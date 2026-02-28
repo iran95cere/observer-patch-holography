@@ -6,7 +6,7 @@
 >
 > $$G_{\mathrm{phys}} = \frac{SU(3) \times SU(2) \times U(1)}{\mathbb{Z}_6}, \qquad N_c = 3, \qquad N_g = 3.$$
 >
-> No other compact gauge group, no other color multiplicity, and no other generation count satisfies all admissibility conditions while minimizing the complexity vector $C(\Sigma)$. This closes the gauge-group selection gap identified in §6.2 of PAPER.md and the sector factorization gap listed in TECHNICAL_SUPPLEMENT.md.
+> No other compact gauge group, no other color multiplicity, and no other generation count satisfies all admissibility conditions while minimizing the complexity vector $C(\Sigma)$.
 
 ---
 
@@ -54,7 +54,7 @@ From $A1$–$A4 + R0 + R1$ alone, the following is established (PAPER.md §6.1):
 
 $$\mathsf{Sect} \simeq \mathrm{Rep}(G), \qquad G = \mathrm{Aut}_\otimes(\mathcal{F}).$$
 
-This proves *existence* of a compact gauge group but does not identify *which* compact group is realized. The present document closes that gap.
+This proves *existence* of a compact gauge group but does not identify *which* compact group is realized. The present document determines it uniquely.
 
 ### 1.3 The Transportability Premise
 
@@ -182,7 +182,7 @@ A single nonabelian factor cannot simultaneously provide both types: a group is 
 
 *Proof.* On $V = \mathbb{C}^3 \otimes \mathbb{C}^2$, the color factor acts on the first tensor factor and the weak factor acts on the second. These actions commute by the tensor product structure. Therefore the gauge group decomposes as a product $G_{\mathrm{color}} \times G_{\mathrm{weak}} \times G_{\mathrm{abelian}}$ (up to finite quotient). A simple group like $SU(5)$ or $SO(10)$ acting irreducibly on a 6-dimensional space would require $\chi_{\mathrm{faith}} \geq 5$ or $\chi_{\mathrm{faith}} \geq 10$ respectively, and crucially would not provide the independent pseudoreal + complex structure required by Lemma 5.1.
 
-This closes the sector factorization gap: product structure is not assumed (as in the former Selector S1) but derived from the minimal-carrier argument. $\square$
+Product structure is not assumed (as in the former Selector S1) but derived from the minimal-carrier argument. $\square$
 
 ### Step 3: The factors are SU(3), SU(2), and U(1)
 
@@ -365,8 +365,8 @@ The Selection Axiom MAR replaces the following separate selectors and minimality
 
 In PAPER.md, the gauge group derivation was structured as:
 
-- §6.1 (gap-free): Reconstruct *some* compact $G$ via Tannaka-Krein.
-- §6.2 (conditional on S1–S3): Narrow to the SM gauge group.
+- §6.1: Reconstruct *some* compact $G$ via Tannaka-Krein.
+- §6.2 (formerly conditional on S1–S3): Narrow to the SM gauge group.
 
 With MAR, the logical structure becomes:
 
@@ -386,9 +386,9 @@ Under $T_{\mathrm{ext}}$, the following results previously listed as "conditiona
 5. Absence of gauge-mediated proton decay (formerly conditional on product structure)
 6. Hypercharge quantization in sixths (formerly conditional on gauge group + anomaly cancellation)
 
-### 10.3 Items that remain open
+### 10.3 Items for future work
 
-MAR closes the gauge-group selection gap but does not address:
+MAR does not address:
 
 - Yukawa coupling integers and mass hierarchy details (TECHNICAL_SUPPLEMENT.md §12)
 - Cosmological constant from first principles (TECHNICAL_SUPPLEMENT.md §14)
@@ -399,14 +399,12 @@ MAR closes the gauge-group selection gap but does not address:
 
 The full logical chain from axioms to the Standard Model gauge sector is:
 
-$$A1\text{–}A4 + R0 + R1 \;\xrightarrow{\text{Thm 6.1}}\; \exists\, G \text{ compact}$$
+$$\begin{aligned}
+A1\text{–}A4 + R0 + R1 &\;\xrightarrow{\text{Thm 6.1}}\; \exists\, G \text{ compact} \\[6pt]
+{+}\;[z]=0 &\;\xrightarrow{\text{Prop 6.1a}}\; \text{DHR transportable, global gauge symmetry} \\[6pt]
+{+}\;\text{MAR} &\;\xrightarrow{\text{Thm (this doc)}}\; G_{\mathrm{phys}} = \frac{SU(3) \times SU(2) \times U(1)}{\mathbb{Z}_6},\; N_c = 3,\; N_g = 3 \\[6pt]
+&\;\xrightarrow{\text{Thm 6.13}}\; \text{hypercharges fixed} \;\xrightarrow{\text{6.11}}\; \text{photon and graviton inevitable} \\[6pt]
+&\;\xrightarrow{\text{Spectrum Derivation}}\; \text{particle masses from pixel area}
+\end{aligned}$$
 
-$$+ \;[z]=0 \;\xrightarrow{\text{Prop 6.1a}}\; \text{DHR transportable, global gauge symmetry}$$
-
-$$+ \;\text{MAR} \;\xrightarrow{\text{Thm (this doc)}}\; G_{\mathrm{phys}} = \frac{SU(3) \times SU(2) \times U(1)}{\mathbb{Z}_6},\; N_c = 3,\; N_g = 3$$
-
-$$\xrightarrow{\text{Thm 6.13}}\; \text{hypercharges fixed} \;\xrightarrow{\text{§6.11}}\; \text{photon \& graviton inevitable}$$
-
-$$\xrightarrow{\text{SPECTRUM\\_DERIVATION}}\; \text{particle masses from pixel area}$$
-
-This is a complete, gap-free chain from the extended axiom set to the observed gauge structure of Nature. $\square$
+This is a complete chain from the extended axiom set to the observed gauge structure of Nature. $\square$

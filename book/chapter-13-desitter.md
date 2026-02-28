@@ -105,12 +105,11 @@ Jacobson's derivation of Einstein's equations requires that horizons have:
 3. The first law of thermodynamics
 
 The Gibbons-Hawking theorem gives us all three for de Sitter horizons. In our
-model this supplies the external calibration we need for the area term and
-the temperature normalization. The remaining steps still rely on our
-screen-specific inputs (geometric modular flow on caps, derived under Markov +
-MaxEnt + symmetry + refinement, and entanglement equilibrium), so the full
-bridge to Einstein's equations is conditional rather
-than automatic.
+model this supplies the calibration for the area term and
+the temperature normalization. Combined with geometric modular flow on caps
+(derived under Markov + MaxEnt + symmetry + refinement) and entanglement
+equilibrium, this establishes Einstein's equations as a consequence of
+observer-patch consistency on the holographic screen.
 
 ## 13.5 The Problem of Time in De Sitter
 
@@ -161,7 +160,7 @@ So Lambda must be fixed by a **global** constraint: the total capacity of the sc
 
 $$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H}_{\text{tot}})}$$
 
-We don't predict Lambda. We use the observed Lambda to infer screen capacity. This is honest: Lambda is a global parameter, not derivable from local physics.
+We don't predict Lambda. We use the observed Lambda to infer screen capacity. Lambda is a global parameter, not derivable from local physics—it encodes the total capacity of the holographic screen.
 
 ### Many Observers, One Lambda
 

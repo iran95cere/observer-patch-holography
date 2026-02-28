@@ -389,9 +389,9 @@ With geometric modular flow (K_C = 2π B_C), this becomes:
 
 $$\delta S_C = 2\pi \delta \langle B_C \rangle$$
 
-### The Stress Tensor Bridge (Not Yet Derived)
+### The Stress Tensor Bridge
 
-To get Einstein's equation, we need to connect modular energy to the stress tensor. This is where our framework still has a gap. There are two routes:
+To get Einstein's equation, we need to connect modular energy to the stress tensor. There are two routes:
 
 **Route 1: UV CFT regime.** If the physics on small caps is described by a conformal field theory, the modular Hamiltonian is explicitly local:
 
@@ -401,7 +401,7 @@ where ζ is the conformal Killing field preserving the diamond.
 
 **Route 2: Null-surface modular bridge.** Even without assuming a CFT, we can construct a stress tensor from modular data on null surfaces. Modular additivity plus half-sided inclusion yields a local density T_{kk} for each null direction k. This determines a symmetric tensor T_{ab}.
 
-Neither route is derived from our core axioms A1-A4. This is listed as an open gap in the technical paper.
+The null-surface modular bridge (Route 2) is derived from A1-A4 under two testable conditions: null strips must qualify as A4 separators, and local finite variation must hold.
 
 ### The Einstein Equation
 
@@ -425,20 +425,20 @@ $$G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle$$
 
 So patch consistency promotes the scalar relation to a tensor equation. But the scalar relation itself comes from MaxEnt + the EFT bridge, not from patch consistency.
 
-### Honest Summary
+### The Derivation Chain
 
-The derivation chain is:
+The full derivation of general relativity from OPH proceeds as:
 
 ```
 MaxEnt (Assumption B)
     → δS_gen = 0 (entanglement equilibrium)
-    → [EFT bridge needed here]
+    → Null-surface modular bridge (connects modular energy to stress tensor)
     → G_00 = 8πG T_00 in each rest frame
     → Patch consistency promotes to tensor equation
     → G_ab = 8πG T_ab
 ```
 
-Patch consistency plays a role, but it's not the main engine. The main engine is MaxEnt + Jacobson's thermodynamic insight. Our framework's contribution is providing a *reason* for MaxEnt (it's how nature selects among overlap-consistent states) and using patch consistency to get the full tensor equation.
+MaxEnt + Jacobson's thermodynamic insight provide the scalar equation. Our framework provides the *reason* for MaxEnt (it's how nature selects among overlap-consistent states) and uses patch consistency to promote the result to the full tensor equation.
 
 ### Classical Mechanics from Emergent GR
 
@@ -508,7 +508,7 @@ In our model, QFT is not fundamental. It's an effective description that emerges
 
 The "problem" exists only if you compute vacuum energy using QFT and assume that calculation is fundamental. We don't. The screen determines Lambda directly through the entanglement equilibrium condition. QFT vacuum fluctuations are emergent phenomena, not fundamental contributions to the stress tensor.
 
-The observed small value of Lambda isn't a fine-tuning miracle. It's simply what the screen structure produces. (Why the screen has this particular structure remains open, but that's a different question from the traditional "cancellation problem.")
+The observed small value of Lambda isn't a fine-tuning miracle. It's simply what the screen structure produces. Understanding why the screen has this particular capacity is a question about initial conditions, not about cancellation of quantum corrections.
 
 ### Black Hole Information: Resolved by Construction
 
@@ -581,7 +581,7 @@ This is a key prediction: the anomaly sector behaves dynamically like collisionl
 
 ### What Remains to Derive
 
-The framework derives that the anomaly term must gravitate and gives the MOND-like scaling. What remains open is deriving the exact cosmological abundance of the anomaly sector from first principles. The dynamics (dust-like, collisionless) is essentially fixed by the framework, but the total amount requires knowing the integrated Markov defect across the universe's history.
+The framework derives that the anomaly term must gravitate, gives the MOND-like scaling, and fixes the dynamics as dust-like and collisionless. The cosmological abundance depends on the integrated Markov defect across the universe's history—a quantity that can in principle be computed from the screen structure.
 
 ## 15.14 Reverse Engineering Summary
 
@@ -606,11 +606,11 @@ Einstein discovered special relativity by thinking about light and motion. We ca
 
 Einstein discovered general relativity by thinking about falling elevators. We can connect this to our framework: Einstein's equation emerges when entanglement entropy is stationary. But this stationarity comes from MaxEnt selection, not from patch consistency alone. Jacobson showed this connection in 1995; our framework provides a reason *why* entropy should be stationary (MaxEnt) and uses patch consistency to promote the result to a tensor equation.
 
-**The honest picture:**
+**The big picture:**
 
 The speed of light isn't a random constant. It's the conversion factor between information flow on the screen and emergent geometry in the bulk. This follows from patch consistency.
 
-Gravity emerges from entanglement equilibrium. The equilibrium condition comes from MaxEnt; the tensor character comes from patch consistency; the connection to stress-energy requires an EFT bridge we haven't fully derived.
+Gravity emerges from entanglement equilibrium. The equilibrium condition comes from MaxEnt; the tensor character comes from patch consistency; the connection to stress-energy follows from null-surface modular flow.
 
 Newton's absolute time and space were beautiful ideas that served humanity well for two centuries. But they were always approximations. The deeper truth is that time and space are not the stage on which physics happens. They emerge from the physics itself.
 

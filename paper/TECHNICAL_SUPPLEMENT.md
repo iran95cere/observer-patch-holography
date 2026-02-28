@@ -722,7 +722,7 @@ $$\log(\dim \mathcal{H}_{\text{tot}}) \approx 2.85 \times 10^{122}$$
 2. Yukawa integers n_f (needs excitation dictionary)
 3. Full baryogenesis dynamics (needs CP profile)
 4. Page curve dynamics (needs evaporation Hamiltonian)
-5. ~~Sector factorization from axioms~~ **Closed by MAR**: the Selection Axiom MAR derives the product gauge structure from the minimal faithful carrier $\mathbb{C}^3 \otimes \mathbb{C}^2$ (see GAUGE_GROUP_DERIVATION.md)
+5. Sector factorization: derived by the Selection Axiom MAR from the minimal faithful carrier $\mathbb{C}^3 \otimes \mathbb{C}^2$ (see GAUGE_GROUP_DERIVATION.md)
 
 ---
 

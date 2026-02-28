@@ -339,7 +339,7 @@ Recap:
 
 2. **Past Hypothesis**: The arrow of time exists because the Big Bang was a low-entropy state. Our model suggests this isn't an arbitrary input-it's a consistency requirement. Observers need entropy gradients to form records, so a universe with observers must start far from equilibrium.
 
-3. **Jaynes**: Entropy measures ignorance. MaxEnt gives the most honest probability distribution.
+3. **Jaynes**: Entropy measures ignorance. MaxEnt gives the uniquely correct probability distribution given the constraints.
 
 4. **Thermal Time Hypothesis**: Time is the modular flow of our statistical state.
 
@@ -351,7 +351,7 @@ Recap:
 
 8. **Records**: We remember the past because records require entropy flow from a low-entropy origin.
 
-9. **Bisognano-Wichmann**: In QFT wedges, Lorentz boosts are modular flow. Our screen analog follows under the stated Markov, symmetry, and regularity inputs, or can be treated as a bridge assumption if those inputs fail.
+9. **Bisognano-Wichmann**: In QFT wedges, Lorentz boosts are modular flow. Our screen analog follows under the Markov, symmetry, and regularity inputs.
 
 ---
 

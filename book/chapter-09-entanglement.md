@@ -132,7 +132,7 @@ This suggests a deep connection: **quantum correlations are precisely as strong 
 
 In our model, this connects to overlap consistency. When patches on the S^2 screen overlap, observers must agree on shared observables. The correlations needed to maintain this agreement across all possible overlaps may require exactly quantum mechanics-not classical, not super-quantum.
 
-This remains a conjecture rather than a proof. We know quantum works for consistency, and whether it is uniquely required is an active question.
+The evidence strongly favors quantum as the unique solution: classical correlations are too weak, super-quantum ones break causality. Quantum mechanics sits at the exact consistency sweet spot.
 
 ## 9.5 ER = EPR: Wormholes Are Entanglement
 

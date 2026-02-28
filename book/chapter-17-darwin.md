@@ -106,7 +106,7 @@ Pointer states are the winners of quantum natural selection. They survive the pr
 
 ## 17.5 Laws as Compression Algorithms
 
-Here's a less speculative way to think about the evolution of laws.
+Here's another way to think about the evolution of laws.
 
 The holographic screen has limited capacity: A/4G bits. It can't encode infinite complexity. It must compress.
 
