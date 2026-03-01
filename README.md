@@ -160,26 +160,27 @@ Full non-circular closure would require a UV principle that fixes t without refe
 
 ### Current Status
 
-The framework produces:
+The framework now has an end-to-end status across the main paper and supplements:
 
-**From core axioms (A1-A4) + MaxEnt + Euclidean regularity:**
-- Lorentz kinematics (from geometric modular flow on caps)
-- Semiclassical Einstein equations (via entanglement equilibrium)
-- A compact gauge group (from edge-sector fusion + Tannaka-Krein reconstruction)
-- Massless photon and graviton (from emergent gauge/diffeomorphism invariance)
+| Layer | Headline result | Current status | Primary source |
+|-------|-----------------|----------------|----------------|
+| Core axioms (A1-A4) + MaxEnt + Euclidean regularity | Lorentz kinematics, semiclassical Einstein equations, compact gauge-group reconstruction | Derived (Theorems 4.2-4.3, 5.1, 6.1) | [Technical Paper](paper/PAPER.md) |
+| Extended theory $T_{\text{ext}}$ with MAR | SM global group $SU(3)\times SU(2)\times U(1)/\mathbb{Z}_6$, $N_c=3$, $N_g=3$ | Uniquely selected under admissibility + MAR | [Gauge Group Derivation](paper/GAUGE_GROUP_DERIVATION.md) |
+| Gauge-structure consequence | Proton stability (no gauge-mediated proton decay) | Product gauge group implies no $X/Y$ leptoquark generators | [Gauge Group Derivation](paper/GAUGE_GROUP_DERIVATION.md) |
+| Exact symmetry-protected zeros | $m_\gamma = 0$, $m_g = 0$, $m_{\text{graviton}} = 0$ | Derived as exact zeros from gauge/diffeomorphism invariance | [Technical Paper](paper/PAPER.md), [Spectrum Derivation](paper/SPECTRUM_DERIVATION.md) |
+| Couplings at $m_Z$ | $\alpha_s=0.1183$, $\sin^2\theta_W=0.2307$, $\alpha_{\rm em}^{-1}=128.31$ | Quantitatively close to PDG (0.5$\sigma$ to 0.3% level) | [Spectrum Derivation](paper/SPECTRUM_DERIVATION.md) |
+| Precision masses (EW + charged leptons) | $W=80.386$ GeV, $Z=91.220$ GeV, $e/\mu/\tau$ | Five predictions at $<0.04\%$ error | [Spectrum Derivation](paper/SPECTRUM_DERIVATION.md) |
+| Critical-surface masses | Higgs $=126.48$ GeV, top(pole) $=171.1$ GeV | About 1% level, with known 1-loop/threshold limitations | [Spectrum Derivation](paper/SPECTRUM_DERIVATION.md) |
+| Flavor hierarchy structure | $\varepsilon=1/6$ from $\mathbb{Z}_6$, base-6 Yukawa texture | Hierarchy pattern captured; individual quark masses currently 16%-73% off (known scheme/threshold effects) | [Spectrum Derivation](paper/SPECTRUM_DERIVATION.md) |
+| Neutrino sector | $m_{\nu_3}\approx 3.0$ meV, $m_{\nu_2}\approx 0.50$ meV, $m_{\nu_1}\approx 0.084$ meV | Consistent with current bounds; oscillation scales matched at order-of-magnitude | [Spectrum Derivation](paper/SPECTRUM_DERIVATION.md) |
+| QCD/hadron bridge | $P \rightarrow \alpha_s \rightarrow \Lambda_{\overline{\rm MS}}^{(3)} \rightarrow m_{\rm hadrons}$ | Derivation chain complete; current hadron precision limited by quenched/small-volume lattice systematics | [Spectrum Derivation](paper/SPECTRUM_DERIVATION.md) |
+| String-theory bridge | OPH edge weights = 2D YM heat kernels; large-$N$ worldsheet expansion (Gross-Taylor) | Mathematical bridge established; full critical-superstring completion marked as extension work | [String Theory Derivation](paper/STRING_THEORY.md) |
 
-**With Selection Axiom MAR (Minimal Admissible Realization):**
-- The specific SM gauge group SU(3) x SU(2) x U(1) / Z₆ (uniquely selected by MAR)
-- Three colors $N_c = 3$ (Witten anomaly + MAR minimality)
-- Three generations $N_g = 3$ (CP + asymptotic freedom + MAR minimality)
-- Proton stability (product gauge group derived from MAR, no leptoquark generators)
-
-**With SM matter content assumed:**
-- Charge quantization, hypercharge ratios
-- MSSM-like beta coefficients $\Delta b \approx (2.49, 4.17, 4.01)$ from edge-sector heat-kernel + Z₆ quotient, matching $(2.5, 4.17, 4.0)$ to <1%
-- Fermion mass hierarchy pattern $y_f \propto 6^{-n_f}$ (integer charges not yet derived)
-- Five particle masses (W, Z, e, μ, τ) at sub-permille accuracy; Higgs and top at ~1%; three gauge couplings at $m_Z$ within 0.5σ–0.3%
-- Neutrino masses from cosmological anchoring: $m_{\nu_3} \approx 3.0$ meV, $m_{\nu_2} \approx 0.50$ meV, $m_{\nu_1} \approx 0.084$ meV
+**Open closure targets (explicitly tracked):**
+- Derive the MaxEnt multipliers $t_i$ (and thus couplings/pixel calibration) from first principles rather than calibration.
+- Verify the EFT bridge conditions (null-strip A4 separators + local finite variation) in explicit UV regulators.
+- Upgrade precision numerics (2-loop matching/thresholds, unquenched larger-volume lattice for hadrons).
+- Derive $\theta_{\rm QCD}$ (strong-CP) non-perturbatively from the gluing/cohomology structure.
 
 ## What the Model Derives
 
@@ -404,7 +405,7 @@ A falsification would require showing that some phenomenon cannot be explained b
 
 ## Current Status
 
-The framework derives Lorentz kinematics, semiclassical Einstein equations, compact gauge symmetry, the SM gauge group (via MAR), three generations, three colors, massless force carriers, particle masses from a single input, and proton stability. The main open questions for future work are:
+As summarized in the status matrix above, the framework derives Lorentz kinematics, semiclassical Einstein equations, compact gauge symmetry, the SM gauge group (via MAR), three generations, three colors, massless force carriers, particle masses from a single input, proton stability, and an explicit OPH-to-string bridge through 2D Yang-Mills edge sectors. The main open questions for future work are:
 
 1. **Screen microphysics**: Quantum link models realize the regulator premises and give edge-center completion automatically. Remaining: ensure modular flow becomes geometric conformal dilation in the continuum limit.
 
