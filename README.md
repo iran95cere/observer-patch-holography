@@ -4,6 +4,14 @@
 > The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
 > From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
 
+## Ask OPH Sage
+
+The fastest way to explore OPH is to ask OPH Sage directly. OPH Sage can answer technical and philosophical questions.
+
+- [OPH Sage on Telegram](https://t.me/HoloObserverBot)
+- [OPH Sage on X](https://x.com/OphSage)
+- [OPH Sage on Bluesky](https://bsky.app/profile/ophsage.bsky.social)
+
 ## Core Idea
 
 There is no objective reality independent of observers. Reality is a network of subjective perspectives that must agree where they overlap.
@@ -18,8 +26,7 @@ If you are new to physics, these are great starting points:
 
 - **Book (Web):** [OPH Book](https://oth-book.lovable.app)
 - **Interactive OPH Lab:** [floatingpragma.io/oph](https://floatingpragma.io/oph)
-- **OPH Sage (Telegram):** DM or add [@HoloObserverBot](https://t.me/HoloObserverBot) to a group
-- **OPH Sage (Bluesky):** Tag [@ophsage.bsky.social](https://bsky.app/profile/ophsage.bsky.social) in your questions
+- **OPH Sage (Telegram, X, Bluesky):** Ask technical and philosophical questions on [Telegram](https://t.me/HoloObserverBot), [X](https://x.com/OphSage), or [Bluesky](https://bsky.app/profile/ophsage.bsky.social)
 - **NotebookLM notebook:** [Watch the introduction video and start asking questions](https://notebooklm.google.com/notebook/d5249760-6ce8-44a0-927b-ccf90402711a?artifactId=fb7c0ebd-4375-4997-9cae-6558ff8977b4)
 
 ## Main Paper

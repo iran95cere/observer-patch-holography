@@ -102,7 +102,7 @@ A global state \(\omega\) is a positive linear functional on the inductive-limit
 
 This is the minimal specification that turns MaxEnt into a theorem-engine for deriving the local Gibbs form (Lemma 2.6).
 
-\textbf{Clarification (MaxEnt ≠ thermal equilibrium).} MaxEnt here is \textbf{local state selection} given constraints, not "the universe is in thermal equilibrium." The Lagrange multipliers (inverse temperatures) may vary slowly in space and time. Non-equilibrium physics appears as gradients in these multipliers and as controlled violations of exact Markov additivity (bounded by the MX mixing axiom). Equilibrium is an approximation regime with explicit error terms.
+\textbf{Clarification (MaxEnt \(\neq\) thermal equilibrium).} MaxEnt here is \textbf{local state selection} given constraints, not "the universe is in thermal equilibrium." The Lagrange multipliers (inverse temperatures) may vary slowly in space and time. Non-equilibrium physics appears as gradients in these multipliers and as controlled violations of exact Markov additivity (bounded by the MX mixing axiom). Equilibrium is an approximation regime with explicit error terms.
 
 \textbf{Assumption C} (Rotationally invariant constraints): Constraint sets are \(\mathrm{SO}(3)\)-invariant on \(S^2\).
 
@@ -2124,9 +2124,9 @@ The full proof is in Part II of this manuscript.
 
 We now connect MaxEnt selection to a stability requirement under refinement. The key observation is that a relevant deformation is an unstable direction under coarse-graining; if it is neither symmetry-forbidden nor constrained, it cannot be kept at zero without fine tuning.
 
-\textbf{Lemma 6.7 (refinement stability forbids unprotected relevant operators).} Assume R0, Assumption B (MaxEnt), and Assumption I (refinement stability). Let 𝒪 be a gauge-invariant Lorentz-scalar relevant deformation in the emergent EFT sense (Δ\textless4 in 3+1D), allowed by symmetry, and unconstrained by the constraint set 𝒞. Then refinement stability cannot keep the coupling of 𝒪 at zero without fine tuning. Generic refinement induces a nonzero coupling that grows under RG and drives a gapped IR phase. In the near-vacuum regime at fixed macroscopic charges/energy, such a gapped phase has strictly smaller entropy density than the corresponding critical phase, so MaxEnt favors spectra where 𝒪 is symmetry-forbidden or explicitly constrained.
+\textbf{Lemma 6.7 (refinement stability forbids unprotected relevant operators).} Assume R0, Assumption B (MaxEnt), and Assumption I (refinement stability). Let \(\mathcal{O}\) be a gauge-invariant Lorentz-scalar relevant deformation in the emergent EFT sense (\(\Delta<4\) in 3+1D), allowed by symmetry, and unconstrained by the constraint set \(\mathcal{C}\). Then refinement stability cannot keep the coupling of \(\mathcal{O}\) at zero without fine tuning. Generic refinement induces a nonzero coupling that grows under RG and drives a gapped IR phase. In the near-vacuum regime at fixed macroscopic charges/energy, such a gapped phase has strictly smaller entropy density than the corresponding critical phase, so MaxEnt favors spectra where \(\mathcal{O}\) is symmetry-forbidden or explicitly constrained.
 
-\textbf{Proof sketch.} Linearize the coarse-graining channel Φ\_\{ℓ→L\} around the MaxEnt state ω\_ℓ. Constraint- preserving perturbations δρ evolve as δρ\textquotesingle{} = Φ\_\{ℓ→L\}(δρ). A relevant operator corresponds to an unstable eigen-direction δρ\_𝒪 with \textbar Φⁿ(δρ\_𝒪)\textbar{} \textasciitilde{} bⁿʸ\textbar δρ\_𝒪\textbar, y\textgreater0, under repeated coarse-graining. If 𝒪 is not fixed by 𝒞 or symmetry, any small UV mismatch produces a nonzero component along δρ\_𝒪, which grows under refinement, contradicting refinement stability unless one imposes infinite fine tuning. Turning on the relevant coupling generates a mass scale and gaps the IR. At fixed low energy density, gapped phases have lower entropy density than gapless phases, so MaxEnt disfavors them. QED.
+\textbf{Proof sketch.} Linearize the coarse-graining channel \(\Phi_{\ell\to L}\) around the MaxEnt state \(\omega_\ell\). Constraint-preserving perturbations \(\delta\rho\) evolve as \(\delta\rho'=\Phi_{\ell\to L}(\delta\rho)\). A relevant operator corresponds to an unstable eigen-direction \(\delta\rho_{\mathcal{O}}\) with \(\lvert \Phi^n(\delta\rho_{\mathcal{O}})\rvert \sim b^{ny}\lvert \delta\rho_{\mathcal{O}}\rvert\), \(y>0\), under repeated coarse-graining. If \(\mathcal{O}\) is not fixed by \(\mathcal{C}\) or symmetry, any small UV mismatch produces a nonzero component along \(\delta\rho_{\mathcal{O}}\), which grows under refinement, contradicting refinement stability unless one imposes infinite fine tuning. Turning on the relevant coupling generates a mass scale and gaps the IR. At fixed low energy density, gapped phases have lower entropy density than gapless phases, so MaxEnt disfavors them. QED.
 
 \textbf{Corollary 6.8 (chirality selector).} A gauge-invariant Dirac mass term is a relevant scalar. If both chiralities exist in conjugate representations, the mass term is allowed and will be generated under refinement unless symmetry-forbidden. Therefore, the MaxEnt/refinement-stable construction selects chiral fermion content (or imposes explicit mass constraints) as the natural way to keep light fermions without fine tuning. QED.
 
@@ -2231,7 +2231,7 @@ For each overlap, choose a unitary intertwiner
 U_{ij}: \mathcal H_j \to \mathcal H_i
 \]
 
-such that for all O in 𝒜\_ij,
+such that for all \(O \in \mathcal{A}_{ij}\),
 
 \[
 \pi_i(O) = U_{ij} \pi_j(O) U_{ij}^\dagger.
@@ -2245,7 +2245,7 @@ Normalize U\_ii = 1 and U\_ji = U\_ij†.
 \Omega_{ijk} := U_{ij} U_{jk} U_{ki}.
 \]
 
-For all O in 𝒜\_ijk,
+For all \(O \in \mathcal{A}_{ijk}\),
 
 \[
 \Omega_{ijk} \pi_i(O) = \pi_i(O) \Omega_{ijk}.
@@ -2937,7 +2937,7 @@ The same lattice models that yield coupling extraction also provide a concrete d
 m_O = E_n - E_0,
 \]
 
-where \textbar n⟩ is the lowest excited eigenstate with ⟨n\textbar O\textbar0⟩ ≠ 0 and E₀ is the ground state energy.
+where \textbar n⟩ is the lowest excited eigenstate with ⟨n\textbar O\textbar0⟩ \(\neq\) 0 and E₀ is the ground state energy.
 
 \textbf{Plaquette channel.} For the Z₃ model, using O = Σ\_p Re(B\_p), the extracted masses m\_plaq are shown in Section 6.14. This is the standard spectroscopy definition: the lowest pole in the two-point correlator of a local gauge-invariant operator.
 
@@ -3510,7 +3510,7 @@ This is a directly testable prediction: the edge-mode "onset scale" is O(100 TeV
 
 \textbf{What remains.} Currently M\_S ≈ 100 TeV is what the model needs to match data. To convert this into a genuine prediction requires deriving M\_S from the edge physics itself (the gap/decoupling scale of edge excitations in the collar Hamiltonian), rather than solving for it from measured α\_s. This is the sharpest remaining target for closing the precision prediction chain.
 
-\subsubsection{6.18 The Z₆ quotient: edge-sector selection rules and entropy deficit}\label{618-the-zux2086-quotient-edge-sector-selection-rules-and-entropy-deficit}
+\subsubsection{6.18 The Z$_6$ quotient: edge-sector selection rules and entropy deficit}\label{618-the-zux2086-quotient-edge-sector-selection-rules-and-entropy-deficit}
 
 The SM global gauge group is the quotient (SU(3) × SU(2) × U(1))/Z₆, rather than the direct product (Proposition 6.6). Combined with the heat-kernel edge-sector law, this yields sharp, testable predictions.
 
@@ -3708,7 +3708,7 @@ The measured top mass is m\_t ≈ 172.7 GeV, so the prediction is \textbf{\texta
 
 \textbf{Structural Note.} This is the leading-order prediction channel for the top sector. The assumption "y\_t ≈ 1" captures the least-suppressed Yukawa mode selected by the framework.
 
-\subsubsection{6.21 Yukawa hierarchy from Z₆ defect suppression}\label{621-yukawa-hierarchy-from-zux2086-defect-suppression}
+\subsubsection{6.21 Yukawa hierarchy from Z$_6$ defect suppression}\label{621-yukawa-hierarchy-from-zux2086-defect-suppression}
 
 The Z₆ quotient structure provides a natural explanation for the fermion mass hierarchy without introducing continuous Yukawa parameters.
 

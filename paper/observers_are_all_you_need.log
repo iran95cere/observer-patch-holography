@@ -439,17 +439,18 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip83
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 17.
+\c@none=\count301
+Package hyperref Info: Option `colorlinks' set `true' on input line 112.
  (l3backend-xetex.def
 File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
-\c__kernel_sys_dvipdfmx_version_int=\count301
-\l__color_backend_stack_int=\count302
-\g__color_backend_stack_int=\count303
-\g__graphics_track_int=\count304
+\c__kernel_sys_dvipdfmx_version_int=\count302
+\l__color_backend_stack_int=\count303
+\g__color_backend_stack_int=\count304
+\g__graphics_track_int=\count305
 \l__pdf_internal_box=\box63
-\g__pdf_backend_object_int=\count305
-\g__pdf_backend_annotation_int=\count306
-\g__pdf_backend_link_int=\count307
+\g__pdf_backend_object_int=\count306
+\g__pdf_backend_annotation_int=\count307
+\g__pdf_backend_link_int=\count308
 )
 (observers_are_all_you_need.aux
 
@@ -461,31 +462,31 @@ LaTeX Warning: Label `references' multiply defined.
 )
 \openout1 = `observers_are_all_you_need.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+38.
  (ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 138.
+LaTeX Font Info:    ... okay on input line 138.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -521,7 +522,7 @@ LaTeX Font Info:    ... okay on input line 43.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 43.
+Package hyperref Info: Link coloring ON on input line 138.
 (nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (refcount.sty
@@ -529,50 +530,50 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count308
+\c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 138.
+LaTeX Info: Redefining \pageref on input line 138.
+LaTeX Info: Redefining \nameref on input line 138.
 
 (observers_are_all_you_need.out) (observers_are_all_you_need.out)
 \@outlinefile=\write4
 \openout4 = `observers_are_all_you_need.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-5.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+40.
  (ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-5.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+40.
 
 (omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-45.
+140.
  (omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-45.
+140.
  (omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 45.
+(Font)              <12> on input line 140.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 45.
+(Font)              <8> on input line 140.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 45.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
-
+(Font)              <6> on input line 140.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 140
+.
  (umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 140
+.
  (umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -581,22 +582,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 3.
  [1
 
-]
-Missing character: There is no ₆ ("2086) in font ec-lmr10!
-Missing character: There is no ₆ ("2086) in font ec-lmr10!
-[2] [3] [4] [5] [6]
-Missing character: There is no Λ ("39B) in font ec-lmr10!
-Missing character: There is no Λ ("39B) in font ec-lmr10!
-[7]
-Missing character: There is no ₆ ("2086) in font ec-lmr10!
-Missing character: There is no ₃ ("2083) in font ec-lmr10!
-[8])
+] [2] [3] [4] [5] [6] [7] [8])
 \tf@toc=\write5
 \openout5 = `observers_are_all_you_need.toc'.
 
- [9] (tex_fragments/PAPER.tex [10] [11]
-Missing character: There is no ̸ ("338) in font ec-lmbx10!
-[12]
+ [9]
+(tex_fragments/PAPER.tex [10] [11] [12]
 Underfull \hbox (badness 10000) in alignment at lines 200--204
 [] [] [] []
  []
@@ -724,52 +715,13 @@ Underfull \hbox (badness 10000) in alignment at lines 1945--1950
 Missing character: There is no ₆ ("2086) in font ec-lmr10!
 Missing character: There is no χ ("3C7) in font ec-lmr10!
 Missing character: There is no χ ("3C7) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
-Missing character: There is no Δ ("394) in font ec-lmr10!
-Missing character: There is no 𝒞 ("1D49E) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
-Missing character: There is no Φ ("3A6) in font ec-lmr10!
-Missing character: There is no ℓ ("2113) in font ec-lmr10!
-Missing character: There is no → ("2192) in font ec-lmr10!
-Missing character: There is no ω ("3C9) in font ec-lmr10!
-Missing character: There is no ℓ ("2113) in font ec-lmr10!
-Missing character: There is no δ ("3B4) in font ec-lmr10!
-Missing character: There is no ρ ("3C1) in font ec-lmr10!
-Missing character: There is no δ ("3B4) in font ec-lmr10!
-Missing character: There is no ρ ("3C1) in font ec-lmr10!
-Missing character: There is no Φ ("3A6) in font ec-lmr10!
-Missing character: There is no ℓ ("2113) in font ec-lmr10!
-Missing character: There is no → ("2192) in font ec-lmr10!
-Missing character: There is no δ ("3B4) in font ec-lmr10!
-Missing character: There is no ρ ("3C1) in font ec-lmr10!
-Missing character: There is no δ ("3B4) in font ec-lmr10!
-Missing character: There is no ρ ("3C1) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
-Missing character: There is no Φ ("3A6) in font ec-lmr10!
-Missing character: There is no ⁿ ("207F) in font ec-lmr10!
-Missing character: There is no δ ("3B4) in font ec-lmr10!
-Missing character: There is no ρ ("3C1) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
-Missing character: There is no ⁿ ("207F) in font ec-lmr10!
-Missing character: There is no ʸ ("2B8) in font ec-lmr10!
-Missing character: There is no δ ("3B4) in font ec-lmr10!
-Missing character: There is no ρ ("3C1) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
-Missing character: There is no 𝒞 ("1D49E) in font ec-lmr10!
-Missing character: There is no δ ("3B4) in font ec-lmr10!
-Missing character: There is no ρ ("3C1) in font ec-lmr10!
-Missing character: There is no 𝒪 ("1D4AA) in font ec-lmr10!
 [46]
 Missing character: There is no → ("2192) in font ec-lmr10!
 Missing character: There is no → ("2192) in font ec-lmr10!
 [47]
 Missing character: There is no ≤ ("2264) in font ec-lmr10!
 Missing character: There is no ≤ ("2264) in font ec-lmr10!
-Missing character: There is no 𝒜 ("1D49C) in font ec-lmr10!
 Missing character: There is no † ("2020) in font ec-lmr10!
-Missing character: There is no 𝒜 ("1D49C) in font ec-lmr10!
 Missing character: There is no π ("3C0) in font ec-lmr10!
 Missing character: There is no π ("3C0) in font ec-lmr10!
 Missing character: There is no π ("3C0) in font ec-lmr10!
@@ -788,9 +740,10 @@ Missing character: There is no φ ("3C6) in font ec-lmr10!
 Missing character: There is no ᶜ ("1D9C) in font ec-lmr10!
 Missing character: There is no ᶜ ("1D9C) in font ec-lmr10!
 Missing character: There is no ᶜ ("1D9C) in font ec-lmr10!
+[49]
 Missing character: There is no ₃ ("2083) in font ec-lmr10!
 Missing character: There is no ν ("3BD) in font ec-lmr10!
-[49] [50]
+[50]
 Missing character: There is no ∈ ("2208) in font ec-lmr10!
 Missing character: There is no χ ("3C7) in font ec-lmr10!
 Missing character: There is no χ ("3C7) in font ec-lmr10!
@@ -1476,7 +1429,6 @@ Missing character: There is no ₃ ("2083) in font ec-lmr10!
 Missing character: There is no ⟩ ("27E9) in font ec-lmr10!
 Missing character: There is no ⟨ ("27E8) in font ec-lmr10!
 Missing character: There is no ⟩ ("27E9) in font ec-lmr10!
-Missing character: There is no ̸ ("338) in font ec-lmr10!
 Missing character: There is no ₀ ("2080) in font ec-lmr10!
 Missing character: There is no ₃ ("2083) in font ec-lmr10!
 Missing character: There is no Σ ("3A3) in font ec-lmr10!
@@ -1933,7 +1885,18 @@ Missing character: There is no α ("3B1) in font ec-lmr10!
 Missing character: There is no ≈ ("2248) in font ec-lmr10!
 Missing character: There is no ≈ ("2248) in font ec-lmr10!
 Missing character: There is no α ("3B1) in font ec-lmr10!
-Missing character: There is no ₆ ("2086) in font ec-lmbx10!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3513.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3513.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3513.
+
 Missing character: There is no ₆ ("2086) in font ec-lmr10!
 Missing character: There is no ₆ ("2086) in font ec-lmbx10!
 Missing character: There is no π ("3C0) in font ec-lmr10!
@@ -2101,7 +2064,18 @@ Missing character: There is no √ ("221A) in font ec-lmbx10!
 Missing character: There is no ≈ ("2248) in font ec-lmbx10!
 Missing character: There is no ≈ ("2248) in font ec-lmr10!
 Missing character: There is no ≈ ("2248) in font ec-lmr10!
-Missing character: There is no ₆ ("2086) in font ec-lmbx10!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3711.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3711.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3711.
+
 Missing character: There is no ₆ ("2086) in font ec-lmr10!
 Missing character: There is no ₆ ("2086) in font ec-lmr10!
 Missing character: There is no Δ ("394) in font ec-lmr10!
@@ -3156,10 +3130,43 @@ Underfull \hbox (badness 10000) in alignment at lines 286--290
  []
 
 [140] [141] [142]
-Missing character: There is no Λ ("39B) in font ec-lmbx12!
-Missing character: There is no Λ ("39B) in font ec-lmbx12!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 434.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Lambda' on input line 434.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 434.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 442.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Lambda' on input line 442.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 442.
+
 [143] [144]
-Missing character: There is no ₆ ("2086) in font ec-lmbx12!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 540.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 540.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 540.
+
 [145]
 Missing character: There is no ≥ ("2265) in font ec-lmbx10!
 Missing character: There is no ≤ ("2264) in font ec-lmbx10!
@@ -3190,7 +3197,18 @@ Underfull \hbox (badness 10000) in alignment at lines 612--622
 
 Missing character: There is no σ ("3C3) in font ec-lmr10!
 [147]
-Missing character: There is no ₃ ("2083) in font ec-lmbx12!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 657.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 657.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 657.
+
 Missing character: There is no σ ("3C3) in font ec-lmr10!
 Missing character: There is no Λ ("39B) in font ec-lmr10!
 [148] [149]
@@ -3215,53 +3233,53 @@ Underfull \hbox (badness 10000) in alignment at lines 787--794
 ) [150] [151
 
 ]
-Underfull \hbox (badness 10000) in alignment at lines 122--127
+Underfull \hbox (badness 10000) in alignment at lines 217--222
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 127--131
+Underfull \hbox (badness 10000) in alignment at lines 222--226
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 131--133
+Underfull \hbox (badness 10000) in alignment at lines 226--228
 [] []
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 134--134
+Underfull \hbox (badness 1478) in paragraph at lines 229--229
 []|\T1/lmr/m/n/10.95 Quantum grav-ity con-sis-
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 136--137
+Underfull \hbox (badness 1852) in paragraph at lines 231--232
 []|\T1/lmr/m/n/10.95 MaxEnt state se-lec-tion un-der sym-met-ric con-straints y
 ields
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--137
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []|\T1/lmr/m/n/10.95 Supersymmetry non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--138
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 []|\T1/lmr/m/n/10.95 Black-hole in-for-ma-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
 []|\T1/lmr/m/n/10.95 Cosmological con-stant
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 239--239
 []|\T1/lmr/m/n/10.95 Three gen-er-a-tions and
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 133--146
+Underfull \hbox (badness 10000) in alignment at lines 228--241
 [] []
  []
 
@@ -3273,6 +3291,6 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `observers_are_all_you_need.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: B2E0D24EAED85FE3900AF9309884DCA8;75224.
+(rerunfilecheck)             Checksum: 9F8FDF3F120FF0361A30A6080AF50DC1;75196.
  )
-Output written on observers_are_all_you_need.xdv (153 pages, 820868 bytes).
+Output written on observers_are_all_you_need.xdv (153 pages, 821308 bytes).
