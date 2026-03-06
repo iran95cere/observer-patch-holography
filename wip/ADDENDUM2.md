@@ -1,8 +1,6 @@
 # Addendum 2: Ethics, Practice, and the Good Life Under OPH
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
+> OPH is an observer-centric framework for fundamental physics. From one calibrated constant (the pixel area), structural axioms (A1-A4 + MAR), and one cosmological input (screen capacity), OPH derives the Standard Model gauge group, particle mass hierarchy, and key quantitative outputs.
 
 
 *How should you live, knowing that reality is a self-simulating holographic network of observer perspectives?*

@@ -1,8 +1,6 @@
 # Observer-Patch Holography
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
+> OPH is an observer-centric framework for fundamental physics. From one calibrated constant (the pixel area), structural axioms (A1-A4 + MAR), and one cosmological input (screen capacity), OPH derives the Standard Model gauge group, particle mass hierarchy, and key quantitative outputs. The Standard Model, general relativity, and string theory emerge as effective descriptions of the underlying structure.
 
 
 ## Abstract
@@ -27,9 +25,11 @@ covariance, Euclidean regularity, and the derived EFT bridge), OPH establishes:
    $m_\gamma = m_g = m_{\text{graviton}} = 0$, with no gauge-mediated proton
    decay channels in the derived product-group structure.
 4. **End-to-end particle spectrum derivation from OPH inputs**:
-   from pixel area to couplings and masses, including precision-level
-   agreement for $W, Z, e, \mu, \tau$ (sub-0.04%) and percent-level Higgs/top
-   closure (see SPECTRUM_DERIVATION.md).
+   from pixel area (one calibrated constant) to couplings and masses.
+   Gauge couplings and EW boson masses are calibration-sector consistency checks;
+   charged lepton masses ($e, \mu, \tau$, sub-0.025%) and Higgs/top masses (~1%)
+   are genuine predictions from independent structural conditions
+   (see SPECTRUM_DERIVATION.md).
 5. **String-theory bridge from OPH first principles**:
    edge-sector MaxEnt weights are exactly 2D Yang-Mills heat kernels, whose
    large-$N$ expansion is the Gross-Taylor worldsheet/string expansion
@@ -3946,7 +3946,7 @@ Using only $a_{\mathrm{cell}}/\ell_p^2 = 1.63094$ and the precisely measured
 $\hat{\alpha}^{-1}(M_Z) = 127.930 \pm 0.008$ as inputs, solving simultaneously
 gives a unique physical solution:
 
-> **Prediction (Simultaneous gauge couplings):**
+> **Two-input mode outputs** (using $P$ + $\hat{\alpha}^{-1}(M_Z)$ as calibration inputs, so $\alpha_s$ and $\sin^2\theta_W$ become genuine predictions in this mode):
 >
 > **α_s(M_Z) = 0.1175,  sin²θ̂_W(M_Z) = 0.2311**
 

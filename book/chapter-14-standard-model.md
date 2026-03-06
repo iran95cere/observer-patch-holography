@@ -656,7 +656,7 @@ Let's step back and see what the framework actually accounts for.
 
 **Proton stability.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
-**Particle masses.** The framework predicts particle masses from a single input: the pixel area $P = 1.63094$. Five particles (W, Z, electron, muon, tau) are predicted to sub-permille accuracy (< 0.04% error). The Higgs mass and top quark mass are predicted to ~1%. The fermion mass hierarchy reduces to discrete Z₆ defect charges. Quark masses reproduce the correct hierarchy but have larger individual errors from missing scheme matching. See SPECTRUM_DERIVATION.md for the complete derivation chain.
+**Particle masses.** The framework derives particle masses from a single calibrated constant: the pixel area $P = 1.63094$. Gauge couplings and EW boson masses (W, Z) are calibration-sector consistency checks. Three charged lepton masses (electron, muon, tau) are genuine predictions at sub-permille accuracy from parameter-free Koide structure. The Higgs and top quark masses are genuine predictions at ~1% from the critical surface condition. The fermion mass hierarchy reduces to discrete Z₆ defect charges; quark masses reproduce the correct hierarchy but have larger individual errors from missing scheme matching. See SPECTRUM_DERIVATION.md for the complete derivation chain and epistemic classification.
 
 ## 14.21 The Big Picture
 

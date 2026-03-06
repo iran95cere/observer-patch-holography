@@ -1,8 +1,6 @@
 # Observer Patch Holography: An Observer-Centric Approach to Fundamental Physics
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
+> OPH is an observer-centric framework for fundamental physics. From one calibrated constant (the pixel area), structural axioms (A1-A4 + MAR), and one cosmological input (screen capacity), OPH derives the Standard Model gauge group, particle mass hierarchy, and key quantitative outputs. The Standard Model, general relativity, and string theory emerge as effective descriptions of the underlying structure.
 
 ## Core Idea
 
@@ -115,7 +113,7 @@ The following infographic shows how the entire framework flows from two paramete
 
 *From axioms to reality: how overlap consistency derives all of physics.*
 
-> **Particle Spectrum Predictions**: The complete derivation from pixel area to particle masses — with comparison against PDG data and a full audit of every constant — is documented in **[From Pixel Area to Particle Masses](wip/SPECTRUM_DERIVATION.md)**. Five particles (W, Z, e, μ, τ) are predicted to < 0.04% accuracy; the Higgs and top quark to ~1%; all from a single input $P = 1.63094$.
+> **Particle Spectrum Derivation**: The complete derivation from pixel area to particle masses — with comparison against PDG data and a full audit of every constant — is documented in **[From Pixel Area to Particle Masses](wip/SPECTRUM_DERIVATION.md)**. Outputs are classified by epistemic status: gauge couplings and EW boson masses are calibration-sector consistency checks; charged lepton masses (< 0.04% from parameter-free Koide structure), Higgs and top masses (~1% from critical surface condition) are genuine predictions. See §1B of that document for the full classification.
 
 ## The Fundamental Parameters
 
@@ -166,7 +164,7 @@ The same axioms with different settings would produce a universe with different 
 
 ### Calibration vs Prediction
 
-In the current implementation, the pixel constant P = a_cell/ℓ_P² is *inferred* from measured gauge couplings because the axioms fix the functional relation P = 4ℓ̄_tot(t₂,t₃) but do now fix the MaxEnt Lagrange multipliers t_i (equivalently the couplings) from first principles. This inference step is therefore a calibration, not a claimed prediction of P.
+In the current implementation, the pixel constant P = a_cell/ℓ_P² is *inferred* from measured gauge couplings because the axioms fix the functional relation P = 4ℓ̄_tot(t₂,t₃) but do not fix the MaxEnt Lagrange multipliers t_i (equivalently the couplings) from first principles. This inference step is therefore a calibration, not a claimed prediction of P.
 
 The nontrivial content is that P provides an additional constraint linking the gravitational coupling to gauge-sector edge entropy, and in a two-input mode (treating P as a fundamental configuration parameter and using only one electroweak datum α(M_Z)) the framework predicts α_s(M_Z) and sin²θ_W(M_Z) simultaneously.
 
@@ -182,9 +180,10 @@ The framework has an end-to-end validated status across the main paper and suppl
 | Extended theory $T_{\text{ext}}$ with MAR | SM global group $SU(3)\times SU(2)\times U(1)/\mathbb{Z}_6$, $N_c=3$, $N_g=3$ | Uniquely selected under admissibility + MAR | [Gauge Group Derivation](wip/GAUGE_GROUP_DERIVATION.md) |
 | Gauge-structure consequence | Proton stability (no gauge-mediated proton decay) | Product gauge group implies no $X/Y$ leptoquark generators | [Gauge Group Derivation](wip/GAUGE_GROUP_DERIVATION.md) |
 | Exact symmetry-protected zeros | $m_\gamma = 0$, $m_g = 0$, $m_{\text{graviton}} = 0$ | Derived as exact zeros from gauge/diffeomorphism invariance | [Technical Paper](wip/PAPER.md), [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
-| Couplings at $m_Z$ | $\alpha_s=0.1183$, $\sin^2\theta_W=0.2307$, $\alpha_{\rm em}^{-1}=128.31$ | Quantitatively close to PDG (0.5$\sigma$ to 0.3% level) | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
-| Precision masses (EW + charged leptons) | $W=80.386$ GeV, $Z=91.220$ GeV, $e/\mu/\tau$ | Five predictions at $<0.04\%$ error | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
-| Critical-surface masses | Higgs $=126.48$ GeV, top(pole) $=171.1$ GeV | About 1% level, with known 1-loop/threshold limitations | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
+| Couplings at $m_Z$ | $\alpha_s=0.1183$, $\sin^2\theta_W=0.2307$, $\alpha_{\rm em}^{-1}=128.31$ | Consistency checks (calibration sector, 0.2–0.4%) | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
+| EW boson masses | $W=80.386$ GeV, $Z=91.220$ GeV | Consistency checks (flow from calibrated couplings, $<0.04\%$) | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
+| Charged lepton masses | $e/\mu/\tau$ | Genuine predictions at $<0.025\%$ (parameter-free Koide structure) | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
+| Critical-surface masses | Higgs $=126.48$ GeV, top(pole) $=171.1$ GeV | Genuine predictions at ~1%, from independent boundary condition $\lambda = \beta_\lambda = 0$ | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
 | Flavor hierarchy structure | $\varepsilon=1/6$ from $\mathbb{Z}_6$, base-6 Yukawa texture | Hierarchy pattern captured; individual quark masses currently 16%-73% off (known scheme/threshold effects) | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
 | Neutrino sector | $m_{\nu_3}\approx 3.0$ meV, $m_{\nu_2}\approx 0.50$ meV, $m_{\nu_1}\approx 0.084$ meV | Consistent with current bounds; oscillation scales matched at order-of-magnitude | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
 | QCD/hadron bridge | $P \rightarrow \alpha_s \rightarrow \Lambda_{\overline{\rm MS}}^{(3)} \rightarrow m_{\rm hadrons}$ | Derivation chain complete; current hadron precision limited by quenched/small-volume lattice systematics | [Spectrum Derivation](wip/SPECTRUM_DERIVATION.md) |
@@ -272,36 +271,31 @@ These follow once the Standard Model matter content is assumed:
 | Edge entropy deficit = log2 6 bits | Heat-kernel law + Z6 quotient |
 | Yukawa hierarchy $y_f \propto 6^{-n_f}$ | Z6 defect suppression + integer charges |
 
-### Precision Validations Against Existing Data
+### Quantitative Outputs vs Existing Data
 
-The complete derivation chain from pixel area $P = 1.63094$ to particle masses is documented in **[From Pixel Area to Particle Masses](wip/SPECTRUM_DERIVATION.md)**. Additional results (dark matter, Koide formula, baryogenesis, proton spin) are in the **[Technical Supplement](wip/TECHNICAL_SUPPLEMENT.md)**.
+The complete derivation chain from pixel area $P = 1.63094$ to particle masses is documented in **[From Pixel Area to Particle Masses](wip/SPECTRUM_DERIVATION.md)**. Outputs are classified by epistemic tier (see §1B of that document). Additional results (dark matter, Koide formula, baryogenesis, proton spin) are in the **[Technical Supplement](wip/TECHNICAL_SUPPLEMENT.md)**.
 
-**Sub-permille particle masses** (from a single input constant):
+**Calibration-sector consistency checks** (gauge couplings used to fix $P$; agreement expected by construction):
 
-| Particle | OPH (GeV) | PDG (GeV) | Rel. Error |
-|----------|----------:|----------:|-----------:|
-| W boson | 80.386 | 80.377 ± 0.012 | +0.012% |
-| Z boson | 91.220 | 91.188 ± 0.002 | +0.035% |
-| Electron | 5.109 × 10⁻⁴ | 5.110 × 10⁻⁴ | −0.023% |
-| Muon | 0.10564 | 0.10566 | −0.022% |
-| Tau | 1.7766 | 1.7769 | −0.020% |
+| Quantity | OPH | PDG | Rel. Error | Status |
+|----------|----:|----:|-----------:|--------|
+| $\alpha_s(M_Z)$ | 0.1183 | 0.1179 ± 0.0009 | +0.37% | Consistency check |
+| $\sin^2\theta_W(M_Z)$ | 0.2307 | 0.23122 ± 0.00004 | −0.21% | Consistency check |
+| $\alpha_{\text{em}}^{-1}(M_Z)$ | 128.31 | 127.952 ± 0.009 | +0.28% | Consistency check |
+| W boson | 80.386 GeV | 80.377 ± 0.012 GeV | +0.012% | Consistency check |
+| Z boson | 91.220 GeV | 91.188 ± 0.002 GeV | +0.035% | Consistency check |
+| Higgs VEV | 246.77 GeV | 246.22 GeV | +0.22% | Consistency check |
 
-**Percent-level predictions:**
+**Genuine predictions** (structurally independent of $P$ calibration):
 
-| Quantity | OPH | PDG | Rel. Error |
-|----------|----:|----:|-----------:|
-| Higgs mass | 126.48 GeV | 125.20 ± 0.11 GeV | +1.02% |
-| Top quark (critical surface) | 171.1 GeV | 172.57 ± 0.29 GeV | −0.87% |
-| Top quark (Z₆ texture) | 174.5 GeV | 172.57 ± 0.29 GeV | +1.1% |
-| Higgs VEV | 246.77 GeV | 246.22 GeV | +0.22% |
-
-**Gauge couplings at $m_Z$:**
-
-| Quantity | OPH | PDG | Agreement |
-|----------|----:|----:|-----------|
-| $\alpha_s(M_Z)$ | 0.1183 | 0.1179 ± 0.0009 | Within 0.5σ |
-| $\sin^2\theta_W(M_Z)$ | 0.2307 | 0.23122 ± 0.00004 | −0.21% |
-| $\alpha_{\text{em}}^{-1}(M_Z)$ | 128.31 | 127.952 ± 0.009 | +0.28% |
+| Quantity | OPH | PDG | Rel. Error | Origin |
+|----------|----:|----:|-----------:|--------|
+| Electron | 5.109 × 10⁻⁴ GeV | 5.110 × 10⁻⁴ GeV | −0.023% | Koide ($Q=2/3$, $\delta=2/9$) |
+| Muon | 0.10564 GeV | 0.10566 GeV | −0.022% | Koide |
+| Tau | 1.7766 GeV | 1.7769 GeV | −0.020% | Koide |
+| Higgs mass | 126.48 GeV | 125.20 ± 0.11 GeV | +1.02% | Critical surface ($\lambda = \beta_\lambda = 0$) |
+| Top quark (crit. surf.) | 171.1 GeV | 172.57 ± 0.29 GeV | −0.87% | Critical surface |
+| Top quark (Z₆ texture) | 174.5 GeV | 172.57 ± 0.29 GeV | +1.1% | $\mathbb{Z}_6$ texture ($n_t = 0$) |
 
 **Additional quantitative results** (from [Technical Supplement](wip/TECHNICAL_SUPPLEMENT.md)):
 

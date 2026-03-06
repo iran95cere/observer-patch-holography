@@ -1,13 +1,10 @@
 # From Pixel Area to Particle Masses: The Complete OPH Spectrum Derivation
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
-
-
 > **Companion document to**: *Observer-Patch Holography* (PAPER.md)
 >
-> **Abstract.** The Observer-Patch Holography (OPH) framework derives the Standard Model particle spectrum from a single geometric quantity: the **pixel area** — the area of one computational cell on the holographic screen, measured in Planck units. Starting from the OPH axioms (A1–A4: entanglement equilibrium, MaxEnt, edge-center completion, refinement stability), the "screen" encodes all physics through its area law (§5 of PAPER.md) and edge-sector structure (§6 of PAPER.md). The pixel area constant $P \equiv a_{\text{cell}}/\ell_P^2 = 1.63094$ is extracted from the screen's entropy-matching condition (§5.4 of PAPER.md); a second input — the total screen capacity $\log(\dim\mathcal{H}) \sim 10^{122}$ — enters only for neutrino masses and the cosmological constant (§14 of TECHNICAL_SUPPLEMENT.md). Every other quantity appearing in the derivation chain is either a mathematical constant, a consequence of the gauge group (itself reconstructed from the screen's edge-sector fusion rules via Tannaka-Krein, §6.1 of PAPER.md), or a derived structural integer ($N_c = 3$, $N_g = 3$, $\varepsilon = 1/6$, $\delta = 2/9$). No measured masses or couplings enter the prediction pipeline. A complete audit of all constants appears in §1A below.
+> **Abstract.** The Observer-Patch Holography (OPH) framework derives the Standard Model particle spectrum from a single geometric quantity: the **pixel area** — the area of one computational cell on the holographic screen, measured in Planck units. Starting from the OPH axioms (A1–A4: entanglement equilibrium, MaxEnt, edge-center completion, refinement stability), the "screen" encodes all physics through its area law (§5 of PAPER.md) and edge-sector structure (§6 of PAPER.md). The pixel area constant $P \equiv a_{\text{cell}}/\ell_P^2 = 1.63094$ is **calibrated** from the gauge coupling sector via the screen's entropy-matching condition (§5.4 of PAPER.md); a second input — the total screen capacity $\log(\dim\mathcal{H}) \sim 10^{122}$ — enters only for neutrino masses and the cosmological constant (§14 of TECHNICAL_SUPPLEMENT.md). Every other quantity appearing in the derivation chain is either a mathematical constant, a consequence of the gauge group (itself reconstructed from the screen's edge-sector fusion rules via Tannaka-Krein, §6.1 of PAPER.md), or a derived structural integer ($N_c = 3$, $N_g = 3$, $\varepsilon = 1/6$, $\delta = 2/9$). A complete audit of all constants appears in §1A below.
+>
+> **Epistemic status.** The outputs of this derivation fall into three categories: (1) **calibration-sector consistency checks** — quantities used to fix $P$, which must reproduce their input values by construction; (2) **genuine predictions** — quantities determined by the framework's structural content independently of $P$'s calibration; and (3) **parameter-free structural predictions** — discrete quantities (gauge group, $N_c$, $N_g$, $\varepsilon$, $\delta$, $Q$) that follow from the axioms alone with no continuous free parameter. See §1B for the full classification.
 
 ---
 
@@ -33,12 +30,14 @@
 
 ### 1.1 Physical Inputs
 
-The entire prediction pipeline uses exactly **two** physical inputs:
+The entire derivation pipeline uses exactly **two** physical inputs:
 
-| Input | Symbol | Value | Origin |
-|-------|--------|-------|--------|
-| Pixel area constant | $P \equiv a_{\text{cell}}/\ell_P^2$ | 1.63094 | Edge entropy matching (§5.4 of PAPER.md) |
-| Screen capacity | $\log(\dim\mathcal{H}_{\text{tot}})$ | $\sim 10^{122}$ | De Sitter entropy / cosmological constant |
+| Input | Symbol | Value | Origin | Status |
+|-------|--------|-------|--------|--------|
+| Pixel area constant | $P \equiv a_{\text{cell}}/\ell_P^2$ | 1.63094 | **Calibrated** from gauge couplings via entropy matching (§5.4 of PAPER.md) | Single free parameter |
+| Screen capacity | $\log(\dim\mathcal{H}_{\text{tot}})$ | $\sim 10^{122}$ | Inferred from observed cosmological constant | Second input (cosmology only) |
+
+**On the status of $P$:** The OPH axioms fix the functional form $P/4 = \bar{\ell}_{\text{SU(2)}}(t_2) + \bar{\ell}_{\text{SU(3)}}(t_3)$, but do not determine the numerical value of $P$ from first principles. The value $P = 1.63094$ is extracted by requiring this relation to hold at the observed gauge couplings. This is a calibration step, analogous to measuring $G$ in general relativity or $\alpha$ in QED. Outputs that flow directly from the calibrated gauge couplings are therefore consistency checks, not predictions. See §1B for the full classification.
 
 ### 1.2 What Counts as "Derived"
 
@@ -50,9 +49,9 @@ Everything else entering the computation falls into one of three categories:
 
 3. **Numerical-method parameters**: loop order for RG running (1-loop SM for critical surface, 4-loop MSbar for $\Lambda_{\overline{\text{MS}}}$), lattice sizes and statistics for hadron ratios. These affect precision but not the prediction logic.
 
-### 1.3 No-Cheat Guarantee
+### 1.3 No-Leakage Guarantee
 
-The prediction code enforces a runtime mutation test: after computing all predictions, the PDG reference table is scrambled and predictions are recomputed. Any change triggers an assertion failure. This is implemented in `oph_predict_compare.py::_assert_pdg_not_used()`.
+The computation code enforces a runtime mutation test: after computing all outputs, the PDG reference table is scrambled and outputs are recomputed. Any change triggers an assertion failure. This verifies that no PDG values leak into the computation pipeline beyond the initial $P$ calibration. Implemented in `oph_predict_compare.py::_assert_pdg_not_used()`.
 
 ---
 
@@ -141,20 +140,97 @@ These affect computational precision but not the prediction logic. Changing them
 - Casimir eigenvalues, representation dimensions
 - GUT normalization factor $5/3$
 
-**The single genuine physical input**:
-- $P = 1.63094$ (pixel area)
+**The single free parameter**:
+- $P = 1.63094$ (pixel area), calibrated from the gauge coupling sector (see §1B)
 
 **Second input (cosmology only)**:
 - $\log(\dim\mathcal{H}) \sim 10^{122}$ (screen capacity)
 
 **What is NOT assumed or smuggled in**:
 - No particle masses
-- No coupling constants at any scale
 - No CKM matrix elements
 - No Higgs VEV or quartic coupling
 - No SUSY-breaking scale
 - No Yukawa couplings
 - No $\Lambda_{\text{QCD}}$
+
+---
+
+## 1B. Calibration vs. Prediction: Epistemic Classification of Outputs
+
+### 1B.1 The Circularity Question
+
+The pixel area constant $P$ is calibrated from the entropy-matching condition $P/4 = \bar{\ell}_{\text{SU(2)}}(t_2) + \bar{\ell}_{\text{SU(3)}}(t_3)$, where $t_i = 4\pi^2 \alpha_i$ depends on the gauge couplings. This means $P$ encodes information from the gauge coupling sector. Any quantity that flows directly from the gauge couplings through the same algebraic chain used to calibrate $P$ is therefore a **consistency check** — it must reproduce the input data by construction, and its agreement with experiment does not constitute an independent test of the framework.
+
+This is not a defect of OPH any more than $G$ being calibrated from gravitational measurements is a defect of general relativity. Every quantitative theory requires at least one calibration to set its scale. The question is: how many independent outputs does the framework produce beyond the calibration sector?
+
+### 1B.2 Why "Downstream of P" Does Not Mean "Determined by P"
+
+A common objection is that every quantity computed using $P$ "inherits the calibration data," rendering all outputs circular. This conflates two distinct roles that $P$ plays:
+
+1. **Scale setting.** $P$ determines the overall energy scale (via $\alpha_U \to v$). Every theory has this: $G$ sets the Planck scale in general relativity, $\alpha$ sets the Bohr radius in QED. Quantities that depend on $P$ only for their conversion from dimensionless ratios to GeV are not "fitted" — they are *scaled*, exactly as a QED cross-section is scaled by $\alpha$ without being circular.
+
+2. **Structural determination.** The calibration procedure solves *one* equation (the pixel constraint) for *one* unknown ($\alpha_U$). This single degree of freedom determines the gauge couplings, $v$, $M_U$, $m_W$, and $m_Z$ — all members of a one-parameter family. These are the consistency checks (Tier 1).
+
+The Tier 2 predictions are determined by structural content — boundary conditions, algebraic identities, topological data — that is *logically independent* of the pixel constraint. Their dimensionless values are fixed before $P$ enters the computation. Concretely:
+
+| Prediction | Dimensionless form | What determines it (not $P$) |
+|---|---|---|
+| $m_e : m_\mu : m_\tau$ | Koide ratios from $Q = 2/3$, $\delta = 2/9$ | Algebraic: $\delta = (N_c+1)/(2N_cN_g)$, $Q$ from MaxEnt on $\mathbb{Z}_3$. Zero free parameters. |
+| $m_H / v$ | $\approx 0.509$; from $\lambda(M_U) = 0$, $\beta_\lambda(M_U) = 0$ | Critical surface (refinement stability). Independent boundary condition, not used in calibrating $P$. |
+| $m_t / v$ | $\approx 0.702$; from $y_t(M_U)$ at $\beta_\lambda = 0$ | Same critical surface. |
+| $m_f / m_t$ (quarks) | $\varepsilon^{n_f}$ with $\varepsilon = 1/6$, integer $n_f$ | $\mathbb{Z}_6$ quotient topology + $N_c$, $N_g$. No continuous parameter. |
+
+**The decisive test**: change $P$ to any other value. The lepton mass *ratios* do not change. The Higgs-to-VEV ratio does not change. The quark exponents do not change. Only the overall energy scale (the value of $v$ in GeV) shifts. This is the operational definition of "independent of the calibration."
+
+To see why, note that $P$ is a single real number. It cannot simultaneously encode the electron-to-muon mass ratio ($m_e/m_\mu \approx 1/206.8$), the Higgs-to-top ratio ($m_H/m_t \approx 0.725$), and the six quark-mass exponents $(6,3,0,6,4,2)$. These are independent degrees of freedom whose values are fixed by structural constraints that do not reference $P$, the entropy-matching condition, or any experimental coupling constant. Their agreement with observation is a test the framework could fail.
+
+### 1B.3 Classification
+
+**Tier 1 — Calibration-sector consistency checks.** These quantities are algebraically entangled with $P$'s calibration. Their agreement with PDG data demonstrates internal consistency of the formalism but does not constitute independent prediction.
+
+| Quantity | Why it's a consistency check |
+|----------|------------------------------|
+| $\alpha_s(m_Z)$, $\alpha_{\text{em}}^{-1}(m_Z)$, $\sin^2\theta_W(m_Z)$ | The gauge couplings at $m_Z$ are the data from which $P$ (via $\alpha_U$) is extracted. The self-consistent fixed-point procedure ensures these reproduce. |
+| $m_Z$ (tree-level) | $m_Z = \frac{1}{2}v\sqrt{g_2^2 + g_Y^2}$ where $v$ and the couplings both flow from $\alpha_U$, which is determined by the pixel constraint that calibrated $P$. |
+| $m_W$ (tree-level) | Same: $m_W = \frac{1}{2}v \cdot g_2$, directly from the calibrated couplings. |
+| $v$ (Higgs VEV) | $v = E_{\text{cell}} \cdot e^{-2\pi/(\beta_{\text{EW}} \alpha_U)}$; determined by $\alpha_U$, which is the variable solved for during $P$ calibration. |
+
+**Tier 2 — Genuine predictions.** These quantities are determined by structural content of OPH (critical surface conditions, Koide structure, $\mathbb{Z}_6$ texture) that is logically independent of the gauge-coupling calibration. They use $P$ only to set an overall scale, and their specific values are not guaranteed by the calibration.
+
+| Quantity | Why it's a genuine prediction |
+|----------|-------------------------------|
+| $m_H$ (Higgs mass) | From $\lambda(M_U) = 0$, $\beta_\lambda(M_U) = 0$ (refinement stability) — an independent boundary condition not used in calibrating $P$. |
+| $m_t$ (top mass, critical surface) | From $y_t(M_U)$ fixed by $\beta_\lambda = 0$; independent of the pixel constraint. |
+| $m_e, m_\mu, m_\tau$ (charged leptons) | From the Koide structure ($Q = 2/3$, $\delta = 2/9$) — algebraically independent of the gauge-coupling sector. |
+| Quark mass hierarchy | From $\mathbb{Z}_6$ texture with exponents derived from $N_c$, $N_g$; independent of $P$'s value. |
+| $m_{\nu_1}, m_{\nu_2}, m_{\nu_3}$ | From screen capacity $\log(\dim\mathcal{H})$, a second input entirely independent of $P$. |
+| $\Lambda_{\overline{\text{MS}}}$, hadron masses | Propagated from $\alpha_s$, which is in the calibration sector — but the hadron mass *ratios* $C_X$ are independently computed via lattice QCD. |
+
+**Tier 3 — Parameter-free structural predictions.** These discrete quantities follow from the axioms alone with no continuous free parameter whatsoever.
+
+| Quantity | Origin |
+|----------|--------|
+| Gauge group $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$ | Tannaka-Krein + MAR |
+| $N_c = 3$, $N_g = 3$ | Anomaly cancellation + MAR |
+| $\varepsilon = 1/6$ | $\mathbb{Z}_6$ quotient topology |
+| $\delta = 2/9$, $Q = 2/3$ | Algebraic from $N_c$, $N_g$, $\beta_{\text{EW}}$ |
+| $m_\gamma = m_g = m_{\text{graviton}} = 0$ | Symmetry protection |
+| Proton stability | Product gauge group (no leptoquark generators) |
+
+### 1B.4 What OPH Actually Achieves
+
+The Standard Model has 19 free parameters (or 26 with neutrino masses). OPH reduces this to 1 continuous free parameter ($P$) plus 1 cosmological input ($\log \dim \mathcal{H}$), with all structural content (gauge group, generation count, mass hierarchy pattern) derived from axioms.
+
+The genuine predictive content — Tier 2 — includes the Higgs mass, top mass, all three charged lepton masses, the fermion mass hierarchy, and neutrino masses. These are non-trivial outputs. The charged leptons achieve sub-permille accuracy from a structure ($Q = 2/3$, $\delta = 2/9$) that has no free parameters. The Higgs and top masses are predicted at the ~1% level from a boundary condition ($\lambda = \beta_\lambda = 0$ at $M_U$) that is independent of the gauge-coupling calibration.
+
+The quark masses are the weakest sector: the hierarchy is qualitatively correct (5 orders of magnitude from integer exponents in base 6), but individual masses show 16–73% deviations due to missing scheme matching, order-one Clebsch factors, and $u$-$d$ degeneracy. This is an honest limitation, not hidden by relabeling.
+
+### 1B.5 Summary
+
+$P$ is analogous to Newton's constant $G$ in general relativity, or $\alpha$ in QED: a single dimensionful parameter that must be measured. The framework's claim is not "we predict everything from nothing" but rather: **from one measured constant and a set of axioms, the framework determines the complete structure of particle physics, with most outputs being genuine predictions independent of the calibration.**
+
+The gauge couplings at $m_Z$ are consistency checks. The lepton masses, Higgs mass, top mass, and mass hierarchy are predictions. The quark masses are qualitative.
 
 ---
 
@@ -291,7 +367,7 @@ Setting $\beta_\lambda = 0$ at one loop with $\lambda = 0$ fixes the top Yukawa 
 
 $$y_t(M_U) = \left[\frac{1}{16}\left(2g_2^4 + (g_2^2 + g_1^2)^2\right)\right]^{1/4}$$
 
-where $g_1(M_U)$ and $g_2(M_U)$ are obtained by running the OPH-predicted couplings from $m_Z$ to $M_U$ using 1-loop SM $\beta$-functions.
+where $g_1(M_U)$ and $g_2(M_U)$ are obtained by running the OPH-derived couplings from $m_Z$ to $M_U$ using 1-loop SM $\beta$-functions.
 
 ### 5.2 RG Evolution to Low Scales
 
@@ -383,7 +459,7 @@ $$m_e = S \cdot r_1^2, \quad m_\mu = S \cdot r_2^2, \quad m_\tau = S \cdot r_3^2
 
 ### 7.1 $\Lambda_{\overline{\text{MS}}}$ from $\alpha_s(m_Z)$
 
-Given the OPH-predicted $\alpha_s(m_Z) \approx 0.1183$ and the predicted quark thresholds ($m_b$, $m_c$ from Stage 5), the QCD scale is extracted using the standard 4-loop MSbar definition:
+Given the OPH-derived $\alpha_s(m_Z) \approx 0.1183$ (a calibration-sector output) and the quark thresholds ($m_b$, $m_c$ from Stage 5), the QCD scale is extracted using the standard 4-loop MSbar definition:
 
 $$\ln\frac{\mu^2}{\Lambda^2} = \frac{1}{\beta_0 a} + \frac{\beta_1}{\beta_0^2}\ln(\beta_0 a) + \int_0^a dx\left[\frac{1}{\beta(x)} + \frac{1}{\beta_0 x^2} - \frac{\beta_1}{\beta_0^2 x}\right]$$
 
@@ -450,66 +526,68 @@ These are **symmetry-protected zeros**, not accidental cancellations. The gauge 
 
 ---
 
-## 10. Complete Spectrum: Predictions vs PDG
+## 10. Complete Spectrum: OPH Outputs vs PDG
 
-All predictions below use inputs $P = 1.63094$ and $\log(\dim\mathcal{H}) = 10^{122}$ only. PDG values are from the 2024/2025 edition, fetched via the official `pdg` Python package.
+All outputs below use inputs $P = 1.63094$ and $\log(\dim\mathcal{H}) = 10^{122}$ only. PDG values are from the 2024/2025 edition. Each output is classified as **consistency check** (Tier 1, from calibration sector), **prediction** (Tier 2, structurally independent of calibration), or **structural** (Tier 3, parameter-free). See §1B for the full classification.
 
 ### 10.1 Gauge Bosons and Higgs
 
-| Particle | OPH (GeV) | PDG (GeV) | Rel. Error | Stage | Error Source |
-|----------|----------:|----------:|-----------:|-------|-------------|
-| $\gamma$ | 0 | 0 | exact | §9 | Symmetry-protected; no error expected |
-| $g$ (gluon) | 0 | 0 | exact | §9 | Symmetry-protected; no error expected |
-| $W$ boson | 80.386 | 80.377 ± 0.012 | +0.012% | §4 | Tree-level only; missing 1-loop EW corrections ($\Delta r$) would shift by ~0.1%. Residual is well within this |
-| $Z$ pole | 91.220 | 91.188 ± 0.002 | +0.035% | §4 | Uses simplified $\Delta\rho = 3/(32\pi^2)$ (unit Yukawa); full $\Delta\rho(m_t, m_b, m_H)$ would absorb most of this. Also missing 2-loop EW and mixed QCD-EW corrections |
-| $H$ (Higgs) | 126.48 | 125.20 ± 0.11 | +1.02% | §5 | Critical surface uses 1-loop SM RGE only. 2-loop $\beta_\lambda$ (especially the $\alpha_s y_t^2$ term) shifts $m_H$ downward by ~1 GeV, closing most of this gap. Also sensitive to exact $M_U$ value |
+| Particle | OPH (GeV) | PDG (GeV) | Rel. Error | Tier | Error Source |
+|----------|----------:|----------:|-----------:|------|-------------|
+| $\gamma$ | 0 | 0 | exact | Structural | Symmetry-protected; no error expected |
+| $g$ (gluon) | 0 | 0 | exact | Structural | Symmetry-protected; no error expected |
+| $W$ boson | 80.386 | 80.377 ± 0.012 | +0.012% | Consistency | Flows from calibrated $\alpha_U$ and $v$. Tree-level only; missing 1-loop EW corrections ($\Delta r$) would shift by ~0.1% |
+| $Z$ pole | 91.220 | 91.188 ± 0.002 | +0.035% | Consistency | Flows from calibrated couplings. Uses simplified $\Delta\rho = 3/(32\pi^2)$; full $\Delta\rho(m_t, m_b, m_H)$ would absorb most of this |
+| $H$ (Higgs) | 126.48 | 125.20 ± 0.11 | +1.02% | **Prediction** | Independent boundary condition $\lambda(M_U) = 0$, $\beta_\lambda(M_U) = 0$. 1-loop SM RGE only; 2-loop shifts $m_H$ down ~1 GeV |
 
 ### 10.2 Charged Leptons
 
-| Particle | OPH (GeV) | PDG (GeV) | Rel. Error | Stage | Error Source |
-|----------|----------:|----------:|-----------:|-------|-------------|
-| Electron | 5.109 × 10⁻⁴ | 5.110 × 10⁻⁴ | −0.023% | §6 | Koide structure is tightly constrained ($Q=2/3$, $\delta=2/9$); residual is from the scale-factor $S$ determination. is reduced by including QED running from $m_Z$ to $m_e$ |
-| Muon | 0.10564 | 0.10566 | −0.022% | §6 | Same Koide structure; all three leptons shift together. QED running corrections between $m_Z$ and $m_\mu$ are ~0.02%, matching the observed offset |
-| Tau | 1.7766 | 1.7769 ± 0.09 | −0.020% | §6 | Same origin. The uniform sign (all slightly low) shows a common scale-factor effect from QED running or the $2^{1/6}$ normalization convention |
+| Particle | OPH (GeV) | PDG (GeV) | Rel. Error | Tier | Error Source |
+|----------|----------:|----------:|-----------:|------|-------------|
+| Electron | 5.109 × 10⁻⁴ | 5.110 × 10⁻⁴ | −0.023% | **Prediction** | Koide structure ($Q=2/3$, $\delta=2/9$) is independent of gauge-coupling calibration; residual from QED running |
+| Muon | 0.10564 | 0.10566 | −0.022% | **Prediction** | Same Koide structure; all three leptons shift together. QED running corrections ~0.02%, matching the offset |
+| Tau | 1.7766 | 1.7769 ± 0.09 | −0.020% | **Prediction** | Same origin. Uniform sign shows common scale-factor effect from QED running |
 
 ### 10.3 Neutrinos
 
-| Particle | OPH (GeV) | Experiment | Stage | Error Source |
-|----------|----------:|----------:|-------|-------------|
-| $\nu_e$ | 8.39 × 10⁻¹⁴ | $< 8 \times 10^{-10}$ (KATRIN) | §8 | No direct mass measurement exists. Prediction consistent with all bounds. Hierarchy ($\varepsilon, \varepsilon^2$ suppression) is a minimal ansatz; actual PMNS mixing structure not derived |
-| $\nu_\mu$ | 5.04 × 10⁻¹³ | $< 8 \times 10^{-10}$ (KATRIN) | §8 | Same; mass splitting $\Delta m_{21}^2$ consistent with solar oscillation scale in order of magnitude |
-| $\nu_\tau$ | 3.02 × 10⁻¹² | $< 8 \times 10^{-10}$ (KATRIN) | §8 | Anchored at $\rho_\Lambda^{1/4}$; mass splitting $\Delta m_{32}^2$ consistent with atmospheric scale in order of magnitude |
+| Particle | OPH (GeV) | Experiment | Tier | Error Source |
+|----------|----------:|----------:|------|-------------|
+| $\nu_e$ | 8.39 × 10⁻¹⁴ | $< 8 \times 10^{-10}$ (KATRIN) | **Prediction** | Uses second input ($\log\dim\mathcal{H}$), independent of $P$. Consistent with all bounds |
+| $\nu_\mu$ | 5.04 × 10⁻¹³ | $< 8 \times 10^{-10}$ (KATRIN) | **Prediction** | Same; $\Delta m_{21}^2$ consistent with solar oscillation scale in order of magnitude |
+| $\nu_\tau$ | 3.02 × 10⁻¹² | $< 8 \times 10^{-10}$ (KATRIN) | **Prediction** | Anchored at $\rho_\Lambda^{1/4}$; $\Delta m_{32}^2$ consistent with atmospheric scale |
 
 All predictions are well below the current experimental upper bound of $\sim 0.8$ eV $\approx 8 \times 10^{-10}$ GeV. The predicted mass splittings are consistent with oscillation data in order of magnitude.
 
 ### 10.4 Quarks
 
-| Particle | OPH (GeV) | PDG (GeV) | Rel. Error | Stage | Error Source |
-|----------|----------:|----------:|-----------:|-------|-------------|
-| up | 3.74 × 10⁻³ | 2.16 × 10⁻³ | +73% | §6 | **$u$-$d$ degeneracy**: both get exponent $n=6$, predicting $m_u = m_d$. Real isospin breaking ($m_u/m_d \approx 0.46$) requires subleading defect insertions or EM corrections not included in the minimal texture |
-| down | 3.74 × 10⁻³ | 4.70 × 10⁻³ | −20% | §6 | Same $u$-$d$ degeneracy. The geometric mean $\sqrt{m_u m_d} \approx 3.2$ MeV is closer to the prediction (3.7 MeV), suggesting the texture captures the average correctly |
-| strange | 0.1346 | 0.0935 | +44% | §6 | Exponent $n_s = 4$ gives $m_s \sim v \varepsilon^4 / \sqrt{2}$. PDG value is $\overline{\text{MS}}$ at 2 GeV; no scheme matching applied. Also, CKM mixing rotates the down-sector SVD, and order-one Clebsch factors ($c_s \approx 0.7$) are not resolved |
-| charm | 0.808 | 1.273 | −37% | §6 | Exponent $n_c = 3$; PDG value is $\overline{\text{MS}}$ at $m_c$. Missing RG running from $\mu \sim v$ down to $m_c$ (a factor ~1.3 from QCD running) plus order-one Clebsch coefficient ($c_c \approx 1.6$) |
-| bottom | 4.847 | 4.183 | +16% | §6 | Exponent $n_b = 2$; PDG value is $\overline{\text{MS}}$ at $m_b$. Running from $v$ to $m_b$ reduces mass by ~15%, which would largely close this gap. Residual is from Clebsch factor |
-| top (texture) | 174.5 | 172.6 | +1.1% | §6 | Exponent $n_t = 0$ (unsuppressed Yukawa). Small error from $v$ being 0.2% high and from SVD rotation effects in the up-sector mass matrix |
-| top (crit. surf.) | 171.1 | 172.6 | −0.87% | §5 | Independent derivation via critical surface + 3-loop pole mass conversion. Missing 2-loop RGE and exact threshold matching at $M_U$; expected error is ~1% |
+| Particle | OPH (GeV) | PDG (GeV) | Rel. Error | Tier | Error Source |
+|----------|----------:|----------:|-----------:|------|-------------|
+| up | 3.74 × 10⁻³ | 2.16 × 10⁻³ | +73% | **Prediction** | **$u$-$d$ degeneracy**: both get exponent $n=6$. Real isospin breaking requires subleading effects not included |
+| down | 3.74 × 10⁻³ | 4.70 × 10⁻³ | −20% | **Prediction** | Same degeneracy. Geometric mean $\sqrt{m_u m_d} \approx 3.2$ MeV is closer to 3.7 MeV |
+| strange | 0.1346 | 0.0935 | +44% | **Prediction** | No scheme matching; missing Clebsch factors and CKM rotation |
+| charm | 0.808 | 1.273 | −37% | **Prediction** | Missing RG running from $v$ to $m_c$ (~factor 1.3) and Clebsch coefficient |
+| bottom | 4.847 | 4.183 | +16% | **Prediction** | Running from $v$ to $m_b$ reduces mass by ~15%, closing most of the gap |
+| top (texture) | 174.5 | 172.6 | +1.1% | **Prediction** | Exponent $n_t = 0$ (unsuppressed Yukawa); small error from $v$ offset |
+| top (crit. surf.) | 171.1 | 172.6 | −0.87% | **Prediction** | Independent critical surface derivation; missing 2-loop RGE |
 
 ### 10.5 Gauge Couplings at $m_Z$
 
-| Quantity | OPH | PDG | Rel. Error | Error Source |
-|----------|----:|----:|-----------:|-------------|
-| $\alpha_{\text{em}}^{-1}(m_Z)$ | 128.31 | 127.952 ± 0.009 | +0.28% | One-loop MSSM running from $M_U$; 2-loop corrections and threshold effects at $M_U$ and $M_S$ are each ~0.1%. Combined, these could absorb the 0.28% offset |
-| $\sin^2\theta_W(m_Z)$ | 0.2307 | 0.23122 ± 0.00004 | −0.21% | Most sensitive to the precise threshold scale $M_S$ and 2-loop corrections. This is the tightest constraint; full 2-loop matching needed to reach PDG precision |
-| $\alpha_s(m_Z)$ | 0.1183 | 0.1179 ± 0.0009 | +0.37% | Within 0.5$\sigma$ of PDG. One-loop running; 2-loop and threshold corrections estimated at ~0.5%. Excellent consistency |
+These are **calibration-sector consistency checks** (Tier 1). The gauge couplings at $m_Z$ are the data from which $P$ is extracted via the entropy-matching condition and self-consistent fixed-point procedure. Their agreement with PDG values demonstrates internal consistency of the formalism, not independent predictive power.
+
+| Quantity | OPH | PDG | Rel. Error | Tier | Error Source |
+|----------|----:|----:|-----------:|------|-------------|
+| $\alpha_{\text{em}}^{-1}(m_Z)$ | 128.31 | 127.952 ± 0.009 | +0.28% | Consistency | Flows from calibrated $\alpha_U$; 2-loop and threshold effects ~0.1% each |
+| $\sin^2\theta_W(m_Z)$ | 0.2307 | 0.23122 ± 0.00004 | −0.21% | Consistency | Most sensitive to threshold scale; full 2-loop matching needed |
+| $\alpha_s(m_Z)$ | 0.1183 | 0.1179 ± 0.0009 | +0.37% | Consistency | Within 0.5$\sigma$ of PDG |
 
 ### 10.6 Derived Scales
 
-| Quantity | OPH Value | Reference | Agreement | Error Source |
-|----------|----------:|----------:|----------:|-------------|
-| $v$ (Higgs VEV) | 246.77 GeV | 246.22 GeV | +0.22% | Sensitive to $\alpha_U$ and the transmutation formula. The 0.22% reflects propagation of small errors in $\alpha_U$ through the exponential $e^{-2\pi/(\beta_{\text{EW}} \alpha_U)}$ |
-| $M_U$ | 2.47 × 10¹⁶ GeV | — | — | No direct measurement. Consistent with proton stability bounds ($\tau_p > 10^{34}$ yr requires $M_U \gtrsim 10^{15}$ GeV) |
-| $\alpha_U^{-1}$ | 24.32 | — | — | No direct measurement |
-| $\Lambda_{\overline{\text{MS}}}^{(3)}$ | 0.322 GeV | ~0.332 GeV | −3.0% | Propagated from $\alpha_s$ error (0.4% in $\alpha_s$ → ~3% in $\Lambda$ due to the exponential sensitivity $d\ln\Lambda/d\ln\alpha_s \approx 7$). Also affected by using OPH-predicted quark thresholds $m_b, m_c$ (which differ from PDG by 16%/37%) in the flavor stepping |
+| Quantity | OPH Value | Reference | Agreement | Tier | Error Source |
+|----------|----------:|----------:|----------:|------|-------------|
+| $v$ (Higgs VEV) | 246.77 GeV | 246.22 GeV | +0.22% | Consistency | Flows from calibrated $\alpha_U$ via transmutation formula |
+| $M_U$ | 2.47 × 10¹⁶ GeV | — | — | Consistency | No direct measurement; consistent with proton stability bounds |
+| $\alpha_U^{-1}$ | 24.32 | — | — | Consistency | Intermediate variable in calibration procedure |
+| $\Lambda_{\overline{\text{MS}}}^{(3)}$ | 0.322 GeV | ~0.332 GeV | −3.0% | Consistency | Propagated from $\alpha_s$ (calibration sector); 0.4% in $\alpha_s$ → ~3% in $\Lambda$ |
 
 ### 10.7 Hadron Masses
 
@@ -529,19 +607,19 @@ Hadron masses follow from $m_X = C_X \cdot \Lambda_{\overline{\text{MS}}}^{(3)}$
 
 ## 11. Analysis of Discrepancies
 
-### 11.1 Excellent Agreement (< 0.1%)
+### 11.1 Sub-Permille Outputs (< 0.1%)
 
 **W boson** (+0.012%), **Z boson** (+0.035%), **electron** (−0.023%), **muon** (−0.022%), **tau** (−0.020%):
 
-These five predictions are at the sub-permille level. The gauge boson masses follow directly from the pixel constraint and transmutation formula. The charged leptons benefit from the Koide structure, which is highly constrained (only one continuous parameter $\delta = 2/9$ enters, and it is derived from $N_c$ and $N_g$).
+These five outputs are at the sub-permille level, but their epistemic status differs. The gauge boson masses ($W$, $Z$) are **consistency checks**: they flow directly from the calibrated gauge couplings and $v$, so their agreement is expected by construction. The charged leptons ($e$, $\mu$, $\tau$) are **genuine predictions**: the Koide structure ($Q = 2/3$, $\delta = 2/9$) is algebraically independent of the gauge-coupling calibration and has no continuous free parameter.
 
-### 11.2 Good Agreement (0.1% – 2%)
+### 11.2 Percent-Level Outputs (0.1% – 2%)
 
 **Higgs** (+1.0%), **top pole** (−0.87%), **$\alpha_s$** (+0.37%), **$\sin^2\theta_W$** (−0.21%), **$\alpha_{\text{em}}^{-1}$** (+0.28%):
 
-The Higgs and top masses come from the critical surface constraint with 1-loop RG running. The ~1% error is consistent with the expected size of 2-loop corrections, threshold effects at $M_U$, and scheme matching between the entanglement-defined coupling and $\overline{\text{MS}}$. These is systematically improved by extending to 2-loop RGEs.
+Again, the epistemic status differs within this group. The **gauge couplings** ($\alpha_s$, $\sin^2\theta_W$, $\alpha_{\text{em}}^{-1}$) are **consistency checks** — they are the data used to calibrate $P$, so their agreement demonstrates that the self-consistent fixed-point procedure works, not that the framework predicts them.
 
-The coupling predictions at $m_Z$ are similarly limited by one-loop running. The $\sin^2\theta_W$ tension (~2$\sigma$ relative to the precise PDG value) is where precision threshold and two-loop effects matter most.
+The **Higgs and top masses** are **genuine predictions**: they come from the critical surface constraint ($\lambda(M_U) = 0$, $\beta_\lambda(M_U) = 0$) with 1-loop RG running — an independent boundary condition not used in calibrating $P$. The ~1% error is consistent with the expected size of 2-loop corrections and threshold effects.
 
 ### 11.3 Qualitative Agreement Only: Quark Masses (16% – 73%)
 
@@ -648,17 +726,28 @@ python3 ../tools/fetch_pdg_data.py
 
 ## Summary
 
-Starting from two numbers — the pixel area $P = 1.63094$ and the screen capacity $\log(\dim\mathcal{H}) \sim 10^{122}$ — the OPH derivation chain produces:
+Starting from one calibrated constant — the pixel area $P = 1.63094$ — and one cosmological input — the screen capacity $\log(\dim\mathcal{H}) \sim 10^{122}$ — the OPH derivation chain produces outputs in three epistemic tiers:
 
-- **5 predictions at < 0.04% accuracy**: $W$, $Z$, $e$, $\mu$, $\tau$
-- **5 predictions at 0.2%–1% accuracy**: $H$, $m_t^{\text{pole}}$, $\alpha_s$, $\sin^2\theta_W$, $\alpha_{\text{em}}^{-1}$
-- **6 quark masses** at the correct order of magnitude with hierarchy correctly reproduced, but 16%–73% individual errors from missing scheme matching
-- **3 neutrino masses** consistent with all current bounds
-- **3 exactly massless particles** ($\gamma$, $g$, graviton) from symmetry protection
-- **Hadron masses** from $\Lambda_{\overline{\text{MS}}}^{(3)}$ via lattice QCD (systematic uncertainties ~10–20% from quenched approximation)
+**Calibration-sector consistency checks** (agreement expected by construction):
+- Gauge couplings at $m_Z$: $\alpha_s$, $\sin^2\theta_W$, $\alpha_{\text{em}}^{-1}$ (0.2–0.4%)
+- Electroweak boson masses: $W$ (+0.012%), $Z$ (+0.035%)
+- Higgs VEV $v$ (+0.22%)
 
-No PDG masses or couplings enter the prediction pipeline at any point. The derivation chain is:
+**Genuine predictions** (structurally independent of calibration):
+- Charged leptons: $e$, $\mu$, $\tau$ at < 0.025% (from parameter-free Koide structure)
+- Higgs mass: 126.48 GeV vs 125.20 GeV (+1.0%, from critical surface $\lambda = \beta_\lambda = 0$)
+- Top quark: 171.1 GeV vs 172.6 GeV (−0.87%, from critical surface)
+- 6 quark masses at correct order of magnitude with hierarchy reproduced, but 16–73% individual errors from missing scheme matching and Clebsch factors
+- 3 neutrino masses consistent with all current bounds
+- Hadron masses from $\Lambda_{\overline{\text{MS}}}^{(3)}$ via lattice QCD (10–20% systematics)
+
+**Parameter-free structural predictions** (from axioms alone):
+- Gauge group $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, $N_c = 3$, $N_g = 3$
+- 3 exactly massless particles ($\gamma$, $g$, graviton) from symmetry protection
+- Proton stability, $\varepsilon = 1/6$, $\delta = 2/9$, $Q = 2/3$
+
+The derivation chain is:
 
 $$\boxed{P \;\xrightarrow{\text{entropy matching}}\; \alpha_U, M_U \;\xrightarrow{\text{transmutation}}\; v \;\xrightarrow{\text{RG + pixel}}\; \alpha_i(m_Z), m_Z, m_W \;\xrightarrow{\text{critical surface}}\; m_H, m_t \;\xrightarrow{\mathbb{Z}_6\text{ texture}}\; m_f \;\xrightarrow{\Lambda_{\overline{\text{MS}}}}\; m_{\text{hadrons}}}$$
 
-Every arrow is a mathematical derivation. The only free parameter is $P$.
+$P$ is the single free parameter, calibrated from the gauge coupling sector. The first arrow is calibration; subsequent arrows produce genuine predictions. The framework's claim is not "we predict everything from nothing" but: **from one calibrated constant and structural axioms, the framework determines the complete particle spectrum, with most outputs independent of the calibration.**

@@ -121,11 +121,11 @@ work out the consequences, the results are extraordinary:
 
 - **General relativity** emerges from entanglement equilibrium on the screen
 - **The Standard Model gauge group** SU(3) x SU(2) x U(1)/Z₆ is uniquely derived — not assumed
-- **Five particle masses** (W, Z, electron, muon, tau) are predicted to sub-permille accuracy from a single input
+- **Three charged lepton masses** (electron, muon, tau) are genuine predictions at sub-permille accuracy from parameter-free Koide structure; W and Z boson masses are calibration-sector consistency checks
 - **Dark matter phenomena** emerge as information deficits, not new particles
 - **Why anything exists at all** is answered: reality is a self-simulating strange loop
 
-No other framework in physics derives all of this from first principles.
+No other framework in physics derives all of this from a single calibrated constant and structural axioms.
 
 Once you make this shift, strange features of reality start making sense.
 The "weird" behaviors of physics-the ones that seem bizarre or paradoxical
@@ -161,7 +161,7 @@ This book reverse engineers reality from first principles.
 We start with a minimal assumption: observers exist, they have bounded
 access to information, and they must agree where their observations overlap.
 
-This framework has exactly one free parameter: the pixel area $P \approx 1.63$, the geometric size of a single computational element on the holographic screen in Planck units. Everything else — Newton's constant, gauge couplings, particle masses, the structure of spacetime — follows from the axioms or is determined by ratios involving this single scale. Five particle masses are predicted to sub-permille accuracy. The gauge group of the Standard Model is uniquely derived.
+This framework has exactly one free parameter: the pixel area $P \approx 1.63$, the geometric size of a single computational element on the holographic screen in Planck units, calibrated from the gauge coupling sector. Everything else — Newton's constant, particle masses, the structure of spacetime — follows from the axioms or is determined by structural conditions. Three charged lepton masses are predicted to sub-permille accuracy from parameter-free Koide structure. The Higgs and top masses are predicted at ~1% from an independent critical surface condition. The gauge group of the Standard Model is uniquely derived.
 
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency
@@ -182,7 +182,7 @@ The structure follows the logic of reverse engineering:
 3. **Test against behavior.** We catalogue predictions, both verified and
    testable. We note what identifies a measurement contradiction with the model.
 
-This model rests on established mathematics and physics, extended by four axioms and one selection principle. The results are striking: general relativity, the Standard Model gauge group, and five particle masses all emerge from the framework. Our goal is to show you how deep the rabbit hole goes.
+This model rests on established mathematics and physics, extended by four axioms and one selection principle. The results are striking: general relativity, the Standard Model gauge group, and the particle mass spectrum all emerge from the framework — with charged lepton masses predicted to sub-permille accuracy and the Higgs and top masses to ~1%. Our goal is to show you how deep the rabbit hole goes.
 
 ## Let's Go
 

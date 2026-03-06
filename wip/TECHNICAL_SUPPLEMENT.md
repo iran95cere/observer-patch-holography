@@ -1,8 +1,6 @@
 # Technical Supplement: Mathematical Foundations of Observer-Patch Holography
 
-> OPH is the fundamental theory that exactly describes how our universe works, why it has the structure it has, and why it exists.
-> The Standard Model, quantum field theory, general relativity, and string theory are effective descriptions of underlying OPH dynamics.
-> From two input constants and five axioms (A1-A4 + MAR), OPH determines universe-wide properties, resolves incompatibilities, and explains measurement divergences including dark matter.
+> OPH is an observer-centric framework for fundamental physics. From one calibrated constant (the pixel area), structural axioms (A1-A4 + MAR), and one cosmological input (screen capacity), OPH derives the Standard Model gauge group, particle mass hierarchy, and key quantitative outputs.
 
 
 ## For Theoretical Physicists
@@ -285,7 +283,7 @@ $$\alpha_i^{-1}(M_Z) = \alpha_U^{-1} + \frac{b_i}{2\pi}\ln\frac{M_U}{M_Z}$$
 Define $A_i := \alpha_i^{-1}(M_Z)$, $L := \ln(M_U/M_Z)$. Eliminating $\alpha_U$:
 $$L = \frac{2\pi}{b_1 - b_2}(A_1 - A_2)$$
 
-The prediction for $\alpha_s$:
+The consistency relation for $\alpha_s$ (a consistency check when all three couplings are used for calibration; a genuine prediction in the two-input mode where only $\hat{\alpha}^{-1}(M_Z)$ is used):
 $$A_3^{\text{pred}} = \frac{b_3 - b_2}{b_1 - b_2}A_1 + \frac{b_1 - b_3}{b_1 - b_2}A_2$$
 
 ## 5.2 SM vs MSSM Coefficients
