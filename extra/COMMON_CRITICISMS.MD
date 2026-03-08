@@ -32,11 +32,7 @@ That is exactly what the paper's epistemic classification answers.
 
 ### Notation
 
-For the particle-spectrum discussion, the published notation in Part III is
-
-$$
-P \equiv a_{\rm cell}/\ell_P^2.
-$$
+For the particle-spectrum discussion, the published notation in Part III is `P = a_cell / l_P^2`.
 
 This note follows that convention in the circularity section. In the Lorentz/gravity section, `a_cell` is retained when discussing the geometric area law because that is the notation used in the main gravity derivation. They are the same underlying constant, written dimensionfully as `a_cell` and dimensionlessly as `P`.
 
@@ -268,37 +264,13 @@ That matters because the epistemic status of an output depends on which data are
 
 If one wants the reply in compact form, it is this:
 
-1. OPH has one particle-physics input constant:
-
-$$
-P \equiv a_{\rm cell}/\ell_P^2.
-$$
-
-2. `P` is calibrated from the pixel constraint:
-
-$$
-\frac{P}{4} = \bar{\ell}_{SU(2)}(t_2) + \bar{\ell}_{SU(3)}(t_3).
-$$
-
+1. OPH has one particle-physics input constant: `P = a_cell / l_P^2`.
+2. `P` is calibrated from the pixel constraint: `P/4 = lbar_SU(2)(t_2) + lbar_SU(3)(t_3)`.
 3. Any quantity algebraically entangled with that same calibration chain is a **consistency check**, not a claimed prediction.
-
 4. Other outputs are fixed by independent structural conditions:
-
-- Koide structure,
-- critical-surface RG boundary conditions,
-- `Z_6` topological texture,
-- screen-capacity input for neutrinos.
-
-Concrete examples of genuine predictions in that category are:
-
-- `m_H`,
-- `m_t`,
-- `m_e`, `m_mu`, `m_tau`,
-- the quark hierarchy pattern,
-- neutrino masses.
-
+Koide structure, critical-surface RG boundary conditions, `Z_6` topological texture, and screen-capacity input for neutrinos.
+Concrete examples of genuine predictions in that category are `m_H`, `m_t`, `m_e`, `m_mu`, `m_tau`, the quark hierarchy pattern, and neutrino masses.
 5. Therefore "depends on `P`" does **not** imply "is determined by the calibration of `P`."
-
 6. Operationally, if changing `P` changes only the overall scale while leaving the relevant dimensionless structure fixed, then that structure is not circularly inherited from the calibration.
 
 That is exactly why the paper distinguishes Tier 1 from Tier 2.
@@ -357,30 +329,13 @@ In OPH:
 
 - `a_cell` is a UV **area density** attached to cut elements of the screen net, not a preferred spatial ruler in emergent 3+1D spacetime.
 - The physical objects are patch algebras and their overlap maps, not coordinate cells in a background bulk.
-- Lorentz kinematics are derived from **geometric modular flow** on caps:
-
-$$
-K_C = 2\pi B_C,
-$$
-
-with
-
-$$
-\mathrm{Conf}^+(S^2) \cong \mathrm{PSL}(2,\mathbb C) \cong \mathrm{SO}^+(3,1).
-$$
-
+- Lorentz kinematics are derived from **geometric modular flow** on caps, with `K_C = 2pi B_C` and `Conf^+(S^2) ~= PSL(2,C) ~= SO^+(3,1)`.
 - The entanglement first law is applied to these algebraic caps, and it is covariant under the induced Lorentz action.
-- The gravity derivation is explicitly upgraded from a scalar rest-frame statement to the **full tensor Einstein equation** by overlap consistency across all local timelike directions:
-
-$$
-G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle,
-$$
-
-so the framework does **not** stop at a Newtonian approximation. This is the published chain in *Observers Are All You Need*, Part I §4.2-4.3 and Part I §5.1-5.7, with the compact theorem statements also summarized in Part V §2.1-2.5.
+- The gravity derivation is explicitly upgraded from a scalar rest-frame statement to the **full tensor Einstein equation** by overlap consistency across all local timelike directions, `G_ab + Lambda g_ab = 8pi G <T_ab>`, so the framework does **not** stop at a Newtonian approximation. This is the published chain in *Observers Are All You Need*, Part I §4.2-4.3 and Part I §5.1-5.7, with the compact theorem statements also summarized in Part V §2.1-2.5.
 
 ---
 
-## 1. What this cricitism seems fair
+## 1. Why this criticism can sound plausible
 
 There is a legitimate general concern that. e.g. Sabine Hossenfelder likes to bring up regarding quantum lattice models.
 
@@ -432,40 +387,15 @@ Neither statement matches OPH.
 
 ### 3.1 Entropy in OPH is algebraic, not naive cell counting
 
-For a cap `C`, OPH uses the reduced density matrix `rho_C` and the generalized entropy
+For a cap `C`, OPH uses the reduced density matrix `rho_C` and the generalized entropy `S_gen(C) = Tr(rho L_C) + S_bulk(C)`.
 
-$$
-S_{\rm gen}(C) = \mathrm{Tr}(\rho L_C) + S_{\rm bulk}(C),
-$$
+With edge-center decomposition, `rho_C = ⊕_alpha p_alpha (rho_bulk,C^alpha ⊗ 1_edge^alpha / d_alpha)`.
 
-with edge-center decomposition
+The area term is not "count visible squares in Euclidean coordinates." It is encoded by the edge-center operator `L_C`, whose expectation becomes extensive in the collar limit: `Tr(rho L_C) ≈ N_Sigma lbar(t)`.
 
-$$
-\rho_C
-=
-\bigoplus_\alpha p_\alpha
-\left(
-\rho_{{\rm bulk},C}^\alpha \otimes \frac{\mathbf 1_{\rm edge}^\alpha}{d_\alpha}
-\right).
-$$
+The geometric area scales as `A(C) ≈ N_Sigma a_cell`.
 
-The area term is not "count visible squares in Euclidean coordinates." It is encoded by the edge-center operator `L_C`, whose expectation becomes extensive in the collar limit:
-
-$$
-\mathrm{Tr}(\rho L_C) \approx N_\Sigma \, \bar{\ell}(t),
-$$
-
-while the geometric area is
-
-$$
-A(C) \approx N_\Sigma \, a_{\rm cell}.
-$$
-
-Matching the two gives
-
-$$
-G = \frac{a_{\rm cell}}{4\bar{\ell}(t)}.
-$$
+Matching the two gives `G = a_cell / (4 lbar(t))`.
 
 So `a_cell` is the geometric area per UV cut element in the emergent metric. It is not a pre-existing coordinate spacing in a preferred inertial frame (*Observers Are All You Need*, Part I §5.4).
 
@@ -473,31 +403,11 @@ So `a_cell` is the geometric area per UV cut element in the emergent metric. It 
 
 The correct object that transforms is the **patch algebra** and its modular generator.
 
-Once OPH derives geometric modular flow on caps, the relevant symmetry group is
+Once OPH derives geometric modular flow on caps, the relevant symmetry group is `Conf^+(S^2) ≅ SO^+(3,1)`.
 
-$$
-\mathrm{Conf}^+(S^2) \cong \mathrm{SO}^+(3,1).
-$$
+Write the induced action on the net as `alpha_Lambda`, or in a representation as conjugation by `U(Lambda)`. Then the covariant comparison is `rho_(Lambda C) = U(Lambda) rho_C U(Lambda)^dagger` and `K_(Lambda C) = U(Lambda) K_C U(Lambda)^dagger`.
 
-Write the induced action on the net as `alpha_Lambda`, or in a representation as conjugation by `U(Lambda)`. Then the covariant comparison is
-
-$$
-\rho_{\Lambda C} = U(\Lambda)\rho_C U(\Lambda)^\dagger,
-\qquad
-K_{\Lambda C} = U(\Lambda)K_CU(\Lambda)^\dagger.
-$$
-
-Von Neumann entropy is invariant under unitary conjugation:
-
-$$
-S(\rho_{\Lambda C})
-=
--\mathrm{Tr}\!\left(\rho_{\Lambda C}\log\rho_{\Lambda C}\right)
-=
--\mathrm{Tr}\!\left(\rho_C\log\rho_C\right)
-=
-S(\rho_C).
-$$
+Von Neumann entropy is invariant under unitary conjugation: `S(rho_(Lambda C)) = -Tr(rho_(Lambda C) log rho_(Lambda C)) = -Tr(rho_C log rho_C) = S(rho_C)`.
 
 So the claim "boost changes the entropy count" is not correct when the comparison is done between the **same physical region described in two Lorentz-related frames**. The entropy is an invariant of the reduced state up to unitary equivalence, not a frame-dependent count of shrunken coordinate pixels.
 
@@ -533,17 +443,13 @@ The key steps in the main paper are:
 3. Euclidean regularity fixes the KMS normalization to `2pi`.
 4. Therefore cap modular flow is the unique cap-preserving conformal dilation:
 
-$$
-K_C = 2\pi B_C.
-$$
+`K_C = 2pi B_C`.
 
 That is the `BW_{S^2}` step.
 
 Then:
 
-$$
-\mathrm{Conf}^+(S^2) \cong \mathrm{PSL}(2,\mathbb C) \cong \mathrm{SO}^+(3,1),
-$$
+`Conf^+(S^2) ≅ PSL(2,C) ≅ SO^+(3,1)`,
 
 so the induced kinematic symmetry is the connected Lorentz group.
 
@@ -553,21 +459,15 @@ This is not a vague analogy. It is the explicit theorem-level route the paper us
 
 Near a smooth entangling cut, the cap geometry blows up to a tangent Rindler geometry. In that limit, OPH derives the null-coordinate dilation
 
-$$
-v - v_0 \mapsto e^{-2\pi t}(v - v_0).
-$$
+`v - v_0 -> exp(-2pi t) (v - v_0)`.
 
 Half-sided modular inclusion then yields a positive null translation generator `P` with
 
-$$
-\Delta^{it} U(a)\Delta^{-it} = U(e^{-2\pi t}a),
-$$
+`Delta^(it) U(a) Delta^(-it) = U(exp(-2pi t) a)`,
 
 and hence
 
-$$
-[K,P] = i\,2\pi P.
-$$
+`[K,P] = i 2pi P`.
 
 That is the local boost/translation algebra, not a Newtonian remnant.
 
@@ -575,9 +475,7 @@ That is the local boost/translation algebra, not a Newtonian remnant.
 
 From the null modular bridge, OPH obtains
 
-$$
-K = 2\pi \int v\, T_{kk}(v,\Omega)\, dv + \text{(central term)}.
-$$
+`K = 2pi ∫ v T_kk(v,Omega) dv + central term`.
 
 This is the same structural role played by boost generators in the standard Bisognano-Wichmann setting. Once one has this, the theory is already operating in Lorentzian null kinematics, not in Galilean kinematics (*Observers Are All You Need*, Part I §5.2; Part V §2.3-2.4).
 
@@ -589,51 +487,25 @@ So the criticism's conclusion, "therefore only Newtonian gravity," does not foll
 
 The criticism invokes the first law of entanglement entropy:
 
-$$
-\delta S = \delta \langle K_{\rm mod} \rangle.
-$$
+`delta S = delta <K_mod>`.
 
 That is exactly the right place to look. But it does not harm OPH; it helps it.
 
 For a cap `C` in the reference state,
 
-$$
-K_C = -\log \rho_C^\omega,
-$$
+`K_C = -log rho_C^omega`,
 
 and the cap first law is
 
-$$
-\delta S_C = \delta \langle K_C \rangle.
-$$
+`delta S_C = delta <K_C>`.
 
 After the `BW_{S^2}` step this becomes
 
-$$
-\delta S_C = 2\pi\,\delta \langle B_C \rangle.
-$$
+`delta S_C = 2pi delta <B_C>`.
 
-Now apply a Lorentz transformation `Lambda`. Covariance gives
+Now apply a Lorentz transformation `Lambda`. Covariance gives `rho_C -> rho_(Lambda C) = U(Lambda) rho_C U(Lambda)^dagger` and `K_C -> K_(Lambda C) = U(Lambda) K_C U(Lambda)^dagger`.
 
-$$
-\rho_C \mapsto \rho_{\Lambda C} = U(\Lambda)\rho_CU(\Lambda)^\dagger,
-\qquad
-K_C \mapsto K_{\Lambda C} = U(\Lambda)K_CU(\Lambda)^\dagger.
-$$
-
-Therefore
-
-$$
-\delta S_{\Lambda C}
-=
-\delta \langle K_{\Lambda C} \rangle
-=
-\delta \mathrm{Tr}\!\left(U\rho_CU^\dagger\, UK_CU^\dagger\right)
-=
-\delta \mathrm{Tr}(\rho_CK_C)
-=
-\delta S_C.
-$$
+Therefore `delta S_(Lambda C) = delta <K_(Lambda C)> = delta Tr(U rho_C U^dagger U K_C U^dagger) = delta Tr(rho_C K_C) = delta S_C`.
 
 So the first law is **frame-covariant**, not frame-violating, once boosts are represented as automorphisms of the cap net (*Observers Are All You Need*, Part I §5.1 and Part I §4.2-4.3).
 
@@ -651,19 +523,13 @@ The OPH gravity derivation does not end with a Newtonian potential equation. It 
 
 Entanglement equilibrium plus the modular-energy bridge gives, in a local diamond rest frame,
 
-$$
-G_{00} + \Lambda g_{00} = 8\pi G \langle T_{00} \rangle.
-$$
+`G_00 + Lambda g_00 = 8pi G <T_00>`.
 
 ### 6.2 Null reconstruction
 
 From the null modular bridge one reconstructs `T_{kk}` for all null directions, and from those null data reconstructs a symmetric tensor `T_{ab}` modulo the expected metric ambiguity:
 
-$$
-X_{ab}k^ak^b = 0 \ \forall \text{ null } k
-\quad\Longrightarrow\quad
-X_{ab} = \phi g_{ab}.
-$$
+`X_ab k^a k^b = 0` for all null `k` implies `X_ab = phi g_ab`.
 
 This is why the derivation determines Einstein's equation only up to the cosmological term `Lambda g_{ab}`. That is standard and expected from null-data reconstruction (*Observers Are All You Need*, Part I §5.2 and Part V §2.4).
 
@@ -671,9 +537,7 @@ This is why the derivation determines Einstein's equation only up to the cosmolo
 
 Different observers through the same bulk point choose different local rest frames `u`. OPH then uses overlap consistency to require that the local equation hold for **all** timelike directions. The result is the full tensor form:
 
-$$
-G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle.
-$$
+`G_ab + Lambda g_ab = 8pi G <T_ab>`.
 
 This exact upgrade step is precisely what rules out the claim that the framework reaches only Newtonian gravity (*Observers Are All You Need*, Part I §5.6-5.7; Part V §2.5).
 
@@ -729,49 +593,12 @@ If one wants the reply in one compact chain, it is this:
 
 1. OPH does **not** identify physical entropy with a frame-dependent count of coordinate pixels.
 2. The physical objects are reduced states on cap algebras and their modular Hamiltonians.
-3. Under the OPH assumptions, cap modular flow is geometric and KMS-normalized:
-
-$$
-K_C = 2\pi B_C.
-$$
-
-4. The cap-preserving geometric group is conformal on `S^2`, hence
-
-$$
-\mathrm{Conf}^+(S^2) \cong \mathrm{SO}^+(3,1).
-$$
-
-5. Therefore boosts act as automorphisms of the cap net:
-
-$$
-\rho_C \mapsto U(\Lambda)\rho_CU(\Lambda)^\dagger,
-\qquad
-K_C \mapsto U(\Lambda)K_CU(\Lambda)^\dagger.
-$$
-
-6. Von Neumann entropy and the first-law pairing are invariant under this conjugation:
-
-$$
-S(U\rho U^\dagger) = S(\rho),
-\qquad
-\delta\langle UKU^\dagger\rangle_{U\rho U^\dagger}
-=
-\delta\langle K\rangle_\rho.
-$$
-
-7. The null blow-up gives the local boost algebra and stress-energy generator:
-
-$$
-[K,P] = i\,2\pi P,
-\qquad
-K = 2\pi\int v\,T_{kk}\,dv + \text{central}.
-$$
-
-8. Entanglement equilibrium then yields the Einstein equation, first in a rest frame and then, by overlap consistency across all timelike directions, in tensor form:
-
-$$
-G_{ab} + \Lambda g_{ab} = 8\pi G \langle T_{ab} \rangle.
-$$
+3. Under the OPH assumptions, cap modular flow is geometric and KMS-normalized: `K_C = 2pi B_C`.
+4. The cap-preserving geometric group is conformal on `S^2`, hence `Conf^+(S^2) ≅ SO^+(3,1)`.
+5. Therefore boosts act as automorphisms of the cap net: `rho_C -> U(Lambda) rho_C U(Lambda)^dagger` and `K_C -> U(Lambda) K_C U(Lambda)^dagger`.
+6. Von Neumann entropy and the first-law pairing are invariant under this conjugation: `S(U rho U^dagger) = S(rho)` and `delta <U K U^dagger>_(U rho U^dagger) = delta <K>_rho`.
+7. The null blow-up gives the local boost algebra and stress-energy generator: `[K,P] = i 2pi P` and `K = 2pi ∫ v T_kk dv + central`.
+8. Entanglement equilibrium then yields the Einstein equation, first in a rest frame and then, by overlap consistency across all timelike directions, in tensor form: `G_ab + Lambda g_ab = 8pi G <T_ab>`.
 
 That is why the criticism does not follow.
 
