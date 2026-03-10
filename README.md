@@ -33,7 +33,7 @@ All other documents in this repository are supporting derivations, supplements, 
 
 If you are new to physics, these are great starting points:
 
-- **Book (Web):** [OPH Book](https://oth-book.lovable.app)
+- **Book (Web):** [OPH Book](https://oph-book.floatingpragma.io)
 - **Interactive OPH Lab:** [floatingpragma.io/oph](https://floatingpragma.io/oph)
 - **NotebookLM notebook:** [Watch the introduction video and start asking questions](https://notebooklm.google.com/notebook/d5249760-6ce8-44a0-927b-ccf90402711a?artifactId=fb7c0ebd-4375-4997-9cae-6558ff8977b4)
 
