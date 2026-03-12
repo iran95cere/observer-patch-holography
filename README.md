@@ -33,6 +33,14 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 - **PDF:** [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)
 - **LaTeX source:** [reality_as_consensus_protocol.tex](paper/reality_as_consensus_protocol.tex)
 
+Each PDF carries a visible paper release line. The shared release source is
+[`paper/release_info.tex`](paper/release_info.tex), and the current PDF hashes are written to
+[`paper/paper_release_manifest.json`](paper/paper_release_manifest.json) by running:
+
+```bash
+python3 tools/generate_paper_release_manifest.py
+```
+
 The canonical paper sources now live under [`paper/`](paper). The old draft tree has been removed from the repository.
 
 ## Official OPH Resources

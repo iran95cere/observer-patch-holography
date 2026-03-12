@@ -6,6 +6,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\input{release_info.tex}
 
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
 
@@ -17,10 +18,11 @@
 \title{Reality as a Consensus Protocol:\\
 The Fixed-Point Computation That Implements Physics}
 \author{B.\ M\"uller}
-\date{March 2026}
+\date{March 13, 2026}
 
 \begin{document}
 \maketitle
+\OPHPaperReleaseBanner
 
 \begin{abstract}
 We show that objective physical law is the unique fixed point of a distributed consensus protocol running between observer patches. The model is simple: a finite graph of local observers, each holding a local state, connected by overlap regions where they must agree. No global state is postulated. Instead, an asynchronous reconciliation process repairs local inconsistencies, and we prove that if this process terminates and is locally confluent, every initial configuration converges to a unique normal form regardless of execution order. The terminal state \emph{is} physical reality.
