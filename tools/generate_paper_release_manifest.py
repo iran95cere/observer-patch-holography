@@ -54,7 +54,7 @@ def main() -> int:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Write the current release manifest for the paper PDFs.",
+        description="Write the current release manifest for the synced paper PDFs.",
     )
     parser.add_argument(
         "--allow-same-release",
@@ -105,7 +105,7 @@ def enforce_release_bump(previous_manifest: dict | None, manifest: dict, allow_s
     raise SystemExit(
         "PDF hashes changed for the current release ID "
         f"{current_release_id}, but the release was not bumped first: {changed_list}. "
-        "Run python3 tools/bump_paper_release.py, rebuild the PDFs, and rerun this command. "
+        "Run python3 tools/bump_paper_release.py, rebuild all current paper PDFs, and rerun this command. "
         "Use --allow-same-release only if the unchanged release ID is intentional."
     )
 
@@ -131,7 +131,8 @@ def verify_pdf_release_lines(repo_root: Path, manifest: dict, skip_pdf_release_c
         raise SystemExit(
             "Local PDFs do not expose the current visible release line "
             f"{release_id}: {', '.join(sorted(missing_release_line))}. "
-            "Rebuild the PDFs after bumping paper/release_info.tex, then rerun this command."
+            "Rebuild all current paper PDFs after bumping paper/release_info.tex, then rerun this command. "
+            "Every release bump must propagate to every paper PDF so the release IDs stay in sync."
         )
 
     if tool_failures:

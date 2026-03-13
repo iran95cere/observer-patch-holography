@@ -68,6 +68,10 @@ python3 tools/generate_paper_release_manifest.py
 The manifest generator now fails if the PDFs changed under the same release ID, or if the local
 PDFs do not yet expose the current visible release line.
 
+The release ID is global across the current paper set. Even if only one paper changes, bump once,
+rebuild all three PDFs, and publish all three challenge PDFs with that same release ID.
+Challenge uploads are handled by workspace-local operational tooling rather than this public repo.
+
 The canonical paper sources now live under [`paper/`](paper). The old draft tree has been removed from the repository.
 
 When hardening paper claims or running a paper-upgrade release, start with the compact submission paper first. Only after its theorem-status language and release line are coherent should equivalent wording changes be propagated into the main paper, book, README surfaces, websites, and ingestion pipeline.

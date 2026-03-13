@@ -37,13 +37,13 @@ def main() -> int:
     print(f"Updated {release_info_path}")
     print(f"release_id: {current_release_id} -> {next_release_id}")
     print(f"released_at: {current_release_date} -> {next_release_date}")
-    print("Next: rebuild the paper PDFs, then run python3 tools/generate_paper_release_manifest.py")
+    print("Next: rebuild all current paper PDFs, then run python3 tools/generate_paper_release_manifest.py")
     return 0
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Bump the shared paper release ID and release date in paper/release_info.tex.",
+        description="Bump the shared paper release ID and release date in paper/release_info.tex for all current papers.",
     )
     parser.add_argument(
         "--release-id",

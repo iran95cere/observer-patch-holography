@@ -72,6 +72,11 @@ python3 tools/generate_paper_release_manifest.py
 Le générateur de manifeste échoue désormais si les PDF changent sans nouvelle version, ou si les
 PDF locaux n'exposent pas encore la ligne de version visible attendue.
 
+La version est globale à l'ensemble courant des articles. Même si un seul article change,
+incrémentez une seule fois, reconstruisez les trois PDF, puis publiez les trois PDF du challenge
+avec cette même version.
+L'envoi vers le challenge est géré par un outillage opérationnel local à l'espace de travail, pas par ce dépôt public.
+
 Les sources canoniques des articles se trouvent désormais dans [`paper/`](paper). L'ancien arbre de brouillons a été supprimé du dépôt.
 
 Lorsqu'une mise à niveau ou un audit touche plusieurs articles, commencez toujours par l'article compact de soumission. Ce n'est qu'une fois sa ligne de version et son langage de statut cohérents qu'il faut propager les mêmes corrections vers l'article principal, le livre, les README, les sites publics et la pipeline d'ingestion.
