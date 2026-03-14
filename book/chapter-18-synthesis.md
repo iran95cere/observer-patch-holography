@@ -193,11 +193,12 @@ Equivalently, there exists a recovery map from AB to ABC with error controlled b
 3. **Euclidean regularity**: modular flow near smooth cuts has a regular Euclidean continuation with period 2 pi.
 4. **Gauge-as-gluing and obstruction data**: overlap identifications form a redundancy; loop defects live in a 2-group cocycle, with the central case as a simple truncation. A refinement-stable category of transportable edge sectors then reconstructs a compact gauge group.
 5. **ExtEFT and UV limits**: a low-energy EFT limit exists (for SM contact)
-   and either (a) a null-surface modular route yields local stress-energy
-   densities from additivity and half-sided inclusion, or (b) a UV CFT regime
+   and either (a) a null-surface modular route, under explicit half-sided-inclusion,
+   endpoint-differentiation, and null-stress premises, yields local stress-energy
+   densities, or (b) a UV CFT regime
    controls local modular Hamiltonians on small caps.
 
-Under these inputs, geometric modular flow on caps (BW_{S^2}) is *derived* rather than postulated, providing Lorentz kinematics on the screen. The remaining derivations (GR and SM chains) then proceed from the same inputs.
+Under these inputs, Lorentz kinematics is recovered conditionally in a geometric modular phase on caps. In the synchronized paper ledger, geometric modular flow and the null-bridge premises are still treated as explicit technical regularity assumptions rather than theorems of the five axioms alone. The remaining GR and SM chains proceed only under those stated assumptions.
 
 ## 18.6 What the Model Yields (Under Stated Assumptions)
 
@@ -349,10 +350,10 @@ These predictions have been tested experimentally or computationally:
 | Conservation of energy, momentum, charge | Precision experiments | Confirmed (10^-18) |
 | CPT invariance | Kaon experiments | Confirmed (10^-18) |
 | Page curve for black holes | Island calculations (2019-2020) | Confirmed |
-| Electroweak VEV v ≈ 243.5 GeV | Measured: 246.2 GeV | 1.1% error |
-| Top mass m_t ≈ 172.2 GeV | Measured: 172.7 GeV | 0.3% error |
-| Strong coupling α_s(M_Z) ≈ 0.1175 | PDG: 0.1177 ± 0.0009 | Within 1σ |
-| Weak mixing angle sin²θ_W ≈ 0.2311 | PDG: 0.23129 | 0.1% low (~5σ in exp. units; theory error not quantified) |
+| Electroweak VEV v ≈ 246.77 GeV | Measured: 246.22 GeV | Calibration-sector scale setting; not an independent confirmation |
+| Top pole mass m_t ≈ 171.1 GeV | Measured: 172.6 GeV | 0.9% low; supplement-backed independent quantitative branch |
+| Strong coupling α_s(M_Z) ≈ 0.1183 | PDG: 0.1179 | Calibration-sector consistency check |
+| Weak mixing angle sin²θ_W ≈ 0.23119 | PDG: 0.23122 | Calibration-sector consistency check |
 | QCD scale Λ_MS ≈ 195 MeV | PDG: 213 ± 8 MeV | ~10% low (from Dynkin-index β) |
 
 ### Derived from Axioms + Assumptions

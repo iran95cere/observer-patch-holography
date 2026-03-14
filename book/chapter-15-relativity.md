@@ -399,9 +399,9 @@ $$K = \int_\Sigma T_{ab} \zeta^b d\Sigma^a$$
 
 where ζ is the conformal Killing field preserving the diamond.
 
-**Route 2: Null-surface modular bridge.** Even without assuming a CFT, we can construct a stress tensor from modular data on null surfaces. Modular additivity plus half-sided inclusion yields a local density T_{kk} for each null direction k. This determines a symmetric tensor T_{ab}.
+**Route 2: Null-surface modular bridge.** Even without assuming a CFT, one can try to reconstruct null stress data from modular data on null surfaces. In the synchronized paper package this route is conditional: modular additivity, half-sided modular inclusion, endpoint differentiation on null half-lines, and the relativistic null-stress identification premise together yield a local density $T_{kk}$ for each null direction $k$. If the null-to-tensor upgrade holds for all local directions and reference states in the scaling regime, this determines a symmetric tensor $T_{ab}$ up to the usual metric term.
 
-The null-surface modular bridge (Route 2) is derived from A1-A4 under two testable conditions: null strips must qualify as A4 separators, and local finite variation must hold.
+The null-surface modular bridge (Route 2) is therefore not currently derived from A1-A4 alone. It is an explicit scaling-limit route whose extra technical premises must be verified in the intended EFT phase.
 
 ### The Einstein Equation
 
