@@ -426,19 +426,25 @@ The present paper provides the computational foundation. OPH says what the patch
 
 \section{Discussion and Open Problems}
 
-Five directions stand out as immediate next steps:
+This paper proves the fixed-point / consensus spine of the OPH program: schedule-independent normal forms, holonomy obstructions, gauge-quotient invariance, record-layer convergence, and a clean law-selection meta-model. In the broader OPH ledger, that spine should be read as foundational rather than as a replacement for the compact note's claim tiers. The recovered OPH core remains the conditional relativity chain together with the realized Standard Model structural chain; the capacity relation is separate and input-dependent; the current numerical implementation and all downstream phenomenology live at lower claim tiers.
+
+Six directions stand out as immediate next steps:
 
 \begin{enumerate}
 \item \textbf{Computational complexity.} What is the complexity of computing $\operatorname{nf}_\lambda(s)$? The termination bound from $\Phi$-decrease is a worst-case measure, but typical instances may converge much faster. Is there a polynomial bound for natural classes of patch nets?
 
 \item \textbf{Coarse-graining.} When does reconciliation commute with renormalization? If you coarse-grain the patch net and then reconcile, do you get the same result as reconciling first and then coarse-graining? The conditions under which these operations commute would connect the discrete model to continuum field theory.
 
-\item \textbf{Defect classification.} Which holonomy classes correspond to stable quasi-particles? In the abelian case, the classification is by the first cohomology group $H^1(G,A)$. The non-abelian case is richer and connects to the classification of topological defects in gauge theory.
+\item \textbf{Defect classification and transportability.} Which holonomy classes correspond to stable quasi-particles, and when do they admit path-independent transport? In the abelian case, the classification is by $H^1(G,A)$; the non-abelian case is richer and should tie directly to the transportability / obstruction discussion in the broader OPH program.
 
-\item \textbf{Observable-level confluence.} When the raw state is not unique (because local confluence fails), can gauge-invariant macrostates still be unique? This weaker form of objectivity may hold under broader conditions.
+\item \textbf{Observable-level confluence.} When the raw state is not unique because local confluence fails, can gauge-invariant macrostates still be unique? This weaker form of objectivity may hold under broader conditions than the strict normal-form theorem.
 
-\item \textbf{Quantum lift.} How much of the patch-net theorem survives when local state spaces become operator algebras and repair maps become quantum channels? The Markov-collar splice theorem in the OPH appendix (where interior observer states can be spliced into different compatible environments without changing interior observables) suggests that the algebraic version is natural.
+\item \textbf{Quantum lift.} How much of the patch-net theorem survives when local state spaces become operator algebras and repair maps become quantum channels? The Markov-collar splice theorem in the appendix already suggests that the algebraic version is natural.
+
+\item \textbf{Scaling-limit bridge to full OPH.} Under what additional regularity conditions does the consensus protocol land in the geometric modular phase required by the compact note, so that the D3--D5 gravity chain and the D7--D9 gauge/matter chain become available? This is also the point at which the broader Phase-II and Phase-III branches must remain disciplined: dark-sector, baryogenesis, spectroscopy, and string/worldsheet topics require extra premises beyond what this paper itself proves.
 \end{enumerate}
+
+The last item is the status bridge. If it succeeds, this paper plugs cleanly into the recovered-core OPH program. If it fails, the fixed-point theorems proved here remain intact while the corresponding higher-tier gravity, gauge, or continuation branches would have to be revised individually.
 
 
 \appendix

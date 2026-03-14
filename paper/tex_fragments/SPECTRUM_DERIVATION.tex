@@ -259,122 +259,42 @@ Heat-kernel truncation & 200 representations & Adding more changes \(\bar{\ell}\
 
 \subsubsection{1B.1 The Calibration Structure}\label{1b1-the-calibration-structure}
 
-The pixel area constant \(P\) is calibrated from the entropy-matching condition \(P/4 = \bar{\ell}_{\text{SU(2)}}(t_2) + \bar{\ell}_{\text{SU(3)}}(t_3)\), where \(t_i = 4\pi^2 \alpha_i\) depends on the gauge couplings. This means \(P\) encodes information from the gauge coupling sector. Any quantity that flows directly from the gauge couplings through the same algebraic chain used to calibrate \(P\) is therefore a \textbf{consistency check}---it must reproduce the input data by construction, and its agreement with experiment does not constitute an independent test of the framework.
+The pixel area constant \(P\) is the external continuous input used by the present particle-physics implementation. In practice it is fixed through the gauge sector via the entropy-matching / pixel-constraint closure. Quantities algebraically entangled with that same closure sit in D10 and are calibration-sector consistency checks rather than independent confirmations. In this file, D10 includes the unified coupling and scale-setting branch, the running gauge couplings at \(m_Z\), \(\alpha_{\mathrm{em}}^{-1}(m_Z)\), \(\sin^2\theta_W(m_Z)\), \(v\), and the tree-level electroweak masses. Agreement there shows that the current implementation is self-consistent once \(P\) and the printed supplement-backed conventions are imposed. It does not by itself promote the whole spectrum program to theorem level.
 
-This is not a defect of OPH any more than \(G\) being calibrated from gravitational measurements is a defect of general relativity. Every quantitative theory requires at least one calibration to set its scale. The question is: how many independent outputs does the framework produce beyond the calibration sector?
+\subsubsection{1B.2 Why ``Downstream of \(P\)'' Does Not Mean ``Recovered Core''}\label{1b2-dimensionless-independence}
 
-\subsubsection{1B.2 Why ``Downstream of \(P\)'' Does Not Mean ``Determined by \(P\)''}\label{1b2-dimensionless-independence}
+Using \(P\) to set an overall energy scale and using an output branch as a recovered-core claim are different things. The critical-surface Higgs/top branch illustrates the distinction: once the D10 trajectory is fixed, the extra condition
+\[
+\lambda(M_U)=0,\qquad \beta_\lambda(M_U)=0
+\]
+adds no new continuous fit, so its failure would challenge the D11 branch rather than the D10 calibration closure. But it is still not part of the recovered core D1--D5 plus D7--D9. By contrast, charged-lepton/Koide fits, texture exponents, neutrino estimates, and downstream hadron extractions use additional ans\"atze, capacity assumptions, or external lattice/QCD machinery. Those belong to D12 or to later downstream numerical layers and must not be read back into the core claim set.
 
-A common objection is that every quantity computed using \(P\) ``inherits the calibration data,'' rendering all outputs circular. This conflates two distinct roles that \(P\) plays:
-
-\begin{enumerate}
-\item \textbf{Scale setting.} \(P\) determines the overall energy scale (via \(\alpha_U \to v\)). Every theory has this: \(G\) sets the Planck scale in general relativity, \(\alpha\) sets the Bohr radius in QED. Quantities that depend on \(P\) only for their conversion from dimensionless ratios to GeV are not ``fitted''---they are \emph{scaled}, exactly as a QED cross-section is scaled by \(\alpha\) without being circular.
-\item \textbf{Structural determination.} The calibration procedure solves \emph{one} equation (the pixel constraint) for \emph{one} unknown (\(\alpha_U\)). This single degree of freedom determines the gauge couplings, \(v\), \(M_U\), \(m_W\), and \(m_Z\)---all members of a one-parameter family. These are the consistency checks (Tier~1).
-\end{enumerate}
-
-The strongest non-calibration quantitative outputs are determined by structural content---boundary conditions, algebraic identities, topological data---that is \emph{logically independent} of the pixel constraint. Their dimensionless values are fixed before \(P\) enters the computation. Concretely:
-
-{\footnotesize
-\def\LTcaptype{none}
-\begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.22\textwidth}>{\RaggedRight\arraybackslash}p{0.30\textwidth}>{\RaggedRight\arraybackslash}p{0.40\textwidth}@{}}
-\toprule
-Output branch & Dimensionless form & What determines it (not \(P\)) \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-\(m_e : m_\mu : m_\tau\) continuation & Koide ratios from \(Q = 2/3\), \(\delta = 2/9\) & Algebraic phase data plus an additional discrete-selection step for the exponent pattern; logically independent of \(P\) but weaker than the theorem-level branches. \\
-\(m_H / v\) & \(\approx 0.509\); from \(\lambda(M_U) = 0\), \(\beta_\lambda(M_U) = 0\) & Critical surface (refinement stability). Independent boundary condition, not used in calibrating \(P\). \\
-\(m_t / v\) & \(\approx 0.702\); from \(y_t(M_U)\) at \(\beta_\lambda = 0\) & Same critical surface. \\
-\(m_f / m_t\) quark-texture continuation & \(\varepsilon^{n_f}\) with \(\varepsilon = 1/6\), integer \(n_f\) & \(\mathbb{Z}_6\) quotient topology + \(N_c\), \(N_g\), plus the texture ansatz used to assign exponents. \\
-\end{longtable}
-}
-
-\textbf{The decisive test}: change \(P\) to any other value. The lepton mass \emph{ratios} do not change. The Higgs-to-VEV ratio does not change. The quark exponents do not change. Only the overall energy scale (the value of \(v\) in GeV) shifts. This is the operational definition of ``independent of the calibration.''
-
-To see why, note that \(P\) is a single real number. It cannot simultaneously encode the electron-to-muon mass ratio (\(m_e/m_\mu \approx 1/206.8\)), the Higgs-to-top ratio (\(m_H/m_t \approx 0.725\)), and the six quark-mass exponents \((6,3,0,6,4,2)\). These are independent degrees of freedom whose values are fixed by structural constraints that do not reference \(P\), the entropy-matching condition, or any experimental coupling constant. Their agreement with observation is a test the framework could fail.
+Put differently: scale-setting dependence does not erase all distinctions, but neither does it automatically elevate later numerics to theorem level. The correct sync rule is the master ledger: D10 is calibration-sector, D11 is the secondary quantitative branch, and the remaining spectrum branches are deferred continuations unless explicitly promoted elsewhere.
 
 \subsubsection{1B.3 Classification}\label{1b3-classification}
 
-\textbf{Tier 1---Calibration-sector consistency checks.} These quantities are algebraically entangled with \(P\)'s calibration. Their agreement with PDG data demonstrates internal consistency but does not constitute independent prediction.
-
 {\footnotesize
-\begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.30\textwidth}>{\RaggedRight\arraybackslash}p{0.62\textwidth}@{}}
+\def\LTcaptype{none}
+\begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.22\textwidth}>{\RaggedRight\arraybackslash}p{0.28\textwidth}>{\RaggedRight\arraybackslash}p{0.40\textwidth}@{}}
 \toprule
-Quantity & Why it is a consistency check \\
+Tier / node & Representative outputs in this part & Status rule \\
 \midrule
 \endhead
 \bottomrule
 \endfoot
-\(\alpha_s(m_Z)\), \(\alpha_{\text{em}}^{-1}(m_Z)\), \(\sin^2\theta_W(m_Z)\) & The gauge couplings at \(m_Z\) are the data from which \(P\) (via \(\alpha_U\)) is extracted. The self-consistent fixed-point procedure ensures these reproduce. \\
-\(m_Z\) (tree-level) & \(m_Z = \frac{1}{2}v\sqrt{g_2^2 + g_Y^2}\) where \(v\) and the couplings both flow from \(\alpha_U\), determined by the pixel constraint that calibrated \(P\). \\
-\(m_W\) (tree-level) & Same: \(m_W = \frac{1}{2}v \cdot g_2\), directly from the calibrated couplings. \\
-\(v\) (Higgs VEV) & \(v = E_{\text{cell}} \cdot e^{-2\pi/(\beta_{\text{EW}} \alpha_U)}\); determined by \(\alpha_U\), the variable solved for during \(P\) calibration. \\
+Phase I recovered core inherited from Parts I--II (D1--D5, D7--D9) & conditional relativity branch; compact gauge reconstruction in the bosonic branch; realized Standard Model quotient, exact hypercharges, \(N_c=3\), \(N_g=3\), and no gauge-mediated proton decay & These are structural or realized-branch outputs proved upstream. They are \emph{not} generated by the present spectrum numerics, even when this part reuses them. \\
+Phase II input-dependent corollary inherited from Part~I (D6) & \(\Lambda=\frac{3\pi}{G N_{\mathrm{scr}}}\) once the screen-capacity identification is adopted, together with the associated order-of-magnitude capacity estimate & Separate from the recovered core. It uses the second external continuous input \(N_{\mathrm{scr}}\). \\
+Phase II current implementation: calibration sector (D10) & pixel-closure gauge/electroweak consistency, \(\alpha_i(m_Z)\), \(\alpha_{\mathrm{em}}^{-1}(m_Z)\), \(\sin^2\theta_W(m_Z)\), \(v\), \(m_W\), and the running \(Z\)-mass relation & Supplement-backed consistency checks of the current implementation. Their agreement is expected once \(P\) and the printed running/matching conventions are imposed. \\
+Phase II current implementation: secondary quantitative branch (D11) & Higgs/top critical-surface branch & Main non-calibration numerical branch of the present implementation. It adds no further continuous fit once D10 is fixed, but it remains secondary to the recovered core. \\
+Phase III deferred continuations / downstream numerical branches (D12 and beyond) & charged-lepton/Koide fits, quark-texture branches, neutrino estimates, hadron extractions, and any use of \(\varepsilon=1/6\) or \(\delta=2/9\) as flavor ans\"atze & Failure retracts the corresponding continuation only. These branches use extra structural choices, capacity assumptions, or external numerical machinery beyond D10--D11. \\
 \end{longtable}
 }
 
-\textbf{Tier 2---Independent quantitative outputs.} These quantities are determined by structural content of OPH that is logically independent of the gauge-coupling calibration. They use \(P\) only to set an overall scale, and their specific values are not guaranteed by the calibration.
+\subsubsection{1B.4 What This Part Actually Contributes}\label{1b4-what-oph-achieves}
 
-{\footnotesize
-\begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.30\textwidth}>{\RaggedRight\arraybackslash}p{0.62\textwidth}@{}}
-\toprule
-Quantity & Why it is an independent quantitative output \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-\(m_H\) (Higgs mass) & From \(\lambda(M_U) = 0\), \(\beta_\lambda(M_U) = 0\) (refinement stability)---an independent boundary condition not used in calibrating \(P\). \\
-\(m_t\) (top mass, critical surface) & From \(y_t(M_U)\) fixed by \(\beta_\lambda = 0\); independent of the pixel constraint. \\
-\end{longtable}
-}
+The present spectrum part should therefore be read as follows. Its documentary center of gravity is the D10--D11 implementation layer. The gauge-sector closure and electroweak scale-setting branch are calibration-sector consistency checks. The Higgs/top critical-surface branch is the main secondary quantitative output. Charged-lepton, texture, neutrino, and hadronic branches remain explicitly weaker continuations.
 
-\textbf{Tier 3---Phenomenological continuations and downstream numerical branches.} These outputs use additional ans\"atze, discrete scans, capacity estimates, or downstream numerical machinery beyond the core calibration and critical-surface branches.
-
-{\footnotesize
-\begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.30\textwidth}>{\RaggedRight\arraybackslash}p{0.62\textwidth}@{}}
-\toprule
-Quantity & Why it is a phenomenological continuation / downstream branch \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-\(m_e, m_\mu, m_\tau\) (charged leptons) & Uses the Koide phase data together with an additional discrete-selection step for the exponent pattern. Numerically sharp, but weaker in logical status than the critical-surface branch. \\
-Quark mass hierarchy & Uses the \(\mathbb{Z}_6\) texture ansatz and captures hierarchy structure more reliably than individual masses. \\
-\(m_{\nu_1}, m_{\nu_2}, m_{\nu_3}\) & Capacity-branch estimate from \(\log(\dim\mathcal{H})\); presently an order-of-magnitude branch rather than a benchmark quantitative mass formula. \\
-Hadron masses & Downstream numerical continuation \(P \to \alpha_s \to \Lambda^{(3)} \to m_X\), with standard lattice-QCD systematics dominating the final errors. \\
-\end{longtable}
-}
-
-\textbf{Tier 4---Parameter-free structural outputs.} These discrete quantities follow from the axioms and stated admissibility package with no continuous free parameter.
-
-{\footnotesize
-\begin{longtable}[]{@{}>{\RaggedRight\arraybackslash}p{0.45\textwidth}>{\RaggedRight\arraybackslash}p{0.45\textwidth}@{}}
-\toprule
-Quantity & Origin \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-Gauge group \(SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6\) & Tannaka-Krein + MAR \\
-\(N_c = 3\), \(N_g = 3\) & Anomaly cancellation + MAR \\
-\(\varepsilon = 1/6\) & \(\mathbb{Z}_6\) quotient topology \\
-\(\delta = 2/9\), \(Q = 2/3\) & Algebraic from \(N_c\), \(N_g\), \(\beta_{\text{EW}}\) \\
-\(m_\gamma = m_g = m_{\text{graviton}} = 0\) & Symmetry protection \\
-No gauge-mediated proton decay & Product gauge group (no leptoquark generators) \\
-\end{longtable}
-}
-
-\subsubsection{1B.4 What OPH Achieves}\label{1b4-what-oph-achieves}
-
-The Standard Model has 19 free parameters (or 26 with neutrino masses). OPH compresses the current implementation to one primary particle-physics calibration input (\(P\)) plus one cosmological/capacity input (\(\log \dim \mathcal{H}\)), with structural content such as the gauge group and generation count derived from axioms and admissibility.
-
-The strongest independent quantitative content---Tier 2---is the Higgs/top critical-surface branch. The charged-lepton, texture, neutrino, and hadron sectors sit in Tier 3: they are useful continuations, and in the charged-lepton case numerically very sharp, but they do not currently have the same logical status as the critical-surface branch.
-
-The quark masses are the weakest sector: the hierarchy is qualitatively correct (5 orders of magnitude from integer exponents in base 6), but individual masses show 16--73\% deviations due to missing scheme matching, order-one Clebsch factors, and \(u\)-\(d\) degeneracy.
-
-\(P\) is analogous to Newton's constant \(G\) in general relativity, or \(\alpha\) in QED: a dimensionful parameter that must be measured. The framework's claim is not ``we predict everything from nothing'' but rather: \textbf{from a small external input set and a set of axioms, the framework sharply constrains particle physics and organizes which outputs are structural, which are calibration-sector, which are independently quantitative, and which remain phenomenological continuations.}
-
-The gauge couplings at \(m_Z\) are consistency checks. The Higgs and top masses are the main independent quantitative outputs. The charged-lepton, quark-texture, neutrino, and hadron branches are weaker continuations with explicitly stated limitations.
+This means that quantities sometimes reused in these later branches do \emph{not} all have the same claim tier. In particular, \(\varepsilon=1/6\), \(\delta=2/9\), Koide relations, texture exponents, neutrino scales, and hadron fits should not be cited as recovered-core outputs of overlap consistency plus the stated scaling-limit and categorical premises. The correct compact summary is simpler: Parts~I--II carry the recovered relativity-plus-Standard-Model core; this part begins at the D10 implementation layer and keeps everything beyond D11 explicitly non-core.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1013,49 +933,26 @@ File & Description & Stage \\
 
 \subsection{Summary}\label{summary}
 
-Starting from the current external input set --- the pixel area \(P = 1.63094\) and the screen capacity \(\log(\dim\mathcal{H}) \sim 10^{122}\) --- the OPH derivation chain produces outputs in four epistemic tiers:
+This part is a quantitative implementation dossier, not a second statement of the recovered-core theorem package. In the master ledger, the recovered core remains D1--D5 together with D7--D9. The role of the present part is to record what happens after that structural core is in place.
 
-\textbf{Calibration-sector consistency checks} (agreement expected by construction):
-\begin{itemize}\tightlist
-\item Gauge couplings at \(m_Z\): \(\alpha_s\), \(\sin^2\theta_W\), \(\alpha_{\text{em}}^{-1}\) (0.2--0.4\%)
-\item Electroweak boson masses: \(W\) (+0.012\%), \(Z\) (+0.035\%)
-\item Higgs VEV \(v\) (+0.22\%)
+\begin{itemize}
+\item \textbf{Phase I recovered core inherited from Parts I--II:} conditional relativity plus the realized Standard Model structural chain. These results are upstream prerequisites for the present file, not outputs newly established here.
+\item \textbf{Phase II input-dependent / implementation layer:} D6 if the screen-capacity identification is adopted; D10 for the supplement-backed gauge/electroweak calibration sector; D11 for the Higgs/top critical-surface branch that adds no new continuous fit once D10 is fixed.
+\item \textbf{Phase III continuation layer:} charged-lepton/Koide fits, texture branches, neutrino estimates, and downstream hadron extractions.
 \end{itemize}
 
-\textbf{Independent quantitative outputs} (structurally independent of calibration):
-\begin{itemize}\tightlist
-\item Higgs mass: 126.48 GeV vs 125.20 GeV (+1.0\%, from critical surface \(\lambda = \beta_\lambda = 0\))
-\item Top quark: 171.1 GeV vs 172.6 GeV (−0.87\%, from critical surface)
-\end{itemize}
+The practical contribution of this part is therefore narrow but useful. It records the current D10 gauge/electroweak closure of the supplement-backed implementation, the D11 critical-surface Higgs/top branch, and a set of D12 continuations that reuse the same structural backdrop without acquiring the same claim tier.
 
-\textbf{Phenomenological continuations / downstream branches}:
-\begin{itemize}\tightlist
-\item Charged leptons: \(e\), \(\mu\), \(\tau\) at \textless{} 0.025\% from the Koide branch plus a discrete exponent-selection step
-\item 6 quark masses at correct order of magnitude with hierarchy reproduced, but 16--73\% individual errors
-\item 3 neutrino masses presently at order-of-magnitude level and consistent with current bounds
-\item Hadron masses from \(\Lambda_{\overline{\text{MS}}}^{(3)}\) via lattice QCD (10--20\% systematics)
-\end{itemize}
-
-\textbf{Parameter-free structural outputs} (from axioms and admissibility):
-\begin{itemize}\tightlist
-\item Gauge group \(SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6\), \(N_c = 3\), \(N_g = 3\)
-\item 3 exactly massless particles (\(\gamma\), \(g\), graviton) from symmetry protection
-\item No gauge-mediated proton decay, \(\varepsilon = 1/6\), \(\delta = 2/9\), \(Q = 2/3\)
-\end{itemize}
-
-The derivation chain is:
-
+A compact schematic of the status boundary is
 \[
-\boxed{
-\begin{aligned}
-P &\xrightarrow{\text{entropy matching}} \alpha_U, M_U
-\xrightarrow{\text{transmutation}} v \\
-&\xrightarrow{\text{RG + pixel}} \alpha_i(m_Z), m_Z, m_W
-\xrightarrow{\text{critical surface}} m_H, m_t \\
-&\xrightarrow{\mathbb{Z}_6\text{ texture}} m_f
-\xrightarrow{\Lambda_{\overline{\text{MS}}}} m_{\text{hadrons}}
-\end{aligned}
-}
+\text{Recovered core}
+\Longrightarrow
+\bigl(D6\ \text{if the capacity input is adopted}\bigr)
+\Longrightarrow
+D10
+\Longrightarrow
+D11
+\Longrightarrow
+D12.
 \]
-
-\(P\) is the primary particle-physics calibration input. The first arrow is calibration; the critical-surface branch then gives the main independent quantitative outputs, while later flavor, neutrino, and hadron steps are weaker continuations. The framework's claim is not ``we predict everything from nothing'' but: \textbf{from a small external input set and structural axioms, the framework sharply constrains particle physics while keeping the logical status of each branch explicit.}
+Here D10 uses the external input \(P\), D6 uses the external input \(N_{\mathrm{scr}}\), D11 adds the extra critical-surface condition, and D12 introduces further ans\"atze or downstream numerical machinery. Failure of a Phase-III branch does not by itself falsify the recovered core; failure of D11 challenges that secondary quantitative branch; failure of D10 challenges the current supplement-backed implementation.
