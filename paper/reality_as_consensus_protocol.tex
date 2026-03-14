@@ -458,7 +458,7 @@ O=(P,\mathcal{A}(P),\rho,R),
 \]
 where $P$ is the screen patch, $\mathcal{A}(P)$ the local von Neumann algebra, $\rho$ the local state, and $R$ the record algebra.
 
-\begin{theorem}[Markov-collar splice theorem]\label{thm:splice}
+\begin{theorem}[Markov-collar splice theorem, exact and controlled]\label{thm:splice}
 Suppose a collar tripartition $A$-$B$-$D$ has exact Markov decomposition
 \[
 \rho_{ABD}
@@ -485,11 +485,62 @@ Then for every observable $X$ supported on $A\cup b_L$,
 =
 \operatorname{Tr}(X\rho_{ABD}).
 \]
-The interior observer state can be spliced into a different compatible environment without changing any interior observable statistics.
+Now fix one finite-dimensional collar model and let
+\[
+\mathfrak M_{A:B:D}
+:=
+\left\{
+\tau_{ABD}: I(A:D\mid B)_\tau=0
+\right\},
+\]
+with exact-Markov distance modulus
+\[
+\delta^{\mathrm M}_{A:B:D}(\varepsilon)
+:=
+\sup\left\{
+\inf_{\tau\in\mathfrak M_{A:B:D}}\|\omega-\tau\|_1:
+I(A:D\mid B)_\omega\le\varepsilon
+\right\}.
+\]
+Then
+\[
+\delta^{\mathrm M}_{A:B:D}(\varepsilon)\to0
+\qquad
+(\varepsilon\downarrow0).
+\]
+Hence if \(I(A:D\mid B)_\omega\le \varepsilon\) and \(\widetilde\omega_\varepsilon\in\mathfrak M_{A:B:D}\) is chosen so that
+\[
+\|\omega-\widetilde\omega_\varepsilon\|_1
+\le
+\delta^{\mathrm M}_{A:B:D}(\varepsilon),
+\]
+the corresponding exact splice \(\widetilde\omega'_\varepsilon\) satisfies
+\[
+\left|
+\operatorname{Tr}(X\omega)-\operatorname{Tr}(X\widetilde\omega'_\varepsilon)
+\right|
+\le
+\|X\|_\infty\,
+\delta^{\mathrm M}_{A:B:D}(\varepsilon)
+\]
+for every observable \(X\) supported on \(A\cup b_L\).
+
+Independently, if \(I(A:D\mid B)_\omega\le \varepsilon\), then there exists a recovery map \(\mathcal R_{B\to BD}\) such that
+\[
+\left\|
+\omega_{ABD}
+-
+(\mathrm{id}_A\otimes \mathcal R_{B\to BD})(\omega_{AB})
+\right\|_1
+\le
+2\sqrt{1-e^{-\varepsilon}}
+\le
+2\sqrt{\varepsilon}.
+\]
 \end{theorem}
 
 \begin{proof}
-By blockwise factorization,
+The exact splice statement is the usual blockwise factorization argument:
 \[
 \operatorname{Tr}(X\rho'_{AB D'})
 =
@@ -500,26 +551,25 @@ X\, \rho^{(\alpha)}_{A b_L^\alpha}
 \right)
 \operatorname{Tr}\!\left(\sigma_{b_R^\alpha D'}^{(\alpha)}\right).
 \]
-Each $\sigma_{b_R^\alpha D'}^{(\alpha)}$ is normalized, so its trace is~1. The same computation for $\rho_{ABD}$ yields the same value because the right factor is normalized there as well.
+Each right factor is normalized, so the value agrees with the same computation for \(\rho_{ABD}\).
+
+For the controlled statement, compactness of the fixed finite-dimensional state space and continuity of conditional mutual information imply \(\delta^{\mathrm M}_{A:B:D}(\varepsilon)\to0\): otherwise one could find a sequence with \(I(A:D\mid B)\to0\) staying a fixed trace distance away from every exact Markov state, contradicting convergence of a subsequence to an exact Markov limit point. Once \(\widetilde\omega_\varepsilon\) is chosen, the exact splice identity for \(\widetilde\omega_\varepsilon\) gives
+\[
+\left|
+\operatorname{Tr}(X\omega)-\operatorname{Tr}(X\widetilde\omega'_\varepsilon)
+\right|
+=
+\left|
+\operatorname{Tr}\!\left[X(\omega-\widetilde\omega_\varepsilon)\right]
+\right|
+\le
+\|X\|_\infty\,
+\delta^{\mathrm M}_{A:B:D}(\varepsilon).
+\]
+The final inequality is the standard Fawzi--Renner recovery bound.
 \end{proof}
 
-An approximate version follows from recoverability. If the conditional mutual information satisfies
-\[
-I(A:D\mid B)_\rho \le \varepsilon,
-\]
-then there exists a recovery map $\mathcal{R}_{B\to BD}$ such that
-\[
-\left\|
-\rho_{ABD}
--
-(\mathrm{id}_A\otimes\mathcal{R}_{B\to BD})(\rho_{AB})
-\right\|_1
-\le
-2\sqrt{\ln 2\,\varepsilon}.
-\]
-This gives a bounded-error observer-modularity theorem: even when the Markov condition is only approximate, the interior observer state is recoverable with controlled error. The collar width controls $\varepsilon$, and thicker collars give better isolation.
-
-This structure is the algebraic version of the patch-net formalism. The sector labels $\alpha$ are the classical center data (the overlap interface), the blockwise factorization is the algebraic version of the interface projection, and the splice theorem is the algebraic version of gauge-invariant normal-form uniqueness: internal observer data is invariant under compatible environment substitution.
+This appendix therefore uses exact splice identities in only two regimes: literal exact Markovity, or a controlled collar family on one fixed finite-dimensional model for which \(\delta^{\mathrm M}_{A:B:D}(\varepsilon)\to0\). Small one-shot conditional mutual information is not silently upgraded to an exact normal form.
 
 
 \begin{thebibliography}{9}
