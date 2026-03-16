@@ -221,7 +221,7 @@ where the carried remainder is controlled on bounded observables by \(r_{\mathrm
 
 \subsection{2.3 Null Modular Bridge (EFT Conditions N1-N3)}\label{23-null-modular-bridge-eft-conditions-n1-n3}
 
-The fixed-cutoff null bridge now advances through the derived half-sided-inclusion step. What is established here is: transferred cut-center data on null strips, exact-or-controlled strip additivity on one inherited strip model, endpoint-Lipschitz control of the renormalized half-line family, and the geometric blow-up argument that turns the null half-line net into a half-sided modular pair, so that Borchers--Wiesbrock yields a genuine positive translation generator. What is not established here is the downstream density upgrade or the relativistic null-stress identification. The present condition package should therefore be read with the following split.
+The fixed-cutoff null bridge now advances through the derived half-sided-inclusion step. What is established here is: transferred cut-center data on null strips, exact-or-controlled strip additivity on one inherited strip model, endpoint-Lipschitz control of the renormalized half-line family, and the geometric blow-up argument that turns the null half-line net into a half-sided modular pair, so that Borchers--Wiesbrock yields an explicit positive null-translation generator on its Stone domain. What is not established here is the downstream density upgrade or the relativistic null-stress identification. The present condition package should therefore be read with the following split.
 
 \textbf{Condition N1 (null-strip center transfer and exact-or-controlled strip additivity).} For consecutive null strips
 \[
@@ -420,7 +420,30 @@ would permit the downstream density formula
 \]
 but that density upgrade is not established here.
 
-\textbf{Consequence.} The present condition package proves the fixed-cutoff strip bridge through the weak tail generator \(q(a,\Omega)\), derives half-sided modular inclusion on the null half-line blow-up net, and therefore obtains a genuine positive null translation generator by Borchers--Wiesbrock. The remaining downstream burdens are the density-upgrade hypotheses and the relativistic EFT null-stress premise. Those later steps are explicit rather than hidden parts of N1--N3.
+\textbf{Imported Borchers consequence.} Let \(\Delta_0(\Omega)\) be the modular operator of the standard pair \((\mathcal M_0(\Omega),\omega)\), define \(K_0(\Omega):=-\log \Delta_0(\Omega)\), and let \(\Delta_a(\Omega)\) denote the modular operator of \((\mathcal M_a(\Omega),\omega)\). Applying Borchers--Wiesbrock to the derived half-sided pair of Condition N2 yields a unique strongly continuous unitary group \(U_\Omega(a)=e^{iaP_\Omega}\) with positive self-adjoint Stone generator \(P_\Omega\) on
+\[
+D(P_\Omega)
+:=
+\left\{
+\psi\in\mathcal H:
+\lim_{a\to0}\frac{U_\Omega(a)\psi-\psi}{ia}\ \text{exists}
+\right\}.
+\]
+It obeys
+\[
+\Delta_0(\Omega)^{it}U_\Omega(a)\Delta_0(\Omega)^{-it}
+=
+U_\Omega(e^{-2\pi t}a),
+\qquad
+[K_0(\Omega),P_\Omega]=-\,i\,2\pi P_\Omega,
+\]
+and if \(K_a(\Omega):=-\log \Delta_a(\Omega)\), then
+\[
+K_a(\Omega)=K_0(\Omega)-2\pi a\,P_\Omega
+\]
+as a quadratic-form identity on \(D(K_0(\Omega))\cap D(P_\Omega)\).
+
+\textbf{Consequence.} The present condition package proves the fixed-cutoff strip bridge through the weak tail generator \(q(a,\Omega)\), derives half-sided modular inclusion on the null half-line blow-up net, and therefore identifies an explicit positive null-translation generator \(P_\Omega\) together with its Stone domain and half-line modular-Hamiltonian relation. The remaining downstream burdens are the density-upgrade hypotheses and the relativistic EFT null-stress premise. Those later steps are explicit rather than hidden parts of N1--N3.
 \subsection{2.4 Stress Tensor Reconstruction}\label{24-stress-tensor-reconstruction}
 
 \textbf{Lemma 2.3 (Null Data Ambiguity):} If a symmetric tensor \(X_{ab}\) satisfies \(X_{ab}k^a k^b = 0\) for all null \(k\), then: \[X_{ab} = \phi \, g_{ab}\] for some scalar \(\phi\).

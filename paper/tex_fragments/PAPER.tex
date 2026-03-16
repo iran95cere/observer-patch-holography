@@ -570,9 +570,9 @@ This shows H serves as a regularity condition on how the geometric labeling \(P 
 
 \begin{itemize}
 \item
-\textbf{N1 (fixed-cutoff null-strip bridge).} The synchronized c.11 package now proves transferred cut-center data, theorem-local inherited left/right strip structure, exact-or-controlled four-term strip additivity on one inherited strip model, renormalized endpoint control up to the weak tail generator, and the derived half-sided modular pair whose Borchers--Wiesbrock consequence is a positive null translation generator. No separate LR, endpoint-control, or half-sided-inclusion premise is imported beyond that theorem-local inherited-strip hypothesis and the geometric scaling branch of Theorem 4.2.
+\textbf{N1 (fixed-cutoff null-strip bridge).} The synchronized c.12 package now proves transferred cut-center data, theorem-local inherited left/right strip structure, exact-or-controlled four-term strip additivity on one inherited strip model, renormalized endpoint control up to the weak tail generator, and the derived half-sided modular pair whose Borchers--Wiesbrock consequence is an explicit positive null-translation generator on its Stone domain. No separate LR, endpoint-control, or half-sided-inclusion premise is imported beyond that theorem-local inherited-strip hypothesis and the geometric scaling branch of Theorem 4.2.
 \item
-\textbf{N2 (derived half-sided modular inclusion).} Nested null half-line algebras satisfy half-sided modular inclusion on the OPH geometric scaling branch by Corollary 5.2e; Borchers/Wiesbrock then gives the translation group with positive generator; see \href{https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-157/issue-1/Half-sided-modular-inclusions-of-von-Neumann-algebras/cmp/1104253848.pdf}{Wiesbrock, CMP 157 (1993)}.
+\textbf{N2 (derived half-sided modular inclusion).} Nested null half-line algebras satisfy half-sided modular inclusion on the OPH geometric scaling branch by Corollary 5.2e; Borchers/Wiesbrock then identifies the positive null-translation generator on its Stone domain together with the affine half-line modular relation; see \href{https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-157/issue-1/Half-sided-modular-inclusions-of-von-Neumann-algebras/cmp/1104253848.pdf}{Wiesbrock, CMP 157 (1993)}.
 \item
 \textbf{N3 (weak continuity/finite variation).} The bounded-interval and half-line endpoint control already follow internally from the local MaxEnt branch and now define the weak tail generator at fixed cutoff. What CMFP-3 adds is the continuum null-generator setting in which that weak-tail data can later be identified with the geometric null modular Hamiltonian of the relativistic phase.
 \end{itemize}
@@ -920,7 +920,7 @@ By Section 4.2, \(K_C = 2\pi B_C + \text{const}\), hence
 
 \subsubsection{5.2 Null-surface modular bridge}\label{52-null-surface-modular-bridge}
 
-This subsection now advances one step farther than the fixed-cutoff weak-tail-generator boundary. At fixed cutoff one can transfer cut-center data to regulated null strips, obtain exact or controlled strip additivity on one inherited strip model, and derive a weak tail generator for the renormalized half-line family. On the OPH geometric scaling branch of Theorem 4.2, the null half-line blow-up net then inherits geometric dilation and therefore half-sided modular inclusion, so Borchers--Wiesbrock supplies a genuine positive translation generator without leaving that step as an extra physical premise. What is still not proved here is the downstream density upgrade and the relativistic null-stress identification. Accordingly the c.11-local bridge now consists of:
+This subsection now advances one step farther than the fixed-cutoff weak-tail-generator boundary. At fixed cutoff one can transfer cut-center data to regulated null strips, obtain exact or controlled strip additivity on one inherited strip model, and derive a weak tail generator for the renormalized half-line family. On the OPH geometric scaling branch of Theorem 4.2, the null half-line blow-up net then inherits geometric dilation and therefore half-sided modular inclusion, so Borchers--Wiesbrock supplies an explicit positive null-translation generator on its Stone domain rather than leaving that step as an extra physical premise. What is still not proved here is the downstream density upgrade and the relativistic null-stress identification. Accordingly the c.12-local bridge now consists of:
 \begin{itemize}
 \tightlist
 \item
@@ -932,7 +932,7 @@ This subsection now advances one step farther than the fixed-cutoff weak-tail-ge
 \item
   derived half-sided modular inclusion on the null half-line blow-up net, and the resulting Borchers positive translation generator.
 \end{itemize}
-The later density formula and \(T_{kk}\) bridge are kept below only as explicit downstream templates rather than as fixed-cutoff theorems proved in this subsection.
+The later density formula and \(T_{kk}\) bridge are kept below only as explicit downstream templates rather than as fixed-cutoff theorems proved in this subsection. Lemma 5.2f makes the positive null-translation generator itself explicit: it records the Borchers unitary group, positivity and self-adjointness on the Stone domain, the corrected affine commutator relation, and the half-line modular-Hamiltonian identity \(K_a=K_0-2\pi aP_\Omega\). Bounded-interval formulas remain downstream.
 
 \textbf{Proposition 5.2a (Null-cut center transfer and inherited split).} Fix a regulated null tripartition
 \[
@@ -1131,10 +1131,11 @@ For \(a<b\),
 =
 -2\pi\int_a^b \langle\psi,q(v,\Omega)\phi\rangle\,dv.
 \]
+At this stage \(q(a,\Omega)\) is a weak tail generator, not yet a local operator-valued density; its identification with the positive self-adjoint Borchers generator occurs only after Corollary 5.2e and Lemma 5.2f.
 
 \textbf{Proof.} The derived endpoint-control estimate already applies to the renormalized family after removal of the central endpoint term. For bounded intervals, the symmetric-difference length is bounded by \(|a'-a|+|b'-b|\); for half-lines it is exactly \(|a'-a|\). Therefore the matrix-element functions are Lipschitz in the endpoints. A Lipschitz function on a compact interval is absolutely continuous, so \(f_{\psi,\phi}(a)\) has an \(L^\infty_{\mathrm{loc}}\) derivative and obeys the fundamental theorem of calculus. Defining \(q\) as the rescaled negative derivative gives the displayed integral relation. QED.
 
-\textbf{Downstream c.11--c.13 boundary.} The fixed-cutoff bridge established above is the end of the present subsection's proved content.
+\textbf{Downstream c.12--c.13 boundary.} The fixed-cutoff bridge established above is the end of the present subsection's proved content.
 
 \textbf{Lemma 5.2d (Downstream density-upgrade template).} If, in addition, the weak tail generator \(q(a,\Omega)\) is weakly differentiable in \(a\) and both \(f_{\psi,\phi}(a)\) and \(q_{\psi,\phi}(a)\) vanish at \(+\infty\), then one may define a density
 \[
@@ -1186,21 +1187,77 @@ so the inclusion \(\mathcal M_a(\Omega)\subset \mathcal M_0(\Omega)\) is half-si
 
 \textbf{Proof.} Blow up the cap modular flow of Theorem 4.2 near a smooth cut and restrict to the chosen null generator. In the tangent limit the cap-preserving flow becomes the null dilation \(v\mapsto e^{-2\pi t}v\). For every bounded interval \((c,d)\subset H_a\), this sends \(\mathcal A((c,d),\Omega)\) to \(\mathcal A((e^{-2\pi t}c,e^{-2\pi t}d),\Omega)\), and taking the von Neumann closure of the interval net yields the displayed identity for \(\mathcal M_a(\Omega)\). If \(t\le 0\), then \(e^{-2\pi t}a\ge a\), so \(H_{e^{-2\pi t}a}\subseteq H_a\), and isotony gives \(\mathcal M_{e^{-2\pi t}a}(\Omega)\subseteq \mathcal M_a(\Omega)\). QED.
 
-\textbf{Lemma 5.2f (Borchers promotion to a genuine null translation generator).} For the derived half-sided modular pair of Corollary 5.2e, Borchers--Wiesbrock yields a strongly continuous one-parameter unitary group \(U_\Omega(a)=e^{iaP_\Omega}\) with \(P_\Omega\ge0\) such that for \(a,b\ge0\),
+\textbf{Lemma 5.2f (Positive null-translation generator).} For the derived half-sided modular inclusion
 \[
-U_\Omega(a)\,\mathcal M_b(\Omega)\,U_\Omega(a)^*=\mathcal M_{a+b}(\Omega),
+\mathcal M_a(\Omega)\subset \mathcal M_0(\Omega)
+\qquad (a>0),
 \]
-and
+let \(\Delta_0(\Omega)\) be the modular operator of the standard pair \((\mathcal M_0(\Omega),\omega)\) and define \(K_0(\Omega):=-\log \Delta_0(\Omega)\). Borchers--Wiesbrock then yields a unique strongly continuous one-parameter unitary group
 \[
-\Delta^{it}U_\Omega(a)\Delta^{-it}=U_\Omega(e^{-2\pi t}a),
+U_\Omega(a)=e^{iaP_\Omega},
+\qquad a\in\mathbb R,
+\]
+such that
+\[
+U_\Omega(a)\omega=\omega,
 \qquad
-[K,P_\Omega]=i2\pi P_\Omega.
+U_\Omega(a)\mathcal M_b(\Omega)U_\Omega(a)^*=\mathcal M_{a+b}(\Omega)
+\quad (a,b\ge0),
 \]
-The weak tail generator from Proposition 5.2c is therefore upgraded from a domain-level endpoint derivative to a genuine positive translation generator.
+and whose generator \(P_\Omega\) is positive and self-adjoint on the Stone domain
+\[
+D(P_\Omega)
+:=
+\left\{
+\psi\in\mathcal H:
+\lim_{a\to0}\frac{U_\Omega(a)\psi-\psi}{ia}\ \text{exists}
+\right\}.
+\]
+Moreover,
+\[
+\Delta_0(\Omega)^{it}U_\Omega(a)\Delta_0(\Omega)^{-it}
+=
+U_\Omega(e^{-2\pi t}a),
+\qquad
+\Delta_0(\Omega)^{it}P_\Omega\Delta_0(\Omega)^{-it}
+=
+e^{-2\pi t}P_\Omega,
+\]
+and on the common invariant analytic core of \(K_0(\Omega)\) and \(P_\Omega\),
+\[
+[K_0(\Omega),P_\Omega]=-\,i\,2\pi P_\Omega.
+\]
+If \(\Delta_a(\Omega)\) denotes the modular operator of \((\mathcal M_a(\Omega),\omega)\) and \(K_a(\Omega):=-\log \Delta_a(\Omega)\), then
+\[
+\Delta_a(\Omega)=U_\Omega(a)\Delta_0(\Omega)U_\Omega(a)^*,
+\qquad
+K_a(\Omega)=U_\Omega(a)K_0(\Omega)U_\Omega(a)^*,
+\]
+so
+\[
+K_a(\Omega)=K_0(\Omega)-2\pi a\,P_\Omega
+\]
+as a quadratic-form identity on \(D(K_0(\Omega))\cap D(P_\Omega)\). Equivalently,
+\[
+\langle\psi,(K_b(\Omega)-K_a(\Omega))\phi\rangle
+=
+-2\pi(b-a)\langle\psi,P_\Omega\phi\rangle
+\]
+for all \(\psi,\phi\in D(K_0(\Omega))\cap D(P_\Omega)\). In the canonical normalization of Corollary 5.2b, the weak endpoint derivative from Proposition 5.2c is therefore exactly the Borchers generator. Bounded-interval modular-Hamiltonian formulas remain downstream and require the separate interval-preserving branch recorded in Theorem 5.2g.
 
-\textbf{Proof.} Apply the Borchers--Wiesbrock theorem to the half-sided modular inclusion \(\mathcal M_a(\Omega)\subset \mathcal M_0(\Omega)\) supplied by Corollary 5.2e. This gives the unique positive self-adjoint generator \(P_\Omega\) and the affine covariance relation with the modular group. Differentiating that covariance at \(a=0\) gives \([K,P_\Omega]=i2\pi P_\Omega\). QED.
+\textbf{Proof.} Corollary 5.2e gives the required half-sided modular inclusion. Borchers--Wiesbrock then yields the unique strongly continuous unitary group \(U_\Omega(a)\), its positive self-adjoint generator \(P_\Omega\), and the affine covariance relation with the modular group; Stone's theorem gives the displayed domain formula. Differentiating
+\[
+\Delta_0(\Omega)^{it}U_\Omega(a)\Delta_0(\Omega)^{-it}
+=
+U_\Omega(e^{-2\pi t}a)
+\]
+first at \(a=0\) and then at \(t=0\) on the common analytic core gives
+\[
+[K_0(\Omega),P_\Omega]=-\,i\,2\pi P_\Omega.
+\]
+Because \(U_\Omega(a)\omega=\omega\) and \(U_\Omega(a)\mathcal M_0(\Omega)U_\Omega(a)^*=\mathcal M_a(\Omega)\), uniqueness of modular data for the translated standard pair gives the displayed formulas for \(\Delta_a(\Omega)\) and \(K_a(\Omega)\). Differentiating \(K_a(\Omega)=U_\Omega(a)K_0(\Omega)U_\Omega(a)^*\) in \(a\) yields \(dK_a/da=-2\pi P_\Omega\) as a quadratic-form identity, and integrating from \(0\) to \(a\) gives the stated half-line modular-Hamiltonian relation. QED.
 
-\textbf{Theorem 5.2g (Downstream null-stress identification template).} If one adds the density-upgrade hypotheses of Lemma 5.2d and the relativistic scaling-limit null-stress premise, then on the half-line blow-up net whose half-sided modular inclusion is derived in Corollary 5.2e and whose positive translation group is given by Lemma 5.2f, one expects an operator-valued distribution \(T_{kk}(v,\Omega)\) with
+\textbf{Theorem 5.2g (Downstream null-stress identification template).} If one adds the density-upgrade hypotheses of Lemma 5.2d and the relativistic scaling-limit null-stress premise, then on the half-line blow-up net whose half-sided modular inclusion is derived in Corollary 5.2e and whose positive null-translation generator is identified in Lemma 5.2f, one expects an operator-valued distribution \(T_{kk}(v,\Omega)\) with
 \[
 \widetilde K[(a,\infty),\Omega]
 =
@@ -1254,11 +1311,11 @@ with \(K_\partial\) central and boundary-supported, and knowledge of \(T_{kk}\) 
 \item
   the local finite-constraint MaxEnt branch gives endpoint-Lipschitz control strong enough to define a weak tail generator for renormalized half-lines, and the OPH geometric scaling branch then derives half-sided modular inclusion on the half-line blow-up net;
 \item
-  Borchers--Wiesbrock therefore supplies a genuine positive null-translation generator inside the bridge itself;
+  Borchers--Wiesbrock therefore supplies a genuine positive null-translation generator \(P_\Omega\) inside the bridge itself, together with its Stone domain and the half-line modular-Hamiltonian relation \(K_a=K_0-2\pi aP_\Omega\);
 \item
   the density upgrade and the final identification with a local continuum \(T_{kk}\) are the remaining explicit downstream steps.
 \end{itemize}
-This is the disciplined route from null-strip factorization to the later Jacobson branch without pretending that c.11 has already completed the remaining density-upgrade and null-stress steps.
+This is the disciplined route from null-strip factorization to the later Jacobson branch without pretending that c.12 has already completed the remaining density-upgrade and null-stress steps.
 \subsubsection{5.3 Modular energy as stress-tensor charge (UV CFT)}\label{53-modular-energy-as-stress-tensor-charge-uv-cft}
 
 If one assumes a UV CFT regime on sufficiently small caps, the modular Hamiltonian is explicitly local. This serves as an alternative EFT bridge to Section 5.2.
@@ -1659,7 +1716,7 @@ For null deformations parameterized by \(\lambda\), consider nested null regions
 
 with the \(2\pi\) normalization fixed by Theorem 4.2.
 
-\textbf{Proof.} Use the derived half-sided modular-inclusion statement of Corollary 5.2e and its Borchers-Wiesbrock consequence from Lemma 5.2f. This gives the translation structure with \([K, P] = i 2\pi P\).
+\textbf{Proof.} Use the derived half-sided modular-inclusion statement of Corollary 5.2e and its Borchers-Wiesbrock consequence from Lemma 5.2f. This gives the translation structure with \([K, P] = - i 2\pi P\).
 
 Consider the relative entropy \(S(\rho_\lambda \| \omega_\lambda)\) between the state \(\rho\) restricted to \(R(\lambda)\) and the reference state \(\omega\). Monotonicity under restriction to smaller regions (\(\lambda' > \lambda\)) gives:
 
