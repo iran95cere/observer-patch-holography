@@ -1,0 +1,656 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\input{release_info.tex}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\title{Screen Microphysics, Patches, and Observer Synchronization in OPH}
+\author{B.\ M\"uller}
+\date{March 18, 2026}
+
+\begin{document}
+\maketitle
+\OPHPaperReleaseBanner
+
+\begin{abstract}
+This paper is a phase-1 architecture note for Observer-Patch Holography (OPH). The
+objective is constructive and simulator-facing: choose one finite local screen model that can
+actually be encoded in qubits, make the map from local registers to patch algebras and overlap
+observables explicit, and state how stable records, observer patterns, local interaction, and
+observer-level synchronization could be built inside that same microscopic system. The working
+choice is a constrained finite gauge-register or quantum-link style model on a cellulated
+screen, used here as a \emph{reference architecture} rather than as a claim that the unique OPH
+UV completion has already been identified. We separate reused OPH structure, architecture-level
+claims, simulator targets, and conjectural bridges. In particular, this note does \emph{not}
+claim that the OPH continuum or gravity branch has already been derived from the present
+microphysics. The deliverable of this round is a sharper blueprint: local Hilbert spaces,
+qudit-to-qubit encoding agenda, patch and overlap observable dictionary, observer criterion,
+synchronization and repair options, a first implementable reference model, and a validation
+package that can fail.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Project Charter}
+
+\textbf{Status.} Extra side paper. Not part of the compact recovered core. Not yet part of the
+release-critical OPH theorem stack.
+
+\textbf{Purpose.}
+\begin{enumerate}[leftmargin=2em]
+\item Give a concrete reference architecture for local finite screen degrees of freedom.
+\item Make the bridge from local registers to patches, overlaps, records, observers, and
+synchronization explicit enough to build toy simulators.
+\item Keep theorem claims, simulator claims, and conjectural bridges sharply separated.
+\item Feed the existing OPH microphysics, repair, and observer task lanes without pretending
+to close them automatically.
+\end{enumerate}
+
+\textbf{Non-goals.}
+\begin{enumerate}[leftmargin=2em]
+\item Do not claim that the unique UV completion is known.
+\item Do not claim that the OPH scaling-limit continuum or gravity branch is already derived
+here.
+\item Do not treat ``observer'' as a consciousness claim.
+\item Do not treat synchronization of overlap data as a proof of full continuum closure.
+\end{enumerate}
+
+\textbf{Phase-1 output.} A reference microscopic screen model, a qubit-encoding agenda, a patch
+and overlap dictionary, an observer criterion, a synchronization design space, and a simulator
+validation package.
+
+\section{Claim Taxonomy}
+
+The point of this paper is not to maximize the number of statements called ``derived.'' The
+point is to keep the layers clean.
+
+\begin{enumerate}[leftmargin=2em,label=\textbf{T\arabic*.}]
+\item \textbf{Reused OPH structure.} The OPH screen-net picture, overlap consistency language,
+local MaxEnt and refinement-stability branch, recoverable generalized entropy package, and the
+regulator-scale edge-center completion language are reused as background structure. This paper
+does not re-prove them.
+
+\item \textbf{Architecture claims.} Once one finite gauge-register reference architecture is
+chosen, the patch algebra, overlap algebra, edge-sector observables, record layer, and
+observer-level interfaces can be defined explicitly at fixed cutoff.
+
+\item \textbf{Simulator claims.} Small-lattice digital or tensor-network simulations can test
+whether the reference architecture exhibits gauge-invariant patch observables, stable records,
+low conditional mutual information across collars, and robust synchronization under local repair
+schedules.
+
+\item \textbf{Conjectural bridge claims.} It is plausible that an appropriate refinement-stable
+phase of such models lands in the OPH modular-geometric branch and later supports the OPH
+continuum or gravity story, but that bridge is not proved here.
+
+\item \textbf{Excluded claims.} This note does not identify the final OPH microphysics, does not
+establish a unique repair law, and does not close the Standard Model or continuum branches.
+\end{enumerate}
+
+\section{Why a Finite Gauge-Register Reference Architecture}
+
+Several microscopic families are logically possible: constrained finite gauge registers,
+quantum-link truncations of compact gauge systems, string-net or quantum-double models,
+generic tensor-network ans\"atze, or ad hoc observer automata attached to a screen. For a
+phase-1 constructive draft, the first working model should be selected by engineering
+criteria rather than by aesthetic breadth.
+
+The selection criteria are:
+\begin{enumerate}[leftmargin=2em]
+\item finite local Hilbert spaces at fixed cutoff;
+\item exact local constraints rather than only emergent ones;
+\item a natural patch and overlap algebra;
+\item explicit edge-sector or center observables on collars;
+\item straightforward qudit-to-qubit compilation;
+\item a path from local mismatch syndromes to repair or synchronization maps;
+\item extensibility from toy groups such as $\mathbb Z_2$ or $S_3$ to richer quantum-link
+truncations.
+\end{enumerate}
+
+A constrained finite gauge-register or quantum-link style screen model is therefore the
+default reference architecture for this draft. It is finite-dimensional, local, gauge-aware,
+and already speaks the same language as the OPH regulator package. It also makes the collar
+center and edge-sector story concrete instead of metaphorical.
+
+This choice is a working \emph{reference architecture}. It is not a claim that all other
+microscopic families are ruled out.
+
+\section{Reference Architecture: Local Screen Registers on a Cellulated Sphere}
+
+Take a finite cellulation $\Gamma=(V,E,F)$ of a horizon screen $S^2$. Each oriented link
+$e\in E$ carries a finite register $\mathcal H_e$. The simplest version is a finite-group
+register with basis $\{|g\rangle_e:g\in G\}$ for a finite group $G$, so
+\begin{equation}
+\mathcal H_e \cong \mathbb C^{d_G},\qquad d_G=|G|.
+\end{equation}
+A more flexible version replaces $|g\rangle$ by a truncated quantum-link basis labeled by a
+small irrep set and matrix indices. For phase 1, the finite-group presentation is easier to
+simulate, while the quantum-link presentation shows how the same pattern could extend to
+compact-group truncations.
+
+To support records and observer logic, attach a small record register to selected vertices or
+coarse cells:
+\begin{equation}
+\mathcal H_v^{\mathrm{rec}} \cong (\mathbb C^2)^{\otimes m_v}.
+\end{equation}
+The extended Hilbert space is then
+\begin{equation}
+\widetilde{\mathcal H}_{\Gamma}=
+\bigotimes_{e\in E}\mathcal H_e
+\otimes
+\bigotimes_{v\in V}\mathcal H_v^{\mathrm{rec}}.
+\end{equation}
+
+At each vertex $v$, a local gauge action acts on the incident oriented links by left/right
+multiplication or by the corresponding truncated quantum-link action. Let $P_v$ denote the
+Gauss projector onto the locally admissible subspace. The physical cutoff Hilbert space is
+\begin{equation}
+\mathcal H_{\mathrm{phys}} = \Bigl(\prod_{v\in V}P_v\Bigr)\widetilde{\mathcal H}_{\Gamma}.
+\end{equation}
+
+A minimal reference Hamiltonian or Trotterized circuit family should contain four layers:
+\begin{equation}
+H_{\mathrm{ref}} =
+\lambda_G\sum_{v}(1-P_v)
++\lambda_B\sum_{f}(1-B_f)
++\lambda_R\sum_{a}(1-R_a)
++H_{\mathrm{sync}},
+\end{equation}
+where $B_f$ are plaquette or face operators, $R_a$ are record-stabilization or record-write
+terms, and $H_{\mathrm{sync}}$ is a local overlap-repair interaction to be chosen from a small
+menu later in the paper. The exact coefficients and update schedules are not fixed here.
+What matters is the architecture: gauge constraints, face dynamics, record dynamics, and
+repair dynamics all live on one finite screen.
+
+\begin{verbatim}
+Microscopic screen picture
+
+   record q(v1)      record q(v2)      record q(v3)
+        o------------------o------------------o
+        | \              / | \              / |
+        |  \    f1      /  |  \    f2      /  |
+        |   \          /   |   \          /   |
+        |    \        /    |    \        /    |
+        o-----\------/-----o-----\------/-----o
+      q(v4)    \    /    q(v5)    \    /    q(v6)
+                 \  /                \/
+                  \/                 /\
+                  /\                /  \
+                 /  \              / f4 \
+                / f3 \            /      \
+               /      \          /        \
+              o--------\--------o----------o
+          record q(v7)          q(v8)     q(v9)
+
+   links carry finite gauge registers
+   vertices host Gauss checks and optional record qubits
+   faces carry plaquette/holonomy dynamics
+\end{verbatim}
+
+The simulator-facing question is therefore not ``what is the final UV completion?'' It is
+``can one finite local screen model realize the OPH patch, edge, record, and synchronization
+interfaces well enough to be testable?''
+
+\section{Qudit-to-Qubit Encoding Agenda}
+
+If the screen model is ever going to be built or simulated on conventional hardware, the
+local finite registers must be compiled into qubits. This paper does not pick a single global
+encoding forever; it sets the agenda and the tradeoffs.
+
+\subsection{Binary, unary, and factorized encodings}
+
+For a $d$-level link register, the default binary encoding uses
+\begin{equation}
+ n_e = \lceil \log_2 d\rceil
+\end{equation}
+qubits per link, with a penalty term suppressing unused binary strings when $d$ is not a
+power of two. Binary encoding is qubit-efficient and natural for digital simulation.
+
+Unary or one-hot encoding uses $d$ qubits per link with one excitation allowed. It is less
+qubit-efficient but makes local projectors and permutation actions shallower. This is useful
+for very small groups and for verification runs.
+
+For truncated quantum-link bases labeled by irreps and matrix indices, a factorized encoding
+is often cleaner:
+\begin{equation}
+|R,m,n\rangle \longmapsto |R\rangle_{\mathrm{irrep}}\otimes |m\rangle_{\mathrm{left}}
+\otimes |n\rangle_{\mathrm{right}}.
+\end{equation}
+This keeps the representation label explicit, which is attractive when collar sector labels
+are later measured.
+
+\subsection{Agenda for phase 1}
+
+The encoding work should proceed in the following order.
+\begin{enumerate}[leftmargin=2em]
+\item Start with $G=\mathbb Z_2$ or $\mathbb Z_N$ in binary encoding to validate the patch,
+overlap, and synchronization pipeline cheaply.
+\item Move to $S_3$ or another small nonabelian finite group to validate nonabelian sector
+projectors, collar labels, and character-based observables.
+\item Add a truncated quantum-link variant only after the finite-group version produces stable
+measurements and sensible scaling diagnostics.
+\item Compare binary and unary encodings only at the level of compilation cost and numerical
+stability, not as a statement about final physics.
+\end{enumerate}
+
+What must be compiled into qubit circuits is now explicit:
+\begin{enumerate}[leftmargin=2em]
+\item local gauge transformations and Gauss projectors;
+\item plaquette or loop operators;
+\item record-write and record-read channels;
+\item overlap projectors, edge-sector projectors, and mismatch syndromes;
+\item local repair maps that preserve gauge admissibility.
+\end{enumerate}
+
+\section{From Local Registers to Patches and Overlaps}
+
+The bridge from local finite registers to OPH patch language has to be explicit. A patch is
+not only a geometric region. It is a connected region together with the gauge-invariant
+observable algebra available there.
+
+Let $P\subseteq \Gamma$ be a connected collection of faces, together with all vertices and
+links incident to those faces. Its extended cutoff Hilbert space is
+\begin{equation}
+\widetilde{\mathcal H}_P=
+\bigotimes_{e\subset P}\mathcal H_e
+\otimes
+\bigotimes_{v\subset P}\mathcal H_v^{\mathrm{rec}},
+\end{equation}
+and its extended local algebra is
+\begin{equation}
+\widetilde{\mathcal A}(P)=\mathcal B(\widetilde{\mathcal H}_P).
+\end{equation}
+The physical patch algebra is the boundary-fixed subalgebra
+\begin{equation}
+\mathcal A(P)=\widetilde{\mathcal A}(P)^{G_{\partial P}},
+\end{equation}
+in the same spirit as the regulator picture already used in OPH.
+
+If $P$ and $Q$ overlap, the shared region $B=P\cap Q$ is not merely a geometric set. It is
+where the shared or comparable observables live. At fixed cutoff, the collar Hilbert space is
+expected to decompose as
+\begin{equation}
+\mathcal H_B \cong \bigoplus_{\alpha}
+\bigl(H_{b_L^{\alpha}}\otimes H_{b_R^{\alpha}}\bigr),
+\end{equation}
+with center projectors $\Pi_{\alpha}$ labeling edge sectors. That decomposition is not proved
+again here; it is reused OPH regulator language and serves as the observable interface for the
+reference model.
+
+\subsection{Patch and overlap observable dictionary}
+
+The working dictionary is the core of this paper.
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Link register basis / electric occupation.}
+The local computational basis on a link is the microscopic screen data. In a finite-group
+presentation this is the basis $|g\rangle_e$; in a quantum-link truncation it is the local
+representation basis.
+
+\item \textbf{Gauss projector $P_v$.}
+This is the local admissibility check. It says which neighboring link configurations may be
+regarded as physical around a vertex.
+
+\item \textbf{Plaquette operator $B_f$ or loop operator $W_\gamma$.}
+This is the patch-level probe of curvature, flux, or sector excitation. Closed loops contained
+inside a patch belong to $\mathcal A(P)$.
+
+\item \textbf{Boundary or collar sector projectors $\Pi_{\alpha}$.}
+These are the overlap-accessible center observables. They are the natural candidates for
+shareable edge data and for robust cross-patch records.
+
+\item \textbf{Record observables $Z^{\mathrm{rec}}_{v,a}$ and pointer subalgebras.}
+These are commuting or approximately commuting observables stabilized long enough to act as
+memories. A record is useful only if it can be read repeatedly with low back-action on the
+shared sector data.
+
+\item \textbf{Patch state $\rho_P$.}
+The reduced state on $\mathcal A(P)$ is the patch description accessible to an internal
+pattern supported on $P$.
+
+\item \textbf{Overlap mismatch syndrome $S_{PQ}$.}
+This is a function of shared observables, typically of the collar sector labels and the record
+comparisons on $B=P\cap Q$. It is the direct input to any repair or synchronization update.
+\end{enumerate}
+
+\begin{verbatim}
+Patch/overlap interface
+
+   Patch P bulk             shared collar B            Patch Q bulk
+  ----------------         =================         ----------------
+  | loops W_gamma |        || Pi_alpha     ||        | loops W_gamma |
+  | records R_P   | <----> || shared bits  || <----> | records R_Q   |
+  | local state   |        || syndrome S   ||        | local state   |
+  ----------------         =================         ----------------
+
+   what is compared on B is not the whole quantum state
+   it is a selected shared observable family on the overlap
+\end{verbatim}
+
+This is where the bridge to observers becomes concrete. An observer never needs access to the
+full global state. It needs persistent access to some patch algebra and to a stable shared
+observable family on overlaps with neighboring patches.
+
+\section{Records and the Observer Criterion}
+
+The word ``observer'' should be used operationally. In OPH language, an observer is an
+internal pattern with patch access and records. In a finite screen model, that can be stated
+more sharply.
+
+\subsection{Records}
+
+A \emph{record layer} is a commuting or approximately commuting subalgebra of robust pointer
+observables, supported partly inside a patch and partly on the boundary sector interface. A
+useful record variable must satisfy three practical conditions:
+\begin{enumerate}[leftmargin=2em]
+\item it is written by local interactions with nearby screen registers;
+\item it survives for many local update cycles compared with the readout timescale;
+\item it can be compared across overlaps through shared observables or recoverable summaries.
+\end{enumerate}
+
+This prevents the word ``record'' from collapsing into an arbitrary entangled correlation.
+The role of the record layer is to produce stable, repeatedly accessible data.
+
+\subsection{Working observer criterion}
+
+The OPH manuscript already uses the tuple
+\begin{equation}
+O=(P_O,\mathcal A(P_O),\rho_O,R_O)
+\end{equation}
+for an observer patch, local algebra, local state, and records. For the reference
+microphysics we add an explicit update interface and treat an observer as a pattern class
+rather than as a primitive object:
+\begin{equation}
+O_{\mathrm{ref}}=(P_O,\mathcal A(P_O),\rho_O,R_O,\mathcal U_O).
+\end{equation}
+Here $\mathcal U_O$ is a local channel or update family that writes, compares, and repairs
+records using only observables available in $P_O$ and on its overlaps.
+
+A subsystem or pattern counts as an \emph{observer in the present operational sense} if it
+satisfies all of the following.
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Patch access.} It is supported on a connected patch $P_O$ with a nontrivial
+shared overlap algebra to neighboring patches.
+\item \textbf{Record support.} It carries a set $R_O$ of metastable record observables.
+\item \textbf{Update capability.} It can condition future local actions on those records.
+\item \textbf{Comparison capability.} It can query at least one shared overlap observable
+family and detect mismatch syndromes with neighbors.
+\item \textbf{Persistence.} The pattern remains identifiable for many local update cycles.
+\end{enumerate}
+
+This is an observer pattern criterion, not a consciousness criterion. It is meant to support
+simulator definitions of record-bearing internal agents or agent-like subsystems.
+
+\begin{verbatim}
+Local registers --> records --> observer pattern --> synchronization
+
+   link qudits / qubits
+          |
+          v
+   gauge-invariant patch observables
+          |
+          v
+   robust pointer variables / records
+          |
+          v
+   persistent update-capable pattern O_ref
+          |
+          v
+   compare shared overlap data and repair mismatch
+\end{verbatim}
+
+\section{Interaction, Synchronization, and Repair}
+
+The main missing bridge in many holographic narratives is the move from ``overlaps exist'' to
+``observers actually synchronize.'' In a simulator-facing draft, synchronization means one
+specific thing: neighboring observer patterns repeatedly compare selected shared observables on
+an overlap and apply local gauge-covariant updates that reduce mismatch without destroying the
+record layer.
+
+\subsection{What is synchronized}
+
+Full quantum states are not synchronized. The synchronization target is a chosen overlap
+observable family,
+\begin{equation}
+\mathcal O^{\mathrm{sh}}_{PQ}\subseteq \mathcal A(P\cap Q),
+\end{equation}
+typically built from collar sector projectors, conserved boundary charges, and read-stable
+record summaries. In practical terms, synchronization means that two observers come to agree on
+\emph{the values or distributions of shared observables}, not that their internal microscopic
+states become identical.
+
+A simple mismatch potential is
+\begin{equation}
+\Phi = \sum_{\langle P,Q\rangle} w_{PQ}\,\Xi_{PQ},
+\end{equation}
+where $\Xi_{PQ}$ is a nonnegative function of disagreement on $\mathcal O^{\mathrm{sh}}_{PQ}$.
+This is only a design template in the present paper; the proof of termination or confluence of
+particular repair maps belongs to the consensus branch, not to this draft.
+
+\subsection{Repair mechanism options}
+
+Three local mechanism families are worth keeping on the table.
+
+\paragraph{Option A: syndrome-based overlap repair.}
+Measure or infer a mismatch syndrome on $P\cap Q$, apply a gauge-covariant correction on one or
+both sides, and keep the update local. This is closest to the distributed-consensus language in
+\texttt{reality\_as\_consensus\_protocol.tex}.
+
+\paragraph{Option B: dissipative synchronization.}
+Use local Lindbladian or CPTP channels that preserve the Gauss constraints while damping
+mismatch in the shared observable family. This is attractive for noisy simulation because it
+builds repair into the dynamics.
+
+\paragraph{Option C: record-mediated Bayesian or modular update.}
+When a robust record layer already exists, synchronize the record summaries first and only then
+feed the result back into local control choices. This is the most observer-facing option but is
+also the furthest from a bare microscopic implementation.
+
+\subsection{Recommended phase-1 choice}
+
+The first implementable build should use Option A as the default synchronization mechanism: a
+local syndrome-reduction map on overlaps, with gauge checks before and after the correction.
+This has four advantages.
+\begin{enumerate}[leftmargin=2em]
+\item It is nearest to the existing OPH repair vocabulary.
+\item It turns disagreement into a measurable object.
+\item It can be tested on small finite graphs with asynchronous schedules.
+\item It leaves open the later upgrade to dissipative or modular versions.
+\end{enumerate}
+
+What this paper can responsibly say is the following: if a chosen repair family is local,
+gauge-covariant, terminating, and locally confluent on the selected shared observable family,
+then observer-level synchronization is schedule-robust on that family. The proof of that kind
+of statement belongs to the separate consensus paper. The present task is to supply the
+microphysical inputs that such repair maps act on.
+
+\section{What a First Implementable Reference Model Should Contain}
+
+A first actual build should be deliberately small and explicit. The minimal reference model
+should contain the following ingredients.
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{A small spherical cellulation.} An octahedral or icosahedral screen graph is enough
+for the first pass. The purpose is to get nontrivial overlaps and collars, not to imitate the
+continuum immediately.
+
+\item \textbf{One finite gauge choice.} Start with $G=\mathbb Z_2$ for debugging and then move to
+$S_3$ for the first nonabelian test. Treat truncated compact-group quantum links as a second
+round, not as the initial burden.
+
+\item \textbf{Explicit registers.} One encoded link register on every oriented edge, one small
+record register on selected coarse cells or vertices, and ancillas only where needed for local
+checks.
+
+\item \textbf{Explicit local layers.} A Gauss-check layer, a face or plaquette layer, a
+record-write layer, an overlap-compare layer, and a repair layer.
+
+\item \textbf{A coarse patch cover.} At least three overlapping patches, so that overlap
+consistency can be tested beyond one isolated pair.
+
+\item \textbf{A declared shared observable family.} Collar sector projectors, selected boundary
+charges, and one record summary observable per overlap.
+
+\item \textbf{A declared observer pattern.} At least one persistent record-bearing subsystem that
+uses local records to select future actions or updates.
+\end{enumerate}
+
+A concrete first reference build could therefore be:
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{
+Octahedral screen, $G=\mathbb Z_2$ on links, one record qubit on each coarse cap,
+three overlapping patches, syndrome-based overlap repair, asynchronous update schedule,
+and measurement of collar sector labels, record lifetimes, and convergence curves.}}
+\end{center}
+
+That model would still be a toy. But it would already answer the right phase-1 question:
+can one finite local screen carry patches, edge sectors, records, observers, and stable local
+synchronization in one consistent simulation?
+
+\section{Simulator Validation Package}
+
+A useful simulator package has to be able to fail. The following tests are the minimum set.
+
+\subsection{Kinematic validation}
+\begin{enumerate}[leftmargin=2em]
+\item Verify the encoded Gauss projectors and the dimension of the physical subspace.
+\item Verify that patch algebras restricted to gauge-invariant operators behave correctly under
+inclusion and overlap.
+\item Verify that the chosen collar projectors really produce a measurable sector
+decomposition.
+\end{enumerate}
+
+\subsection{Record validation}
+\begin{enumerate}[leftmargin=2em]
+\item Measure record lifetimes under the microscopic dynamics.
+\item Check repeated-read stability of the declared record observables.
+\item Check whether records can be compared across overlaps without uncontrolled back-action on
+the shared sector data.
+\end{enumerate}
+
+\subsection{Observer and synchronization validation}
+\begin{enumerate}[leftmargin=2em]
+\item Show that the declared observer pattern remains identifiable for many update cycles.
+\item Run multiple asynchronous repair schedules from the same initial family and compare the
+resulting shared observable outputs.
+\item Track the mismatch potential $\Phi$ and test whether it decreases under the chosen local
+repair family.
+\item Introduce controlled defects or frustrated cycles and determine whether the repair map
+correctly distinguishes removable mismatch from topologically stable residual obstruction.
+\end{enumerate}
+
+\subsection{Negative controls}
+\begin{enumerate}[leftmargin=2em]
+\item Break gauge covariance deliberately and check that patch or overlap observables become
+schedule-sensitive.
+\item Remove the record-stabilization layer and check that observer-level synchronization
+collapses even if microscopic overlaps still exist.
+\item Replace the declared shared observable family by an overambitious one and check that the
+repair map fails to converge.
+\end{enumerate}
+
+\subsection{What this validation package does not establish}
+
+Even a successful validation package would not by itself prove the OPH scaling-limit gravity
+branch, would not establish a unique UV completion, and would not close the quantitative gauge
+or matter branches. It would only show that a finite local screen model can realize the needed
+fixed-cutoff architecture.
+
+\section{Dependence on Existing OPH Results and Open Bridges}
+
+This draft depends heavily on already existing OPH structure. The point is to reuse it
+cleanly and to say where the bridges remain open.
+
+\subsection{Reused structure}
+
+The following ingredients are treated as imported OPH language or results.
+\begin{enumerate}[leftmargin=2em]
+\item The screen-net viewpoint on a horizon screen $S^2$ with patch algebras.
+\item Overlap consistency as the requirement that local descriptions agree on shared
+observables.
+\item The local MaxEnt and refinement-stability branch as the current OPH dynamical baseline.
+\item The recoverable generalized entropy package and the collar language in which conditional
+mutual information and recovery become meaningful.
+\item The regulator-scale edge-center completion picture, including the idea that a collar
+supports center labels or edge sectors visible from both sides.
+\item The observer tuple $(P_O,\mathcal A(P_O),\rho_O,R_O)$ as an existing OPH access model.
+\end{enumerate}
+
+\subsection{Open conjectural bridges}
+
+The following steps remain open and must not be smuggled in as completed results.
+\begin{enumerate}[leftmargin=2em]
+\item Showing that the chosen finite gauge-register architecture realizes the correct
+refinement-stable MaxEnt phase rather than merely imitating its language.
+\item Showing that the collar recovery and edge-sector behavior of the reference model scale in
+the way required by the OPH geometric modular branch.
+\item Deriving the OPH continuum or gravity branch from this microphysics rather than simply
+using compatible notation.
+\item Showing that one reference architecture is unique or even preferred beyond the current
+engineering criteria.
+\item Showing that the same microscopic build closes the quantitative gauge, electroweak, or
+matter branches.
+\end{enumerate}
+
+The structure of this paper is therefore asymmetric on purpose: the fixed-cutoff architecture
+is concrete; the scaling-limit bridges remain explicit research problems.
+
+\section{Relation Back to the Existing Completion Tree}
+
+This extra paper should be read as a phase-1 bridge across three already existing OPH lanes.
+
+\begin{enumerate}[leftmargin=2em]
+\item \textbf{Screen microphysics lane.} The main immediate anchor is the compact-side
+microphysics problem around the edge-sector law and related fixed-cutoff structure. A successful
+reference model would provide actual finite architectures on which those quantities can be
+measured rather than only postulated.
+
+\item \textbf{Repair and synchronization lane.} The overlap-repair and consensus program needs a
+microphysical interface: explicit shared observables, mismatch syndromes, and local repair maps.
+This paper defines those ingredients without yet claiming the final convergence theorems.
+
+\item \textbf{Observer and records lane.} The observer program needs a concrete record layer and
+an operational observer criterion. This paper states both in a way that can be checked in toy
+simulators.
+\end{enumerate}
+
+The relation to the task tree can be stated conservatively.
+\begin{enumerate}[leftmargin=2em]
+\item It directly feeds the compact microphysics anchor \texttt{papers.compact.e.24}.
+\item It directly feeds the repair and synchronization anchor
+\texttt{papers.reality.a.01}.
+\item It directly feeds the observer-side anchors \texttt{papers.observers.b.03} and
+\texttt{papers.observers.e.18}.
+\item It is likely to feed later tasks such as \texttt{papers.compact.e.25--e.27},
+\texttt{papers.reality.a.02--a.05}, and \texttt{papers.reality.b.07--b.09}, but it should not
+claim to close them in phase 1.
+\end{enumerate}
+
+So the correct role of this note inside the completion tree is narrow but important: it makes
+the fixed-cutoff build surface explicit. It does not replace the later derivation or theorem
+packages.
+
+\section{Conclusion}
+
+The main missing bridge for a constructive OPH microphysics program is no longer hard to say.
+One must go from finite local screen registers to gauge-invariant patch algebras, from patch
+algebras to overlap observables and edge sectors, from those shared observables to stable
+records, from records to observer patterns, and from observer patterns to gauge-covariant local
+synchronization rules. This paper chooses a constrained finite gauge-register or quantum-link
+screen model as the reference architecture for that bridge and spells out what a first actual
+build should contain.
+
+If the reference architecture fails, that is useful: it tells us that this class of finite
+screen models does not realize the needed OPH interfaces. If it succeeds, that still does not
+identify the final UV completion or prove the continuum branch. What it does provide is the
+phase-1 architecture needed before those stronger questions can be asked responsibly.
+
+\end{document}
