@@ -96,6 +96,13 @@ Start with the official OPH website, the interactive OPH Lab, and the web editio
 - **OPH Book (web edition):** [Read the OPH Book online](https://oph-book.floatingpragma.io)
 - **NotebookLM notebook:** [Watch the OPH introduction video and start asking questions](https://notebooklm.google.com/notebook/d5249760-6ce8-44a0-927b-ccf90402711a?artifactId=fb7c0ebd-4375-4997-9cae-6558ff8977b4)
 
+## IBM Quantum Experiments
+
+A first public IBM Quantum Cloud benchmark bundle is now included in this repo. It summarizes the initial recoverability and exact-ratio tests, the measured hardware outputs, and the public code/data bundle used for the runs.
+
+- **Experimental note:** [IBM Quantum Cloud Evidence for OPH](extra/IBM_QUANTUM_CLOUD.md)
+- **Public code and data:** [code/ibm_quantum_cloud/](code/ibm_quantum_cloud/)
+
 ## Ask OPH Sage
 
 The fastest way to explore OPH is to ask OPH Sage directly. OPH Sage can answer technical and philosophical questions.

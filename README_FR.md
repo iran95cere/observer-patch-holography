@@ -103,6 +103,13 @@ Commencez par le site officiel de l'OPH, le labo interactif OPH et la version we
 - **Livre OPH (edition web) :** [Lire le livre OPH en ligne](https://oph-book.floatingpragma.io)
 - **NotebookLM :** [Regardez la presentation d'introduction a l'OPH et commencez a poser vos questions](https://notebooklm.google.com/notebook/d5249760-6ce8-44a0-927b-ccf90402711a?artifactId=fb7c0ebd-4375-4997-9cae-6558ff8977b4)
 
+## Expériences IBM Quantum
+
+Un premier bundle public d'expériences IBM Quantum Cloud est maintenant inclus dans ce dépôt. Il résume les premiers tests de récupérabilité et de rapports exacts, les sorties matérielles mesurées, ainsi que le bundle public de code et de données utilisé pour ces exécutions.
+
+- **Note expérimentale :** [IBM Quantum Cloud Evidence for OPH](extra/IBM_QUANTUM_CLOUD.md)
+- **Code et données publics :** [code/ibm_quantum_cloud/](code/ibm_quantum_cloud/)
+
 ## Posez vos questions à OPH Sage
 
 Le moyen le plus rapide d'explorer l'OPH est de poser vos questions directement à OPH Sage. OPH Sage peut répondre à des questions techniques et philosophiques.
