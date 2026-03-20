@@ -159,6 +159,10 @@ of describing an objective world that somehow produces observers, we're
 describing the consistency conditions that observers must satisfy to share
 a reality.
 
+## Reading Rule
+
+For theorem status and claim tier, consult the compact paper first. This book is an explanatory surface synchronized to that ledger, and it also includes interpretive and speculative layers that are not part of the compact recovered core.
+
 ## What This Book Does
 
 This book reverse engineers reality from first principles.

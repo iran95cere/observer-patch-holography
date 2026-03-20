@@ -40,7 +40,7 @@ The strongest plausible end state is not "proof of OPH" in a metaphysical sense,
 - **PDF (main paper):** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **LaTeX source:** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
 
-**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the submission-focused compact paper. It concentrates the falsifiable core of OPH: Lorentz kinematics in the geometric modular phase, the conditional scaling-limit Einstein branch, Standard Model gauge closure under the extended MAR admissibility package, the hypercharge lattice on the realized one-generation matter package under the standard normalization, the realized counting chain $N_g=3$ and then $N_c=3$ on the MAR-admissible branch, the two-input current quantitative implementation, and the strongest supplement-backed quantitative branches.
+**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the submission-focused compact paper. It is the authoritative recovered-core and claim-tier surface for the current OPH paper set. It concentrates the falsifiable core of OPH: Lorentz kinematics in the geometric modular phase, the conditional scaling-limit Einstein branch, Standard Model gauge closure under the extended MAR admissibility package, the hypercharge lattice on the realized one-generation matter package under the standard normalization, the realized counting chain $N_g=3$ and then $N_c=3$ on the MAR-admissible branch, the two-input current quantitative implementation, and the strongest supplement-backed quantitative branches.
 
 In the current synchronized paper set, the null-bridge hardening has removed any standalone propagation, endpoint-control, or half-sided modular-inclusion assumption from the fixed-cutoff gravity route: the MaxEnt branch now carries the control estimates internally, and the geometric blow-up argument closes the bridge through the derived positive null-translation stage. What still remains explicit on that route are the downstream density-upgrade and relativistic null-stress premises.
 
@@ -76,7 +76,7 @@ Challenge uploads are handled by workspace-local operational tooling rather than
 
 The canonical paper sources now live under [`paper/`](paper). The old draft tree has been removed from the repository.
 
-When hardening paper claims or running a paper-upgrade release, start with the compact submission paper first. Only after its theorem-status language and release line are coherent should equivalent wording changes be propagated into the main paper, book, README surfaces, websites, and ingestion pipeline.
+When hardening paper claims or running a paper-upgrade release, start with the compact submission paper first. The compact note is the authoritative recovered-core and claim-tier source. Only after its theorem-status language and release line are coherent should equivalent wording changes be propagated into the main paper, book, README surfaces, websites, and ingestion pipeline, all of which inherit those statuses rather than upgrading them.
 
 Across the current paper set, OPH separates claims by status: parameter-free structural outputs
 (Lorentz/gauge/quotient chain, hypercharge lattice on the realized matter package, $N_g=3$ and
@@ -531,6 +531,8 @@ As summarized in the status matrix above, the framework derives Lorentz kinemati
 | [oph_no_cheat_audit.py](code/particles/oph_no_cheat_audit.py) | Static + runtime anti-leak audit |
 
 ### Book Chapters
+
+For theorem status and claim tier, read the compact paper first; the book is a synchronized explanatory surface.
 
 | Chapter | Title | Topic |
 |---------|-------|-------|
