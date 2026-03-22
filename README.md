@@ -18,66 +18,30 @@ The laws of physics are the consistency rules that make this intersubjective agr
 
 From this starting point (plus entropy and Markov constraints), OPH treats spacetime, gauge structure, and particle physics as emergent consequences of consistency.
 
-## Research Program
-
-OPH should currently be understood as a research program rather than a finished theory. In physics, one does not prove in an absolute sense that a theory is "the correct one"; the realistic target is a framework that is mathematically explicit, regulator-backed, empirically discriminating, and resilient under attempts at falsification.
-
-The current program is therefore to:
-
-- turn the remaining sketch-level arguments into complete proofs
-- remove auxiliary assumptions where possible, or isolate them sharply where they remain necessary
-- realize the axioms in explicit microscopic screen models or regulators
-- derive the gravity, gauge, and quantitative sectors from those realizations with controlled approximations
-- replace calibration-dependent steps with first-principles derivations where such claims are intended
-- produce novel empirical contradiction criteria and branch-sensitive tests that can fail cleanly
-
-The strongest plausible end state is not "proof of OPH" in a metaphysical sense, but a rigorously derived and experimentally accountable theory whose effective sectors, parameter economy, and falsifiable predictions survive independent scrutiny.
-
 ## Papers
 
-**Observers are all you need** is the primary OPH paper.
+**Observers are all you need** is the primary technical paper. It gives the broadest current statement of the OPH program and its main derivation branches.
 
 - **PDF (main paper):** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **LaTeX source:** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
 
-**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the submission-focused compact paper. It concentrates the falsifiable core of OPH: Lorentz kinematics in the geometric modular phase, the conditional scaling-limit Einstein branch, reconstruction of the Standard Model gauge structure, the hypercharge lattice on the realized one-generation matter package under the standard normalization, the realized counting chain $N_g=3$ and then $N_c=3$, and the current two-input quantitative implementation.
+**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the compact submission paper. It concentrates the current falsifiable core: relativity from observer-overlap consistency, the conditional gravity branch, and the gauge reconstruction program.
 
 - **PDF (compact submission paper):** [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)
 - **LaTeX source:** [recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex)
 
-**Reality as a Consensus Protocol** is a companion CS paper that presents the computational spine of OPH as a standalone theorem package. It formulates objective physical law as the fixed point of a distributed reconciliation protocol between observer patches, shows how topology can obstruct global consistency (with particles as stable defects), interprets gauge symmetry as implementation hiding, and models classical records as an eventually consistent CRDT layer.
+**Reality as a Consensus Protocol** is the CS companion paper. It presents the distributed-computation view of OPH and reformulates objective law as the fixed point of reconciliation across observer patches.
 
 - **PDF:** [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)
 - **LaTeX source:** [reality_as_consensus_protocol.tex](paper/reality_as_consensus_protocol.tex)
 
-**Screen Microphysics and Observer Synchronization** is the constructive microphysics note. It makes the OPH screen-model program simulator-facing by specifying finite local Hilbert spaces, overlap observables, record layers, observer criteria, synchronization moves, and concrete implementation lanes.
+**Screen Microphysics and Observer Synchronization** is the constructive microphysics note. It specifies finite local screen models, overlap observables, observer criteria, record layers, and synchronization moves.
 
 - **PDF:** [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)
 - **LaTeX source:** [screen_microphysics_and_observer_synchronization.tex](paper/screen_microphysics_and_observer_synchronization.tex)
 
-Each PDF carries a visible paper release line. The shared release source is
-[`paper/release_info.tex`](paper/release_info.tex). For every substantive paper update, bump the
-shared release before rebuilding the PDFs:
-
-```bash
-python3 tools/bump_paper_release.py
-```
-
-After rebuilding the PDFs, write the current PDF hashes to
-[`paper/paper_release_manifest.json`](paper/paper_release_manifest.json) by running:
-
-```bash
-python3 tools/generate_paper_release_manifest.py
-```
-
-The manifest generator now fails if the PDFs changed under the same release ID, or if the local
-PDFs do not yet expose the current visible release line.
-
-The release ID is global across the current release-tracked paper set. Even if only one paper changes, bump once,
-rebuild all release-tracked PDFs, and publish all three challenge PDFs with that same release ID.
-Challenge uploads are handled by workspace-local operational tooling rather than this public repo.
-
-When hardening paper claims or running a paper-upgrade release, start with the compact submission paper first. Only after its theorem-status language and release line are coherent should equivalent wording changes be propagated into the main paper, book, README surfaces, websites, and ingestion pipeline.
+Release-tracked PDFs share a visible paper release line sourced from
+[`paper/release_info.tex`](paper/release_info.tex). The release workflow is summarized below.
 
 ## Resources
 
@@ -143,15 +107,11 @@ Think of the screen as a gauge-invariant quantum system on a 2-sphere. It resemb
 
 ### What Drives the Computation?
 
-In quantum link models, the dynamics involve plaquette terms (Wilson loops around faces) and electric field terms (conjugate to the link variables). The competition between these determines the ground state. The "computation" is these quantum degrees of freedom evolving, creating and destroying correlations, with gauge constraints ensuring consistency.
-
-Note that the "time" that observers experience isn't necessarily the microscopic Hamiltonian evolution. Each observer patch has its own modular Hamiltonian (constructed from the reduced density matrix on that patch), and *that* generates what feels like time from inside. The microscopic evolution and emergent modular time are related but distinct.
-
-The system exists in a timeless state (as the Wheeler-DeWitt equation shows for quantum gravity), and what we call "time" is entirely relational. Modular flow gives each subsystem its own internal clock, correlated with others through consistency conditions. The qudits don't "do" anything in the sense of changing over some external time parameter. They just *are*, in a particular entangled configuration, and "time" is how we describe correlations within that configuration from the inside.
+In local screen models, the dynamics come from gauge-constrained quantum degrees of freedom on the screen. Observer time is not assumed to be the microscopic Hamiltonian time; it is tied to modular flow on the observer patch. On this picture, geometry and time are reconstructed from consistency and entanglement structure rather than imposed as primitives.
 
 ### Why This Approach Works
 
-Unified models attempting to combine QFT, gravity, and Standard Model structure tend to encounter a repeatable set of conceptual difficulties: subsystem factorization breaks down in gauge/gravity, modular Hamiltonians are nonlocal, Lorentz invariance is assumed rather than derived, dynamics are hard to get (not just kinematics), gauge symmetry origins are unclear, masslessness is hand-imposed, anomalies appear as mysterious pathologies, charge quantization needs GUTs, coupling unification forces proton decay, the cosmological constant is locally overdetermined, UV infinities proliferate, and parameter counts explode. The observer-patch framework addresses these by making consistency conditions do the work: it treats locality, Lorentz invariance, gauge symmetry, and gravity as *consistency constraints* among overlapping descriptions plus information-theoretic properties of states (Markov/recoverability + MaxEnt), then leans on modular theory rigidity to force the familiar symmetries and dynamics. This "structures → consistency" move is what allows the framework to naturally explain or sidestep classic unification pitfalls (see Section 8.5 of the technical paper for detailed analysis).
+The guiding move of OPH is to treat locality, Lorentz structure, gauge structure, and gravity as consistency requirements among overlapping descriptions, not as separate ingredients added by hand. That is what makes the framework mathematically distinctive and why the papers focus so heavily on overlap algebras, entropy constraints, recoverability, and modular structure.
 
 ## The Axioms
 
@@ -176,61 +136,6 @@ The following infographic summarizes the current OPH reconstruction program from
 *From axioms to effective physics: the current OPH reconstruction program.*
 
 > **Particle Spectrum Derivation**: The repository-backed derivation from pixel area to the particle-mass program, together with comparisons against PDG data and audit checks, is documented in **[the spectrum derivation source](paper/tex_fragments/SPECTRUM_DERIVATION.tex)**.
-
-## The Fundamental Parameters
-
-Our universe is characterized by exactly **two externally fixed fundamental parameters**:
-
-### 1. Pixel Area: $a_{\text{cell}} \approx 1.63 \, \ell_P^2$
-
-The geometric area of a single computational element on the holographic screen. This sets the *resolution* of reality:
-
-| Quantity | Value | Meaning |
-|----------|-------|---------|
-| In Planck units | $a_{\text{cell}} / \ell_P^2 \approx 1.63$ | Dimensionless ratio |
-| In SI units | $a_{\text{cell}} \approx 4.26 \times 10^{-70}$ m^2 | Physical area per pixel |
-| Pixel "side" | $\sqrt{a_{\text{cell}}} \approx 2.06 \times 10^{-35}$ m | Resolution scale |
-
-**What it determines:** Newton's constant (via $G_{\text{nat}} = a_{\text{cell}}/4\bar{\ell}$ in natural units where $G_{\text{nat}} = \ell_P^2$), the Planck scale, the gauge-coupling calibration sector, and the scale used by the supplement-backed Higgs/top branch plus downstream mass continuations.
-
-### 2. Screen Capacity: $\log(\dim \mathcal{H}) \sim 10^{122}$
-
-The total entropy of the holographic screen (in nats). This sets the *size* of reality.
-
-**Important:** Screen capacity is **inferred from** the observed cosmological constant, not predicted. The relation
-
-$$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H})}$$
-
-lets us extract screen capacity from the measured $\Lambda \sim 10^{-52}$ $\text{m}^{-2}$, giving $\log(\dim \mathcal{H}) \sim 10^{122}$.
-
-| Quantity | Value | Status |
-|----------|-------|--------|
-| de Sitter entropy | $S_{dS} \sim 10^{122}$ nats | Inferred from observed $\Lambda$ |
-| de Sitter horizon | $r_{dS} \approx 10^{26}$ m | Observed |
-
-**The relationship:**
-- **Pixel area** = resolution (extracted from gauge couplings via edge entropy)
-- **Screen capacity** = total size (extracted from observed cosmological constant)
-
-The axiom structure contains no other dimensionful constants. The axioms plus reconstruction give *a* compact gauge group; the gauge-sector admissibility analysis then selects SU(3) x SU(2) x U(1) / Z₆ as the realized gauge group (see [the gauge derivation source](paper/tex_fragments/GAUGE_GROUP_DERIVATION.tex)). Charge quantization and scaling-limit semiclassical Einstein dynamics follow from the axiom structure.
-
-### What This Means
-
-The pixel area and screen capacity are **configuration parameters**, the "settings" of the computation that is our universe. They are not derivable from within the simulation; they are boundary conditions set from "outside."
-
-From inside, these parameters manifest as:
-- **Pixel area** determines Newton's constant, the Planck scale, the gauge-coupling calibration sector, and the scale used by the supplement-backed Higgs/top branch plus downstream continuations
-- **Screen capacity** determines observable universe size (but is itself inferred from the observed cosmological constant, which is not predicted)
-
-The same axioms with different settings would produce a universe with different constants but similar physics (Einstein equations, gauge structure). The specific Standard Model gauge group is uniquely selected by the Selection Axiom MAR.
-
-### Calibration vs Prediction
-
-In the current quantitative implementation, the pixel constant P = a_cell/ℓ_P² is *inferred* from measured gauge couplings because the axioms fix the functional relation P = 4ℓ̄_tot(t₂,t₃) but do not fix the MaxEnt Lagrange multipliers t_i (equivalently the couplings) from first principles. This inference step is therefore a calibration, not a claimed prediction of P.
-
-The nontrivial content is that P provides an additional constraint linking the gravitational coupling to gauge-sector edge entropy, and in a two-input mode (treating P as a fundamental configuration parameter and using only one electroweak datum α(M_Z)) the framework predicts α_s(M_Z) and sin²θ_W(M_Z) simultaneously.
-
-Full non-circular closure would require a UV principle that fixes t without reference to measured couplings.
 
 ## Repository Contents
 
@@ -269,7 +174,7 @@ Paper releases are managed from the shared files under [`paper/`](paper):
 2. rebuild the release-tracked PDFs
 3. regenerate [`paper/paper_release_manifest.json`](paper/paper_release_manifest.json)
 
-The workspace-local operational tooling then uses that manifest to publish the current book paper and the synchronized challenge paper set.
+The shared release line applies across the current release-tracked paper set. The workspace-local operational tooling then uses the manifest to publish the current book paper and the synchronized challenge paper set.
 
 ## Contributing
 

@@ -16,73 +16,37 @@ Les lois de la physique sont les règles de cohérence qui rendent cet accord in
 
 À partir de ce point de départ (avec les contraintes d'entropie et de Markov), l'OPH fait émerger espace-temps, symétries de jauge et physique des particules comme conséquences de cohérence.
 
-## Programme de recherche
-
-L'OPH doit actuellement être comprise comme un programme de recherche plutôt que comme une théorie achevée. En physique, on ne démontre pas au sens absolu qu'une théorie est "la bonne" ; la cible réaliste est un cadre mathématiquement explicite, adossé à des régulateurs concrets, empiriquement discriminant, et robuste face aux tentatives de falsification.
-
-Le programme actuel consiste donc à :
-
-- transformer les arguments qui ne sont encore qu'à l'état d'esquisse en preuves complètes
-- supprimer les hypothèses auxiliaires lorsque c'est possible, ou les isoler proprement lorsqu'elles restent nécessaires
-- réaliser les axiomes dans des modèles microscopiques explicites d'écran ou dans des régulateurs concrets
-- dériver à partir de ces réalisations les secteurs gravitationnel, de jauge, et quantitatif avec des approximations contrôlées
-- remplacer les étapes encore dépendantes de calibrations par des dérivations de premiers principes lorsque c'est bien cela qui est revendiqué
-- produire des critères de contradiction empiriques nouveaux et des tests sensibles aux différentes branches, qui puissent échouer proprement
-
-L'état final plausible le plus fort n'est donc pas une "preuve de l'OPH" au sens métaphysique, mais une théorie dérivée rigoureusement et tenue responsable expérimentalement, dont les secteurs effectifs, l'économie en paramètres et les prédictions falsifiables résistent à un examen indépendant.
-
 ## Articles
 
-**Observers are all you need** est l'article principal de l'OPH.
+**Observers are all you need** est l'article technique principal. Il donne l'énoncé le plus large du programme OPH et de ses branches de dérivation actuelles.
 
 - **PDF (article principal) :** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **Source LaTeX :** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
 
 **Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** est
-l'article compact de soumission. Il concentre le coeur falsifiable de l'OPH :
-cinématique de Lorentz dans la phase modulaire géométrique, branche d'Einstein conditionnelle
-dans la limite d'échelle, reconstruction de la structure de jauge du Modèle Standard, réseau
-d'hypercharges sur le paquet de matière réalisé à une génération sous la normalisation standard,
-chaîne de comptage réalisée $N_g=3$ puis $N_c=3$, et implémentation quantitative actuelle à
-deux entrées.
+l'article compact de soumission. Il concentre le coeur falsifiable actuel : relativité issue de la
+cohérence de recouvrement, branche gravitationnelle conditionnelle et programme de
+reconstruction de la jauge.
 
 - **PDF (article compact de soumission) :** [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)
 - **Source LaTeX :** [recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex)
 
-**Reality as a Consensus Protocol** est un article complémentaire orienté informatique qui présente l'ossature computationnelle de l'OPH sous la forme d'un paquet de théorèmes autonome. Il formule la loi physique objective comme le point fixe d'un protocole de réconciliation distribué entre patchs d'observateurs, montre comment la topologie peut faire obstacle à la cohérence globale avec des particules comme défauts stables, interprète la symétrie de jauge comme une forme de masquage d'implémentation, et modélise les enregistrements classiques comme une couche CRDT à cohérence éventuelle.
+**Reality as a Consensus Protocol** est l'article compagnon orienté informatique. Il présente la
+lecture distribuée/calculatoire de l'OPH et reformule la loi objective comme point fixe de la
+réconciliation entre patchs d'observateurs.
 
 - **PDF :** [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)
 - **Source LaTeX :** [reality_as_consensus_protocol.tex](paper/reality_as_consensus_protocol.tex)
 
-**Screen Microphysics and Observer Synchronization** est la note constructive de microphysique. Elle rend le programme de modele d'ecran de l'OPH exploitable cote simulateur en explicitant des espaces de Hilbert locaux finis, des observables de recouvrement, des couches d'enregistrement, des criteres d'observateur, des operations de synchronisation et des pistes d'implementation concretes.
+**Screen Microphysics and Observer Synchronization** est la note constructive de microphysique.
+Elle explicite des modèles locaux finis d'écran, des observables de recouvrement, des critères
+d'observateur, des couches d'enregistrement et des opérations de synchronisation.
 
 - **PDF :** [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)
 - **Source LaTeX :** [screen_microphysics_and_observer_synchronization.tex](paper/screen_microphysics_and_observer_synchronization.tex)
 
-Chaque PDF comporte désormais une ligne de version visible. La source partagée de version est
-[`paper/release_info.tex`](paper/release_info.tex). Pour toute mise à jour substantielle des
-articles, incrémentez d'abord la version partagée avant de reconstruire les PDF :
-
-```bash
-python3 tools/bump_paper_release.py
-```
-
-Après reconstruction des PDF, écrivez les empreintes courantes dans
-[`paper/paper_release_manifest.json`](paper/paper_release_manifest.json) en lançant :
-
-```bash
-python3 tools/generate_paper_release_manifest.py
-```
-
-Le générateur de manifeste échoue désormais si les PDF changent sans nouvelle version, ou si les
-PDF locaux n'exposent pas encore la ligne de version visible attendue.
-
-La version est globale à l'ensemble courant des articles suivis par la release. Même si un seul article change,
-incrémentez une seule fois, reconstruisez tous les PDF suivis par la release, puis publiez les trois PDF du challenge
-avec cette même version.
-L'envoi vers le challenge est géré par un outillage opérationnel local à l'espace de travail, pas par ce dépôt public.
-
-Lorsqu'une mise à niveau ou un audit touche plusieurs articles, commencez toujours par l'article compact de soumission. Ce n'est qu'une fois sa ligne de version et son langage de statut cohérents qu'il faut propager les mêmes corrections vers l'article principal, le livre, les README, les sites publics et la pipeline d'ingestion.
+Les PDF suivis par la release partagent une ligne de version visible, issue de
+[`paper/release_info.tex`](paper/release_info.tex). Le workflow de release est résumé plus bas.
 
 ## Ressources
 
@@ -145,17 +109,18 @@ On peut voir l'écran comme un système quantique invariant de jauge sur une 2-s
 
 ### Qu'est-ce qui pilote le calcul ?
 
-Dans les modèles de liens quantiques, la dynamique combine des termes de plaquette (boucles de Wilson autour des faces) et des termes de champ électrique (conjugués aux variables de lien). Leur compétition détermine l'état fondamental. Le « calcul » est l'évolution de ces degrés de liberté quantiques, qui créent et détruisent des corrélations, tandis que les contraintes de jauge assurent la cohérence.
-
-Le « temps » vécu par les observateurs n'est pas forcément l'évolution hamiltonienne microscopique. Chaque patch possède son propre hamiltonien modulaire (construit à partir de la matrice densité réduite du patch), et c'est lui qui génère ce qui ressemble au temps depuis l'intérieur. L'évolution microscopique et le temps modulaire émergent sont liés, mais distincts.
-
-Le système existe dans un état intemporel (comme le suggère l'équation de Wheeler-DeWitt en gravité quantique), et ce que nous appelons « temps » est relationnel. Le flot modulaire donne à chaque sous-système sa propre horloge interne, corrélée aux autres par les contraintes de cohérence.
+Dans les modèles locaux d'écran, la dynamique vient de degrés de liberté quantiques soumis à des
+contraintes de jauge. Le temps d'un observateur n'est pas simplement le temps hamiltonien
+microscopique : il est relié au flot modulaire du patch. Dans ce cadre, géométrie et temps sont
+reconstruits à partir de la cohérence et de la structure d'intrication.
 
 ### Pourquoi cette approche fonctionne
 
-Les approches unifiées cherchant à combiner TQC, gravité et structure du Modèle Standard rencontrent souvent les mêmes difficultés : échec de factorisation des sous-systèmes en jauge/gravité, non-localité des hamiltoniens modulaires, invariance de Lorentz supposée plutôt que dérivée, difficulté à obtenir la dynamique (pas seulement la cinématique), origine de la symétrie de jauge peu claire, absence de masse imposée à la main, anomalies traitées comme pathologies, quantification de charge nécessitant des GUT, unification des couplages impliquant une désintégration du proton, surdétermination locale de la constante cosmologique, prolifération des infinis UV, et explosion du nombre de paramètres.
-
-Le cadre des patchs d'observateurs renverse la logique : ce sont les conditions de cohérence qui font le travail. Localité, Lorentz, jauge et gravité sont traitées comme des contraintes de cohérence entre descriptions recouvrantes, combinées à des propriétés informationnelles des états (Markov/récupérabilité + MaxEnt), puis rigidifiées par la théorie modulaire pour forcer les symétries et dynamiques familières.
+Le geste central de l'OPH consiste à traiter localité, Lorentz, jauge et gravité comme des
+contraintes de cohérence entre descriptions qui se recouvrent, et non comme des ingrédients
+ajoutés séparément. C'est ce qui rend le cadre mathématiquement distinctif et explique l'importance
+des algèbres de recouvrement, des contraintes entropiques, de la récupérabilité et de la structure
+modulaire dans les articles.
 
 ## Les axiomes
 
@@ -180,61 +145,6 @@ L'infographie suivante résume le programme actuel de reconstruction OPH, depuis
 *Des axiomes à une physique effective : le programme actuel de reconstruction OPH.*
 
 > **Prédictions du spectre de particules :** la dérivation adossée au dépôt, depuis l'aire de pixel jusqu'au programme de masses de particules, avec comparaison aux données PDG et contrôles d'audit, est présentée dans **[la source de dérivation du spectre](paper/tex_fragments/SPECTRUM_DERIVATION.tex)**.
-
-## Les paramètres fondamentaux
-
-Notre univers est actuellement décrit, dans l'implémentation quantitative, par exactement **deux entrées fondamentales fixées de l'extérieur** :
-
-### 1. Aire de pixel : $a_{\text{cell}} \approx 1.63 \, \ell_P^2$
-
-L'aire géométrique d'un élément computationnel de l'écran holographique. Elle fixe la *résolution* de la réalité :
-
-| Grandeur | Valeur | Signification |
-|----------|--------|---------------|
-| En unités de Planck | $a_{\text{cell}} / \ell_P^2 \approx 1.63$ | Rapport sans dimension |
-| En unités SI | $a_{\text{cell}} \approx 4.26 \times 10^{-70}$ m^2 | Aire physique par pixel |
-| « Côté » du pixel | $\sqrt{a_{\text{cell}}} \approx 2.06 \times 10^{-35}$ m | Échelle de résolution |
-
-**Ce qu'elle détermine :** constante de Newton (via $G_{\text{nat}} = a_{\text{cell}}/4\bar{\ell}$ en unités naturelles où $G_{\text{nat}} = \ell_P^2$), échelle de Planck, secteur calibré des couplages de jauge, et échelle utilisée par la branche Higgs/top indépendante ainsi que par les continuations en aval.
-
-### 2. Capacité de l'écran : $\log(\dim \mathcal{H}) \sim 10^{122}$
-
-L'entropie totale de l'écran holographique (en nats). Elle fixe la *taille* de la réalité.
-
-**Important :** la capacité de l'écran est **inférée** à partir de la constante cosmologique observée, elle n'est pas prédite. La relation
-
-$$\Lambda = \frac{3\pi}{G \cdot \log(\dim \mathcal{H})}$$
-
-permet d'en déduire la capacité à partir de $\Lambda \sim 10^{-52}$ $\text{m}^{-2}$, donnant $\log(\dim \mathcal{H}) \sim 10^{122}$.
-
-| Grandeur | Valeur | Statut |
-|----------|--------|--------|
-| Entropie de de Sitter | $S_{dS} \sim 10^{122}$ nats | Inférée depuis $\Lambda$ observé |
-| Horizon de de Sitter | $r_{dS} \approx 10^{26}$ m | Observé |
-
-**Relation :**
-- **Aire de pixel** = résolution (extraite des couplages de jauge via l'entropie de bord)
-- **Capacité de l'écran** = taille totale (extraite de la constante cosmologique observée)
-
-La structure axiomatique ne contient aucune autre constante dimensionnée. Les axiomes plus la reconstruction donnent *un* groupe de jauge compact ; l'analyse d'admissibilité du secteur de jauge sélectionne ensuite $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$ comme groupe réalisé (voir [la source de dérivation du groupe de jauge](paper/tex_fragments/GAUGE_GROUP_DERIVATION.tex)). La quantification de charge et la dynamique d'Einstein semi-classique dans la limite d'échelle suivent alors.
-
-### Ce que cela signifie
-
-L'aire de pixel et la capacité de l'écran sont des **paramètres de configuration**, les « réglages » du calcul qu'est notre univers. Ils ne sont pas dérivables depuis l'intérieur de la simulation ; ce sont des conditions aux limites.
-
-Depuis l'intérieur :
-- **Aire de pixel** -> constante de Newton, échelle de Planck, secteur calibré des couplages de jauge, et échelle utilisée par la branche Higgs/top indépendante ainsi que par les continuations en aval
-- **Capacité de l'écran** -> taille de l'univers observable (et elle-même inférée de $\Lambda$ observé)
-
-Les mêmes axiomes avec d'autres réglages produiraient un univers avec d'autres constantes, mais une physique de structure similaire (Einstein, jauge, etc.).
-
-### Calibration vs prédiction
-
-Dans l'implémentation actuelle, la constante de pixel $P = a_{\text{cell}}/\ell_P^2$ est *inférée* depuis les couplages de jauge mesurés, car les axiomes fixent la relation fonctionnelle $P = 4\bar{\ell}_{\text{tot}}(t_2,t_3)$ sans encore fixer les multiplicateurs de Lagrange MaxEnt $t_i$ (donc les couplages) par premiers principes.
-
-Le contenu non trivial est que $P$ fournit une contrainte supplémentaire reliant le couplage gravitationnel à l'entropie de bord du secteur de jauge, et qu'en mode à deux entrées (traitant $P$ comme paramètre fondamental + une seule donnée électrofaible $\alpha(M_Z)$), le cadre prédit simultanément $\alpha_s(M_Z)$ et $\sin^2\theta_W(M_Z)$.
-
-Une fermeture non circulaire complète nécessite un principe UV qui fixe $t$ sans utiliser les couplages mesurés.
 
 ## Contenu du dépôt
 
@@ -273,7 +183,9 @@ Les releases d'articles sont pilotées depuis les fichiers partagés sous [`pape
 2. reconstruire les PDF suivis par la release
 3. régénérer [`paper/paper_release_manifest.json`](paper/paper_release_manifest.json)
 
-L'outillage opérationnel local à l'espace de travail utilise ensuite ce manifeste pour publier le papier du livre et l'ensemble synchronisé des papiers du challenge.
+La ligne de version est partagée à l'ensemble courant des articles suivis par la release. L'outillage
+opérationnel local à l'espace de travail utilise ensuite ce manifeste pour publier le papier du livre
+et l'ensemble synchronisé des papiers du challenge.
 
 ## Contribuer
 
