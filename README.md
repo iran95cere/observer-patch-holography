@@ -1,4 +1,4 @@
-# Observer Patch Holography: An Observer-Centric Approach to Fundamental Physics
+# Observer Patch Holography: Simulation Theory, the Theory of Everything, and Observer-Centric Physics
 
 > OPH is a mathematical reconstruction program that starts from a simple requirement: overlapping local observer descriptions on a holographic screen must agree where they overlap. From that starting point, OPH develops conditional routes toward general relativity, toward reconstruction of the Standard Model gauge structure, toward a first-principles particle-mass program, and toward string/worldsheet descriptions emerging from the same framework. Early IBM Quantum Cloud benchmarks also provide preliminary experimental support for the local OPH picture.
 
@@ -10,9 +10,18 @@
 
 > **OPH Disproval Challenge:** A USD 10,000 challenge to disprove OPH is currently running at [challenge.floatingpragma.io](https://challenge.floatingpragma.io).
 
+For readers arriving via searches for **simulation theory** or **theory of everything**, the short OPH claim is this: reality is an observer-consistent information process, and quantum mechanics, relativity, gauge structure, and particle physics are effective descriptions of deeper overlap-consistency rules.
+
+The dedicated public landing pages for those queries are:
+
+- **Simulation theory:** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
+- **Theory of everything:** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything/)
+
 ## Core Idea
 
 OPH takes the strong observer-first position that objective reality is not fundamental but emergent from a network of subjective perspectives that must agree where they overlap.
+
+This is why OPH is often framed publicly as both a physics-first form of simulation theory and a candidate theory of everything.
 
 The laws of physics are the consistency rules that make this intersubjective agreement possible.
 
@@ -25,7 +34,7 @@ From this starting point (plus entropy and Markov constraints), OPH treats space
 - **PDF (main paper):** [Observers are all you need](paper/observers_are_all_you_need.pdf)
 - **LaTeX source:** [observers_are_all_you_need.tex](paper/observers_are_all_you_need.tex)
 
-**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the compact submission paper. It concentrates the current falsifiable core: relativity from observer-overlap consistency, the conditional gravity branch, and the gauge reconstruction program.
+**Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency** is the compact submission paper. It is the authoritative recovered-core and claim-tier surface for the current OPH paper set. It concentrates the current falsifiable core: relativity from observer-overlap consistency, the conditional gravity branch, and the gauge reconstruction program.
 
 - **PDF (compact submission paper):** [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)
 - **LaTeX source:** [recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.tex)
@@ -48,6 +57,8 @@ Release-tracked PDFs share a visible paper release line sourced from
 Useful entry points for reading and exploring OPH:
 
 - **Official OPH website:** [floatingpragma.io/oph](https://floatingpragma.io/oph/)
+- **Simulation theory explainer:** [floatingpragma.io/oph/simulation-theory](https://floatingpragma.io/oph/simulation-theory/)
+- **Theory of everything explainer:** [floatingpragma.io/oph/theory-of-everything](https://floatingpragma.io/oph/theory-of-everything/)
 - **USD 10,000 OPH disproval challenge:** [challenge.floatingpragma.io](https://challenge.floatingpragma.io)
 - **OPH Book (web edition):** [oph-book.floatingpragma.io](https://oph-book.floatingpragma.io)
 - **Interactive OPH Lab:** [oph-lab.floatingpragma.io](https://oph-lab.floatingpragma.io)

@@ -9,6 +9,10 @@
 >
 > Official OPH memecoin: [TEO on BaseScan](https://basescan.org/token/0xd2a7055317D0c7b316319cDadaE592D0644A0b07), [DexScreener](https://dexscreener.com/base/0xba55cdae026b9dd63fcb50e82094d61472948e44527ca4791033497469228049), [Buy on Uniswap](https://app.uniswap.org/swap?outputCurrency=0xd2a7055317D0c7b316319cDadaE592D0644A0b07&chain=base). It is purely speculative, has no promised return, and no announced utility at this time. DYOR.
 
+If you arrived here through searches for **simulation theory** or **theory of everything**, this book is the long-form OPH answer to both. It argues that reality is best modeled as an observer-consistent information process and that quantum mechanics, relativity, gauge structure, and particle physics are effective descriptions of deeper overlap-consistency rules.
+
+That is why OPH presents itself simultaneously as a physics-first version of simulation theory and as a candidate theory of everything.
+
 
 ## The Cosmic Program
 
@@ -158,6 +162,10 @@ still works. Relativity still works. But the interpretation shifts. Instead
 of describing an objective world that somehow produces observers, we're
 describing the consistency conditions that observers must satisfy to share
 a reality.
+
+## Reading Rule
+
+For theorem status and claim tier, consult the compact paper first. This book is an explanatory surface synchronized to that ledger, and it also includes interpretive and speculative layers that are not part of the compact recovered core.
 
 ## What This Book Does
 
