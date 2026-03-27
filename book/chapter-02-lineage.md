@@ -48,7 +48,7 @@ $$S_{max} = \frac{A}{4\ell_P^2}$$
 
 This is Plato's Cave made physical. We are the prisoners. The 3D world we perceive is the shadows. The holographic screen is the "real" level-where the data actually lives.
 
-Plato was reverse-engineering reality 2,400 years before we had the physics to confirm his insight.
+Plato was not doing modern holographic physics, but his cave analogy resonates strikingly with later projection-based pictures.
 
 ## 2.3 Zeno's Paradoxes: The Discrete Spacetime Hint
 
@@ -88,7 +88,7 @@ Second, quantum mechanics already quantizes other continuous quantities. Energy 
 
 You don't need to traverse infinitely many intervals because there aren't infinitely many. Below the Planck scale, the very concept of "interval" does not exist. Space has pixels.
 
-Zeno was reverse-engineering the need for discrete structure, 2,500 years before we had the physics to explain it.
+Zeno was not deriving Planck-scale discreteness, but his paradoxes still sharpen the pressure points in naive continuum intuition.
 
 ## 2.4 The Skeptics: The Contextualism Hint
 
@@ -122,7 +122,7 @@ Different measurement contexts reveal different aspects of the system. Niels Boh
 
 The Skeptics' "compared to what?" turns out to be essential physics. Properties are relational, not intrinsic. The honey is sweet-relative-to-healthy-observers, just as the electron has position-relative-to-position-measurements.
 
-The Skeptics were reverse-engineering quantum contextualism, 2,300 years before we had the experiments to confirm it.
+The Skeptics were not doing quantum contextuality in the modern technical sense, but their context-dependence arguments resonate with later measurement-theoretic lessons.
 
 ## 2.5 Descartes: The Observer-First Hint
 
@@ -196,7 +196,7 @@ $$S_A = \frac{\text{Area}(\gamma_A)}{4G_N}$$
 
 Space is not the container. It's the visualization-the 3D picture our recovery map constructs from 2D boundary data.
 
-Kant was reverse-engineering emergent geometry, 250 years before we had the physics to prove it.
+Kant was not deriving holographic geometry, but his reconstruction-first stance resonates with later emergent-space programs.
 
 ## 2.7 Democritus vs. Aristotle: The Information Hint
 
