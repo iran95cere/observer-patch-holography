@@ -48,7 +48,7 @@ $$S_{max} = \frac{A}{4\ell_P^2}$$
 
 This is Plato's Cave made physical. We are the prisoners. The 3D world we perceive is the shadows. The holographic screen is the "real" level-where the data actually lives.
 
-Plato was reverse-engineering reality 2,400 years before we had the physics to confirm his insight.
+Plato was not doing modern holographic physics, but his cave analogy resonates strikingly with later projection-based pictures.
 
 ## 2.3 Zeno's Paradoxes: The Discrete Spacetime Hint
 
@@ -82,13 +82,13 @@ The paradoxes show that our intuitive picture of continuous spacetime is problem
 
 Modern physics has found two hints that spacetime is not continuous.
 
-First, the holographic bound shows that space has a fundamental graininess. The maximum information in a region is finite, proportional to area. If space were truly continuous, you could pack infinite information into any region. The bound implies a minimum length scale-the Planck length, about $10^{-35}$ meters.
+First, the holographic bound strongly suggests finite information capacity. That does not by itself prove a literal spacetime lattice, but it pushes against naive continuum intuition and motivates Planck-scale cutoff pictures.
 
 Second, quantum mechanics already quantizes other continuous quantities. Energy comes in discrete packets (photons). Angular momentum comes in units of $\hbar/2$. If space and time are also quantized, Zeno's paradoxes dissolve.
 
-You don't need to traverse infinitely many intervals because there aren't infinitely many. Below the Planck scale, the very concept of "interval" does not exist. Space has pixels.
+In finite-cutoff pictures of the OPH type, you do not need to traverse infinitely many intervals because the description is discretized below the cutoff.
 
-Zeno was reverse-engineering the need for discrete structure, 2,500 years before we had the physics to explain it.
+Zeno was not deriving Planck-scale discreteness, but his paradoxes still sharpen the pressure points in naive continuum intuition.
 
 ## 2.4 The Skeptics: The Contextualism Hint
 
@@ -122,7 +122,7 @@ Different measurement contexts reveal different aspects of the system. Niels Boh
 
 The Skeptics' "compared to what?" turns out to be essential physics. Properties are relational, not intrinsic. The honey is sweet-relative-to-healthy-observers, just as the electron has position-relative-to-position-measurements.
 
-The Skeptics were reverse-engineering quantum contextualism, 2,300 years before we had the experiments to confirm it.
+The Skeptics were not doing quantum contextuality in the modern technical sense, but their context-dependence arguments resonate with later measurement-theoretic lessons.
 
 ## 2.5 Descartes: The Observer-First Hint
 
@@ -190,13 +190,13 @@ The holographic principle and emergent geometry resonate with this picture.
 
 The fundamental data lives on the 2D holographic screen. This data has no spatial interpretation-it's just quantum information on a sphere. Space is *reconstructed* from this data through the pattern of entanglement.
 
-The Ryu-Takayanagi formula makes this precise: spatial distance is *defined* by entanglement entropy. Regions that are highly entangled are close; regions that are weakly entangled are far.
+The Ryu-Takayanagi formula makes the geometry-entanglement link precise in holographic settings: entanglement structure helps determine bulk geometric relations.
 
 $$S_A = \frac{\text{Area}(\gamma_A)}{4G_N}$$
 
 Space is not the container. It's the visualization-the 3D picture our recovery map constructs from 2D boundary data.
 
-Kant was reverse-engineering emergent geometry, 250 years before we had the physics to prove it.
+Kant was not deriving holographic geometry, but his reconstruction-first stance resonates with later emergent-space programs.
 
 ## 2.7 Democritus vs. Aristotle: The Information Hint
 
@@ -296,7 +296,7 @@ But Hofstadter and others have shown something deeper: the loop doesn't just *ex
 
 We will return to this idea in Chapter 18, where we consider the possibility that reality evolves toward producing observers capable of understanding and simulating it—closing the loop of self-creation.
 
-## 2.11 Information Theory: From Metaphor to Physics
+## 2.10 Information Theory: From Metaphor to Physics
 
 The philosophical hints became physics in the 20th century.
 
@@ -338,7 +338,7 @@ But what if they are not?
 
 ### The Right Question
 
-Our framework shows a different perspective. Reality is not "like" a computation. Reality *is* computation. The screen is a quantum system processing information according to gauge constraints. Observers are patterns within that computation. The laws of physics are the rules that allow consistent information processing across patches.
+Our framework supports a different perspective. Reality is not merely compared to computation; OPH treats computation as a candidate organizing picture for reality. The screen is a quantum system processing information according to gauge constraints. Observers are patterns within that computation. The laws of physics are the rules that allow consistent information processing across patches.
 
 From this view, asking "are we in a simulation?" is like asking "is this novel written in words?" The question assumes an alternative that does not exist. There is no non-computational reality to contrast with a simulation. Computation is not a metaphor for reality. It is what reality is made of.
 
@@ -352,7 +352,7 @@ This is the strange loop: **reality evolves observers who discover how reality w
 
 We are not programs running on someone else's hardware. We are patterns within a self-simulating system. The simulation isn't run by external beings—it runs itself, through us, through our understanding, through our eventual construction of the very computational substrate that gives rise to us.
 
-This isn't proven—it remains a derive. But it resolves the puzzle of existence in an elegant way. "Why does anything exist?" becomes "Why does the self-simulating loop close?" And the answer is: because it must. A self-consistent strange loop is the only stable configuration.
+This isn't proven—it remains an interpretive continuation. It reframes the puzzle of existence in an elegant way, but the stronger closure claim still awaits an actual OPH closure map together with uniqueness and stability inputs.
 
 Escher's hands draw each other. Reality simulates the observers who simulate reality.
 
