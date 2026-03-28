@@ -80,7 +80,7 @@ This idea-that the arrow of time traces back to a special beginning-is called th
 
 ### What Low Entropy Means for the Early Universe
 
-The early universe was hot-thousands of degrees everywhere. Hot systems usually have high entropy. So how was it low entropy?
+The early universe was extremely hot-billions of degrees and far beyond ordinary laboratory scales. Hot systems usually have high entropy. So how was it low entropy?
 
 Here's the key: **gravity reverses the usual intuition**.
 
@@ -106,13 +106,13 @@ We exist in a brief window when entropy is high enough for complexity but low en
 
 **The hint**: The microscopic laws are time-symmetric. Irreversibility is statistical, not fundamental. The arrow traces to the low-entropy initial condition.
 
-**The reframing**: Here is where our model offers something surprising. The Past principle is usually taken as a brute fact-an unexplained initial condition. But consistency constraints *select* for low-entropy beginnings.
+**The reframing**: Here is where our model offers something surprising. The Past principle is usually taken as a brute fact-an unexplained initial condition. But the OPH viewpoint suggests a possible consistency-based explanation for why low-entropy beginnings are structurally important.
 
 Consider: for observers to exist at all, they must be able to form consistent records. Records require entropy gradients-you can only write information by pushing entropy somewhere else. A universe in thermal equilibrium has no observers, no records, no consistency-checking, no reality in the sense we've been developing.
 
 The MaxEnt principle tells us to assign the maximum-entropy state *given our constraints*. But what are the constraints? If one of them is "observers exist to apply MaxEnt," then equilibrium states are ruled out by construction. The very act of asking "what state should I assign?" presupposes a questioner embedded in an entropy gradient.
 
-This doesn't derive the specific low entropy of the Big Bang from pure logic. But it does suggest that the Past principle is not an arbitrary input; it's a consistency requirement. A universe with observers checking for consistency must have started far from equilibrium. The low-entropy past is the price of the consistency-building present.
+This doesn't derive the specific low entropy of the Big Bang from pure logic. But it does suggest that the Past principle is not an arbitrary input; it's a consistency requirement. A universe with observers checking for consistency must have started far from equilibrium. The low-entropy past can then be read as a structural precondition for the consistency-building present, not yet as a fully derived theorem of the framework.
 
 ## 4.4 Information is Physical
 
