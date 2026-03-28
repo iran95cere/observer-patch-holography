@@ -159,7 +159,7 @@ The holographic principle says the universe works the same way. The fundamental 
 3. Therefore, information content of any region is bounded by surface area.
 4. Therefore, the bulk degrees of freedom are not independent-they can be reconstructed from boundary data.
 
-If you accept Bekenstein-Hawking entropy, holography follows.
+If you accept Bekenstein-Hawking entropy, holography becomes a very strong organizing interpretation.
 
 ## 3.5 Black Holes and Horizons
 
@@ -244,13 +244,13 @@ The CMB temperature variations are analyzed by expanding in spherical harmonics.
 
 ### Finite Resolution
 
-If the screen has a smallest length scale-a pixel size at the Planck length-then there is a maximum $\ell$:
+If one adopts a smallest screen length scale as a finite-cutoff modeling assumption, then there is a maximum $\ell$:
 
 $$\ell_{max} \sim \frac{R}{\ell_P}$$
 
 The total number of independent modes is roughly $\ell_{max}^2 \sim R^2/\ell_P^2$-proportional to area in Planck units, exactly what Bekenstein-Hawking says.
 
-The finite resolution of the screen means our experience of a continuous world is an approximation. At the smallest scales, space is pixelated.
+In such a finite-resolution screen model, our experience of a continuous world is an approximation and the screen description becomes effectively discretized.
 
 ## 3.8 Patches and Overlaps
 
@@ -406,12 +406,12 @@ The holographic principle makes sharp, testable predictions:
 
 **3. Information is finite**: The observable universe contains at most $\sim 10^{122}$ bits. This is enormous but finite. Any evidence of truly infinite information content would contradict holography.
 
-These predictions have been tested in every context where we can check:
+These ideas have strong support in the settings where we can currently probe them:
 - Black hole thermodynamics confirms area-entropy
 - AdS/CFT calculations match both sides of the duality
 - No violation of Bekenstein bounds has ever been observed
 
-The holographic principle started as a proposal. It is now one of the most tested ideas in theoretical physics.
+The holographic principle started as a proposal. It is now one of the most influential and best-supported organizing ideas in quantum gravity.
 
 ## 3.11 The Reverse Engineering
 
@@ -430,7 +430,7 @@ Let's trace the reverse engineering explicitly.
 3. Entanglement patterns on the screen create the geometry of the emergent 3D bulk
 4. Different observers have different screens, but consistency on overlaps makes the emergent 3D world shared and stable
 
-The holographic principle is not a philosophical preference. It's what the hints force us to conclude.
+The holographic principle is not introduced here as a philosophical preference. It is presented as the strongest explanatory reading of the hints reviewed in this chapter.
 
 ## 3.12 Pixel Limits
 
@@ -438,7 +438,7 @@ Let's put numbers on this.
 
 The Planck length is $\ell_P \approx 1.6 \times 10^{-35}$ meters-about $10^{20}$ times smaller than a proton. The Planck area is $\ell_P^2 \approx 2.6 \times 10^{-70}$ m².
 
-**The observable universe**: Radius $R \approx 4.4 \times 10^{26}$ m. Horizon area $A \approx 2.4 \times 10^{54}$ m². Number of bits: $N \approx 10^{122}$.
+**The observable universe**: Radius $R \approx 4.4 \times 10^{26}$ m. Horizon area $A \approx 2.4 \times 10^{54}$ m². The corresponding information scale is of order $10^{122}$--$10^{123}$ bits, depending on which horizon convention is being used.
 
 This is a truly enormous number-but it is finite. The observable universe contains a finite amount of information.
 
@@ -446,7 +446,7 @@ This is a truly enormous number-but it is finite. The observable universe contai
 
 This is still huge, but much smaller than the observable universe. Yet it's far more than the entropy of the Sun as a normal star (about $10^{58}$). Collapse increases entropy because the horizon has vastly more microstates than ordinary matter.
 
-The finite resolution of the screen means continuous space is an approximation. At the smallest scales, reality is digital.
+In the finite-resolution screen picture used here, continuous space is an effective approximation rather than the fundamental descriptive layer.
 
 ## 3.13 Where We Go Next
 
