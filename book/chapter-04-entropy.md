@@ -249,7 +249,7 @@ The breakthrough came in 2019. Including **quantum extremal surfaces**-surfaces 
 
 The key is an "island"-a region *inside* the black hole that contributes to the radiation's entanglement. After the Page time, the island appears, and radiation entropy decreases.
 
-Information is not lost. It's encoded in correlations we didn't know to count.
+The modern semiclassical picture strongly suggests that information is not simply lost, but the full interpretation remains more delicate than a one-line closure slogan suggests.
 
 ## 4.8 Entropy on the Observer Screen
 
@@ -302,11 +302,11 @@ The entropy model includes both mathematical results and testable predictions:
 
 **1. Second Law holds statistically**: Entropy increases in isolated systems with overwhelming probability. Any genuine violation identifies a measurement contradiction with statistical mechanics. No violation has ever been observed in a properly isolated system.
 
-**2. Black hole entropy equals A/4**: The Bekenstein-Hawking formula S_BH = A/(4ℓ_P²) is confirmed by string theory microstate counting (Strominger-Vafa 1996), loop quantum gravity calculations, and consistency with the generalized second law.
+**2. Black-hole entropy follows the semiclassical A/4 law**: The Bekenstein-Hawking formula S_BH = A/(4ℓ_P²) is strongly supported by semiclassical gravity, black-hole thermodynamics, and microstate-counting evidence in special settings.
 
-**3. Page curve for black hole evaporation**: If information is preserved, radiation entropy must rise then fall. The island formula (2019-2020) derives this from first principles and confirms consistency with unitarity.
+**3. Page-curve reasoning for black-hole evaporation**: If information is preserved, radiation entropy should rise and then fall. Island-formula calculations reproduce that behavior in important semiclassical settings and support consistency with unitarity.
 
-**4. Area law for ground state entanglement**: Low-energy states of local Hamiltonians have entanglement scaling with boundary area, not volume. Confirmed in countless condensed matter and lattice QCD calculations.
+**4. Area-law behavior for ground-state entanglement**: Low-energy states of local Hamiltonians often show entanglement scaling with boundary area rather than volume. This is widely studied and strongly supported, but the detailed statement depends on the class of states under discussion.
 
 **Empirical validation signatures**:
 - Genuine Second Law violation (not fluctuation)
