@@ -185,7 +185,7 @@ Expectation values are computed by:
 
 $$\langle A \rangle = \text{Tr}(\rho A)$$
 
-**Two observers sharing information about a system should agree on its density matrix.** This is how consistency appears in the formalism.
+**Two observers using the same information set should agree on the relevant reduced state.** This is how consistency appears in the formalism.
 
 ## 5.6 Algebras of Observables
 
@@ -197,7 +197,7 @@ Formally, an algebra is a vector space with a multiplication operation. Quantum 
 
 - Addition corresponds to superposing measurements
 - Scalar multiplication corresponds to rescaling
-- The product corresponds to sequential measurement
+- The product captures algebraic composition and is closely related to sequential operations
 
 ### States on Algebras
 
@@ -279,9 +279,9 @@ John von Neumann classified operator algebras into types. This classification re
 
 ### Why Type III Matters
 
-Type III algebras have strange properties. They have no pure states-every state is mixed. This sounds paradoxical until you realize: the observer behind a horizon sees a thermal state, which is necessarily mixed.
+Type III algebras have strange properties. In particular, they do not admit the simple finite-trace density-matrix picture familiar from finite systems. This sounds paradoxical until you realize: the observer behind a horizon sees a thermal state, which is necessarily mixed.
 
-The Unruh effect demonstrates this. An accelerating observer perceives the vacuum as a thermal bath. Their accessible algebra is Type III-it cannot support a pure state.
+The Unruh effect demonstrates this. An accelerating observer perceives the vacuum as a thermal bath. Their accessible algebra is Type III rather than a finite-dimensional Type I system.
 
 This connects to holography. The boundary observer sees a pure state. The bulk observer, limited to a region, sees a mixed state. The bulk algebra is Type III, reflecting this necessary ignorance.
 
