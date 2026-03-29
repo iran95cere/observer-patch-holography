@@ -282,7 +282,33 @@ If $M:\Sigma\to Y$ is gauge-invariant ($M(\gamma\cdot s)=M(s)$ for all $\gamma$)
 $M(\operatorname{nf}_\lambda(\gamma\cdot s)) = M(\gamma\cdot\operatorname{nf}_\lambda(s)) = M(\operatorname{nf}_\lambda(s))$.
 \end{proof}
 
-Uniqueness is physically meaningful only up to gauge. The universe's internal representation is not unique, but every measurement you can actually perform gives a unique answer. This is exactly what physicists mean when they say gauge symmetry is ``not a real symmetry.'' In our language: it is the freedom to choose different internal data structures on each node without affecting the distributed computation's output. In the broader OPH UV discussion, this is the physically meaningful uniqueness theorem: the model fixes the normal form on the quotient by implementation hiding, not a unique microscopic representative of a given physical branch.
+\begin{corollary}[Inert ancillary refinement does not change physical law]\label{cor:ancilla}
+Let \(K=\prod_i K_i\) be a finite ancillary state space and define \(\Sigma^\eta:=\Sigma\times K\). Lift the repair maps by
+\[
+T_i^{\lambda,\eta}(s,k):=(T_i^\lambda(s),k).
+\]
+If \(M^\eta:\Sigma^\eta\to Y\) ignores the ancillary factor,
+\[
+M^\eta(s,k)=M(s),
+\]
+with \(M\) gauge-invariant on \(\Sigma\), then
+\[
+M^\eta(\operatorname{nf}_\lambda^\eta(s,k))
+=
+M(\operatorname{nf}_\lambda(s))
+\]
+for all \((s,k)\in\Sigma^\eta\).
+\end{corollary}
+
+\begin{proof}
+Because the ancillary factor is inert,
+\[
+\operatorname{nf}_\lambda^\eta(s,k)=\bigl(\operatorname{nf}_\lambda(s),k\bigr).
+\]
+Therefore \(M^\eta(\operatorname{nf}_\lambda^\eta(s,k))=M(\operatorname{nf}_\lambda(s))\), and Corollary~\ref{cor:gaugeinv} supplies gauge-orbit independence.
+\end{proof}
+
+Uniqueness is physically meaningful only up to gauge. The universe's internal representation is not unique, but every measurement you can actually perform gives a unique answer. This is exactly what physicists mean when they say gauge symmetry is ``not a real symmetry.'' In our language: it is the freedom to choose different internal data structures on each node without affecting the distributed computation's output. In the broader OPH UV discussion, this is the physically meaningful uniqueness theorem: the model fixes the normal form on the quotient by implementation hiding and inert ancillary refinement, not a unique microscopic representative of a given physical branch.
 
 
 \section{Classical Records as an Eventually Consistent Layer}

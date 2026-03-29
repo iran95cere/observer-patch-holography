@@ -426,8 +426,76 @@ Hence gauge-invariant observables are unique on the quotient.
 Gauge covariance maps repair sequences to repair sequences. Since the normal form is unique by Theorem~\ref{thm:confluence}, the normal form of $\gamma\cdot s$ must be $\gamma\cdot \nf_\lambda(s)$.
 \end{proof}
 
+\begin{definition}[Ancilla stabilization]\label{def:ancillastab}
+Fix a finite-cutoff OPH realization
+\[
+\mathfrak U=
+\bigl(\{\mathcal H_P,\mathcal A(P),\omega_P\}_{P\in\mathcal P},\,\Gamma,\,T^\lambda\bigr).
+\]
+Choose finite-dimensional ancillary factors \(K_P\) with product state \(\eta=\bigotimes_{P\in\mathcal P}\eta_P\). The associated ancilla stabilization is the realization
+\[
+\mathfrak U^\eta=
+\bigl(\{\mathcal H_P^\eta,\mathcal A^\eta(P),\omega_P^\eta\}_{P\in\mathcal P},\,\Gamma,\,(T^\lambda)^\eta\bigr),
+\]
+with
+\[
+\mathcal H_P^\eta:=\mathcal H_P\otimes K_P,\qquad
+\mathcal A^\eta(P):=\mathcal A(P)\otimes \mathbf 1_{K_P},\qquad
+\omega_P^\eta:=\omega_P\otimes \eta_P,
+\]
+and lifted repair dynamics acting trivially on the ancillas.
+\end{definition}
+
+\begin{proposition}[Ancilla-stable UV underdetermination]\label{prop:ancillauv}
+Let \(\mathfrak U^\eta\) be an ancilla stabilization of a finite-cutoff OPH realization \(\mathfrak U\). Then:
+\begin{enumerate}[leftmargin=2em]
+\item observable expectations on the physical subalgebras are unchanged:
+\[
+\omega_P^\eta(a\otimes \mathbf 1_{K_P})=\omega_P(a)
+\qquad
+\forall\, a\in\mathcal A(P);
+\]
+\item the interacting local MaxEnt branch on the physical subalgebra is unchanged, since
+\[
+\omega_{\ell_{\mathrm{UV}}}^\eta(\lambda)=\omega_{\ell_{\mathrm{UV}}}(\lambda)\otimes \eta;
+\]
+\item for every collar split \(A:B:D\),
+\[
+I(A:D\mid B)_{\rho\otimes \eta}=I(A:D\mid B)_\rho,
+\]
+so the Fawzi--Renner remainder \(r_{\mathrm{FR}}(\varepsilon)\) and the collar Markov modulus \(\delta^{\mathrm M}_{A:B:D}(\varepsilon)\) are unchanged;
+\item if the ancillas are inert under repair, then
+\[
+\nf_\lambda^\eta(s\otimes k)=\nf_\lambda(s)\otimes k,
+\]
+so the quotient normal form on physical observables is identical;
+\item if the ancillas carry only trivial neutral sectors, the MAR-selected realized sector package is unchanged.
+\end{enumerate}
+Hence \(\mathfrak U\) and \(\mathfrak U^\eta\) are OPH-indistinguishable although they are different microscopic regulator realizations.
+\end{proposition}
+
+\begin{proof}
+Item 1 is immediate from the definition of \(\mathcal A^\eta(P)\) and \(\omega_P^\eta\). Item 2 is the product-state form of the same fixed-cutoff MaxEnt branch. Item 3 follows from additivity of entropy for product ancillas, which cancels in the conditional mutual-information combination and therefore leaves both \(r_{\mathrm{FR}}\) and \(\delta^{\mathrm M}\) unchanged. Item 4 holds because the lifted repair maps do not act on the ancillary factors. Item 5 is immediate when the ancillas are neutral and carry no extra realized sector data.
+\end{proof}
+
+\begin{definition}[OPH-stable UV equivalence]\label{def:ophuveq}
+Two finite-cutoff realizations \(\mathfrak U\) and \(\mathfrak U'\) are \emph{OPH-stably equivalent}, written
+\[
+\mathfrak U\sim_{\mathrm{OPH}}\mathfrak U',
+\]
+if after finite ancilla stabilizations they are related by local gauge-covariant \(^*\)-isomorphisms intertwining the observable patch net, overlap maps, local states, and repair dynamics on the physical subalgebras.
+\end{definition}
+
+\begin{corollary}[Unique physical UV branch only modulo OPH-stable equivalence]\label{cor:ophuveq}
+Under the present OPH axiom language, the UV invariant determined by the theory is the class \([\mathfrak U]_{\mathrm{OPH}}\), not a unique microscopic regulator presentation. Literal microscopic UV uniqueness is therefore not an OPH invariant.
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:gauge} fixes the schedule-independent physical branch on the quotient, while Proposition~\ref{prop:ancillauv} shows that inert ancillary refinements leave every OPH observable invariant. So the physical branch is fixed only modulo \(\sim_{\mathrm{OPH}}\), not at the level of one microscopic representative.
+\end{proof}
+
 These three results already encode much of the eventual physical interpretation. Objectivity becomes confluence, gauge symmetry becomes quotient invariance, and stable defects are represented by nontrivial overlap holonomy classes.
-The physically relevant uniqueness statement is therefore quotient uniqueness: OPH fixes a unique gauge-invariant normal form modulo boundary redundancy and implementation hiding, not a unique microscopic regulator presentation.
+The physically relevant uniqueness statement is therefore quotient uniqueness together with ancilla-stable equivalence: OPH fixes a unique gauge-invariant physical branch modulo boundary redundancy, implementation hiding, and inert ancillary stabilization, not a unique microscopic regulator presentation.
 
 \section{Collars, Edge Centers, and Generalized Entropy}
 
@@ -529,7 +597,7 @@ which yields the displayed block decomposition and shows that the center is gene
 \end{proof}
 
 \begin{remark}[Status of the regulator package and the precise Markov boundary]
-Proposition~\ref{prop:regulatedrealization} and Theorem~\ref{thm:markovcollar} show that, on the ordinary or central-defect branch, edge-center completion is a theorem of overlap consistency plus the finite regulator presentation; no preferred quantum-link realization is being assumed there. Assumption~\ref{ass:technical}\textbf{T1} is therefore theorem-local shorthand for this derived regulator package. The only remaining fixed-cutoff obstruction to a fully general ordinary-group theorem is a genuinely noncentral 2-group defect. On that branch the fixed-cutoff topological UV package is therefore closed up to that named noncentral obstruction; the further transportable compact-gauge lift still carries \textbf{T7} and \textbf{T10}--\textbf{T12} whenever it is invoked. The distinct issue addressed next is \emph{state} control: exact splice and modular-additivity identities require either literal exact Markovity or a controlled family that converges to the exact Markov set on one fixed finite-dimensional collar.
+Proposition~\ref{prop:regulatedrealization} and Theorem~\ref{thm:markovcollar} show that, on the ordinary or central-defect branch, edge-center completion is a theorem of overlap consistency plus the finite regulator presentation; no preferred quantum-link realization is being assumed there. Assumption~\ref{ass:technical}\textbf{T1} is therefore theorem-local shorthand for this derived regulator package. The only remaining fixed-cutoff obstruction to a fully general ordinary-group theorem is a genuinely noncentral 2-group defect. On that branch the fixed-cutoff topological UV package is therefore closed up to that named noncentral obstruction; the further transportable compact-gauge lift still carries \textbf{T7} and \textbf{T10}--\textbf{T12} whenever it is invoked. In the genuinely noncentral case, the right replacement is a higher-gauge or crossed-module version of the collar block decomposition and transportability theorem rather than one more ordinary-group lemma. The distinct issue addressed next is \emph{state} control: exact splice and modular-additivity identities require either literal exact Markovity or a controlled family that converges to the exact Markov set on one fixed finite-dimensional collar.
 \end{remark}
 
 \begin{definition}[Exact Markov set and collar-distance modulus]\label{def:markovmodulus}
@@ -2276,7 +2344,7 @@ This is no more problematic than using a lattice regulator for Yang-Mills theory
 
 \subsection{What is the current UV-completion claim?}
 
-At fixed cutoff, Axiom~\ref{ax:maxent} already yields a quasi-local finite-range interacting branch, and Proposition~\ref{prop:gauge} makes the physical normal form unique only after quotienting by boundary redundancy. The present suite therefore does not claim a unique microscopic UV completion. What is fixed is a unique physical branch modulo implementation hiding. On the ordinary or central-defect branch, the remaining fixed-cutoff topological obstruction is the genuinely noncentral 2-group defect singled out above. Beyond fixed cutoff, the continuum modular/geometric lift remains frozen behind \textbf{T4} and \textbf{T8}, and the transportable bosonic gauge lift still carries \textbf{T7} and \textbf{T10}--\textbf{T12} when invoked.
+At fixed cutoff, Axiom~\ref{ax:maxent} already yields a quasi-local finite-range interacting branch, and Propositions~\ref{prop:gauge} and \ref{prop:ancillauv} show that the physical normal form is unique only modulo quotient-level OPH-stable equivalence. The present suite therefore does not merely decline to prove a unique microscopic UV completion; it shows that literal microscopic uniqueness is not the invariant fixed by the current axiom language. What is fixed is the class \([\mathfrak U]_{\mathrm{OPH}}\) of the physical branch modulo implementation hiding and inert ancillary stabilization. On the ordinary or central-defect branch, the remaining fixed-cutoff topological obstruction is the genuinely noncentral 2-group defect singled out above. Beyond fixed cutoff, the continuum modular/geometric lift remains frozen behind \textbf{T4} and \textbf{T8}, and the transportable bosonic gauge lift still carries \textbf{T7} and \textbf{T10}--\textbf{T12} when invoked; the noncentral case points to a higher-gauge crossed-module extension rather than an ordinary-group proof patch.
 
 \subsection{Why is charge quantization possible without a simple GUT?}
 
@@ -2294,7 +2362,7 @@ The framework is strongest where the outputs are discrete or structurally rigid:
 \item the compact two-input economy of the present quantitative implementation, kept explicit as a secondary layer rather than as part of Phase I.
 \end{enumerate}
 
-At the same time, the UV status is sharper than a generic ``open gap'' label. The local MaxEnt branch already gives a finite-range interacting fixed-cutoff dynamics, and Proposition~\ref{prop:gauge} gives a unique physical branch modulo implementation hiding. On the ordinary or central-defect branch, the fixed-cutoff topological sector is reduced to the named noncentral 2-group obstruction. What remains open is the continuum BW/geometric lift of \textbf{T4}+\textbf{T8} and the fuller transportable compact-gauge lift when \textbf{T7} and \textbf{T10}--\textbf{T12} are invoked.
+At the same time, the UV status is sharper than a generic ``open gap'' label. The local MaxEnt branch already gives a finite-range interacting fixed-cutoff dynamics, and Propositions~\ref{prop:gauge} and \ref{prop:ancillauv} show that the physically meaningful uniqueness theorem is uniqueness of the UV branch only modulo OPH-stable equivalence, not uniqueness of one microscopic representative. On the ordinary or central-defect branch, the fixed-cutoff topological sector is reduced to the named noncentral 2-group obstruction. What remains open is the continuum BW/geometric lift of \textbf{T4}+\textbf{T8}, the fuller transportable compact-gauge lift when \textbf{T7} and \textbf{T10}--\textbf{T12} are invoked, and the higher-gauge crossed-module extension required by the genuinely noncentral defect case.
 
 The next strongest non-core sector is the supplement-backed D10 calibration branch. On the present local implementation, the current D10 carrier closes its own exact \(W/Z\) chart, but exact PDG \(W/Z\) does not yet honestly follow on that carrier; the remaining quantitative burden should therefore be read as a repair branch beyond the present carrier rather than as a hidden extra decimal place or an unnamed selector on the existing point. The separate D6 cosmological-capacity relation remains visible as an input-dependent corollary rather than as part of the recovered core. The charged-lepton and Koide sectors remain phenomenological continuations rather than core theorem outputs; the strongest current local charged-lepton result is an explicit same-carrier obstruction together with a two-scalar support-extension shell, not a closed emitted spectrum. On the flavor side, the only structural output already fixed before those continuations is the realized counting chain \(N_g=3\) then \(N_c=3\).
 
@@ -2306,9 +2374,9 @@ Topics intentionally excluded from the present formulation include simulation na
 
 \section{Conclusion}
 
-Observer-Patch Holography starts from overlap consistency of observer patches and yields, within one framework, several effective structures usually treated separately in modern fundamental physics. The compact note supports a unique schedule-independent normal form for overlap repair and hence a unique physical UV branch modulo boundary redundancy and implementation hiding, a conditional Lorentz branch in the assumed geometric modular phase, a conditional Jacobson-type Einstein branch under fixed-cap stationarity and the null-stress premise, the Standard Model gauge quotient with exact hypercharges on the realized matter package under the MAR admissibility package in the bosonic internal-gauge branch, the realized counting chain \(N_g=3\) then \(N_c=3\) on that branch, a separate supplement-backed gauge-calibration sector that remains secondary to the recovered core, and a separate input-dependent cosmological-capacity corollary. It also records several phenomenological continuations whose present status is weaker and is labeled as such in the text.
+Observer-Patch Holography starts from overlap consistency of observer patches and yields, within one framework, several effective structures usually treated separately in modern fundamental physics. The compact note supports a unique schedule-independent normal form for overlap repair and hence a unique physical UV branch only modulo boundary redundancy, implementation hiding, and inert ancillary stabilization, a conditional Lorentz branch in the assumed geometric modular phase, a conditional Jacobson-type Einstein branch under fixed-cap stationarity and the null-stress premise, the Standard Model gauge quotient with exact hypercharges on the realized matter package under the MAR admissibility package in the bosonic internal-gauge branch, the realized counting chain \(N_g=3\) then \(N_c=3\) on that branch, a separate supplement-backed gauge-calibration sector that remains secondary to the recovered core, and a separate input-dependent cosmological-capacity corollary. It also records several phenomenological continuations whose present status is weaker and is labeled as such in the text.
 
-Accordingly, the framework functions as a candidate underlying theory from which general relativity and the Standard Model may arise as effective descriptions once the stated scaling-limit and categorical premises are realized. The next technical tasks are sharper quantitative control, derivation or reduction of the noncentral topological obstruction and the transportability-side premises, a fuller fermionic gauge branch, and explicit microscopic realizations whose continuum lift lands in the required modular/geometric phase.
+Accordingly, the framework functions as a candidate underlying theory from which general relativity and the Standard Model may arise as effective descriptions once the stated scaling-limit and categorical premises are realized. The next technical tasks are sharper quantitative control, derivation or reduction of the noncentral topological obstruction together with the higher-gauge crossed-module replacement it points toward, derivation or removal of the transportability-side premises, a fuller fermionic gauge branch, and explicit microscopic realizations whose continuum lift lands in the required modular/geometric phase.
 
 \appendix
 
