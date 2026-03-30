@@ -38,12 +38,31 @@ D11_FORWARD_SEED = ROOT / "particles" / "runs" / "calibration" / "d11_forward_se
 FORWARD_CHARGED_LEPTONS = ROOT / "particles" / "runs" / "leptons" / "forward_charged_leptons.json"
 FORWARD_NEUTRINO_BUNDLE = ROOT / "particles" / "runs" / "neutrino" / "forward_neutrino_closure_bundle.json"
 NEUTRINO_EXACT_BLOCKERS = ROOT / "particles" / "runs" / "neutrino" / "exact_blocking_items.json"
+NEUTRINO_WEIGHTED_CYCLE_REPAIR = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_repair.json"
 PUBLIC_SURFACE_KIND = "particles_native_candidate_or_gap_surface"
 P_DEFAULT = 1.63094
 LOG_DIM_H_DEFAULT = 1.0e122
 
 
 GROUP_ORDER = ["Bosons", "Leptons", "Quarks", "Hadrons"]
+NEUTRINO_OSCILLATION_SOURCE_URL = "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-neutrino-mixing.pdf"
+NEUTRINO_OSCILLATION_REFERENCE_LABEL = "PDG 2025 NO reference"
+NEUTRINO_PDG_2025_NO_CENTRAL = {
+    "theta12_deg": 33.68,
+    "theta23_deg": 43.3,
+    "theta13_deg": 8.56,
+    "delta_deg": 212.0,
+    "delta_m21_sq_eV2": 7.49e-5,
+    "delta_m32_sq_eV2": 2.438e-3,
+}
+NEUTRINO_PDG_2025_NO_1SIGMA = {
+    "theta12_deg": {"plus": 0.73, "minus": 0.70},
+    "theta23_deg": {"plus": 1.0, "minus": 0.9},
+    "theta13_deg": {"plus": 0.11, "minus": 0.11},
+    "delta_deg": {"plus": 26.0, "minus": 41.0},
+    "delta_m21_sq_eV2": {"plus": 0.19e-5, "minus": 0.20e-5},
+    "delta_m32_sq_eV2": {"plus": 0.021e-3, "minus": 0.019e-3},
+}
 D10_MASS_PAIR_NOTE = (
     "Derived from the D10 calibration chain "
     "`derive_d10_ew_observable_family.py -> derive_d10_ew_source_transport_pair.py -> "
@@ -353,6 +372,42 @@ def format_gev(value: Optional[float]) -> str:
     return f"{value:.9g}"
 
 
+def format_scalar(value: Optional[float]) -> str:
+    if value is None:
+        return "n/a"
+    if value == 0.0:
+        return "0"
+    abs_value = abs(value)
+    if abs_value < 1.0e-9 or abs_value >= 1.0e4:
+        return f"{value:.6e}"
+    if abs_value < 1.0e-4:
+        return f"{value:.12g}"
+    if abs_value < 1.0:
+        return f"{value:.8g}"
+    return f"{value:.6f}".rstrip("0").rstrip(".")
+
+
+def format_observable_value(value: Optional[float], unit: str) -> str:
+    if value is None:
+        return "n/a"
+    return f"{format_scalar(value)} {unit}".rstrip()
+
+
+def format_observable_reference(value: float, unit: str, *, err_plus: float, err_minus: float) -> str:
+    if abs(err_plus - err_minus) <= max(abs(err_plus), abs(err_minus), 1.0) * 1.0e-12:
+        return f"{format_scalar(value)} +- {format_scalar(err_plus)} {unit}".rstrip()
+    return f"{format_scalar(value)} +{format_scalar(err_plus)} -{format_scalar(err_minus)} {unit}".rstrip()
+
+
+def format_observable_delta(pred_value: float, reference_value: float, unit: str) -> str:
+    delta = pred_value - reference_value
+    rel = None if reference_value == 0 else delta / reference_value
+    display = format_observable_value(delta, unit)
+    if rel is None:
+        return display
+    return f"{display} ({rel:+.3e})"
+
+
 def format_reference(entry: Dict[str, Any]) -> str:
     if entry.get("value_gev") is not None:
         value_gev = float(entry["value_gev"])
@@ -560,6 +615,149 @@ def apply_local_candidate_overrides(prediction: Dict[str, Any]) -> Dict[str, Any
     return updated
 
 
+def build_neutrino_oscillation_comparison_rows(surface_state: Dict[str, Any]) -> List[Dict[str, Any]]:
+    active = dict(surface_state["active_local_public_candidates"])
+    if not active.get("neutrino_repaired_branch"):
+        return []
+    if not NEUTRINO_WEIGHTED_CYCLE_REPAIR.exists():
+        return []
+
+    repair = json.loads(NEUTRINO_WEIGHTED_CYCLE_REPAIR.read_text(encoding="utf-8"))
+    pmns = dict(repair.get("pmns_observables", {}))
+    anchored = dict(repair.get("compare_only_atmospheric_anchor", {}))
+    ratio_value = repair.get("dimensionless_ratio_dm21_over_dm32")
+    ratio_reference = (
+        NEUTRINO_PDG_2025_NO_CENTRAL["delta_m21_sq_eV2"] / NEUTRINO_PDG_2025_NO_CENTRAL["delta_m32_sq_eV2"]
+    )
+
+    def _row(
+        *,
+        observable_id: str,
+        observable: str,
+        status: str,
+        prediction_value: float,
+        reference_value: float,
+        err_plus: float,
+        err_minus: float,
+        unit: str,
+        note: str,
+    ) -> Dict[str, Any]:
+        return {
+            "observable_id": observable_id,
+            "observable": observable,
+            "status": status,
+            "prediction_value": float(prediction_value),
+            "prediction_display": format_observable_value(float(prediction_value), unit),
+            "reference_value": float(reference_value),
+            "reference_display": format_observable_reference(
+                float(reference_value),
+                unit,
+                err_plus=float(err_plus),
+                err_minus=float(err_minus),
+            ),
+            "delta_display": format_observable_delta(float(prediction_value), float(reference_value), unit),
+            "note": note,
+            "reference_source_url": NEUTRINO_OSCILLATION_SOURCE_URL,
+            "reference_label": NEUTRINO_OSCILLATION_REFERENCE_LABEL,
+            "unit": unit,
+        }
+
+    rows = [
+        _row(
+            observable_id="theta12_deg",
+            observable="theta12",
+            status="repaired_dimensionless",
+            prediction_value=float(pmns["theta12_deg"]),
+            reference_value=NEUTRINO_PDG_2025_NO_CENTRAL["theta12_deg"],
+            err_plus=NEUTRINO_PDG_2025_NO_1SIGMA["theta12_deg"]["plus"],
+            err_minus=NEUTRINO_PDG_2025_NO_1SIGMA["theta12_deg"]["minus"],
+            unit="deg",
+            note="Direct PMNS angle from the repaired weighted-cycle branch; no absolute mass anchor is used.",
+        ),
+        _row(
+            observable_id="theta23_deg",
+            observable="theta23",
+            status="repaired_dimensionless",
+            prediction_value=float(pmns["theta23_deg"]),
+            reference_value=NEUTRINO_PDG_2025_NO_CENTRAL["theta23_deg"],
+            err_plus=NEUTRINO_PDG_2025_NO_1SIGMA["theta23_deg"]["plus"],
+            err_minus=NEUTRINO_PDG_2025_NO_1SIGMA["theta23_deg"]["minus"],
+            unit="deg",
+            note="Direct PMNS angle from the repaired weighted-cycle branch; this lands inside the PDG 3sigma NO window near its upper edge.",
+        ),
+        _row(
+            observable_id="theta13_deg",
+            observable="theta13",
+            status="repaired_dimensionless",
+            prediction_value=float(pmns["theta13_deg"]),
+            reference_value=NEUTRINO_PDG_2025_NO_CENTRAL["theta13_deg"],
+            err_plus=NEUTRINO_PDG_2025_NO_1SIGMA["theta13_deg"]["plus"],
+            err_minus=NEUTRINO_PDG_2025_NO_1SIGMA["theta13_deg"]["minus"],
+            unit="deg",
+            note="Direct PMNS angle from the repaired weighted-cycle branch; no absolute mass anchor is used.",
+        ),
+        _row(
+            observable_id="delta_cp_deg",
+            observable="delta_CP",
+            status="repaired_dimensionless",
+            prediction_value=float(pmns["delta_deg"]),
+            reference_value=NEUTRINO_PDG_2025_NO_CENTRAL["delta_deg"],
+            err_plus=NEUTRINO_PDG_2025_NO_1SIGMA["delta_deg"]["plus"],
+            err_minus=NEUTRINO_PDG_2025_NO_1SIGMA["delta_deg"]["minus"],
+            unit="deg",
+            note="Direct PMNS phase from the repaired weighted-cycle branch; inside the PDG 3sigma NO window but displaced from the NO best fit.",
+        ),
+    ]
+
+    if ratio_value is not None:
+        rows.append(
+            {
+                "observable_id": "delta_m21_sq_over_delta_m32_sq",
+                "observable": "Delta m21^2 / Delta m32^2",
+                "status": "repaired_dimensionless",
+                "prediction_value": float(ratio_value),
+                "prediction_display": format_scalar(float(ratio_value)),
+                "reference_value": float(ratio_reference),
+                "reference_display": format_scalar(float(ratio_reference)),
+                "delta_display": format_observable_delta(float(ratio_value), float(ratio_reference), ""),
+                "note": "Dimensionless hierarchy ratio from the repaired branch; this is the cleanest split comparison because it does not depend on the missing absolute normalization scalar.",
+                "reference_source_url": NEUTRINO_OSCILLATION_SOURCE_URL,
+                "reference_label": NEUTRINO_OSCILLATION_REFERENCE_LABEL,
+                "unit": "",
+            }
+        )
+
+    if "delta_m21_sq_eV2" in anchored and "delta_m32_sq_eV2" in anchored:
+        rows.extend(
+            [
+                _row(
+                    observable_id="delta_m21_sq_eV2",
+                    observable="Delta m21^2",
+                    status="compare_only",
+                    prediction_value=float(anchored["delta_m21_sq_eV2"]),
+                    reference_value=NEUTRINO_PDG_2025_NO_CENTRAL["delta_m21_sq_eV2"],
+                    err_plus=NEUTRINO_PDG_2025_NO_1SIGMA["delta_m21_sq_eV2"]["plus"],
+                    err_minus=NEUTRINO_PDG_2025_NO_1SIGMA["delta_m21_sq_eV2"]["minus"],
+                    unit="eV^2",
+                    note="Absolute solar splitting after compare-only anchoring with the atmospheric Delta m32^2 input; this is not yet a promoted theorem-grade OPH output.",
+                ),
+                _row(
+                    observable_id="delta_m32_sq_eV2",
+                    observable="Delta m32^2",
+                    status="compare_only_anchor",
+                    prediction_value=float(anchored["delta_m32_sq_eV2"]),
+                    reference_value=NEUTRINO_PDG_2025_NO_CENTRAL["delta_m32_sq_eV2"],
+                    err_plus=NEUTRINO_PDG_2025_NO_1SIGMA["delta_m32_sq_eV2"]["plus"],
+                    err_minus=NEUTRINO_PDG_2025_NO_1SIGMA["delta_m32_sq_eV2"]["minus"],
+                    unit="eV^2",
+                    note="This is the external atmospheric anchor used to put the repaired dimensionless branch on an eV scale, so it is shown only as compare-only context, not as an independent prediction.",
+                ),
+            ]
+        )
+
+    return rows
+
+
 def prediction_surface_for_row(row_spec: Dict[str, Any], surface_state: Dict[str, Any], *, with_hadrons: bool) -> str:
     active = dict(surface_state["active_local_public_candidates"])
     particle_id = row_spec["particle_id"]
@@ -635,6 +833,7 @@ def build_premise_boundaries() -> Dict[str, Any]:
 def render_markdown(
     *,
     rows: List[Dict[str, Any]],
+    comparison_rows: List[Dict[str, Any]],
     generated_utc: str,
     P: float,
     log_dim_H: float,
@@ -707,6 +906,20 @@ def render_markdown(
                 f"| {row['particle']} | {row['status']} | {row['prediction_display_gev']} | {row['reference_display']} | {row['delta_display']} | {row['note']} |"
             )
         lines.append("")
+        if group == "Leptons" and comparison_rows:
+            lines.extend(
+                [
+                    "## Neutrino Oscillation Comparison",
+                    "",
+                    "| Observable | Status | OPH value | PDG 2025 NO reference | Delta | Note |",
+                    "| --- | --- | --- | --- | --- | --- |",
+                ]
+            )
+            for row in comparison_rows:
+                lines.append(
+                    f"| {row['observable']} | {row['status']} | {row['prediction_display']} | {row['reference_display']} | {row['delta_display']} | {row['note']} |"
+                )
+            lines.append("")
 
     return "\n".join(lines)
 
@@ -741,10 +954,12 @@ def main() -> int:
         with_hadrons=with_hadrons,
         surface_state=surface_state,
     )
+    comparison_rows = build_neutrino_oscillation_comparison_rows(surface_state)
     generated_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     markdown = render_markdown(
         rows=rows,
+        comparison_rows=comparison_rows,
         generated_utc=generated_utc,
         P=float(args.P),
         log_dim_H=float(args.log_dim_H),
@@ -775,6 +990,7 @@ def main() -> int:
         "surface_state": surface_state,
         "premise_boundaries": premise_boundaries,
         "rows": rows,
+        "comparison_rows": comparison_rows,
     }
     forward_out.write_text(json.dumps(forward_payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
@@ -794,6 +1010,7 @@ def main() -> int:
                 "premise_boundaries": premise_boundaries,
                 "reference_source": reference_payload["source"],
                 "rows": rows,
+                "comparison_rows": comparison_rows,
             },
             indent=2,
             sort_keys=True,
