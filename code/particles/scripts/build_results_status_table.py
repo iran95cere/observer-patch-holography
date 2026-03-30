@@ -130,6 +130,24 @@ HADRON_CONTINUATION_NOTE = (
     "Public hadron rows still require real production unquenched execution and production continuum/volume/chiral/statistical systematics; the next live residual is "
     "`backend_correlator_dump.production.json`."
 )
+UV_BW_PREMISE_BOUNDARY = {
+    "status": "open_final_no_go_on_current_corpus",
+    "remaining_object": "controlled_bw_scaling_branch_theorem",
+    "current_internalized_scope": (
+        "Axiom-3 plus the fixed-cutoff collar/MaxEnt package internalize local Gibbs form, quasi-local propagation, "
+        "endpoint-Lipschitz interval control, and refinement-stable branch persistence."
+    ),
+    "reason_current_corpus_fails": (
+        "The current sources prove only fixed-cutoff type-I collar control and a conditional scaling-limit automorphism theorem "
+        "on the assumed BW branch. They do not prove that the realized refinement-stable branch has the needed controlled scaling limit "
+        "or that it lands in the Bisognano-Wichmann geometric modular class from internal premises alone; the limit cap algebra may be non-type-I."
+    ),
+    "statement": (
+        "For each round cap C on the realized refinement-stable Axiom-3 branch, derive a controlled scaling-limit cap pair "
+        "(A_infty(C), omega_infty^C) with vanishing carried collar errors and geometric modular automorphism group "
+        "sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}, without assuming type-I survival or a surviving cap density matrix."
+    ),
+}
 INVENTORY: List[Dict[str, Any]] = [
     {
         "particle_id": "photon",
@@ -599,6 +617,12 @@ def build_rows(
     return rows
 
 
+def build_premise_boundaries() -> Dict[str, Any]:
+    return {
+        "uv_bw_internalization": dict(UV_BW_PREMISE_BOUNDARY),
+    }
+
+
 def render_markdown(
     *,
     rows: List[Dict[str, Any]],
@@ -610,6 +634,7 @@ def render_markdown(
     hadron_profile: str,
     reference_payload: Dict[str, Any],
     surface_state: Dict[str, Any],
+    premise_boundaries: Dict[str, Any],
 ) -> str:
     groups_present = [group for group in GROUP_ORDER if any(item["group"] == group for item in rows)]
     hadron_profile_display = hadron_profile if with_hadrons else "suppressed"
@@ -640,6 +665,21 @@ def render_markdown(
         f"Measured/reference values are pinned from the official {reference_payload['source']['label']} {reference_payload['source']['edition']} machine-readable surface where available, with explicit manual structural-context entries for non-PDG rows such as gluons, graviton, and flavor neutrinos: {reference_payload['source']['api_info_url']}.",
         "",
     ]
+
+    uv_boundary = premise_boundaries.get("uv_bw_internalization")
+    if uv_boundary:
+        lines.extend(
+            [
+                "## Premise Boundaries",
+                "",
+                f"- `uv_bw_internalization`: `{uv_boundary['status']}`",
+                f"- Remaining object: `{uv_boundary['remaining_object']}`",
+                f"- Internalized scope: {uv_boundary['current_internalized_scope']}",
+                f"- Why still open: {uv_boundary['reason_current_corpus_fails']}",
+                f"- Exact theorem object: {uv_boundary['statement']}",
+                "",
+            ]
+        )
 
     for group in groups_present:
         lines.extend(
@@ -677,6 +717,7 @@ def main() -> int:
 
     with_hadrons = bool(args.with_hadrons)
     surface_state = build_surface_state(with_hadrons=with_hadrons)
+    premise_boundaries = build_premise_boundaries()
     reference_payload = json.loads(pathlib.Path(args.reference_json).read_text(encoding="utf-8"))
     reference_entries = reference_payload["entries"]
     ledger_entries = load_ledger_entries(pathlib.Path(args.ledger_yaml))
@@ -700,6 +741,7 @@ def main() -> int:
         hadron_profile=str(args.hadron_profile),
         reference_payload=reference_payload,
         surface_state=surface_state,
+        premise_boundaries=premise_boundaries,
     )
 
     markdown_out = pathlib.Path(args.markdown_out)
@@ -719,6 +761,7 @@ def main() -> int:
             "hadron_profile": str(args.hadron_profile),
         },
         "surface_state": surface_state,
+        "premise_boundaries": premise_boundaries,
         "rows": rows,
     }
     forward_out.write_text(json.dumps(forward_payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -736,6 +779,7 @@ def main() -> int:
                     "hadron_profile": str(args.hadron_profile),
                 },
                 "surface_state": surface_state,
+                "premise_boundaries": premise_boundaries,
                 "reference_source": reference_payload["source"],
                 "rows": rows,
             },

@@ -1,6 +1,6 @@
 # Particle Results Status
 
-Generated: `2026-03-30T00:40:50Z`
+Generated: `2026-03-30T02:39:43Z`
 
 Inputs: `P=1.63094` | `log_dim_H=1e+122` | `loops=4` | `with_hadrons=False` | `hadron_profile=suppressed`
 
@@ -15,6 +15,14 @@ This table is a `/particles`-native audit surface. If a sector has no live local
 Hadron rows are intentionally suppressed by default because the hadron lane is execution-bound: promotable rows require real unquenched production computation and production systematics, not just further symbolic derivation. Re-enable them only for explicit hadron debugging with `--with-hadrons`.
 
 Measured/reference values are pinned from the official Particle Data Group 2025 machine-readable surface where available, with explicit manual structural-context entries for non-PDG rows such as gluons, graviton, and flavor neutrinos: https://pdg.lbl.gov/api.
+
+## Premise Boundaries
+
+- `uv_bw_internalization`: `open_final_no_go_on_current_corpus`
+- Remaining object: `controlled_bw_scaling_branch_theorem`
+- Internalized scope: Axiom-3 plus the fixed-cutoff collar/MaxEnt package internalize local Gibbs form, quasi-local propagation, endpoint-Lipschitz interval control, and refinement-stable branch persistence.
+- Why still open: The current sources prove only fixed-cutoff type-I collar control and a conditional scaling-limit automorphism theorem on the assumed BW branch. They do not prove that the realized refinement-stable branch has the needed controlled scaling limit or that it lands in the Bisognano-Wichmann geometric modular class from internal premises alone; the limit cap algebra may be non-type-I.
+- Exact theorem object: For each round cap C on the realized refinement-stable Axiom-3 branch, derive a controlled scaling-limit cap pair (A_infty(C), omega_infty^C) with vanishing carried collar errors and geometric modular automorphism group sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}, without assuming type-I survival or a surviving cap density matrix.
 
 ## Bosons
 

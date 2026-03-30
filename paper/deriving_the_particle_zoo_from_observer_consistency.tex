@@ -56,7 +56,10 @@ and the quark branch emits continuation-level rows for the up quark, down quark,
 charm quark, and bottom quark. Charged leptons and flavor-labeled neutrinos remain
 open for different reasons: the charged lane fixes the centered hierarchy but not the absolute
 normalization, while the repaired neutrino continuation branch lands on the observed PMNS/hierarchy
-pattern but still leaves one overall positive normalization scalar open. Hadrons remain execution-bound. The purpose of the paper is therefore not to claim full closure, but to give a concise
+pattern but still leaves one overall positive normalization scalar open. Hadrons remain execution-bound:
+unlike the upstream elementary-particle lanes, the hadron branch requires large-scale classical
+lattice-QCD computation and is not presently a realistic target for ordinary local hardware or
+current cloud quantum devices. The purpose of the paper is therefore not to claim full closure, but to give a concise
 end-to-end derivation map from observer-consistency axioms and \(P\) to the reported particle
 outputs while marking every remaining closure object explicitly.
 \end{abstract}
@@ -2185,9 +2188,12 @@ execution-incomplete.
 The engineering burden is therefore asymmetric. Local execution is sufficient for manifest
 generation, surrogate validation, and downstream readout tests, because those stages operate on a
 tiny correlator payload. The physical branch is different: the dominant cost is upstream
-gauge-field generation and Dirac solves, not the final analysis dump. So the honest deployment
-target is a multi-node HPC cluster or cloud HPC allocation rather than a laptop or ordinary
-workstation. As an operational estimate, a backend adapter and first real stable-channel pilot dump
+gauge-field generation and Dirac solves, not the final analysis dump. This is therefore a classical
+high-performance-computing workload, not a special quantum-computing shortcut. Current
+quantum-cloud hardware can support toy lattice-gauge demonstrations, but it is not presently a
+realistic execution target for full \(3+1\)-dimensional dynamical \(SU(3)\) lattice-QCD hadron
+spectroscopy. So the honest deployment target is a multi-node HPC cluster or cloud HPC allocation
+rather than a laptop, ordinary workstation, or current quantum-cloud device. As an operational estimate, a backend adapter and first real stable-channel pilot dump
 are a week-scale software task, whereas publishable \(\pi_{\mathrm{iso}}/N_{\mathrm{iso}}\)
 systematics are month-scale numerical work and depend strongly on the available allocation, solver
 quality, and whether one stays on the current stable-channel branch or also opens the later

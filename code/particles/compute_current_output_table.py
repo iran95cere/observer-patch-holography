@@ -230,6 +230,16 @@ def _render_terminal_report(payload: dict[str, Any], *, color: bool) -> str:
             enabled=color,
         )
     )
+    premise_boundaries = payload.get("premise_boundaries", {})
+    uv_boundary = premise_boundaries.get("uv_bw_internalization")
+    if uv_boundary:
+        lines.append("")
+        lines.append(_style("Premise Boundaries", BOLD, enabled=color))
+        lines.append(
+            "UV/BW: "
+            f"{uv_boundary['status']} | remaining_object={uv_boundary['remaining_object']}"
+        )
+        lines.append(_style(uv_boundary["reason_current_corpus_fails"], DIM, enabled=color))
 
     grouped: dict[str, list[dict[str, Any]]] = {group: [] for group in GROUP_ORDER}
     for row in payload["rows"]:

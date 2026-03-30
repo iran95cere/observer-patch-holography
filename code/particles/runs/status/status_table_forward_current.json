@@ -1,12 +1,21 @@
 {
   "artifact": "oph_status_table_forward_current",
-  "generated_utc": "2026-03-30T00:40:50Z",
+  "generated_utc": "2026-03-30T02:39:43Z",
   "inputs": {
     "P": 1.63094,
     "hadron_profile": "serious",
     "log_dim_H": 1e+122,
     "loops": 4,
     "with_hadrons": false
+  },
+  "premise_boundaries": {
+    "uv_bw_internalization": {
+      "current_internalized_scope": "Axiom-3 plus the fixed-cutoff collar/MaxEnt package internalize local Gibbs form, quasi-local propagation, endpoint-Lipschitz interval control, and refinement-stable branch persistence.",
+      "reason_current_corpus_fails": "The current sources prove only fixed-cutoff type-I collar control and a conditional scaling-limit automorphism theorem on the assumed BW branch. They do not prove that the realized refinement-stable branch has the needed controlled scaling limit or that it lands in the Bisognano-Wichmann geometric modular class from internal premises alone; the limit cap algebra may be non-type-I.",
+      "remaining_object": "controlled_bw_scaling_branch_theorem",
+      "statement": "For each round cap C on the realized refinement-stable Axiom-3 branch, derive a controlled scaling-limit cap pair (A_infty(C), omega_infty^C) with vanishing carried collar errors and geometric modular automorphism group sigma_t^{omega_infty^C} = alpha_{lambda_C(2 pi t)}, without assuming type-I survival or a surviving cap density matrix.",
+      "status": "open_final_no_go_on_current_corpus"
+    }
   },
   "rows": [
     {
