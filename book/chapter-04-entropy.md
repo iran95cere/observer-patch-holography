@@ -357,7 +357,7 @@ The universe had to start in a special state for any of this to work. But this n
 
 6. **The area law connects to holography**: Entanglement entropy and black hole entropy both scale with area.
 
-7. **Black holes preserve information**: The Page curve is reproduced by including islands.
+7. **Black-hole information recovery has strong semiclassical support**: The Page curve is reproduced by including islands in important controlled settings.
 
 8. **Observers have an entropy budget**: Patch boundaries limit accessible information. Laws must be compressible. Memory costs free energy.
 
