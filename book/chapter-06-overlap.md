@@ -84,9 +84,9 @@ Many physicists read the Bell results as strong pressure against naive local rea
 
 **This is the hint**: Quantum correlations exceed what any local hidden variable theory permits. The intuitive picture of pre-existing properties carried from a common past is experimentally contradicted.
 
-## 6.3 The First-Principles Reframing: Consistency Requires Nonlocal Correlations
+## 6.3 The First-Principles Reframing: Consistency and Nonlocal Correlations
 
-Now we reverse engineer. Why does nature behave this way? What principle would make nonlocal correlations necessary rather than surprising?
+Now we reverse engineer. Why does nature behave this way? What principle would make such nonclassical correlations structurally natural rather than merely surprising?
 
 ### Objectivity Is Agreement
 
@@ -151,7 +151,7 @@ Now apply the overlap consistency condition. Any assignment where patches disagr
 
 The hardness of the Quantum Marginal Problem tells us the filter is doing real work. The constraints are genuinely restrictive. This is why physics is non-trivial. If consistency were easy, any random assignment would work. The difficulty of the marginal problem is why we have specific physical laws and not chaos.
 
-And here is the key insight: to satisfy the overlap conditions with fewer pre-existing constraints, nature must permit correlations that exceed classical bounds. Bell-violating correlations are the price of-or the mechanism for-keeping quantum patches consistent.
+And here is the key insight: in the OPH reading, overlap conditions favor allowing correlations that exceed classical bounds. Bell-violating correlations are then interpreted as part of the quantum structure that helps keep patches consistent without a large hidden-variable bookkeeping overhead.
 
 In a universe built on observer agreement, the nonlocal correlations that so troubled Einstein are not inexplicable. OPH treats them as structurally natural rather than accidental.
 
