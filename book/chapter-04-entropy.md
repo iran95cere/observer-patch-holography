@@ -204,7 +204,7 @@ Points deep inside A are entangled with other inside points, not the outside. Th
 
 ### The Connection to Holography
 
-The Bekenstein bound says maximum entropy scales with area. The area law of entanglement says actual entropy (in ground states) scales with area too.
+Black-hole entropy bounds point toward area scaling, while the area law of entanglement says actual entropy (in ground states) scales with area too.
 
 This is not coincidence. Gravitational entropy bounds and entanglement area laws point in the same structural direction, even though they arise in different settings.
 

@@ -402,7 +402,7 @@ The holographic principle makes sharp, testable predictions:
 
 **1. Area law vs. volume law**: If the holographic principle is correct, entanglement entropy in gravitational systems must scale with area, not volume. Tensor network models that respect the holographic bound produce area-law scaling. Generic quantum field theory states produce volume-law scaling. This is a discriminating test.
 
-**2. The Bekenstein bound is saturated by black holes**: No system can have entropy exceeding $S = A/(4\ell_P^2)$. Black holes saturate this bound-they are maximally entropic for their size. Any violation identifies a measurement contradiction with the model.
+**2. Black holes saturate the gravitational area law**: Black holes realize $S = A/(4\ell_P^2)$ and are maximally entropic for their size in this gravitational sense. Any clear violation of the associated entropy bounds would identify a measurement contradiction with the model.
 
 **3. Information is finite**: The observable universe contains at most $\sim 10^{122}$ bits. This is enormous but finite. Any evidence of truly infinite information content would contradict holography.
 
