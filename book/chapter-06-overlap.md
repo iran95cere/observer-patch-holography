@@ -131,11 +131,11 @@ Why can't you just glue quantum marginals together? The answer involves one of q
 
 If particles A and B are maximally entangled, then A cannot also be maximally entangled with C. You can't share maximal quantum correlation with more than one partner.
 
-The Coffman-Kundu-Wootters inequality quantifies this:
+One standard qubit monogamy relation is the Coffman-Kundu-Wootters inequality:
 
-$$E(A:B) + E(A:C) \leq E(A:BC)$$
+$$\tau_{A:B} + \tau_{A:C} \leq \tau_{A:BC}$$
 
-Entanglement with B plus entanglement with C cannot exceed entanglement with BC together.
+In this qubit setting, A's pairwise entanglement budget with B and C cannot exceed its total entanglement with BC together.
 
 Think of it like attention. If you're having a deeply intimate conversation with one person, you can't simultaneously have an equally deep conversation with someone else. Quantum correlations work the same way.
 
