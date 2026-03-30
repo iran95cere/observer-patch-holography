@@ -146,7 +146,7 @@ This is weird. It means the interior of a region is somehow redundant. All the i
 
 In the early 1990s, Gerard 't Hooft and Leonard Susskind took this reasoning to its logical conclusion.
 
-If the maximum information in a region scales with surface area, then **the fundamental degrees of freedom must be two-dimensional**. The three-dimensional interior is not fundamental-it is emergent, reconstructed from boundary data.
+If the maximum information in a region scales with surface area, then **a boundary-first description becomes a very strong candidate for the fundamental bookkeeping**. On that reading, the three-dimensional interior is not fundamental-it is emergent, reconstructed from boundary data.
 
 't Hooft called this the **holographic principle**, by analogy with holograms. A hologram is a two-dimensional film that encodes a three-dimensional image. When you illuminate it, you see depth that isn't really there-the depth is computed from the 2D pattern.
 
@@ -382,9 +382,9 @@ $$S_A = \frac{\text{Area}(\gamma_A)}{4 G_N}$$
 
 The entanglement entropy of a boundary region A equals the area of the minimal surface $\gamma_A$ in the bulk.
 
-This is stunning. **Entanglement on the boundary creates geometry in the bulk.** If two regions of the boundary are highly entangled, the minimal surface connecting them is short-they are close in the bulk. If weakly entangled, they are far apart.
+This is stunning. **In holographic settings, boundary entanglement strongly constrains bulk geometry.** If two regions of the boundary are highly entangled, the corresponding bulk relation is typically shorter; if weakly entangled, it is typically farther apart.
 
-**Distance in the emergent space is entanglement on the screen.**
+**Distance in the emergent space is tightly linked to entanglement structure on the screen.**
 
 ### Tensor Networks
 
