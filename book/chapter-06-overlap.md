@@ -218,7 +218,7 @@ Being QMA-complete means the Quantum Marginal Problem is as hard as any problem 
 
 ### What This Means
 
-In classical physics, local data determine global data (given enough overlap). Checking consistency is computationally easy.
+In classical physics, local data often determine global data on simple overlap structures, and compatibility checking is much easier than in the quantum case.
 
 In quantum physics, local data constrain but don't determine global data. Checking consistency is computationally hard-there's no efficient algorithm to decide if quantum marginals are compatible.
 
@@ -458,7 +458,7 @@ Put differently: OPH treats Bell-violating correlations as an efficient part of 
 
 3. **Overlap Condition**: When observers share access to a region, their restricted states must agree on the shared overlap algebra.
 
-4. **The Quantum Marginal Problem is QMA-Complete**: Unlike classical physics, where consistent marginals always fit together, quantum marginals might not. Checking compatibility is computationally hard.
+4. **The Quantum Marginal Problem is QMA-Complete**: Unlike simple classical gluing problems, quantum marginals can fail to fit together even when pairwise overlaps match. Checking compatibility is computationally hard.
 
 5. **Monogamy of Entanglement**: You can't be maximally entangled with multiple parties. Quantum correlations are a limited budget.
 
