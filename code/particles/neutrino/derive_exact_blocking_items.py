@@ -34,6 +34,7 @@ INTRINSIC_VALIDATION_JSON = ROOT / "particles" / "runs" / "neutrino" / "intrinsi
 REPAIR_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_repair.json"
 AMPLITUDE_BRIDGE_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_absolute_amplitude_bridge.json"
 BRIDGE_CANDIDATE_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_lambda_nu_bridge_candidate.json"
+IRREDUCIBILITY_JSON = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_irreducibility_theorem.json"
 DEFAULT_EXACT_OUT = ROOT / "particles" / "runs" / "neutrino" / "exact_blocking_items.json"
 DEFAULT_SUMMARY_OUT = ROOT / "particles" / "runs" / "neutrino" / "current_snapshot_blocker_summary.json"
 
@@ -56,6 +57,7 @@ def build_exact_blockers(
     repair: dict,
     amplitude_bridge: dict | None,
     bridge_candidate: dict | None,
+    irreducibility: dict | None,
 ) -> tuple[dict, dict]:
     same_label_present = bool(certificate.get("sufficient_for_intrinsic_mass_eigenstates"))
     charged_basis_present = charged_left.get("status") == "closed"
@@ -309,6 +311,16 @@ def build_exact_blockers(
                     "sharper_attachment_object": (
                         bridge_candidate.get("exact_next_theorem_object") if bridge_candidate else None
                     ),
+                    "current_attached_stack_irreducibility_theorem": (
+                        {
+                            "artifact": irreducibility.get("artifact"),
+                            "status": irreducibility.get("status"),
+                            "statement": irreducibility.get("theorem", {}).get("statement"),
+                            "remaining_object": irreducibility.get("remaining_object"),
+                        }
+                        if irreducibility
+                        else None
+                    ),
                     "immediate_theorem_gate": (
                         bridge_candidate.get("strictly_smaller_missing_clause") if bridge_candidate else None
                     ),
@@ -361,6 +373,7 @@ def main() -> int:
     parser.add_argument("--repair", default=str(REPAIR_JSON))
     parser.add_argument("--amplitude-bridge", default=str(AMPLITUDE_BRIDGE_JSON))
     parser.add_argument("--bridge-candidate", default=str(BRIDGE_CANDIDATE_JSON))
+    parser.add_argument("--irreducibility", default=str(IRREDUCIBILITY_JSON))
     parser.add_argument("--exact-output", default=str(DEFAULT_EXACT_OUT))
     parser.add_argument("--summary-output", default=str(DEFAULT_SUMMARY_OUT))
     args = parser.parse_args()
@@ -375,6 +388,7 @@ def main() -> int:
         _load_json(Path(args.repair)) if Path(args.repair).exists() else {},
         _load_json(Path(args.amplitude_bridge)) if Path(args.amplitude_bridge).exists() else None,
         _load_json(Path(args.bridge_candidate)) if Path(args.bridge_candidate).exists() else None,
+        _load_json(Path(args.irreducibility)) if Path(args.irreducibility).exists() else None,
     )
 
     exact_out = Path(args.exact_output)

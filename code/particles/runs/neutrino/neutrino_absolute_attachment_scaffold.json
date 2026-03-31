@@ -1,6 +1,6 @@
 {
   "artifact": "oph_neutrino_absolute_attachment_scaffold",
-  "generated_utc": "2026-03-31T02:21:50Z",
+  "generated_utc": "2026-03-31T06:04:01Z",
   "status": "minimal_constructive_extension",
   "public_promotion_allowed": false,
   "exact_missing_object": "neutrino_weighted_cycle_absolute_attachment",
@@ -31,7 +31,16 @@
     "exact_next_theorem_object": "oph_neutrino_attachment_bridge_invariant",
     "strictly_smaller_missing_clause": null,
     "exact_residual_moduli_space": "R_{>0}",
-    "one_additional_positive_bridge_invariant_is_necessary_and_sufficient": true
+    "one_additional_positive_bridge_invariant_is_necessary_and_sufficient": true,
+    "corrected_bridge_parameterization": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
+    "residual_amplitude_parameterization": {
+      "compare_only_B_nu_star": 6.696793104628337,
+      "definition": "B_nu = lambda_nu * q_mean^p_nu / m_star_eV",
+      "equivalent_amplitude": "A_nu = lambda_nu * q_mean^p_nu",
+      "p_nu": 1.395092021318097,
+      "q_mean": 0.035685809281968475,
+      "q_mean_to_p_nu": 0.009563086655984892
+    }
   },
   "extension_contract": {
     "input_objects": [
@@ -74,7 +83,7 @@
       },
       {
         "id": "oph_neutrino_attachment_bridge_invariant",
-        "role": "positive residual bridge invariant that completes F_nu(qbar, I_nu) above the closed normalizer",
+        "role": "positive non-homogeneous residual attachment scalar B_nu = lambda_nu * q_mean^p_nu / m_star_eV above the emitted stack",
         "status": "open"
       },
       {
@@ -91,6 +100,6 @@
   },
   "notes": [
     "The residual absolute ambiguity above the closed normalizer is exactly the positive rescaling orbit.",
-    "The current corpus therefore needs one and only one positive bridge invariant above qbar_e before lambda_nu can be emitted theorem-grade."
+    "The current corpus therefore needs one and only one positive non-homogeneous attachment scalar above the present emitted stack before lambda_nu can be emitted theorem-grade."
   ]
 }

@@ -114,8 +114,8 @@ ligne déterminant ne s'est pas refermée, enregistre la branche neutrino
 pondérée actuelle avec `theta12 = 34.2259°`, `theta23 = 49.7228°`, `theta13 = 8.68636°`,
 `delta = 305.581°` et `Delta m21^2 / Delta m32^2 = 0.03072111`, compare ces nombres directement
 à la surface oscillatoire PDG, explique que la section normalisée des poids de défaut de
-recouvrement est déjà fermée tandis que le spectre neutrino absolu attend encore un invariant de pont et
-`lambda_nu`, et indique que les hadrons restent
+recouvrement est déjà fermée tandis que le spectre neutrino absolu attend encore le scalaire de pont résiduel
+`B_nu` ainsi que `lambda_nu`, et indique que les hadrons restent
 liés à l'exécution plutôt qu'à des lignes de sortie déjà dérivées dans l'article.
 
 - **PDF :** [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)

@@ -16,6 +16,8 @@ COMPARE_FIT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_compare_only_
 SCALAR_EVALUATOR = ROOT / "particles" / "runs" / "neutrino" / "majorana_overlap_defect_scalar_evaluator.json"
 NORMALIZER = ROOT / "particles" / "runs" / "neutrino" / "same_label_overlap_defect_weight_normalizer.json"
 THEOREM_OBJECT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_weighted_cycle_theorem_object.json"
+IRREDUCIBILITY = ROOT / "particles" / "runs" / "neutrino" / "neutrino_attachment_irreducibility_theorem.json"
+DEFECT_WEIGHTED_FAMILY = ROOT / "particles" / "runs" / "neutrino" / "defect_weighted_mu_e_family.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "neutrino" / "neutrino_lambda_nu_bridge_candidate.json"
 
 
@@ -34,10 +36,16 @@ def build_payload(
     scalar_evaluator: dict[str, Any],
     normalizer: dict[str, Any],
     theorem_object: dict[str, Any],
+    irreducibility: dict[str, Any] | None,
+    defect_weighted_family: dict[str, Any],
 ) -> dict[str, Any]:
     m_star_eV = float(scale_anchor["anchors"]["m_star_gev"]) * 1.0e9
     lambda_cmp = float(compare_fit["fits"]["weighted_least_squares"]["lambda_nu"])
     bridge_factor = lambda_cmp / m_star_eV
+    q_mean = float(normalizer["q_mean"])
+    p_nu = float(theorem_object["live_inputs"]["p_nu"])
+    q_mean_to_p = q_mean**p_nu
+    residual_amplitude_ratio = lambda_cmp * q_mean_to_p / m_star_eV
     gamma = float(theorem_object["live_inputs"]["gamma"])
     ratio_hat = float(theorem_object["live_outputs"]["dimensionless_ratio_dm21_over_dm32"])
     lambda_closed_form = gamma / (ratio_hat ** 0.5)
@@ -61,10 +69,16 @@ def build_payload(
     normalizer_id = scalar_evaluator["attachment_normalizer_candidate_id"]
     bridge_invariant_id = "oph_neutrino_attachment_bridge_invariant"
     scalar_theorem_id = scalar_evaluator.get("remaining_theorem_object") or scalar_evaluator["theorem_candidate_id"]
+    mu_values = list(defect_weighted_family["edge_weights"].values())
+    mu_mean = sum(mu_values) / len(mu_values)
+    mu_spread = (
+        sum((value - mu_mean) ** 2 for value in mu_values) / len(mu_values)
+    ) ** 0.5
+    max_min_ratio = max(mu_values) / min(mu_values)
     return {
         "artifact": "oph_neutrino_lambda_nu_bridge_candidate",
         "generated_utc": _timestamp(),
-        "status": "candidate_interface_not_promoted",
+        "status": "candidate_interface_contract_corrected_not_promoted",
         "public_promotion_allowed": False,
         "current_dimensionless_theorem_object": theorem_object["theorem_object"]["name"],
         "dimensionful_anchor": {
@@ -77,12 +91,54 @@ def build_payload(
         "closed_normalizer_artifact": normalizer.get("artifact"),
         "exact_next_theorem_object": bridge_invariant_id,
         "strictly_smaller_missing_clause": smaller_clause,
-        "bridge_ansatz": "lambda_nu = m_star_eV * F_nu",
-        "bridge_factor_schema": "F_nu = F_nu(qbar, I_nu)",
-        "where_F_nu_should_come_from": (
-            "The live normalized same-label overlap-defect weight section qbar_e together with one residual bridge invariant "
-            "I_nu extracted above the finite-angle Majorana overlap-defect scalar interface on the selected weighted-cycle / midpoint branch."
+        "bridge_ansatz": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
+        "bridge_factor_schema": "B_nu = lambda_nu * q_mean^p_nu / m_star_eV",
+        "residual_amplitude_parameterization": {
+            "definition": "B_nu = lambda_nu * q_mean^p_nu / m_star_eV",
+            "equivalent_amplitude": "A_nu = lambda_nu * q_mean^p_nu",
+            "q_mean": q_mean,
+            "p_nu": p_nu,
+            "q_mean_to_p_nu": q_mean_to_p,
+            "compare_only_B_nu_star": residual_amplitude_ratio,
+        },
+        "ruled_out_current_selected_point_scalar": {
+            "status": "already_internal_to_current_emitted_stack_not_the_missing_bridge_scalar",
+            "name": "I_nu^(wc)",
+            "definition": "I_nu^(wc) = 0.5 * sum_e qbar_e * |z_e(psi_wc) - 1|^2",
+            "equivalent_if_edge_character_norm_closes": "I_nu^(wc) = sum_e qbar_e * (1 - cos(delta_psi_e))",
+            "selected_point": "weighted_cycle_selector_psi_wc",
+            "gate": phase_clause,
+            "why_ruled_out": (
+                "qbar_e, psi_wc, and psi* are already emitted on the current stack, so I_nu^(wc) is itself already fixed on the exact one-parameter positive amplitude orbit and cannot be the missing bridge-external scalar."
+            ),
+        },
+        "where_B_nu_should_come_from": (
+            "One positive non-homogeneous attachment scalar above the present emitted stack, equivalently a theorem that fixes A_nu / m_star after the exact q_mean^p_nu factorization."
         ),
+        "best_constructive_subbridge_object": {
+            "artifact": defect_weighted_family["artifact"],
+            "status": defect_weighted_family["proof_status"],
+            "role": "first honest spectrum-moving local object beneath the irreducible bridge scalar B_nu",
+            "raw_edge_score_rule": defect_weighted_family["raw_edge_score_rule"],
+            "centered_log_rule": defect_weighted_family["centered_log_rule"],
+            "mu_family_rule": "mu_e = mu_nu * exp(eta_e) / mean_f(exp(eta_f))",
+            "raw_edge_score": defect_weighted_family["raw_edge_score"],
+            "edge_weights": defect_weighted_family["edge_weights"],
+            "anisotropy_diagnostics": {
+                "max_mu_over_min_mu": max_min_ratio,
+                "sigma_mu_over_mean_mu": mu_spread / mu_mean,
+            },
+        },
+        "current_attached_stack_collapse_status": (
+            "refuted_by_attachment_irreducibility_theorem"
+            if irreducibility is not None
+            else "unresolved"
+        ),
+        "current_attached_stack_irreducibility_theorem": None if irreducibility is None else {
+            "artifact": irreducibility.get("artifact"),
+            "status": irreducibility.get("status"),
+            "statement": irreducibility.get("theorem", {}).get("statement"),
+        },
         "bridge_interface_theorem_stack": [
             {
                 "id": normalizer_id,
@@ -107,7 +163,7 @@ def build_payload(
             {
                 "id": bridge_invariant_id,
                 "status": "open",
-                "role": "positive residual bridge invariant that completes F_nu(qbar, I_nu) above the closed normalizer",
+                "role": "positive non-homogeneous residual attachment scalar B_nu = lambda_nu * q_mean^p_nu / m_star_eV above the emitted stack",
             },
             {
                 "id": "neutrino_weighted_cycle_absolute_attachment",
@@ -124,6 +180,10 @@ def build_payload(
             "lambda_nu_weighted_fit": lambda_cmp,
             "F_nu_star": bridge_factor,
             "interpretation": "If the bridge ansatz is correct, the theorem-grade evaluator would have to emit this positive dimensionless factor on the current branch.",
+        },
+        "compare_only_residual_amplitude_ratio": {
+            "B_nu_star": residual_amplitude_ratio,
+            "interpretation": "After exact q_mean^p_nu factorization, this is the size of the remaining compare-only non-homogeneous attachment scalar.",
         },
         "target_free_closed_form_candidates": [
             {
@@ -162,11 +222,16 @@ def build_payload(
             "current_status": "open",
             "promotion_gate": None,
             "smallest_missing_clause": smaller_clause,
+            "corrected_parameterization": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
         },
         "notes": [
             "This bridge candidate does not claim lambda_nu is already emitted.",
             "It packages the strongest current local interface between the emitted D10 amplitude scale and the emitted weighted-cycle theorem object.",
-            "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate, and the finite-angle centered edge-norm theorem is closed on the current isotropic branch; the remaining attachment gap sits above qbar_e as one positive bridge invariant.",
+            "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate, and the finite-angle centered edge-norm theorem is closed on the current isotropic branch; the remaining attachment gap sits above the emitted stack as one positive non-homogeneous scalar.",
+            "The current attached stack cannot collapse that bridge factor to a qbar-only law; the exact irreducibility theorem proves one positive bridge invariant remains external to the attached stack itself.",
+            "The previously proposed selected-point scalar I_nu^(wc) = 0.5 * sum_e qbar_e * |z_e(psi_wc) - 1|^2 is itself already fixed by the emitted qbar_e, psi_wc, and psi* data, so it cannot be the missing bridge-external scalar.",
+            "The best constructive local object beneath that bridge is the defect-weighted same-label edge family q_e = sqrt(g_e * d_e), whose induced mu_e anisotropy is already real and sizable but still does not by itself emit the final bridge scalar.",
+            "The exact remaining scalar is better parameterized as B_nu := lambda_nu * q_mean^p_nu / m_star_eV, equivalently A_nu / m_star_eV.",
             "The closed-form gamma-over-sqrt-ratio numerology is retained only as a refuted compare-only audit target; it is incompatible with the exact positive-rescaling no-go.",
         ],
     }
@@ -179,6 +244,8 @@ def main() -> int:
     parser.add_argument("--scalar-evaluator", default=str(SCALAR_EVALUATOR))
     parser.add_argument("--normalizer", default=str(NORMALIZER))
     parser.add_argument("--theorem-object", default=str(THEOREM_OBJECT))
+    parser.add_argument("--irreducibility", default=str(IRREDUCIBILITY))
+    parser.add_argument("--defect-weighted-family", default=str(DEFECT_WEIGHTED_FAMILY))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -188,6 +255,8 @@ def main() -> int:
         scalar_evaluator=_load_json(Path(args.scalar_evaluator)),
         normalizer=_load_json(Path(args.normalizer)),
         theorem_object=_load_json(Path(args.theorem_object)),
+        irreducibility=_load_json(Path(args.irreducibility)) if Path(args.irreducibility).exists() else None,
+        defect_weighted_family=_load_json(Path(args.defect_weighted_family)),
     )
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)

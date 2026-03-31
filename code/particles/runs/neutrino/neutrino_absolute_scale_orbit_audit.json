@@ -29,7 +29,7 @@
       "forbidden_feedback": "compare_only_anchor_must_not_feed_back_into_theorem_state_or_lambda_nu_emission"
     }
   },
-  "generated_utc": "2026-03-31T02:22:19Z",
+  "generated_utc": "2026-03-31T07:07:04Z",
   "next_breaking_contract": "neutrino_weighted_cycle_absolute_attachment",
   "no_hidden_discrete_branch": {
     "closed_discrete_witnesses": [
@@ -51,6 +51,20 @@
           "status": "constructive_extension_required"
         },
         "absolute_family_parameter": "lambda_nu > 0",
+        "current_attached_stack_irreducibility_theorem": {
+          "artifact": "oph_neutrino_attachment_irreducibility_theorem",
+          "remaining_object": {
+            "equivalent_parameterizations": [
+              "I_nu above the attached stack in lambda_nu = m_star * F_nu(qbar, I_nu)",
+              "A_nu = lambda_nu * q_mean^p"
+            ],
+            "must_break": "the current positive common-homogeneity between the D10 amplitude anchor and the weighted-cycle normal form",
+            "name": "one_positive_neutrino_attachment_bridge_invariant",
+            "status": "irreducible_on_current_corpus"
+          },
+          "statement": "With the current emitted normalizer, weighted-cycle theorem object, and centered-edge-norm scalar stack fixed, the neutrino branch factors exactly through q_e = q_mean * qbar_e and retains one free positive amplitude orbit. Hence no theorem-grade absolute attachment law can be derived from the current attached stack alone; one positive bridge invariant remains irreducible.",
+          "status": "proved_from_current_attached_stack"
+        },
         "dimensionless_dm2_family_eV2": {
           "21": "Delta m21^2 = lambda_nu^2 * 2.520259180367675e-05",
           "31": "Delta m31^2 = lambda_nu^2 * 0.0008455698156217034",

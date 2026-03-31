@@ -73,6 +73,8 @@ def main() -> int:
             "g_e": "exp(A_ch)",
             "Delta_e_abs": "log(g_ch_shared) - A_ch",
         },
+        "induced_by_exact_smaller_object": "refinement_stable_uncentered_trace_lift",
+        "induced_formula_on_fill": "A_ch = (1/3) * log(det(Y_e)) = (1/3) * tr(log Y_e)",
         "hard_rejections": {
             "common_shift_invariant_functionals": "cannot emit A_ch because they satisfy F(logm + c*(1,1,1)) = F(logm)",
             "gamma_min_restore_pick": {
@@ -90,6 +92,7 @@ def main() -> int:
             "This scaffold exists to package the exact future contract for the charged absolute anchor.",
             "Promotion of C_hat_e^cand is upstream and necessary, but not sufficient: it promotes theorem-grade centered data, not the affine common-shift breaker itself.",
             "Any candidate A_ch must exhibit the affine +c covariance explicitly, not merely reproduce one preferred numerical representative.",
+            "Once a refinement-stable uncentered trace lift exists on theorem-grade physical Y_e or an equivalent determinant line, A_ch is induced rather than independent.",
         ],
     }
 

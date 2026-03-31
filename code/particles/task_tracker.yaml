@@ -32,6 +32,11 @@ stages:
         status: completed
         owner_lane: local_code
         depends_on: ["particles.audit.03-add-uv-bw-internalization-scaffold"]
+      - id: particles.audit.06-sharpen-uv-carried-collar-witness-to-fixed-local-collar-datum
+        title: "Reduce the remaining UV carried-collar witness to the fixed-local-collar Markov/faithfulness datum of collarwise CMI vanishing plus an eventual positive lower spectral bound"
+        status: completed
+        owner_lane: local_code
+        depends_on: ["particles.audit.05-emit-uv-prelimit-cap-local-system"]
       - id: particles.validation.01-frozen-forward-blind-harness
         title: "Separate forward prediction artifacts from compare-only validation"
         status: completed
@@ -498,8 +503,8 @@ stages:
           ]
       - id: particles.leptons.23-sharpen-determinant-line-to-canonical-lift
         title: "Sharpen the charged absolute-anchor route to the refinement-stable uncentered trace lift beneath the determinant-line section"
-        status: in_progress
-        owner_lane: pro_paper
+        status: completed
+        owner_lane: local_code
         depends_on:
           [
             "particles.leptons.20-derive-determinant-normalization-transport-theorem",
@@ -719,6 +724,16 @@ stages:
         status: completed
         owner_lane: local_code
         depends_on: ["particles.flavor.57-expose-sigma-ud-orbit-provider-interface"]
+      - id: particles.flavor.59-record-transport-frame-diagnostic-orbit-no-go
+        title: "Record the transport-frame same-label diagnostic orbit and mark it non-promotable because sector-attached mixed branches still depend on the residual objectwise-U(1) quotient"
+        status: completed
+        owner_lane: local_code
+        depends_on: ["particles.flavor.58-widen-orbit-provider-schema"]
+      - id: particles.flavor.60-sharpen-provider-output-contract-from-diagnostic-orbit
+        title: "Use the transport-frame diagnostic orbit to sharpen the exact missing quark provider output to a non-empty Sigma_ud_orbit.elements list with full left-handed evaluations"
+        status: completed
+        owner_lane: local_code
+        depends_on: ["particles.flavor.59-record-transport-frame-diagnostic-orbit-no-go"]
       - id: particles.flavor.53-derive-selected-branch-quark-mass-scale-law
         title: "Derive the intrinsic mass-side scale law on the selected quark branch after the discrete CKM branch selector is fixed"
         status: pending
@@ -1015,6 +1030,58 @@ stages:
         depends_on:
           [
             "particles.neutrino.43-add-attachment-bridge-invariant-scaffold"
+          ]
+      - id: particles.neutrino.45-prove-attachment-irreducibility-after-full-stack
+        title: "Prove that the current attached neutrino stack cannot collapse the remaining amplitude orbit to a qbar-only bridge law"
+        status: completed
+        owner_lane: local_code
+        depends_on:
+          [
+            "particles.neutrino.43-add-attachment-bridge-invariant-scaffold",
+            "particles.neutrino.44-record-one-dimensional-attachment-quotient"
+          ]
+      - id: particles.neutrino.46-shape-minimal-bridge-invariant-contract
+        title: "Shape the cleanest one-scalar bridge-invariant contract above the closed qbar normalizer without promoting a bridge law prematurely"
+        status: completed
+        owner_lane: local_code
+        depends_on:
+          [
+            "particles.neutrino.43-add-attachment-bridge-invariant-scaffold",
+            "particles.neutrino.45-prove-attachment-irreducibility-after-full-stack"
+          ]
+      - id: particles.neutrino.47-audit-residual-amplitude-after-qmean-factorization
+        title: "Audit compare-only residual amplitude formulas after stripping off the exact q_mean^p_nu homogeneity from the neutrino attachment problem"
+        status: completed
+        owner_lane: local_code
+        depends_on:
+          [
+            "particles.neutrino.45-prove-attachment-irreducibility-after-full-stack",
+            "particles.neutrino.46-shape-minimal-bridge-invariant-contract"
+          ]
+      - id: particles.neutrino.48-correct-bridge-contract-to-residual-amplitude-scalar
+        title: "Replace the old F_nu(qbar, I_nu) bridge contract with the sharper residual-amplitude scalar B_nu after proving that the selected-point scalar is already internal to the emitted stack"
+        status: completed
+        owner_lane: local_code
+        depends_on:
+          [
+            "particles.neutrino.45-prove-attachment-irreducibility-after-full-stack",
+            "particles.neutrino.47-audit-residual-amplitude-after-qmean-factorization"
+          ]
+      - id: particles.neutrino.49-extend-residual-audit-through-defect-weighted-mu-family
+        title: "Extend the residual-amplitude bridge audit across the defect-weighted mu_e family and record the strongest compare-only bridge clue on the enlarged scalar pool"
+        status: completed
+        owner_lane: local_code
+        depends_on:
+          [
+            "particles.neutrino.48-correct-bridge-contract-to-residual-amplitude-scalar"
+          ]
+      - id: particles.neutrino.50-record-two-layer-bridge-frontier
+        title: "Record the two-layer neutrino bridge frontier: defect-weighted mu_e family as the best constructive sub-bridge object, with one irreducible positive bridge scalar B_nu still above it"
+        status: completed
+        owner_lane: local_code
+        depends_on:
+          [
+            "particles.neutrino.49-extend-residual-audit-through-defect-weighted-mu-family"
           ]
   - id: stage-6
     title: "Hadron branch (deferred, execution-bound)"

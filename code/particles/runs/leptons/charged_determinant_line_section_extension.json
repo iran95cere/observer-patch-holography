@@ -6,10 +6,11 @@
     "g_e": "exp((1/3) * log(det(Y_e)))"
   },
   "exact_missing_object": "charged_determinant_line_section",
+  "exact_smaller_missing_object": "refinement_stable_uncentered_trace_lift",
   "extension_kind": "determinant_line_section",
   "extra_metric_compatibility_required": false,
   "extra_trivialization_required": false,
-  "generated_utc": "2026-03-30T23:44:14Z",
+  "generated_utc": "2026-03-31T03:52:01Z",
   "hard_rejections": {
     "common_shift_invariant_functionals": "cannot emit A_ch because they satisfy F(logm + c*(1,1,1)) = F(logm)",
     "d12_compare_only_target": {
@@ -38,11 +39,21 @@
   },
   "notes": [
     "This is a constructive extension route, not a theorem hidden in the current corpus.",
-    "Promoting C_hat_e^cand is still upstream and necessary, but the determinant-line section is the first object that can realize the affine common-shift breaker geometrically.",
-    "The smaller exact missing object beneath this section is the refinement-stable uncentered trace lift that keeps the determinant coordinate canonical across the live refinement family."
+    "Promoting C_hat_e^cand is still upstream and necessary, but the determinant-line section is induced only after the uncentered trace lift exists on the promoted surface.",
+    "The smaller exact missing object beneath this section is the refinement-stable uncentered trace lift that keeps the determinant coordinate canonical across the live refinement family.",
+    "Therefore the determinant-line section is not an additional independent blocker once that lift exists."
   ],
-  "possible_smaller_missing_object": "refinement_stable_uncentered_trace_lift",
   "public_promotion_allowed": false,
+  "reduction_theorem": {
+    "id": "charged_determinant_line_reduces_to_uncentered_trace_lift",
+    "induced_data": [
+      "determinant_torsor_section",
+      "charged_absolute_anchor_A_ch",
+      "g_e",
+      "Delta_e_abs"
+    ],
+    "statement": "Once theorem-grade centered promotion exists, a refinement-stable uncentered trace lift C_tilde_e = C_hat_e + mu I on theorem-grade physical Y_e or equivalent determinant line canonically induces the determinant-line section and A_ch = mu = (1/3) log det(Y_e)."
+  },
   "section_contract": {
     "charged_anchor_readout": "A_ch = (1/3) * s_det(det Y_e)",
     "derived_quantities": {
@@ -53,6 +64,7 @@
     "kind": "determinant_torsor_section",
     "required_covariance": "s_det(exp(3c) * detY) = s_det(detY) + 3c"
   },
+  "section_induced_by_exact_smaller_object": true,
   "status": "minimal_constructive_extension",
   "upstream_prerequisites": {
     "promotion_effect": "theorem_grade_C_hat_e",

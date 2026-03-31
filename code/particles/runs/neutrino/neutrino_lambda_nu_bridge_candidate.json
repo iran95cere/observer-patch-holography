@@ -1,7 +1,29 @@
 {
   "artifact": "oph_neutrino_lambda_nu_bridge_candidate",
-  "bridge_ansatz": "lambda_nu = m_star_eV * F_nu",
-  "bridge_factor_schema": "F_nu = F_nu(qbar, I_nu)",
+  "best_constructive_subbridge_object": {
+    "anisotropy_diagnostics": {
+      "max_mu_over_min_mu": 2.619401534900072,
+      "sigma_mu_over_mean_mu": 0.36590058568415135
+    },
+    "artifact": "oph_defect_weighted_majorana_edge_weight_family",
+    "centered_log_rule": "eta_e = 0.5 * ((log g_e + log d_e) - mean_f(log g_f + log d_f))",
+    "edge_weights": {
+      "psi12": 0.0013874214804477558,
+      "psi23": 0.000954027990417139,
+      "psi31": 0.0005296711718162312
+    },
+    "mu_family_rule": "mu_e = mu_nu * exp(eta_e) / mean_f(exp(eta_f))",
+    "raw_edge_score": {
+      "psi12": 0.05173372822682583,
+      "psi23": 0.03557349044437228,
+      "psi31": 0.019750209174707316
+    },
+    "raw_edge_score_rule": "q_e = sqrt(gap_e * defect_e)",
+    "role": "first honest spectrum-moving local object beneath the irreducible bridge scalar B_nu",
+    "status": "candidate_only"
+  },
+  "bridge_ansatz": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
+  "bridge_factor_schema": "B_nu = lambda_nu * q_mean^p_nu / m_star_eV",
   "bridge_interface_theorem_stack": [
     {
       "id": "oph_same_label_overlap_defect_weight_normalizer",
@@ -25,7 +47,7 @@
     },
     {
       "id": "oph_neutrino_attachment_bridge_invariant",
-      "role": "positive residual bridge invariant that completes F_nu(qbar, I_nu) above the closed normalizer",
+      "role": "positive non-homogeneous residual attachment scalar B_nu = lambda_nu * q_mean^p_nu / m_star_eV above the emitted stack",
       "status": "open"
     },
     {
@@ -40,6 +62,16 @@
     "interpretation": "If the bridge ansatz is correct, the theorem-grade evaluator would have to emit this positive dimensionless factor on the current branch.",
     "lambda_nu_weighted_fit": 1.7239045130315727
   },
+  "compare_only_residual_amplitude_ratio": {
+    "B_nu_star": 6.696793104628337,
+    "interpretation": "After exact q_mean^p_nu factorization, this is the size of the remaining compare-only non-homogeneous attachment scalar."
+  },
+  "current_attached_stack_collapse_status": "refuted_by_attachment_irreducibility_theorem",
+  "current_attached_stack_irreducibility_theorem": {
+    "artifact": "oph_neutrino_attachment_irreducibility_theorem",
+    "statement": "With the current emitted normalizer, weighted-cycle theorem object, and centered-edge-norm scalar stack fixed, the neutrino branch factors exactly through q_e = q_mean * qbar_e and retains one free positive amplitude orbit. Hence no theorem-grade absolute attachment law can be derived from the current attached stack alone; one positive bridge invariant remains irreducible.",
+    "status": "proved_from_current_attached_stack"
+  },
   "current_candidate_interface_artifact": "oph_majorana_overlap_defect_scalar_evaluator",
   "current_dimensionless_theorem_object": "p_nu_gamma_eps_midpoint_law",
   "dimensionful_anchor": {
@@ -49,8 +81,9 @@
     "name": "m_star"
   },
   "exact_next_theorem_object": "oph_neutrino_attachment_bridge_invariant",
-  "generated_utc": "2026-03-31T02:22:19Z",
+  "generated_utc": "2026-03-31T07:07:04Z",
   "next_theorem_if_this_route_is_right": {
+    "corrected_parameterization": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
     "current_status": "open",
     "id": "oph_neutrino_attachment_bridge_invariant",
     "promotion_gate": null,
@@ -59,10 +92,31 @@
   "notes": [
     "This bridge candidate does not claim lambda_nu is already emitted.",
     "It packages the strongest current local interface between the emitted D10 amplitude scale and the emitted weighted-cycle theorem object.",
-    "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate, and the finite-angle centered edge-norm theorem is closed on the current isotropic branch; the remaining attachment gap sits above qbar_e as one positive bridge invariant.",
+    "The normalized overlap-defect weight section is already closed from the live same-label scalar certificate, and the finite-angle centered edge-norm theorem is closed on the current isotropic branch; the remaining attachment gap sits above the emitted stack as one positive non-homogeneous scalar.",
+    "The current attached stack cannot collapse that bridge factor to a qbar-only law; the exact irreducibility theorem proves one positive bridge invariant remains external to the attached stack itself.",
+    "The previously proposed selected-point scalar I_nu^(wc) = 0.5 * sum_e qbar_e * |z_e(psi_wc) - 1|^2 is itself already fixed by the emitted qbar_e, psi_wc, and psi* data, so it cannot be the missing bridge-external scalar.",
+    "The best constructive local object beneath that bridge is the defect-weighted same-label edge family q_e = sqrt(g_e * d_e), whose induced mu_e anisotropy is already real and sizable but still does not by itself emit the final bridge scalar.",
+    "The exact remaining scalar is better parameterized as B_nu := lambda_nu * q_mean^p_nu / m_star_eV, equivalently A_nu / m_star_eV.",
     "The closed-form gamma-over-sqrt-ratio numerology is retained only as a refuted compare-only audit target; it is incompatible with the exact positive-rescaling no-go."
   ],
   "public_promotion_allowed": false,
+  "residual_amplitude_parameterization": {
+    "compare_only_B_nu_star": 6.696793104628337,
+    "definition": "B_nu = lambda_nu * q_mean^p_nu / m_star_eV",
+    "equivalent_amplitude": "A_nu = lambda_nu * q_mean^p_nu",
+    "p_nu": 1.395092021318097,
+    "q_mean": 0.035685809281968475,
+    "q_mean_to_p_nu": 0.009563086655984892
+  },
+  "ruled_out_current_selected_point_scalar": {
+    "definition": "I_nu^(wc) = 0.5 * sum_e qbar_e * |z_e(psi_wc) - 1|^2",
+    "equivalent_if_edge_character_norm_closes": "I_nu^(wc) = sum_e qbar_e * (1 - cos(delta_psi_e))",
+    "gate": "selector_overlap_phase_coboundary_trivializes_same_label_edge_transport",
+    "name": "I_nu^(wc)",
+    "selected_point": "weighted_cycle_selector_psi_wc",
+    "status": "already_internal_to_current_emitted_stack_not_the_missing_bridge_scalar",
+    "why_ruled_out": "qbar_e, psi_wc, and psi* are already emitted on the current stack, so I_nu^(wc) is itself already fixed on the exact one-parameter positive amplitude orbit and cannot be the missing bridge-external scalar."
+  },
   "ruled_out_shortcuts": {
     "edge_amplitude_only_formulas": {
       "reason": "Current edge-amplitude invariants are far too small and do not carry the required bridge factor.",
@@ -77,7 +131,7 @@
       "status": "not_weighted_cycle_sensitive"
     }
   },
-  "status": "candidate_interface_not_promoted",
+  "status": "candidate_interface_contract_corrected_not_promoted",
   "strictly_smaller_missing_clause": null,
   "target_free_closed_form_candidates": [
     {
@@ -104,7 +158,7 @@
       "why_refuted": "gamma and Delta_hat_21 / Delta_hat_32 are orbit invariants on the positive-rescaling family, so no theorem-grade absolute-scale law can be a function of those invariants alone."
     }
   ],
-  "where_F_nu_should_come_from": "The live normalized same-label overlap-defect weight section qbar_e together with one residual bridge invariant I_nu extracted above the finite-angle Majorana overlap-defect scalar interface on the selected weighted-cycle / midpoint branch.",
+  "where_B_nu_should_come_from": "One positive non-homogeneous attachment scalar above the present emitted stack, equivalently a theorem that fixes A_nu / m_star after the exact q_mean^p_nu factorization.",
   "why_this_is_the_sharpest_local_candidate": [
     "The weighted-cycle theorem object closes the dimensionless branch only.",
     "The scale anchor closes only the isotropic dimensionful amplitude m_star.",

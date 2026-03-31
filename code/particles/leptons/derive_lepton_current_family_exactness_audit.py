@@ -417,19 +417,19 @@ def main() -> int:
                 "current_strength_statement": generation_bundle.get("promotion_gate", {}).get("current_strength_statement") if generation_bundle is not None else None,
             },
             "mandatory_package_b": {
-                "id": "charged_determinant_line_section",
+                "id": "refinement_stable_uncentered_trace_lift",
                 "linked_issue": "papers.compact.e.30-replace-koide-assisted-lepton-fitting-with-a-theorem",
-                "summary": "Derive one theorem-grade uncentered determinant-line section of the charged response so the lost affine common-shift mode is restored before any absolute anchor is read out.",
-                "immediate_downstream_effect": "Once the determinant line is carried by the promoted charged response, the affine coordinate A_ch is read out canonically as (1/3) log det(Y_e).",
+                "summary": "Derive the refinement-stable uncentered trace lift of the promoted charged response on theorem-grade physical Y_e or an equivalent determinant line.",
+                "immediate_downstream_effect": "The determinant-line section and A_ch are then induced canonically by A_ch = (1/3) log det(Y_e) = (1/3) tr(log Y_e).",
                 "status": "open_future_single_slot_only",
                 "replaces_invalid_route": "charged_common_refinement_transport_equalizer",
             },
             "mandatory_package_c": {
                 "id": "charged_absolute_anchor_A_ch",
                 "linked_issue": "papers.compact.e.30-replace-koide-assisted-lepton-fitting-with-a-theorem",
-                "summary": "Read out the affine charged absolute coordinate A_ch from the determinant-line section, with A_ch(logm + c*(1,1,1)) = A_ch(logm) + c.",
+                "summary": "Read out the affine charged absolute coordinate A_ch from the induced determinant-line section, with A_ch(logm + c*(1,1,1)) = A_ch(logm) + c.",
                 "immediate_downstream_effect": "Once A_ch exists, the absolute charged scale is emitted by g_e = exp(A_ch), and Delta_e_abs follows as log(g_ch_shared) - A_ch.",
-                "status": "downstream_of_determinant_line_section",
+                "status": "derived_once_package_b_exists",
             },
             "optional_package_d": {
                 "id": "charged_holonomy_bridge_for_legacy_delta_2_over_9",
@@ -450,7 +450,7 @@ def main() -> int:
                 if generation_bundle is not None
                 else None
             ),
-            "next_exact_object_after_that": "charged_determinant_line_section",
+            "next_exact_object_after_that": "refinement_stable_uncentered_trace_lift",
             "next_exact_object_after_that_if_closed": "charged_absolute_anchor_A_ch",
             "do_not_promote": [
                 "eta_source_support_extension_log_per_side",
@@ -506,7 +506,7 @@ def main() -> int:
             "The current-support obstruction certificate is now on disk, and the next charged mover is the minimal support-extension emitter on the canonical quadratic ordered direction.",
             "The full two-scalar support-extension completion law is now explicit on disk; the live same-carrier primitive is the eta source-readback, followed by the sigma endpoint-ratio breaker.",
             "The stronger same-carrier source-scalar pair readback is also now explicit on disk, collecting those eta and sigma invariants into one ordered primitive beneath the full completion shell.",
-            "At theorem level, eta and sigma are no longer the deepest honest waiting set. The live builder still exposes eta then sigma as the first same-carrier residuals, but the paper-facing exact burden is first to promote the latent candidate C_hat_e^{cand} by closing the branch-generator splitting theorem, then to restore the lost affine mode through an uncentered determinant-line section of the charged response, and only then to read out the affine absolute coordinate A_ch.",
+            "At theorem level, eta and sigma are no longer the deepest honest waiting set. The live builder still exposes eta then sigma as the first same-carrier residuals, but the paper-facing exact burden is first to promote the latent candidate C_hat_e^{cand} by closing the branch-generator splitting theorem, then to restore the lost affine mode through a refinement-stable uncentered trace lift of the charged response, from which the determinant-line section and the affine absolute coordinate A_ch are induced.",
             (
                 "The charged sector-response operator remains undeclared: only the latent candidate C_hat_e^{cand} is on disk, and its promotion is blocked by the upstream theorem oph_generation_bundle_branch_generator_splitting together with the smaller clause compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split."
                 if generation_bundle is not None

@@ -109,6 +109,10 @@ def main() -> int:
         "public_promotion_allowed": False,
         "exact_missing_object": "sigma_ud_orbit",
         "exact_missing_solver_interface": "sigma_ud_orbit_provider_interface",
+        "exact_missing_provider_methods": [
+            "enumerate_relative_sheets_d12()",
+            "evaluate_relative_sheet(token)",
+        ],
         "concrete_provider_scaffold": "code/particles/flavor/sigma_ud_orbit_provider.py",
         "orbit_kind": "finite_relative_sheet_orbit",
         "branch_key": ["D12", "sigma_ud"],
@@ -138,6 +142,24 @@ def main() -> int:
             "ckm_invariants",
         ],
         "elements": elements,
+        "diagnostic_transport_frame_orbit": {
+            "status": "compare_only_not_sector_attached",
+            "gauge_invariant_self_overlap_symbol": "F0^dagger F1",
+            "best_self_overlap_ckm_invariants": {
+                "theta_12": 0.05303513965374758,
+                "theta_23": 0.03505328791223491,
+                "theta_13": 0.004481306693226461,
+                "delta_ckm": 5.816877568635481,
+                "jarlskog": -3.735348679914088e-06,
+            },
+            "debug_log_shell_loss": {
+                "current_same_sheet": 44.39864816128614,
+                "best_self_overlap": 2.2111875588521643,
+            },
+            "why_not_promotable": (
+                "The gauge-invariant transport-frame self-overlap improves the compare-only CKM shell loss, but once sector-attached mixed branches are restored the residual objectwise-U(1) orbit moves CKM moduli, so no physical same-label left-handed Sigma_ud element is emitted."
+            ),
+        },
         "theorem_grade_selection": None,
         "selection_rule_status": "open_target_free_rule_unemitted",
         "debug_compare_shell_ranking": {
@@ -166,7 +188,8 @@ def main() -> int:
             "This scaffold exists to make the missing finite solver object explicit.",
             "The current D12 sheet is transport-closed but wrong-branch; same-sheet changes cannot move CKM invariants to the physical shell.",
             "Branch selection is discrete here. A continuous scalar cannot replace orbit exposure.",
-            "On the current live corpus the more immediate implementation gap is the orbit provider itself: no same-label left-handed Sigma_ud enumerator or sigma-to-CKM evaluator is emitted yet.",
+            "A representative-level transport-frame diagnostic orbit can be extracted from the common-refinement line-lift data, and its gauge-invariant self-overlap F0^dagger F1 already gives a much better compare-only CKM shell loss than the current same-sheet branch; but that signal is not sector-attached and its mixed branches remain gauge-dependent under the residual objectwise-U(1) quotient, so it is not an emitted Sigma_ud element.",
+            "On the current live corpus the more immediate implementation gap is the first non-empty provider output itself: no same-label left-handed Sigma_ud enumerator or sigma-to-CKM evaluator is emitted yet.",
             "The provider interface has been widened to the full left-handed evaluation schema expected by this artifact; what is still missing is a real implementation that can populate those fields from emitted same-label transport data.",
             "If elements is empty, the artifact records the honest frontier rather than inventing Sigma_ud.",
             "If elements are supplied, the debug ranking remains comparison-only and cannot be promoted.",

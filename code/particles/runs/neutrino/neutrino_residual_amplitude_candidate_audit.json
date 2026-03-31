@@ -1,0 +1,959 @@
+{
+  "artifact": "oph_neutrino_residual_amplitude_candidate_audit",
+  "best_compare_only_candidate": {
+    "complexity": 3,
+    "exponents": [
+      0.5,
+      0.5,
+      -1.0
+    ],
+    "formula": "I_nu^0.5 * ratio_hat^0.5 * sum_defect^-1",
+    "keys": [
+      "I_nu",
+      "ratio_hat",
+      "sum_defect"
+    ],
+    "relative_error": 0.00045284897467005544,
+    "value": 6.699825740519345
+  },
+  "best_extended_compare_only_candidate": {
+    "complexity": 3,
+    "exponents": [
+      0.5,
+      0.5,
+      -1.0
+    ],
+    "formula": "I_nu^0.5 * ratio_hat^0.5 * sum_defect^-1",
+    "keys": [
+      "I_nu",
+      "ratio_hat",
+      "sum_defect"
+    ],
+    "relative_error": 0.00045284897467005544,
+    "value": 6.699825740519345
+  },
+  "excluded_trivial_scalars_from_search": {
+    "sum_qbar": {
+      "reason": "The closed qbar_e normalizer fixes sum_qbar = 3 exactly, so it is a trivial normalization constant rather than a bridge signal.",
+      "value": 3.0
+    }
+  },
+  "extended_residual_invariant_pool": {
+    "I_nu": 0.0965316330845031,
+    "base_mu_over_mstar": 388763757.3955654,
+    "chi": 1.1045845502912137,
+    "doublet_center_over_mstar": 0.9743646804440719,
+    "gamma": 0.30236566025890826,
+    "heavy_light_gap_over_mstar": 0.07776134826713114,
+    "prod_qbar": 0.7998071945087601,
+    "ratio_hat": 0.030721110097966534,
+    "solar_response_over_mstar": 3.8974587217762875,
+    "sum_defect": 0.008128113736742382,
+    "sum_gap": 1.5706478772884154,
+    "sum_mu": 0.0028711206426811258,
+    "sum_qbar": 3.0
+  },
+  "extended_top_single_factor_candidates": [
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "ratio_hat^-0.5",
+      "keys": [
+        "ratio_hat"
+      ],
+      "relative_error": 0.14804890414755129,
+      "value": 5.705340224185234
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        1.0
+      ],
+      "formula": "solar_response_over_mstar",
+      "keys": [
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.4180111792489681,
+      "value": 3.8974587217762875
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "heavy_light_gap_over_mstar^-0.5",
+      "keys": [
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.4645101698731659,
+      "value": 3.586064601991982
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -1.0
+      ],
+      "formula": "gamma^-1",
+      "keys": [
+        "gamma"
+      ],
+      "relative_error": 0.5061436394741122,
+      "value": 3.307253869846611
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "I_nu^-0.5",
+      "keys": [
+        "I_nu"
+      ],
+      "relative_error": 0.5193839259908338,
+      "value": 3.2185864103981263
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -1.0
+      ],
+      "formula": "I_nu^-1",
+      "keys": [
+        "I_nu"
+      ],
+      "relative_error": 0.5469043644248023,
+      "value": 10.359298481199495
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        2.0
+      ],
+      "formula": "sum_gap^2",
+      "keys": [
+        "sum_gap"
+      ],
+      "relative_error": 0.6316244632485899,
+      "value": 2.4669347544306053
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -2.0
+      ],
+      "formula": "gamma^-2",
+      "keys": [
+        "gamma"
+      ],
+      "relative_error": 0.6333083594976053,
+      "value": 10.937928159615383
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "sum_defect^-0.5",
+      "keys": [
+        "sum_defect"
+      ],
+      "relative_error": 0.6562970647636309,
+      "value": 11.091878762525237
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        0.5
+      ],
+      "formula": "solar_response_over_mstar^0.5",
+      "keys": [
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.7052024428713463,
+      "value": 1.974198247840446
+    }
+  ],
+  "extended_top_three_factor_candidates": [
+    {
+      "complexity": 3,
+      "exponents": [
+        0.5,
+        0.5,
+        -1.0
+      ],
+      "formula": "I_nu^0.5 * ratio_hat^0.5 * sum_defect^-1",
+      "keys": [
+        "I_nu",
+        "ratio_hat",
+        "sum_defect"
+      ],
+      "relative_error": 0.00045284897467005544,
+      "value": 6.699825740519345
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -1.0,
+        -0.5
+      ],
+      "formula": "gamma^-0.5 * doublet_center_over_mstar^-1 * heavy_light_gap_over_mstar^-0.5",
+      "keys": [
+        "gamma",
+        "doublet_center_over_mstar",
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.0005445029288468986,
+      "value": 6.693146681168985
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -2.0,
+        0.5
+      ],
+      "formula": "I_nu^-0.5 * doublet_center_over_mstar^-2 * solar_response_over_mstar^0.5",
+      "keys": [
+        "I_nu",
+        "doublet_center_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.0005847136926809044,
+      "value": 6.692877398003009
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -1.0,
+        -1.0,
+        0.5
+      ],
+      "formula": "gamma^-1 * doublet_center_over_mstar^-1 * solar_response_over_mstar^0.5",
+      "keys": [
+        "gamma",
+        "doublet_center_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.000621616529366835,
+      "value": 6.7009559419159235
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -1.0,
+        2.0
+      ],
+      "formula": "sum_defect^-0.5 * sum_gap^-1 * doublet_center_over_mstar^2",
+      "keys": [
+        "sum_defect",
+        "sum_gap",
+        "doublet_center_over_mstar"
+      ],
+      "relative_error": 0.001157641076643224,
+      "value": 6.7045455874080355
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "formula": "ratio_hat^-0.5 * chi^0.5 * prod_qbar^-0.5",
+      "keys": [
+        "ratio_hat",
+        "chi",
+        "prod_qbar"
+      ],
+      "relative_error": 0.0012015076543563177,
+      "value": 6.704839352803188
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -1.0,
+        -2.0,
+        2.0
+      ],
+      "formula": "gamma^-1 * chi^-2 * sum_gap^2",
+      "keys": [
+        "gamma",
+        "chi",
+        "sum_gap"
+      ],
+      "relative_error": 0.0014716817638291515,
+      "value": 6.686937556340118
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -2.0,
+        2.0,
+        -2.0
+      ],
+      "formula": "I_nu^-2 * doublet_center_over_mstar^2 * solar_response_over_mstar^-2",
+      "keys": [
+        "I_nu",
+        "doublet_center_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.0015527520591701914,
+      "value": 6.707191563911385
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        2.0,
+        -1.0
+      ],
+      "formula": "ratio_hat^-0.5 * gamma^2 * heavy_light_gap_over_mstar^-1",
+      "keys": [
+        "ratio_hat",
+        "gamma",
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.0016495892579849098,
+      "value": 6.707840062596679
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -1.0,
+        -1.0,
+        -0.5
+      ],
+      "formula": "doublet_center_over_mstar^-1 * heavy_light_gap_over_mstar^-1 * solar_response_over_mstar^-0.5",
+      "keys": [
+        "doublet_center_over_mstar",
+        "heavy_light_gap_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.0017092633972406708,
+      "value": 6.685346521295702
+    }
+  ],
+  "extended_top_two_factor_candidates": [
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        2.0
+      ],
+      "formula": "I_nu^-1 * prod_qbar^2",
+      "keys": [
+        "I_nu",
+        "prod_qbar"
+      ],
+      "relative_error": 0.010458351912983919,
+      "value": 6.626755685651689
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        -1.0
+      ],
+      "formula": "I_nu^-1 * sum_gap^-1",
+      "keys": [
+        "I_nu",
+        "sum_gap"
+      ],
+      "relative_error": 0.015117018401733738,
+      "value": 6.5955575600330665
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        0.5
+      ],
+      "formula": "sum_defect^-1 * sum_mu^0.5",
+      "keys": [
+        "sum_defect",
+        "sum_mu"
+      ],
+      "relative_error": 0.015605752815777764,
+      "value": 6.592284606779102
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        0.5
+      ],
+      "formula": "gamma^-1 * solar_response_over_mstar^0.5",
+      "keys": [
+        "gamma",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.02502963836493279,
+      "value": 6.529174795014714
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -0.5,
+        -0.5
+      ],
+      "formula": "gamma^-0.5 * heavy_light_gap_over_mstar^-0.5",
+      "keys": [
+        "gamma",
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.02616586397819484,
+      "value": 6.5215657271625185
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        -0.5
+      ],
+      "formula": "heavy_light_gap_over_mstar^-1 * solar_response_over_mstar^-0.5",
+      "keys": [
+        "heavy_light_gap_over_mstar",
+        "solar_response_over_mstar"
+      ],
+      "relative_error": 0.02730076543977515,
+      "value": 6.513965526880175
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -0.5,
+        2.0
+      ],
+      "formula": "ratio_hat^-0.5 * chi^2",
+      "keys": [
+        "ratio_hat",
+        "chi"
+      ],
+      "relative_error": 0.039471520194058536,
+      "value": 6.961125708893106
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -2.0,
+        -1.0
+      ],
+      "formula": "gamma^-2 * sum_gap^-1",
+      "keys": [
+        "gamma",
+        "sum_gap"
+      ],
+      "relative_error": 0.03989467220200101,
+      "value": 6.963959470342105
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -2.0,
+        2.0
+      ],
+      "formula": "ratio_hat^-2 * heavy_light_gap_over_mstar^2",
+      "keys": [
+        "ratio_hat",
+        "heavy_light_gap_over_mstar"
+      ],
+      "relative_error": 0.04327555027515265,
+      "value": 6.4069856979466975
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -2.0,
+        2.0
+      ],
+      "formula": "gamma^-2 * prod_qbar^2",
+      "keys": [
+        "gamma",
+        "prod_qbar"
+      ],
+      "relative_error": 0.0448135534820443,
+      "value": 6.996900200580784
+    }
+  ],
+  "generated_utc": "2026-03-31T07:07:05Z",
+  "hard_guard": {
+    "reason": "This search runs only on low-complexity residual monomials. It does not prove that the current corpus emits the residual amplitude bridge, and it must not be turned into a theorem-grade lambda_nu or A_nu law without an honest OPH derivation.",
+    "status": "do_not_promote"
+  },
+  "public_promotion_allowed": false,
+  "residual_amplitude_definition": "A_nu = lambda_nu * q_mean^p_nu",
+  "residual_invariant_pool": {
+    "I_nu": 0.0965316330845031,
+    "chi": 1.1045845502912137,
+    "gamma": 0.30236566025890826,
+    "prod_qbar": 0.7998071945087601,
+    "ratio_hat": 0.030721110097966534,
+    "sum_defect": 0.008128113736742382,
+    "sum_gap": 1.5706478772884154,
+    "sum_mu": 0.0028711206426811258,
+    "sum_qbar": 3.0
+  },
+  "search_family": {
+    "disallowed_shortcuts": [
+      "q_mean",
+      "q_mean^p_nu",
+      "lambda_nu",
+      "external_oscillation_anchor",
+      "sum_qbar"
+    ],
+    "exponents": [
+      -2.0,
+      -1.0,
+      -0.5,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "kind": "one_to_three_factor_monomials_on_residual_scalar_pool",
+    "objective": "minimize relative error to A_nu_star / m_star"
+  },
+  "selected_point_relative_phase_contract": {
+    "center_source": "majorana_overlap_defect_hessian.selector_point",
+    "definition": "delta_psi_e = psi_e(weighted_cycle_selector) - psi_e(equal_split_selector)",
+    "selector_source": "neutrino_weighted_cycle_repair.selector_phases_absolute"
+  },
+  "status": "compare_only_residual_amplitude_search",
+  "target_residual_ratio": {
+    "A_nu_star_eV": 0.016485848244764366,
+    "m_star_eV": 0.0024617526608923523,
+    "name": "A_nu_star / m_star",
+    "source": "weighted_least_squares_compare_only_scale_fit_after_exact_q_mean_factorization",
+    "value": 6.696793104628337
+  },
+  "top_single_factor_candidates": [
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "ratio_hat^-0.5",
+      "keys": [
+        "ratio_hat"
+      ],
+      "relative_error": 0.14804890414755129,
+      "value": 5.705340224185234
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -1.0
+      ],
+      "formula": "gamma^-1",
+      "keys": [
+        "gamma"
+      ],
+      "relative_error": 0.5061436394741122,
+      "value": 3.307253869846611
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "I_nu^-0.5",
+      "keys": [
+        "I_nu"
+      ],
+      "relative_error": 0.5193839259908338,
+      "value": 3.2185864103981263
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -1.0
+      ],
+      "formula": "I_nu^-1",
+      "keys": [
+        "I_nu"
+      ],
+      "relative_error": 0.5469043644248023,
+      "value": 10.359298481199495
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        2.0
+      ],
+      "formula": "sum_gap^2",
+      "keys": [
+        "sum_gap"
+      ],
+      "relative_error": 0.6316244632485899,
+      "value": 2.4669347544306053
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -2.0
+      ],
+      "formula": "gamma^-2",
+      "keys": [
+        "gamma"
+      ],
+      "relative_error": 0.6333083594976053,
+      "value": 10.937928159615383
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "sum_defect^-0.5",
+      "keys": [
+        "sum_defect"
+      ],
+      "relative_error": 0.6562970647636309,
+      "value": 11.091878762525237
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -0.5
+      ],
+      "formula": "gamma^-0.5",
+      "keys": [
+        "gamma"
+      ],
+      "relative_error": 0.7284393216226889,
+      "value": 1.8185856784453711
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        1.0
+      ],
+      "formula": "sum_gap",
+      "keys": [
+        "sum_gap"
+      ],
+      "relative_error": 0.765462684489551,
+      "value": 1.5706478772884154
+    },
+    {
+      "complexity": 1,
+      "exponents": [
+        -2.0
+      ],
+      "formula": "prod_qbar^-2",
+      "keys": [
+        "prod_qbar"
+      ],
+      "relative_error": 0.7665668635144987,
+      "value": 1.5632534188078702
+    }
+  ],
+  "top_three_factor_candidates": [
+    {
+      "complexity": 3,
+      "exponents": [
+        0.5,
+        0.5,
+        -1.0
+      ],
+      "formula": "I_nu^0.5 * ratio_hat^0.5 * sum_defect^-1",
+      "keys": [
+        "I_nu",
+        "ratio_hat",
+        "sum_defect"
+      ],
+      "relative_error": 0.00045284897467005544,
+      "value": 6.699825740519345
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "formula": "ratio_hat^-0.5 * chi^0.5 * prod_qbar^-0.5",
+      "keys": [
+        "ratio_hat",
+        "chi",
+        "prod_qbar"
+      ],
+      "relative_error": 0.0012015076543563177,
+      "value": 6.704839352803188
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -1.0,
+        -2.0,
+        2.0
+      ],
+      "formula": "gamma^-1 * chi^-2 * sum_gap^2",
+      "keys": [
+        "gamma",
+        "chi",
+        "sum_gap"
+      ],
+      "relative_error": 0.0014716817638291515,
+      "value": 6.686937556340118
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -0.5,
+        -1.0
+      ],
+      "formula": "chi^-0.5 * sum_defect^-0.5 * sum_gap^-1",
+      "keys": [
+        "chi",
+        "sum_defect",
+        "sum_gap"
+      ],
+      "relative_error": 0.003367242500453237,
+      "value": 6.719342830986983
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -2.0,
+        -0.5,
+        2.0
+      ],
+      "formula": "gamma^-2 * chi^-0.5 * prod_qbar^2",
+      "keys": [
+        "gamma",
+        "chi",
+        "prod_qbar"
+      ],
+      "relative_error": 0.005878845626779624,
+      "value": 6.657423691771744
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        0.5,
+        1.0,
+        -0.5
+      ],
+      "formula": "gamma^0.5 * chi * sum_defect^-0.5",
+      "keys": [
+        "gamma",
+        "chi",
+        "sum_defect"
+      ],
+      "relative_error": 0.0060126229491527135,
+      "value": 6.737058396534953
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -0.5,
+        2.0
+      ],
+      "formula": "chi^-0.5 * sum_defect^-0.5 * prod_qbar^2",
+      "keys": [
+        "chi",
+        "sum_defect",
+        "prod_qbar"
+      ],
+      "relative_error": 0.008113342733559702,
+      "value": 6.751126482301926
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -0.5,
+        -0.5,
+        2.0
+      ],
+      "formula": "ratio_hat^-0.5 * gamma^-0.5 * prod_qbar^2",
+      "keys": [
+        "ratio_hat",
+        "gamma",
+        "prod_qbar"
+      ],
+      "relative_error": 0.008896418832317662,
+      "value": 6.637215628336186
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -2.0,
+        -0.5,
+        0.5
+      ],
+      "formula": "sum_gap^-2 * sum_mu^-0.5 * prod_qbar^0.5",
+      "keys": [
+        "sum_gap",
+        "sum_mu",
+        "prod_qbar"
+      ],
+      "relative_error": 0.010281469403548956,
+      "value": 6.7656459780354705
+    },
+    {
+      "complexity": 3,
+      "exponents": [
+        -2.0,
+        -0.5,
+        -1.0
+      ],
+      "formula": "gamma^-2 * chi^-0.5 * sum_gap^-1",
+      "keys": [
+        "gamma",
+        "chi",
+        "sum_gap"
+      ],
+      "relative_error": 0.01055907198874123,
+      "value": 6.62608118414286
+    }
+  ],
+  "top_two_factor_candidates": [
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        2.0
+      ],
+      "formula": "I_nu^-1 * prod_qbar^2",
+      "keys": [
+        "I_nu",
+        "prod_qbar"
+      ],
+      "relative_error": 0.010458351912983919,
+      "value": 6.626755685651689
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        -1.0
+      ],
+      "formula": "I_nu^-1 * sum_gap^-1",
+      "keys": [
+        "I_nu",
+        "sum_gap"
+      ],
+      "relative_error": 0.015117018401733738,
+      "value": 6.5955575600330665
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -1.0,
+        0.5
+      ],
+      "formula": "sum_defect^-1 * sum_mu^0.5",
+      "keys": [
+        "sum_defect",
+        "sum_mu"
+      ],
+      "relative_error": 0.015605752815777764,
+      "value": 6.592284606779102
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -0.5,
+        2.0
+      ],
+      "formula": "ratio_hat^-0.5 * chi^2",
+      "keys": [
+        "ratio_hat",
+        "chi"
+      ],
+      "relative_error": 0.039471520194058536,
+      "value": 6.961125708893106
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -2.0,
+        -1.0
+      ],
+      "formula": "gamma^-2 * sum_gap^-1",
+      "keys": [
+        "gamma",
+        "sum_gap"
+      ],
+      "relative_error": 0.03989467220200101,
+      "value": 6.963959470342105
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -2.0,
+        2.0
+      ],
+      "formula": "gamma^-2 * prod_qbar^2",
+      "keys": [
+        "gamma",
+        "prod_qbar"
+      ],
+      "relative_error": 0.0448135534820443,
+      "value": 6.996900200580784
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -0.5,
+        -0.5
+      ],
+      "formula": "ratio_hat^-0.5 * prod_qbar^-0.5",
+      "keys": [
+        "ratio_hat",
+        "prod_qbar"
+      ],
+      "relative_error": 0.04737491657485236,
+      "value": 6.379533089977523
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -0.5,
+        -1.0
+      ],
+      "formula": "sum_defect^-0.5 * sum_gap^-1",
+      "keys": [
+        "sum_defect",
+        "sum_gap"
+      ],
+      "relative_error": 0.05453111974600023,
+      "value": 7.061976731331013
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -0.5,
+        1.0
+      ],
+      "formula": "ratio_hat^-0.5 * chi",
+      "keys": [
+        "ratio_hat",
+        "chi"
+      ],
+      "relative_error": 0.058947981917716205,
+      "value": 6.302030665790019
+    },
+    {
+      "complexity": 2,
+      "exponents": [
+        -0.5,
+        2.0
+      ],
+      "formula": "sum_defect^-0.5 * prod_qbar^2",
+      "keys": [
+        "sum_defect",
+        "prod_qbar"
+      ],
+      "relative_error": 0.059519233949102995,
+      "value": 7.09538110013145
+    }
+  ],
+  "working_observation": "After stripping off the exact q_mean^p_nu homogeneity, the residual compare-only target A_nu_star / m_star is numerically much smaller and cleaner than the raw bridge factor lambda_nu / m_star. On the core residual scalar pool the strongest simple clue is sqrt(I_nu) * sqrt(ratio_hat) / sum_defect. On the extended pool that also includes defect-weighted mu_e family scales normalized by m_star, no stronger low-complexity clue survives after the trivial closed normalizer `sum_qbar = 3` is removed from the search. So the extended pool does not yet beat the core clue `sqrt(I_nu) * sqrt(ratio_hat) / sum_defect`. Both remain compare-only audit signals."
+}

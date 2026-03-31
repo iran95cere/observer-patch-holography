@@ -21,6 +21,8 @@ def test_neutrino_absolute_attachment_scaffold_contract() -> None:
     assert payload["current_no_go"]["closed_normalizer_artifact"] == "oph_same_label_overlap_defect_weight_normalizer"
     assert payload["current_no_go"]["exact_next_theorem_object"] == "oph_neutrino_attachment_bridge_invariant"
     assert payload["current_no_go"]["strictly_smaller_missing_clause"] is None
+    assert payload["current_no_go"]["corrected_bridge_parameterization"] == "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu"
+    assert payload["current_no_go"]["residual_amplitude_parameterization"]["definition"] == "B_nu = lambda_nu * q_mean^p_nu / m_star_eV"
     assert payload["extension_contract"]["must_emit"].startswith("lambda_nu")
     stack = payload["extension_contract"]["current_theorem_stack"]
     assert stack[0]["id"] == "oph_same_label_overlap_defect_weight_normalizer"

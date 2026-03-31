@@ -2,10 +2,10 @@
 """Emit the charged determinant-line section extension scaffold.
 
 This does not close the charged lane. It sharpens the absolute-anchor problem:
-the smallest constructive breaker beyond the current common-shift quotient is a
-section of the charged determinant line. Once such a section exists, the
-charged absolute anchor is read out as ``A_ch = (1/3) log det(Y_e)`` on the
-promoted charged operator surface.
+the determinant-line section is not the exact irreducible blocker. Once a
+refinement-stable uncentered trace lift exists on theorem-grade physical
+``Y_e`` (or an equivalent determinant line), the determinant-line section and
+the affine anchor are induced canonically.
 """
 
 from __future__ import annotations
@@ -41,7 +41,8 @@ def build_artifact(anchor_section: dict[str, Any], transfer_extension: dict[str,
         "public_promotion_allowed": False,
         "extension_kind": "determinant_line_section",
         "exact_missing_object": "charged_determinant_line_section",
-        "possible_smaller_missing_object": "refinement_stable_uncentered_trace_lift",
+        "exact_smaller_missing_object": "refinement_stable_uncentered_trace_lift",
+        "section_induced_by_exact_smaller_object": True,
         "extra_trivialization_required": False,
         "extra_metric_compatibility_required": False,
         "upstream_prerequisites": {
@@ -65,6 +66,20 @@ def build_artifact(anchor_section: dict[str, Any], transfer_extension: dict[str,
             "g_e": "exp((1/3) * log(det(Y_e)))",
             "determinant_rule": "det(Y_e) = exp(3 * A_ch)",
         },
+        "reduction_theorem": {
+            "id": "charged_determinant_line_reduces_to_uncentered_trace_lift",
+            "statement": (
+                "Once theorem-grade centered promotion exists, a refinement-stable uncentered trace lift "
+                "C_tilde_e = C_hat_e + mu I on theorem-grade physical Y_e or equivalent determinant line "
+                "canonically induces the determinant-line section and A_ch = mu = (1/3) log det(Y_e)."
+            ),
+            "induced_data": [
+                "determinant_torsor_section",
+                "charged_absolute_anchor_A_ch",
+                "g_e",
+                "Delta_e_abs",
+            ],
+        },
         "why_this_is_sharper_than_bare_A_ch": [
             "The common-shift quotient acts on the determinant line by det(Y_e) -> exp(3c) det(Y_e).",
             "A section of that line is exactly the affine object needed to break the quotient symmetry.",
@@ -74,8 +89,9 @@ def build_artifact(anchor_section: dict[str, Any], transfer_extension: dict[str,
         "hard_rejections": anchor_section.get("hard_rejections"),
         "notes": [
             "This is a constructive extension route, not a theorem hidden in the current corpus.",
-            "Promoting C_hat_e^cand is still upstream and necessary, but the determinant-line section is the first object that can realize the affine common-shift breaker geometrically.",
+            "Promoting C_hat_e^cand is still upstream and necessary, but the determinant-line section is induced only after the uncentered trace lift exists on the promoted surface.",
             "The smaller exact missing object beneath this section is the refinement-stable uncentered trace lift that keeps the determinant coordinate canonical across the live refinement family.",
+            "Therefore the determinant-line section is not an additional independent blocker once that lift exists.",
         ],
     }
 
