@@ -245,7 +245,7 @@ This is the **Page curve**.
 
 For decades, no one could derive the Page curve from gravity.
 
-The breakthrough came in 2019. Including **quantum extremal surfaces**-surfaces minimizing area plus bulk entropy-reproduces the Page curve.
+The breakthrough came in 2019. Including **quantum extremal surfaces**-surfaces defined by extremizing the generalized entropy, which combines area and bulk-entropy terms-reproduces the Page curve.
 
 The key is an "island"-a region *inside* the black hole that contributes to the radiation's entanglement. After the Page time, the island appears, and radiation entropy decreases.
 
