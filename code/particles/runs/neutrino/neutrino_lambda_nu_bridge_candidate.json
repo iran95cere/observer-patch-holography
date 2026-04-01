@@ -19,7 +19,7 @@
       "psi31": 0.019750209174707316
     },
     "raw_edge_score_rule": "q_e = sqrt(gap_e * defect_e)",
-    "role": "first honest spectrum-moving local object beneath the irreducible bridge scalar B_nu",
+    "role": "first honest spectrum-moving local object beneath the irreducible reduced correction scalar C_nu, equivalently beneath the paper-facing amplitude parameterization B_nu",
     "status": "closed_constructive_subbridge_object"
   },
   "bridge_ansatz": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
@@ -47,7 +47,7 @@
     },
     {
       "id": "oph_neutrino_attachment_bridge_invariant",
-      "role": "positive non-homogeneous residual attachment scalar B_nu = lambda_nu * q_mean^p_nu / m_star_eV above the emitted stack",
+      "role": "paper-facing positive non-homogeneous attachment parameterization B_nu = lambda_nu * q_mean^p_nu / m_star_eV; the exact remaining object above the emitted proxy is the reduced correction invariant C_nu",
       "status": "open"
     },
     {
@@ -80,11 +80,12 @@
     "m_star_gev": 2.4617526608923523e-12,
     "name": "m_star"
   },
-  "exact_next_theorem_object": "oph_neutrino_attachment_bridge_invariant",
-  "generated_utc": "2026-04-01T01:42:52Z",
+  "exact_next_theorem_object": "one_positive_neutrino_bridge_correction_invariant",
+  "generated_utc": "2026-04-01T02:06:50Z",
   "next_theorem_if_this_route_is_right": {
     "corrected_parameterization": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
     "current_status": "open",
+    "exact_reduced_object": "one_positive_neutrino_bridge_correction_invariant",
     "id": "oph_neutrino_attachment_bridge_invariant",
     "promotion_gate": null,
     "smallest_missing_clause": null
@@ -104,6 +105,7 @@
     "The exact remaining scalar is better parameterized as B_nu := lambda_nu * q_mean^p_nu / m_star_eV, equivalently A_nu / m_star_eV.",
     "The closed-form gamma-over-sqrt-ratio numerology is retained only as a refuted compare-only audit target; it is incompatible with the exact positive-rescaling no-go."
   ],
+  "paper_facing_attachment_parameterization": "oph_neutrino_attachment_bridge_invariant",
   "public_promotion_allowed": false,
   "residual_amplitude_parameterization": {
     "compare_only_B_nu_star": 6.696793104628337,

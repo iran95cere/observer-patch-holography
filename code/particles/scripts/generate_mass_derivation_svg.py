@@ -219,8 +219,8 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "leptons",
         "title": "Charged Leptons",
-        "summary": "The charged-lepton lane implements the ordered package, the support-obstruction certificate, the eta source-readback primitive, the sigma endpoint-ratio breaker, and the forward shape/scale surface.",
-        "takeaway": "The shape of the charged-lepton hierarchy is visible, but the overall size is still floating because the theorem chain only fixes the centered pattern, not the absolute normalization.",
+        "summary": "The charged-lepton lane closes the centered hierarchy readback and the common-shift no-go, then sharpens the remaining exact burden to one branch-generator clause and one post-promotion affine scalar.",
+        "takeaway": "The active charged blocker is no longer a vague fit problem: the current theorem emits only the common-shift quotient class, and the next exact closure route runs through the descended commutator clause and then `mu_phys(Y_e)`.",
         "logic": (
             "The lane starts from the ordered charged package, proves that the realized support is a one-dimensional "
             "linear subray, exposes the canonical quadratic support-extension direction, maps that into the charged "
@@ -231,12 +231,10 @@ LANES: List[Dict[str, Any]] = [
             "`C_hat_e^{cand}`. Promoting it is blocked by the branch-generator splitting theorem and its "
             "commutator clause, and the local corpus proves neither exact vanishing nor uniform quadratic smallness of that descended commutator yet. The strongest new route is only an extension candidate: a centered Schur-type "
             "`P->Q->P` transfer theorem would promote the proxy bridge if a refinement-uniform middle-factor bound can be certified, with the current local proxy gap staying safe for about `M < 119.56`. On the absolute side the equalizer route is no-go under common-shift "
-            "symmetry, so the future slot is one affine-covariant absolute anchor `A_ch`. End-to-end closure still needs "
-            "an uncentered charged response lift carrying a determinant line, because centering removes the only affine "
-            "mode that can transform by `+c`; the clean future formula is `A_ch = (1/3) log det(Y_e)`."
+            "symmetry, so the future slot is one affine-covariant absolute anchor `A_ch`. Conditional on theorem-grade centered promotion, the exact post-promotion burden descends further to the physical affine scalar `mu_phys(Y_e)`, from which the uncentered lift, determinant-line section, and affine anchor follow canonically."
         ),
-        "tasks_text": "Open task: close `oph_generation_bundle_branch_generator_splitting`, in particular `compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split`, so the latent candidate `C_hat_e^{cand}` can be promoted; then derive one affine-covariant absolute charged anchor `A_ch` with `A_ch(logm + c*(1,1,1)) = A_ch(logm) + c` on an uncentered charged response lift carrying a determinant line. The common-refinement equalizer route is currently a no-go, while the central-split transfer theorem is only an unpromoted extension route.",
-        "prediction_surface": "Charged forward surface with an eta readback primitive plus a sigma endpoint-ratio breaker on one support-extension family.",
+        "tasks_text": "Open task: search for the full charged closure chain first by proving `oph_generation_bundle_branch_generator_splitting`, reduced to `compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split`, and then deriving the descended physical affine scalar `mu_phys(Y_e)`. If that still fails, keep the layered frontier explicit rather than falling back to older fit language.",
+        "prediction_surface": "Charged forward surface with exact centered readback, a common-shift no-go for the absolute scale, and a layered post-promotion route through `mu_phys(Y_e)` to the uncentered determinant-line lift and affine anchor.",
         "particles": ["electron", "muon", "tau"],
         "tasks": [
             "papers.compact.e.29-derive-the-yukawa-excitation-dictionary",
@@ -261,14 +259,10 @@ LANES: List[Dict[str, Any]] = [
             "The CKM/CP side is no longer the open burden: the forward Yukawa step already emits the same-label "
             "transport unitary `V_CKM^fwd = U_u^dagger U_d`, and its principal logarithm gives the honest gauge-fixed "
             "generator. But the current D12 sheet is now a strict no-go for the physical CKM shell: same-sheet "
-            "rephasing cannot change the CKM invariants, and the emitted angles are too small. So the exact next "
-            "quark object is not a continuous mass scalar but one discrete relative sheet selector "
-            "`quark_relative_sheet_selector`; the current local surface is formally insufficient because it exposes only one "
-            "reference-sheet representative and no finite `sigma_ud_orbit`. The only finite local scan on disk is a same-sheet 4001-point `Delta_ud_overlap` scan against `reference_targets`, and that route is comparison-only rather than a valid `Sigma_ud` orbit. Only after branch selection does a selected-branch mass-side scale law "
-            "become relevant. A smaller finite local basis orbit is already extractable from the current forward Yukawa surface, but its nontrivial elements use right-singular-basis substitutions and are therefore diagnostic-only rather than admissible physical selectors."
+            "rephasing cannot change the CKM invariants, and the emitted angles are too small. The selector-side frontier is no longer open on the local solver surface: the same-label left-handed orbit already closes to the singleton `sigma_ref`, so the selected branch is fixed but remains the current wrong-branch D12 sheet. The only finite local scan on disk is a same-sheet 4001-point `Delta_ud_overlap` scan against `reference_targets`, and that route is comparison-only rather than a valid physical repair. A smaller finite local basis orbit is already extractable from the current forward Yukawa surface, but its nontrivial elements use right-singular-basis substitutions and are therefore diagnostic-only rather than admissible physical selectors. The exact next quark object is therefore the intrinsic mass-side scale law `intrinsic_scale_law_D12` on the already-emitted mass ray, unless a genuinely new branch-changing theorem is found outside the current selected sheet."
         ),
-        "tasks_text": "Open task: emit a finite left-handed same-label `sigma_ud_orbit` and then one discrete `quark_relative_sheet_selector` that leaves the wrong-branch D12 no-go class. After the physical branch is selected, derive a selected-branch intrinsic mass-side scale law independent of target masses and independent of CKM/CP. CKM/CP transport closure on the current D12 sheet is already explicit, and the smaller local chirality-basis orbit is already excluded.",
-        "prediction_surface": "Local forward quark Yukawa surface on the public table, with CKM/CP transport closed on the current D12 sheet, the light-quark mass side reduced to the emitted one-parameter ray `D12_ud_mass_ray`, a smaller nonphysical local basis orbit excluded, and the physical branch still waiting on an emitted finite left-handed same-label `sigma_ud_orbit` plus one discrete relative-sheet selector. The top row is carried by D11, not this lane.",
+        "tasks_text": "Open task: search for a real branch-changing theorem that escapes the selected wrong-branch `sigma_ref` sheet and reaches the physical CKM shell. If no such route exists on the current corpus, target only `intrinsic_scale_law_D12` on the emitted `D12_ud_mass_ray` and keep diagnostic orbit improvements out of theorem state.",
+        "prediction_surface": "Local forward quark Yukawa surface on the public table, with CKM/CP transport closed on the selected wrong-branch D12 sheet, the light-quark mass side reduced to the emitted one-parameter ray `D12_ud_mass_ray`, and the next exact theorem-side burden reduced to `intrinsic_scale_law_D12`.",
         "particles": ["up_quark", "down_quark", "strange_quark", "charm_quark", "bottom_quark"],
         "tasks": [
             "papers.compact.e.29-derive-the-yukawa-excitation-dictionary",
@@ -279,8 +273,8 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "neutrinos",
         "title": "Neutrinos",
-        "summary": "The neutrino lane closes the weighted-cycle PMNS/hierarchy branch and the normalized overlap-defect weight section. The absolute spectrum remains a one-parameter positive family until one bridge invariant and the final normalization scalar are emitted.",
-        "takeaway": "The mixing pattern is basically in the right place now. What is still missing is one final number that sets the overall absolute neutrino mass scale.",
+        "summary": "The neutrino lane closes the weighted-cycle PMNS/hierarchy branch and the normalized overlap-defect weight section. The absolute spectrum remains a one-parameter positive family, but the exact remaining object has now reduced from a raw bridge amplitude to the correction invariant `C_nu` above the emitted proxy.",
+        "takeaway": "The mixing pattern is in place. The exact remaining theorem object is now smaller and sharper: first `C_nu`, then the induced paper-facing bridge amplitude and absolute normalization.",
         "logic": (
             "The lane derives m_star = v^2 / mu_u from the D10 core, builds the family-response tensor, the "
             "Majorana holonomy lift, the pullback metric, the forward Majorana matrix, and the splitting/ordering "
@@ -292,10 +286,10 @@ LANES: List[Dict[str, Any]] = [
             "the midpoint, so `D_nu = (chi + 1 + gamma_half) / 2` and the repaired edge law becomes "
             "`w_e = q_e^(1 + gamma + eps / D_nu)`. That repaired branch "
             "lands in the physical PMNS window and the correct splitting hierarchy. The normalized same-label overlap-defect weight section `qbar_e` is already closed below the absolute attachment problem. "
-            "No hidden discrete branch remains on that repaired lane; once the normalizer is fixed, the residual quotient is exactly the positive rescaling orbit, so the remaining burden is one bridge invariant above `qbar_e` and then the final positive absolute neutrino normalization scalar."
+            "No hidden discrete branch remains on that repaired lane; once the normalizer is fixed, the residual quotient is exactly the positive rescaling orbit. After factoring out the already-emitted proxy `P_nu = I_nu^0.5 * ratio_hat^0.5 * sum_defect^-1`, the exact remaining theorem object is the reduced correction invariant `C_nu`, with the paper-facing amplitude `B_nu` and then the final positive normalization scalar induced only after that correction law is fixed."
         ),
-        "tasks_text": "Open task: emit the positive bridge invariant above `qbar_e` and then the final positive absolute neutrino normalization scalar. The weighted-cycle branch and closed normalizer already force the remaining residual family to `m_i = lambda_nu * mhat_i`, `Delta m^2_ij = lambda_nu^2 * Delta_hat_ij` with no hidden discrete branch.",
-        "prediction_surface": "Weighted-cycle neutrino branch with PMNS/hierarchy closure and a closed normalized overlap-defect weight section; public flavor rows remain hidden until the bridge invariant and the final positive normalization scalar collapse the one-parameter absolute family to one theorem-grade spectrum.",
+        "tasks_text": "Open task: search for the full closure chain by deriving the reduced bridge-correction invariant `C_nu` above the emitted proxy and then collapsing the remaining positive normalization orbit. If closure still fails, keep `C_nu` as the canonical smallest exact missing object and keep corridor fits compare-only.",
+        "prediction_surface": "Weighted-cycle neutrino branch with PMNS/hierarchy closure, a closed normalized overlap-defect weight section, and one exact reduced correction invariant `C_nu` still separating the emitted proxy from a theorem-grade absolute spectrum.",
         "particles": ["electron_neutrino", "muon_neutrino", "tau_neutrino"],
         "tasks": [
             "papers.compact.e.32-derive-neutrino-masses-from-screen-capacity-as-a-theorem",
@@ -306,19 +300,18 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "hadrons",
         "title": "Hadrons",
-        "summary": "The hadron lane is deferred and execution-bound: the theorem-side schema is explicit, but promotable masses require real production computation and systematics.",
+        "summary": "The hadron lane is deferred and execution-contract-frozen: the theorem-side schema, receipt, and local writeback path are explicit, but promotable masses still require one production backend export bundle and then real production systematics.",
         "takeaway": "This lane is not waiting on one clever symbolic trick. It is waiting on actual nonperturbative computation, which is why it is deferred in the active closure program.",
         "logic": (
             "The hadron path steps down from D10 and the local quark masses into Lambda_MSbar^(3), seeds the "
             "unquenched ensemble family, realizes deterministic cfg/source payload identifiers, attaches a fixed "
             "RHMC/HMC schedule shell and conditional execution receipt, then builds the stable-channel "
             "sequence population/evaluation shells and aggregates them into the ground-state readout surface. Numerical "
-            "hadron masses require the real production backend correlator dump, executed runtime receipt `(N_therm, N_sep)`, "
-            "realized cfg/source arrays, evaluator arrays, and declared production continuum/volume/chiral/statistical systematics. "
+            "hadron masses require one production backend export bundle with publication-complete manifest provenance, real `pi_iso`, `N_iso_direct`, and `N_iso_exchange` arrays, the executed runtime receipt `(N_therm, N_sep)`, and then declared production continuum/volume/chiral/statistical systematics. "
             "The surrogate execution bridge is only a diagnostic proof that the schema closes; it is not a promotable hadron output surface."
         ),
-        "tasks_text": "Deferred task: if this lane is resumed later, execute the real production backend dump and publish the production systematics for the seeded 2+1 QED-off stable channels. It is not part of the active exact-spectrum closure program.",
-        "prediction_surface": "Execution-bound stable-channel hadron shell; public hadron rows remain hidden because this lane is deferred and requires real production computation.",
+        "tasks_text": "Deferred task: if this lane is resumed later, land the production backend export bundle and then publish the production systematics for the seeded 2+1 QED-off stable channels. It is not part of the active exact-spectrum closure program.",
+        "prediction_surface": "Execution-contract-frozen stable-channel hadron shell; public hadron rows remain hidden because this lane still requires a real backend bundle and real production computation.",
         "particles": ["proton", "neutron", "neutral_pion", "rho_770_0"],
         "tasks": [
             "papers.compact.e.33-close-the-nonperturbative-qcd-hadron-branch",

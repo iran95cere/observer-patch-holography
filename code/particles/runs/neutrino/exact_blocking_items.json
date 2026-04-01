@@ -79,7 +79,7 @@
     }
   ],
   "fully_completed": false,
-  "generated_utc": "2026-04-01T00:30:50Z",
+  "generated_utc": "2026-04-01T02:06:50Z",
   "live_continuation_branch_status": {
     "absolute_scale_no_go": {
       "absolute_amplitude_bridge_summary": {
@@ -377,7 +377,7 @@
         "normalization_convention": "internal_weighted_cycle_branch_normal_form",
         "notation": "m_hat"
       },
-      "sharper_attachment_object": "oph_neutrino_attachment_bridge_invariant",
+      "sharper_attachment_object": "one_positive_neutrino_bridge_correction_invariant",
       "smallest_exact_missing_object": {
         "bridge_reconstruction": "B_nu = (I_nu^0.5 * ratio_hat^0.5 * sum_defect^-1) * C_nu",
         "compare_only_target": 0.9995473560046991,

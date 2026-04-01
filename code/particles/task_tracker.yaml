@@ -315,12 +315,12 @@ stages:
             "particles.flavor.17-upgrade-flavor-observable-to-persistent-spectral-triple"
           ]
   - id: stage-3
-    title: "Replace Koide-assisted charged-lepton fitting"
+    title: "Close the charged-lepton absolute frontier"
     status: active
-    success_rule: "Charged leptons come from the forward dictionary plus declared standard-QFT completion only."
+    success_rule: "The charged lane either closes through the exact centered-to-affine route above C_hat_e^{cand}, or every public surface states the honest two-layer obstruction: the descended commutator clause is still open and mu_phys(Y_e) is the irreducible post-promotion scalar."
     tasks:
       - id: papers.compact.e.30-replace-koide-assisted-lepton-fitting-with-a-theorem
-        title: "Promote the latent charged candidate C_hat_e^{cand} by closing branch-generator splitting, then derive the theorem-grade uncentered determinant-line lift whose affine coordinate A_ch makes eta/sigma/g_e induced invariants without Koide import"
+        title: "Search for the full charged closure chain by promoting C_hat_e^{cand} and then deriving the descended affine scalar mu_phys(Y_e) beneath A_ch"
         status: in_progress
         owner_lane: pro_paper
         depends_on: ["papers.compact.e.29-derive-the-yukawa-excitation-dictionary"]
@@ -565,12 +565,12 @@ stages:
         owner_lane: local_code
         depends_on: ["particles.flavor.40-add-commutator-transfer-margin-fields"]
   - id: stage-4
-    title: "Derive quarks, CKM, and CP"
+    title: "Close the physical quark branch"
     status: active
-    success_rule: "No CKM import, no texture shopping, no hidden order-one coefficients, and no recovered-core overclaim for light-quark isospin splitting."
+    success_rule: "Either the quark lane escapes the selected wrong-branch sigma_ref sheet and reaches a theorem-grade physical CKM branch, or every surface states the sharper current boundary: sigma_ref is already selected and intrinsic_scale_law_D12 is the next exact object on D12_ud_mass_ray."
     tasks:
       - id: papers.compact.e.31-derive-quark-textures-ckm-mixing-and-cp-from-overlap-defects
-        title: "Derive quark textures, CKM, and CP from overlap defects on the honest D12 continuation tier"
+        title: "Search for a genuine quark branch-changing closure beyond the selected wrong-branch sigma_ref sheet"
         status: in_progress
         owner_lane: pro_paper
         depends_on: ["papers.compact.e.29-derive-the-yukawa-excitation-dictionary"]
@@ -687,9 +687,9 @@ stages:
         owner_lane: local_code
         depends_on: ["particles.flavor.50-record-same-family-d12-selector-value-law"]
       - id: particles.flavor.52-emit-quark-relative-sheet-selector
-        title: "Emit the discrete relative up/down sheet selector from a finite left-handed same-label sigma_ud_orbit that leaves the current D12 no-go class"
-        status: in_progress
-        owner_lane: pro_paper
+        title: "Emit the discrete relative up/down sheet selector and record the selected sigma_ref singleton on the current local solver surface"
+        status: completed
+        owner_lane: local_code
         depends_on:
           [
             "particles.flavor.51-certify-current-d12-sheet-no-go-for-physical-ckm-shell",
@@ -712,7 +712,7 @@ stages:
         depends_on: ["particles.flavor.54-add-quark-sigma-ud-orbit-scaffold"]
       - id: particles.flavor.57-expose-sigma-ud-orbit-provider-interface
         title: "Expose the same-label left-handed sigma_ud orbit provider / sigma-to-CKM evaluator so the empty orbit scaffold becomes a real finite solver object"
-        status: in_progress
+        status: completed
         owner_lane: local_code
         depends_on:
           [
@@ -735,7 +735,7 @@ stages:
         owner_lane: local_code
         depends_on: ["particles.flavor.59-record-transport-frame-diagnostic-orbit-no-go"]
       - id: particles.flavor.53-derive-selected-branch-quark-mass-scale-law
-        title: "Derive the intrinsic mass-side scale law on the selected quark branch after the discrete CKM branch selector is fixed"
+        title: "Derive the intrinsic mass-side scale law intrinsic_scale_law_D12 on the emitted selected quark branch"
         status: pending
         owner_lane: pro_paper
         depends_on:
@@ -744,9 +744,9 @@ stages:
             "particles.flavor.57-expose-sigma-ud-orbit-provider-interface"
           ]
   - id: stage-5
-    title: "Close the neutrino sector"
+    title: "Close the neutrino absolute attachment frontier"
     status: active
-    success_rule: "Emit the physically correct neutrino branch without PMNS import and either emit the final absolute normalization scalar or state explicitly that one positive mass normalization remains open."
+    success_rule: "The weighted-cycle neutrino branch stays honest about the positive-scale no-go, names C_nu as the smallest exact missing object above the emitted proxy, and only promotes absolute neutrino rows if that reduced correction invariant and the final normalization orbit are both genuinely closed."
     tasks:
       - id: papers.compact.e.32-derive-neutrino-masses-from-screen-capacity-as-a-theorem
         title: "Repair the neutrino continuation branch so the emitted spectrum and PMNS reach the physical oscillation regime"
@@ -754,7 +754,7 @@ stages:
         owner_lane: pro_paper
         depends_on: ["papers.compact.e.29-derive-the-yukawa-excitation-dictionary"]
       - id: particles.e.32b-close-neutrino-splittings-and-mixing
-        title: "Promote the weighted-cycle neutrino branch from scale-free PMNS/hierarchy closure to a theorem-grade absolute spectrum by emitting one internal positive normalization scalar lambda_nu, equivalently an internal attachment from the D10 amplitude sector to the weighted-cycle absolute normal form"
+        title: "Close the reduced neutrino attachment law by emitting C_nu above the emitted proxy and then collapse the remaining positive normalization orbit"
         status: in_progress
         owner_lane: pro_neutrino
         depends_on: ["papers.compact.e.32-derive-neutrino-masses-from-screen-capacity-as-a-theorem"]
@@ -1076,7 +1076,7 @@ stages:
             "particles.neutrino.48-correct-bridge-contract-to-residual-amplitude-scalar"
           ]
       - id: particles.neutrino.50-record-two-layer-bridge-frontier
-        title: "Record the two-layer neutrino bridge frontier: defect-weighted mu_e family as the best constructive sub-bridge object, with one irreducible positive bridge scalar B_nu still above it"
+        title: "Record the two-layer neutrino bridge frontier with C_nu as the irreducible exact object above the emitted proxy and B_nu retained only as the paper-facing amplitude parameterization"
         status: completed
         owner_lane: local_code
         depends_on:
@@ -1084,13 +1084,13 @@ stages:
             "particles.neutrino.49-extend-residual-audit-through-defect-weighted-mu-family"
           ]
   - id: stage-6
-    title: "Hadron branch (deferred, execution-bound)"
+    title: "Hadron branch (deferred, execution-contract-frozen)"
     status: deferred
-    note: "Deferred from the active exact-spectrum closure program because honest progress from the current state requires real production unquenched execution and systematics, not more local theorem work."
-    success_rule: "Simulation-dependent stable-channel hadron pipeline with executed production dump plus declared continuum, volume, chiral, and statistics budgets on the seeded 2+1 QED-off branch."
+    note: "Deferred from the active exact-spectrum closure program because honest progress from the current state requires one real production backend export bundle and then executed production systematics, not more local theorem work."
+    success_rule: "Simulation-dependent stable-channel hadron pipeline with one production backend export bundle, executed writeback, and declared continuum, volume, chiral, and statistics budgets on the seeded 2+1 QED-off branch."
     tasks:
       - id: papers.compact.e.33-close-the-nonperturbative-qcd-hadron-branch
-        title: "Close the nonperturbative QCD hadron branch with executed unquenching and declared systematics"
+        title: "Close the nonperturbative QCD hadron branch with one production backend export bundle and declared systematics"
         status: deferred
         owner_lane: pro_hadron
         depends_on: ["papers.compact.e.31-derive-quark-textures-ckm-mixing-and-cp-from-overlap-defects"]
@@ -1135,22 +1135,22 @@ stages:
         owner_lane: local_code
         depends_on: ["particles.hadron.06-classify-runtime-receipt-as-execution-systematics-contract"]
       - id: particles.hadron.08-record-production-geometry-and-backend-dump-frontier
-        title: "Record the production geometry summary and reduce the live hadron residual to the backend correlator dump boundary"
+        title: "Record the production geometry summary and reduce the live hadron residual to the production backend export bundle boundary"
         status: completed
         owner_lane: local_code
         depends_on: ["particles.hadron.07-record-surrogate-execution-bridge-status"]
       - id: particles.hadron.09-refresh-execution-bound-audit-and-systematics-surfaces
-        title: "Refresh the hadron audit, receipt, evaluator, and status surfaces so they consistently point at the production backend dump frontier"
+        title: "Refresh the hadron audit, receipt, evaluator, and status surfaces so they consistently point at the production backend export bundle frontier"
         status: completed
         owner_lane: local_code
         depends_on: ["particles.hadron.08-record-production-geometry-and-backend-dump-frontier"]
       - id: particles.hadron.10-implement-production-backend-dump-runner-and-writeback
-        title: "Implement the production backend dump runner, receipt fill-in, cfg/source writeback, and closure validator path for pi_iso and N_iso"
+        title: "Implement the production backend bundle runner, receipt fill-in, cfg/source writeback, and closure validator path for pi_iso and N_iso"
         status: ready
         owner_lane: local_hpc
         depends_on: ["particles.hadron.09-refresh-execution-bound-audit-and-systematics-surfaces"]
       - id: particles.hadron.11-validate-production-dump-and-publish-stable-channel-systematics
-        title: "Validate the production backend dump and publish stable-channel statistical and continuum/volume/chiral systematics"
+        title: "Validate the production backend bundle outputs and publish stable-channel statistical and continuum/volume/chiral systematics"
         status: pending
         owner_lane: local_hpc
         depends_on: ["particles.hadron.10-implement-production-backend-dump-runner-and-writeback"]

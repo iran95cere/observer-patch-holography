@@ -19,7 +19,7 @@
       "psi31": 0.019750209174707316
     },
     "raw_edge_score_rule": "q_e = sqrt(gap_e * defect_e)",
-    "role": "first honest spectrum-moving local object beneath the irreducible bridge scalar B_nu",
+    "role": "first honest spectrum-moving local object beneath the irreducible reduced correction scalar C_nu, equivalently beneath the paper-facing amplitude parameterization B_nu",
     "status": "closed_constructive_subbridge_object"
   },
   "bridge_correction_candidate_audit": {
@@ -157,7 +157,7 @@
     "exact_residual_moduli_space": "R_{>0}",
     "symbol": "B_nu"
   },
-  "generated_utc": "2026-04-01T01:42:52Z",
+  "generated_utc": "2026-04-01T02:06:47Z",
   "notes": [
     "The corridor sits strictly above the defect-weighted mu_e family and strictly below any theorem-grade emission of B_nu.",
     "The family-assisted route is included so the current defect-weighted mu_e family contributes explicitly to the sharpened compare-only bridge picture.",

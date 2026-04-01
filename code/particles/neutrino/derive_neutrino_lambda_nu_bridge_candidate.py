@@ -70,6 +70,7 @@ def build_payload(
     bundle_clause = scalar_evaluator["bundle_descent_candidate_id"]
     normalizer_id = scalar_evaluator["attachment_normalizer_candidate_id"]
     bridge_invariant_id = "oph_neutrino_attachment_bridge_invariant"
+    exact_smallest_object = None if irreducibility is None else irreducibility.get("reduced_remaining_object")
     scalar_theorem_id = scalar_evaluator.get("remaining_theorem_object") or scalar_evaluator["theorem_candidate_id"]
     mu_values = list(defect_weighted_family["edge_weights"].values())
     mu_mean = sum(mu_values) / len(mu_values)
@@ -91,7 +92,8 @@ def build_payload(
         },
         "current_candidate_interface_artifact": "oph_majorana_overlap_defect_scalar_evaluator",
         "closed_normalizer_artifact": normalizer.get("artifact"),
-        "exact_next_theorem_object": bridge_invariant_id,
+        "exact_next_theorem_object": None if exact_smallest_object is None else exact_smallest_object.get("name"),
+        "paper_facing_attachment_parameterization": bridge_invariant_id,
         "strictly_smaller_missing_clause": smaller_clause,
         "bridge_ansatz": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
         "bridge_factor_schema": "B_nu = lambda_nu * q_mean^p_nu / m_star_eV",
@@ -117,14 +119,14 @@ def build_payload(
         "where_B_nu_should_come_from": (
             "One positive non-homogeneous attachment scalar above the present emitted stack, equivalently a theorem that fixes A_nu / m_star after the exact q_mean^p_nu factorization."
         ),
-        "smallest_exact_missing_object": None if irreducibility is None else irreducibility.get("reduced_remaining_object"),
+        "smallest_exact_missing_object": exact_smallest_object,
         "smaller_exact_object_above_emitted_proxy": (
             None if bridge_scalar_corridor is None else bridge_scalar_corridor.get("exact_reduced_correction_scalar")
         ),
         "best_constructive_subbridge_object": {
             "artifact": defect_weighted_family["artifact"],
             "status": defect_weighted_family["proof_status"],
-            "role": "first honest spectrum-moving local object beneath the irreducible bridge scalar B_nu",
+            "role": "first honest spectrum-moving local object beneath the irreducible reduced correction scalar C_nu, equivalently beneath the paper-facing amplitude parameterization B_nu",
             "raw_edge_score_rule": defect_weighted_family["raw_edge_score_rule"],
             "centered_log_rule": defect_weighted_family["centered_log_rule"],
             "mu_family_rule": "mu_e = mu_nu * exp(eta_e) / mean_f(exp(eta_f))",
@@ -169,7 +171,7 @@ def build_payload(
             {
                 "id": bridge_invariant_id,
                 "status": "open",
-                "role": "positive non-homogeneous residual attachment scalar B_nu = lambda_nu * q_mean^p_nu / m_star_eV above the emitted stack",
+                "role": "paper-facing positive non-homogeneous attachment parameterization B_nu = lambda_nu * q_mean^p_nu / m_star_eV; the exact remaining object above the emitted proxy is the reduced correction invariant C_nu",
             },
             {
                 "id": "neutrino_weighted_cycle_absolute_attachment",
@@ -252,6 +254,7 @@ def build_payload(
             "promotion_gate": None,
             "smallest_missing_clause": smaller_clause,
             "corrected_parameterization": "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu",
+            "exact_reduced_object": None if exact_smallest_object is None else exact_smallest_object.get("name"),
         },
         "notes": [
             "This bridge candidate does not claim lambda_nu is already emitted.",

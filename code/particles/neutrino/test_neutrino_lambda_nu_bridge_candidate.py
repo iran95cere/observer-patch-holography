@@ -30,7 +30,8 @@ def test_neutrino_lambda_nu_bridge_candidate() -> None:
     assert payload["artifact"] == "oph_neutrino_lambda_nu_bridge_candidate"
     assert payload["current_candidate_interface_artifact"] == "oph_majorana_overlap_defect_scalar_evaluator"
     assert payload["closed_normalizer_artifact"] == "oph_same_label_overlap_defect_weight_normalizer"
-    assert payload["exact_next_theorem_object"] == "oph_neutrino_attachment_bridge_invariant"
+    assert payload["exact_next_theorem_object"] == "one_positive_neutrino_bridge_correction_invariant"
+    assert payload["paper_facing_attachment_parameterization"] == "oph_neutrino_attachment_bridge_invariant"
     assert payload["strictly_smaller_missing_clause"] is None
     assert payload["current_attached_stack_collapse_status"] == "refuted_by_attachment_irreducibility_theorem"
     assert payload["bridge_ansatz"] == "lambda_nu = (m_star_eV / q_mean^p_nu) * B_nu"
@@ -60,12 +61,14 @@ def test_neutrino_lambda_nu_bridge_candidate() -> None:
     assert stack[3]["id"] == "oph_majorana_scalar_from_centered_edge_norm"
     assert stack[3]["status"] == "closed_on_current_isotropic_branch"
     assert stack[4]["id"] == "oph_neutrino_attachment_bridge_invariant"
+    assert "exact remaining object above the emitted proxy is the reduced correction invariant C_nu" in stack[4]["role"]
     assert stack[5]["id"] == "neutrino_weighted_cycle_absolute_attachment"
     assert payload["compare_only_bridge_factor"]["F_nu_star"] > 1.0
     assert payload["compare_only_residual_amplitude_ratio"]["B_nu_star"] > 1.0
     smallest = payload["smallest_exact_missing_object"]
     assert smallest["symbol"] == "C_nu"
     assert smallest["status"] == "irreducible_on_current_corpus"
+    assert payload["next_theorem_if_this_route_is_right"]["exact_reduced_object"] == "one_positive_neutrino_bridge_correction_invariant"
     reduced = payload["smaller_exact_object_above_emitted_proxy"]
     assert reduced["symbol"] == "C_nu"
     assert reduced["compare_only_target"] > 0.99

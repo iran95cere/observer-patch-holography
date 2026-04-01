@@ -15,8 +15,10 @@
       "smaller_comparison_witness": "fixed_local_collar_exact_markov_modulus_vanishing"
     }
   },
+  "derived_missing_witness": "vanishing_carried_collar_schedule_on_fixed_local_collars",
+  "derived_missing_witness_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json",
   "exact_missing_object": "vanishing_carried_collar_schedule_on_fixed_local_collars",
-  "generated_utc": "2026-04-01T01:42:54Z",
+  "generated_utc": "2026-04-01T02:06:49Z",
   "honesty_gate": {
     "closure_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/uv/bw_carried_collar_schedule_scaffold.json",
     "derived_witness_chain": [
@@ -49,6 +51,7 @@
     ],
     "status": "open"
   },
+  "intermediate_substep": "fixed_local_collar_exact_markov_modulus_vanishing",
   "notes": [
     "This scaffold does not claim the schedule is already emitted on the live corpus.",
     "It records the exact witness contract consumed by scaling-limit cap-pair extraction so solver work no longer jumps directly from the raw datum to the extraction theorem.",
@@ -132,6 +135,8 @@
     ]
   },
   "public_promotion_allowed": false,
+  "raw_input_frontier": "fixed_local_collar_markov_faithfulness_datum",
+  "raw_input_frontier_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/uv/bw_fixed_local_collar_markov_faithfulness_datum.json",
   "reduction_from_raw_datum": {
     "constructive_recovery_witness_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/uv/bw_fixed_local_collar_constructive_recovery_scaffold.json",
     "derived_exact_markov_comparison_witness_artifact": "/Users/muellerberndt/Projects/oph-meta/reverse-engineering-reality/code/particles/runs/uv/bw_fixed_local_collar_exact_markov_modulus_scaffold.json",
@@ -194,6 +199,7 @@
     "status_on_fill": "carried_collar_schedule_closed",
     "why_this_sharpens_the_frontier": "The carried-collar schedule is no longer treated as an independent primitive solver target; the actual emitted frontier is the two-term pair that generates it."
   },
+  "theorem_object": "canonical_scaling_cap_pair_realization_from_transported_cap_marginals",
   "why_this_witness_is_sharp": [
     "This witness is the exact emitted schedule the extraction theorem consumes; it is smaller than cap-pair extraction but larger than the raw collarwise datum.",
     "The fixed-local-collar Markov/faithfulness datum remains the sharpest lower object because it isolates the two raw controls before they are assembled into one vanishing schedule.",

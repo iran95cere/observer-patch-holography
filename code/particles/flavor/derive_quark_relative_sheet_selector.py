@@ -51,14 +51,17 @@ def build_artifact(repair: dict[str, Any], orbit: dict[str, Any]) -> dict[str, A
             "canonical_token": winner["canonical_token"],
             "branch_key": winner.get("branch_key") or ["D12", winner["sigma_id"]],
         }
+        selection_rule_status = "theorem_grade_rule_emitted_on_current_solver_surface"
         selection_status = "theorem_grade_value_emitted"
         reason = "Exactly one orbit element carries a theorem-grade selection witness."
     elif len(selected) > 1:
         sigma_value = None
+        selection_rule_status = "ambiguous_theorem_rule_surface"
         selection_status = "ambiguous_theorem_witnesses"
         reason = "More than one orbit element claims theorem-grade selection; no value emitted."
     elif len(elements) == 1:
         sigma_value = None
+        selection_rule_status = "open_target_free_rule_unemitted"
         selection_status = "singleton_reference_sheet_not_promoted"
         reason = (
             "The current solver emits one D12 reference-sheet orbit element, but no theorem-grade uniqueness or "
@@ -66,6 +69,7 @@ def build_artifact(repair: dict[str, Any], orbit: dict[str, Any]) -> dict[str, A
         )
     else:
         sigma_value = None
+        selection_rule_status = "open_target_free_rule_unemitted"
         selection_status = "not_emitted_from_current_corpus"
         reason = (
             "No orbit element carries a theorem-grade selection witness. The current corpus therefore emits only the selector object, "
@@ -82,7 +86,7 @@ def build_artifact(repair: dict[str, Any], orbit: dict[str, Any]) -> dict[str, A
         "branch_key_after_repair": theorem["branch_key_after_repair"],
         "must_not_use_compare_fit_masses": theorem["must_not_use_compare_fit_masses"],
         "must_not_use_same_sheet_rephasing": theorem["must_not_use_same_sheet_rephasing"],
-        "selection_rule_status": "open_target_free_rule_unemitted",
+        "selection_rule_status": selection_rule_status,
         "selection_status": selection_status,
         "reason": reason,
         "quark_relative_sheet_selector": {
@@ -105,10 +109,22 @@ def build_artifact(repair: dict[str, Any], orbit: dict[str, Any]) -> dict[str, A
             "solver_artifact": "quark_sigma_ud_orbit.json",
         },
         "notes": [
-            "This is the exact next theorem-side object even when the selector value remains open.",
+            (
+                "The local same-label left-handed selector is now theorem-emitted on the current solver surface and its unique value is sigma_ref."
+                if sigma_value is not None
+                else "This is the exact next theorem-side object even when the selector value remains open."
+            ),
             "This script refuses to convert compare-only CKM-shell ranking into a theorem-grade selection.",
-            "A singleton reference-sheet orbit element is still not enough unless the solver also emits an intrinsic uniqueness witness.",
-            "Once a theorem-grade orbit witness exists, rerunning this script will emit sigma_ud directly.",
+            (
+                "That emitted value is a negative closure: sigma_ref is the current D12 reference sheet, so the physical CKM-shell no-go survives unchanged on the selected branch."
+                if sigma_value is not None
+                else "A singleton reference-sheet orbit element is still not enough unless the solver also emits an intrinsic uniqueness witness."
+            ),
+            (
+                "The next exact theorem-side quark object is therefore intrinsic_scale_law_D12 on the emitted D12_ud_mass_ray."
+                if sigma_value is not None
+                else "Once a theorem-grade orbit witness exists, rerunning this script will emit sigma_ud directly."
+            ),
         ],
     }
 

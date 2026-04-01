@@ -18,7 +18,7 @@
     "repair_theorem_artifact": "quark_physical_branch_repair_theorem.json",
     "solver_artifact": "quark_sigma_ud_orbit.json"
   },
-  "generated_utc": "2026-04-01T00:06:04Z",
+  "generated_utc": "2026-04-01T02:06:49Z",
   "id": "quark_relative_sheet_selector",
   "must_not_use_compare_fit_masses": true,
   "must_not_use_same_sheet_rephasing": true,
@@ -35,10 +35,10 @@
     "unique_intersection_with": "D12_ud_mass_ray"
   },
   "notes": [
-    "This is the exact next theorem-side object even when the selector value remains open.",
+    "The local same-label left-handed selector is now theorem-emitted on the current solver surface and its unique value is sigma_ref.",
     "This script refuses to convert compare-only CKM-shell ranking into a theorem-grade selection.",
-    "A singleton reference-sheet orbit element is still not enough unless the solver also emits an intrinsic uniqueness witness.",
-    "Once a theorem-grade orbit witness exists, rerunning this script will emit sigma_ud directly."
+    "That emitted value is a negative closure: sigma_ref is the current D12 reference sheet, so the physical CKM-shell no-go survives unchanged on the selected branch.",
+    "The next exact theorem-side quark object is therefore intrinsic_scale_law_D12 on the emitted D12_ud_mass_ray."
   ],
   "quark_relative_sheet_selector": {
     "carrier": "Sigma_ud",
@@ -54,7 +54,7 @@
   },
   "reason": "Exactly one orbit element carries a theorem-grade selection witness.",
   "scope": "D12_relative_sheet_selection",
-  "selection_rule_status": "open_target_free_rule_unemitted",
+  "selection_rule_status": "theorem_grade_rule_emitted_on_current_solver_surface",
   "selection_status": "theorem_grade_value_emitted",
   "selector_domain": "left_handed_same_label_relative_sheet_orbit_only"
 }

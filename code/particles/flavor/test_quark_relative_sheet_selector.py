@@ -40,11 +40,13 @@ def test_reference_singleton_orbit_emits_sigma_ref_when_uniqueness_theorem_close
             cwd=ROOT,
         )
         payload = json.loads(selector_out.read_text(encoding="utf-8"))
+        assert payload["selection_rule_status"] == "theorem_grade_rule_emitted_on_current_solver_surface"
         assert payload["selection_status"] == "theorem_grade_value_emitted"
         assert payload["quark_relative_sheet_selector"]["value"]["sigma_id"] == "sigma_ref"
         assert payload["quark_relative_sheet_selector"]["value"]["canonical_token"] == "D12::same_label_left::reference_sheet"
         assert payload["debug_best_candidate"]["sigma_id"] == "sigma_ref"
         assert payload["debug_best_candidate_promotable"] is False
+        assert payload["next_after_selection"]["id"] == "intrinsic_scale_law_D12"
 
 
 def test_theorem_witness_selects_exactly_one_sigma() -> None:
@@ -98,6 +100,7 @@ def test_theorem_witness_selects_exactly_one_sigma() -> None:
             cwd=ROOT,
         )
         payload = json.loads(selector_out.read_text(encoding="utf-8"))
+        assert payload["selection_rule_status"] == "theorem_grade_rule_emitted_on_current_solver_surface"
         assert payload["selection_status"] == "theorem_grade_value_emitted"
         assert payload["quark_relative_sheet_selector"]["value"]["sigma_id"] == "sig-b"
 
@@ -146,5 +149,6 @@ def test_debug_ranking_is_never_promoted() -> None:
             cwd=ROOT,
         )
         payload = json.loads(selector_out.read_text(encoding="utf-8"))
+        assert payload["selection_rule_status"] == "open_target_free_rule_unemitted"
         assert payload["debug_best_candidate_promotable"] is False
         assert payload["quark_relative_sheet_selector"]["value"] is None

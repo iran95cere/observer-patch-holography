@@ -120,6 +120,10 @@ def test_carried_collar_schedule_scaffold() -> None:
     payload = _run(SCHEDULE)
     assert payload["artifact"] == "oph_bw_carried_collar_schedule_scaffold"
     assert payload["exact_missing_object"] == "vanishing_carried_collar_schedule_on_fixed_local_collars"
+    assert payload["theorem_object"] == "canonical_scaling_cap_pair_realization_from_transported_cap_marginals"
+    assert payload["derived_missing_witness"] == "vanishing_carried_collar_schedule_on_fixed_local_collars"
+    assert payload["raw_input_frontier"] == "fixed_local_collar_markov_faithfulness_datum"
+    assert payload["intermediate_substep"] == "fixed_local_collar_exact_markov_modulus_vanishing"
     assert payload["smaller_raw_datum"] == "fixed_local_collar_markov_faithfulness_datum"
     assert payload["smaller_raw_datum_artifact"].endswith("bw_fixed_local_collar_markov_faithfulness_datum.json")
     assert payload["schedule_contract"]["formula"].startswith("eta_{n,m,delta} = r_FR")
