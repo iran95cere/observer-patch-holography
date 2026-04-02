@@ -93,7 +93,7 @@ $$C = 1 - H_2(p)$$
 
 Below this rate, there exist codes that make error probability arbitrarily small. Above this rate, errors are inevitable.
 
-Shannon's theorem says: **perfect consistency is possible even in a noisy world**, as long as information is encoded into the right subspace.
+Shannon's theorem says: **arbitrarily reliable communication is possible even in a noisy world**, as long as information is encoded into the right subspace.
 
 ### The Hamming Code
 
@@ -142,7 +142,7 @@ The most dramatic application is the black hole information problem.
 
 Take an old black hole that has already emitted more than half its entropy. Throw a diary into it. How long until an outside observer can recover the diary from Hawking radiation?
 
-The answer: **almost immediately**. If the black hole is old and highly scrambled, the diary comes back as soon as it enters. The black hole acts like a mirror.
+The answer: after roughly the scrambling time, plus enough outgoing radiation to carry the diary information. For an old, highly scrambled black hole, this can be parametrically fast compared with the full evaporation time. In that sense the black hole acts like a mirror.
 
 ### The Page Curve and Islands
 
@@ -150,7 +150,7 @@ Don Page argued that if evaporation is unitary, radiation entropy should rise un
 
 In 2019, the "island formula" showed how to derive this from first principles. After Page time, an **island** appears inside the black hole that is encoded in the radiation. Including the island contribution, radiation entropy decreases exactly as unitarity requires.
 
-This is error correction in action. The black hole is the encoder. Hawking radiation is the noisy output. The island formula says the radiation already contains a redundant copy of the interior information.
+This is error correction in action. The black hole is the encoder. Hawking radiation is the noisy output. The island formula says the radiation can encode interior information in a recoverable way, without requiring a literal duplicate copy of an unknown quantum state.
 
 ## 10.7 Observer Consistency as Error Correction
 
@@ -214,7 +214,7 @@ The error correction model includes both rigorous mathematical results and testa
 
 **3. Bulk reconstruction from boundary**: In holographic systems, erasing part of the boundary doesn't destroy bulk information if the remaining boundary's entanglement wedge contains it. Confirmed in all AdS/CFT calculations.
 
-**4. Information preserved in quantum processes**: All unitary quantum evolution preserves information. Tested to extraordinary precision in quantum optics, AMO physics, and quantum computing experiments.
+**4. Information preserved in quantum processes**: Unitary quantum evolution preserves information by construction. Experiments then test whether observed quantum processes continue to follow unitary dynamics to high precision.
 
 **Empirical validation signatures**:
 - Quantum error correction fundamentally impossible

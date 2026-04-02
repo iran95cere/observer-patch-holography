@@ -58,7 +58,7 @@ What is a modular Hamiltonian? In ordinary quantum mechanics, the Hamiltonian H 
 
 Time isn't a coordinate on a manifold. Time is the modular flow of the statistical state.
 
-Here is the reframing: **Time flows because we are in a state of incomplete knowledge. An omniscient observer who knew the exact quantum state would see no time-just a frozen pattern of correlations.**
+Here is the reframing: **Time flows because we are in a state of incomplete knowledge.** The thermal-time program ties experienced time to state restriction and coarse-graining, rather than treating time as a primitive external parameter.
 
 ### Tomita-Takesaki Theory
 
@@ -72,7 +72,7 @@ Even without specifying a Hamiltonian, even without putting time in by hand, the
 
 Key properties:
 1. **KMS Condition**: The state satisfies thermal equilibrium at "temperature" beta = 1 with respect to modular time
-2. **Uniqueness**: Different faithful states give equivalent flows
+2. **State dependence**: The modular flow is fixed by the chosen algebra-state pair; different faithful states generally give different flows
 
 This theorem says: given any quantum system and any state of incomplete knowledge, there's a natural notion of time evolution.
 
@@ -198,7 +198,7 @@ Leonard Susskind proposed: **computational complexity**.
 
 Entropy measures how many states are consistent with observations. Complexity measures how hard it is to prepare a state-how many quantum gates you need.
 
-Complexity keeps growing long after entropy saturates. The expansion of space is driven by the growth of quantum complexity. Time keeps ticking because the universe is computing, and it hasn't finished yet.
+Complexity keeps growing long after entropy saturates. One continuation program relates interior growth to quantum complexity. This is a suggestive conjectural bridge, not a settled derivation of cosmic expansion.
 
 ## 11.9 Special Relativity from Modular Structure
 
@@ -240,7 +240,7 @@ Start with thermal structure. Ask: what is the natural notion of time evolution?
 
 This reverses the usual logic in QFT. We don't postulate Lorentz symmetry and then discover thermal horizons; the BW theorem shows the boost structure is already encoded in modular flow.
 
-The speed of light being constant for all observers-Einstein's postulate-follows from the relationship between acceleration, temperature, and boost generators. It's not arbitrary. It's thermodynamic.
+In the OPH program, the modular/boost link is part of the route by which Lorentz kinematics and a universal light speed are recovered. That stronger claim is program-level and should not be presented as a standalone theorem of Unruh/Bisognano-Wichmann alone.
 
 ### Connection to Our Framework
 
@@ -273,7 +273,7 @@ The modular flow provides the time direction. Entanglement provides correlations
 
 Einstein discovered special relativity in 1905 by thinking about light and motion. Over a century later, we see it differently: in QFT, Lorentz boosts are tied to horizon thermodynamics via the Bisognano-Wichmann theorem. In our model the same pattern appears when the screen reaches its smooth geometric limit, so the Lorentz group shows up as the geometry of modular flow on caps.
 
-The laws of physics look the same to all inertial observers because thermal states on wedge-shaped regions naturally evolve via boosts. The speed of light is universal because it is the conversion factor between temperature and acceleration built into the structure of quantum field theory.
+The laws of physics look the same to all inertial observers because thermal states on wedge-shaped regions naturally evolve via boosts. In the OPH program, the universal speed emerges when that modular-boost structure is carried over to the screen and then read back into bulk kinematics.
 
 ## 11.10 Testable Predictions and Verified Results
 
@@ -293,7 +293,7 @@ The emergent time model includes both rigorous mathematical results and testable
 
 **1. Unruh effect**: Accelerating observers see thermal radiation at T = ℏa/(2πk_B c). While direct detection is beyond current technology (requires acceleration ~10²⁰ m/s²), the Unruh effect is equivalent to Hawking radiation by the equivalence principle, and the mathematics is confirmed.
 
-**2. Jacobson's derivation**: If entropy ∝ area and temperature ∝ surface gravity, then Einstein's equations follow. This has been verified-every consistent attempt to combine thermodynamics with horizons yields general relativity.
+**2. Jacobson's derivation**: If entropy ∝ area and temperature ∝ surface gravity, then Einstein's equations can be recovered under specific thermodynamic assumptions. This is strong evidence for the thermodynamic route, but not a proof that every horizon-thermodynamics construction must reduce uniquely to GR.
 
 **3. Time-symmetric microscopic laws**: All fundamental interactions (electromagnetic, strong, weak except CP violation, gravitational) are invariant under time reversal. Confirmed to extraordinary precision.
 

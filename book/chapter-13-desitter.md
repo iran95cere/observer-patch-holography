@@ -69,21 +69,17 @@ In 1977, Gary Gibbons and Stephen Hawking proved that the cosmological horizon r
 
 $$T_{dS} = \frac{\hbar H}{2\pi k_B}$$
 
-For our universe, this is about 10^{-30} Kelvin-undetectable. But during inflation, when H was enormous, this temperature seeded the density fluctuations that became galaxies.
+For our universe, this is about 10^{-30} Kelvin-undetectable. During inflation, horizon-scale quantum fluctuations were stretched and later seeded structure formation; the de Sitter temperature is one thermodynamic way of characterizing that regime.
 
 ### Why This Temperature? The Unruh Connection
 
-The Gibbons-Hawking temperature is **exactly** the Unruh temperature for a static observer.
+The Gibbons-Hawking and Unruh formulas are closely related, but the identification has to be stated carefully.
 
-A static observer in de Sitter space-one who stays at fixed coordinates-is not in free fall. They must accelerate to resist the cosmological expansion that would otherwise carry them toward the horizon. Their proper acceleration is:
+A geodesic observer at the center of the static patch has zero proper acceleration, while a generic observer held at fixed radius has a radius-dependent proper acceleration. Near a horizon, the local de Sitter temperature reduces to the corresponding Unruh form:
 
-$$a = \frac{c}{\ell} = cH$$
+$$T_U = \frac{\hbar a}{2\pi c k_B}$$
 
-where ℓ = 1/H is the de Sitter radius. The Unruh temperature for this acceleration is:
-
-$$T_U = \frac{\hbar a}{2\pi c k_B} = \frac{\hbar H}{2\pi k_B} = T_{dS}$$
-
-**The Gibbons-Hawking temperature IS the Unruh temperature.** This is not a coincidence. Static observers in de Sitter space see the horizon as thermal because they're accelerating-just like accelerating observers in flat space see the vacuum as thermal.
+So the de Sitter and Unruh temperatures are locally linked, but they should not be identified by assigning every static-patch observer the same acceleration \(a = cH\).
 
 This has an important implication for our model: **de Sitter horizons automatically satisfy the same thermodynamic relations as Rindler horizons**. We don't need to prove this-Gibbons and Hawking already did.
 
@@ -91,11 +87,11 @@ This has an important implication for our model: **de Sitter horizons automatica
 
 If the horizon has temperature, it must have entropy:
 
-$$S_{dS} = \frac{A}{4G\hbar} = \frac{\pi}{GH^2} \approx 10^{122} \text{ bits}$$
+$$S_{dS} = \frac{A}{4G\hbar} = \frac{\pi}{G\hbar H^2}$$
 
-This is the **maximum entropy** of the observable universe-the logarithm of the number of quantum states that fit in our static patch.
+This is the entropy associated with one de Sitter static patch-the logarithm of the effective number of states accessible within that patch.
 
-This finite entropy has major implications. The universe is not infinite. It has a finite information capacity.
+This finite entropy has major implications. At minimum, an observer's accessible patch has finite information capacity. Stronger global-finiteness statements require additional assumptions.
 
 ### Why This Matters for Gravity
 
@@ -104,7 +100,7 @@ Jacobson's derivation of Einstein's equations requires that horizons have:
 2. Entropy proportional to area
 3. The first law of thermodynamics
 
-The Gibbons-Hawking theorem gives us all three for de Sitter horizons. In our model this supplies the calibration: we now know the temperature and entropy of the observer's horizon. Combined with the geometric time-flow and entanglement equilibrium from earlier chapters, this establishes Einstein's equation as a consequence of observer-patch consistency on the holographic screen.
+De Sitter thermodynamics supplies the temperature and area-entropy data needed for this route. In our model this is part of the calibration: combined with the geometric time-flow and entanglement-equilibrium steps from earlier chapters, it supports the emergence of Einstein's equation from observer-patch consistency on the holographic screen.
 
 ## 13.5 The Problem of Time in De Sitter
 
@@ -126,7 +122,7 @@ Where should we put the holographic screen in de Sitter?
 
 The natural answer: on the cosmological horizon.
 
-For an observer at r = 0, the horizon is a sphere at r = 1/H. This sphere has area 4 pi / H squared and entropy 10^{122} bits.
+For an observer at r = 0, the horizon is a sphere at r = 1/H. This sphere has area \(4\pi/H^2\) and entropy of order \(10^{122}\) in natural units, or \(10^{122}/\ln 2\) bits.
 
 The three-dimensional bulk inside the horizon is encoded holographically on the two-dimensional horizon.
 
@@ -171,7 +167,7 @@ Information sent toward the horizon gets thermalized, mixed with all the other q
 
 $$t_{scrambling} \sim \frac{1}{H}\ln S \sim \frac{280}{H}$$
 
-For our universe, this is about 4 trillion years. Black holes and de Sitter horizons both saturate the chaos bound-they're maximally chaotic.
+For our universe, this is about 4 trillion years. Black holes are the standard saturators of the chaos bound in holographic settings, and de Sitter is often discussed as a fast-scrambling horizon with analogous scaling.
 
 The smooth, empty appearance of the de Sitter vacuum is actually maximally scrambled information.
 
@@ -179,7 +175,7 @@ The smooth, empty appearance of the de Sitter vacuum is actually maximally scram
 
 String theory has difficulty producing stable de Sitter vacua.
 
-The **swampland derives** suggest that stable de Sitter vacua is impossible in consistent quantum gravity. If true, our universe is slowly rolling down a potential hill.
+Swampland arguments suggest that stable de Sitter vacua may be impossible in consistent quantum gravity. If true, our universe would be slowly rolling down a potential hill.
 
 Even if de Sitter vacua exist, why is Lambda so small (10^{-122} in Planck units)?
 
@@ -193,7 +189,7 @@ The picture so far:
 |---|---|---|
 | The universe is static or decelerating; gravity should slow expansion | 1998 supernova observations: the universe is accelerating; positive cosmological constant Lambda | De Sitter horizon is the natural holographic screen; the static patch is the observer's arena; finite entropy and horizon complementarity fit our model perfectly |
 
-**The key reverse engineering insight**: We started with the intuition that gravity should slow cosmic expansion. The 1998 supernova observations revealed by revealing the universe is accelerating-pushed apart by a positive cosmological constant. Our model explains why de Sitter space is natural: the cosmological horizon serves as the holographic screen. The static patch is the natural arena for observer physics. The finite entropy, observer-dependent time, and horizon complementarity all fit our observer-centric picture. Far from being a problem, de Sitter space is exactly what we should expect.
+**The key reverse engineering insight**: We started with the intuition that gravity should slow cosmic expansion. The 1998 supernova observations revealed that the universe is accelerating-pushed apart by a positive cosmological constant. Our model explains why de Sitter space is natural: the cosmological horizon serves as the holographic screen. The static patch is the natural arena for observer physics. The finite entropy, observer-dependent time, and horizon complementarity all fit our observer-centric picture. Far from being a problem, de Sitter space is exactly what we should expect.
 
 **Additional lessons**:
 
@@ -201,13 +197,13 @@ The picture so far:
 
 2. **Static Patch**: Each observer is bounded by a cosmological horizon at r = 1/H.
 
-3. **Gibbons-Hawking**: The horizon has temperature T = hbar H / (2 pi k_B) and entropy S = A / (4G).
+3. **Gibbons-Hawking**: The horizon has temperature \(T = \hbar H / (2\pi k_B)\) and entropy \(S = A / (4G\hbar)\).
 
-4. **Finite Universe**: Total entropy is approximately 10^{122} bits-finite, not infinite.
+4. **Finite Patch Entropy**: A de Sitter static patch carries entropy of order \(10^{122}\) in natural units, so an observer's accessible region has finite information capacity.
 
 5. **Horizon Complementarity**: No global quantum state; only patch-relative descriptions that must be consistent on overlaps.
 
-6. **Maximum Scrambling**: De Sitter saturates the chaos bound; information thermalizes as fast as quantum mechanics allows.
+6. **Fast Scrambling**: De Sitter is often discussed as a fast-scrambling horizon with scaling analogous to the black-hole case.
 
 7. **Swampland and Anthropics**: The small value of Lambda is selected anthropically or dynamically determined.
 
