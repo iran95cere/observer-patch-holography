@@ -20,5 +20,11 @@ def test_charged_central_split_transfer_extension_exposes_minimal_route() -> Non
     assert payload["artifact"] == "oph_charged_central_split_transfer_extension"
     assert payload["status"] == "proved_as_minimal_extension"
     assert payload["theorem"]["id"] == "central_split_quadratic_commutator_transfer"
-    assert payload["remaining_object_after_extension"]["id"] == "charged_absolute_anchor_A_ch"
+    assert payload["remaining_object_after_extension"]["id"] == "refinement_stable_uncentered_trace_lift"
+    assert payload["remaining_object_after_extension"]["exact_descended_scalar"]["id"] == (
+        "charged_physical_affine_scalar_mu"
+    )
+    assert payload["remaining_object_after_extension"]["exact_smaller_forcing_object"]["id"] == (
+        "charged_physical_identity_mode_equalizer"
+    )
     assert payload["local_numeric_promotion_test"]["sufficient_uniform_constant_bound"] > 100.0

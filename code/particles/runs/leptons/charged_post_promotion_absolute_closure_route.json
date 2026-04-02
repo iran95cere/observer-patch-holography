@@ -29,12 +29,13 @@
       "artifact": "oph_charged_uncentered_trace_lift_scaffold",
       "effect_on_fill": "induce_determinant_line_section_A_ch_and_absolute_charged_outputs",
       "exact_descended_scalar": "charged_physical_affine_scalar_mu",
+      "exact_smaller_forcing_object": "charged_physical_identity_mode_equalizer",
       "id": "refinement_stable_uncentered_trace_lift",
       "internal_carrier": "scalar_affine_cocycle_primitive",
       "required_contract": "one theorem-grade uncentered lift C_tilde_e = C_hat_e + mu I on physical Y_e or an equivalent determinant-line presentation"
     }
   ],
-  "generated_utc": "2026-04-01T16:12:58Z",
+  "generated_utc": "2026-04-02T01:48:59Z",
   "induced_once_post_promotion_slot_exists": {
     "absolute_outputs": {
       "Delta_e_abs": "log(g_ch_shared) - A_ch",
@@ -58,7 +59,8 @@
   "notes": [
     "This route artifact does not claim current-corpus closure.",
     "It sharpens only the theorem-facing frontier above the promoted operator surface.",
-    "The present corpus still lacks both the operator-promotion theorem and the post-promotion uncentered trace lift."
+    "The present corpus still lacks both the operator-promotion theorem and the post-promotion uncentered trace lift.",
+    "Beneath the descended physical scalar, the route now emits the smaller exact physical equalizer that canonically forces the affine mode."
   ],
   "operator_promotion_gate": {
     "candidate_object": "C_hat_e^{cand}",
@@ -73,8 +75,20 @@
     "exact_descended_scalar": {
       "artifact": "oph_charged_mu_physical_descent_reduction",
       "artifact_ref": "code/particles/runs/leptons/charged_mu_physical_descent_reduction.json",
+      "forcing_object": {
+        "artifact": "oph_charged_physical_identity_mode_equalizer",
+        "artifact_ref": "code/particles/runs/leptons/charged_physical_identity_mode_equalizer.json",
+        "id": "charged_physical_identity_mode_equalizer",
+        "kind": "fiberwise_zero_cocycle_certificate_on_theorem_grade_physical_Y_e"
+      },
       "id": "charged_physical_affine_scalar_mu",
       "kind": "single_affine_scalar_on_theorem_grade_physical_Y_e"
+    },
+    "exact_smaller_forcing_object": {
+      "artifact": "oph_charged_physical_identity_mode_equalizer",
+      "artifact_ref": "code/particles/runs/leptons/charged_physical_identity_mode_equalizer.json",
+      "id": "charged_physical_identity_mode_equalizer",
+      "kind": "fiberwise_zero_cocycle_certificate_on_theorem_grade_physical_Y_e"
     },
     "id": "refinement_stable_uncentered_trace_lift",
     "internal_carrier": "scalar_affine_cocycle_primitive",
@@ -108,13 +122,13 @@
   },
   "route_kind": "promotion_then_single_affine_mode_recovery",
   "status": "minimal_constructive_extension",
-  "summary": "The sharpened charged absolute route is two-stage: first promote the latent centered charged operator to theorem-grade C_hat_e, then supply one refinement-stable uncentered trace lift. The determinant-line section, A_ch, and the absolute charged outputs are induced once that second step exists.",
+  "summary": "The sharpened charged absolute route is two-stage: first promote the latent centered charged operator to theorem-grade C_hat_e, then supply one refinement-stable uncentered trace lift. Inside that second stage, the exact forcing core beneath mu_phys(Y_e) is the physical identity-mode equalizer.",
   "why_this_is_the_sharpest_route": [
     "On the current theorem surface A_ch is still absent, but after centered promotion it is no longer an independent post-promotion blocker.",
     "Promotion of C_hat_e alone still cannot emit mu_phys(Y_e), because centered operator data is common-shift invariant.",
     "The determinant-line section is induced by the refinement-stable uncentered trace lift, so there is no extra determinant trivialization theorem slot beyond that lift.",
     "Inside that lift slot, the residual ambiguity is only a scalar affine cocycle primitive, not a further matrix-valued transport theorem.",
-    "Because the lift is already required to be refinement-stable on theorem-grade physical Y_e, that primitive descends further to one physical affine scalar mu_phys(Y_e).",
-    "This is strictly sharper than treating eta, sigma, or a bare free A_ch as the next honest theorem-facing frontier."
+    "Because the lift is already required to be refinement-stable on theorem-grade physical Y_e, the exact forcing object beneath mu_phys(Y_e) is the fiberwise identity-mode equalizer delta(r,r') = 0 on common physical fibers.",
+    "Once that equalizer holds, mu_phys(Y_e), A_ch, and the determinant-line section are the canonical common-value readouts rather than extra independent theorem data."
   ]
 }

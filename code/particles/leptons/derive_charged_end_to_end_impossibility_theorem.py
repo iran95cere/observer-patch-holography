@@ -108,7 +108,9 @@ def build_artifact(
             "effect_if_internalized": "promote_C_hat_e_only",
             "non_sufficiency_for_absolute_scale": (
                 "Internalizing the central-split transfer extension would promote C_hat_e, "
-                "but it would still leave charged_absolute_anchor_A_ch open."
+                "but the remaining post-promotion burden would still be the refinement-stable "
+                "uncentered trace lift; beneath its descended scalar mu_phys(Y_e), the exact forcing "
+                "object is the physical identity-mode equalizer."
             ),
             "local_numeric_margin_if_extension_proved": transfer["local_numeric_promotion_test"],
         },
@@ -152,7 +154,7 @@ def build_artifact(
             "The exact minimal operator-side extension is the central_split_quadratic_commutator_transfer theorem.",
             "Even after that promotion step, centered operator data alone still cannot emit mu_phys(Y_e); the post-promotion centered-operator-only route is now explicitly ruled out.",
             "The sharpened post-promotion single slot is the refinement-stable uncentered trace lift, not a separate determinant-line trivialization theorem.",
-            "Inside that slot the scalar cocycle primitive descends further to one physical affine scalar mu_phys(Y_e) once refinement stability on theorem-grade physical Y_e is imposed.",
+            "Inside that slot the scalar cocycle primitive descends further to one physical affine scalar mu_phys(Y_e), and the exact forcing object beneath that scalar is the physical identity-mode equalizer on common physical fibers.",
             "The determinant-line section and charged absolute anchor A_ch are induced once that trace lift exists on theorem-grade physical Y_e.",
             "Measured charged masses and compare-only D12 absolute targets remain forbidden from theorem artifacts.",
         ],

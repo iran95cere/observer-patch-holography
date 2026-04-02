@@ -1,7 +1,7 @@
 {
   "artifact": "oph_charged_central_split_transfer_extension",
   "extension_kind": "minimal_theorem_extension",
-  "generated_utc": "2026-04-01T16:12:51Z",
+  "generated_utc": "2026-04-02T01:48:52Z",
   "live_bridge_alignment": {
     "bridge_strategy": "control the compression-descendant commutator after the central split",
     "candidate_id": "centered_branch_generator_commutator_transfer",
@@ -21,7 +21,8 @@
   },
   "notes": [
     "This is an extension route, not a theorem hidden in the current corpus.",
-    "Internalizing this route would promote C_hat_e^cand, but it would still not solve the affine common-shift breaker A_ch by itself."
+    "Internalizing this route would promote C_hat_e^cand, but the remaining post-promotion burden is still one uncentered trace-lift slot rather than a bare free A_ch.",
+    "Inside that post-promotion slot, the exact forcing object beneath mu_phys(Y_e) is the physical identity-mode equalizer delta(r,r') = 0 on common physical fibers."
   ],
   "promotion_effect_if_internalized": {
     "actual_generator_transfer_candidate": {
@@ -37,9 +38,29 @@
   },
   "public_promotion_allowed": false,
   "remaining_object_after_extension": {
-    "candidate_route": "charged_determinant_line_section",
-    "id": "charged_absolute_anchor_A_ch",
-    "required_contract": "A_ch(logm + c*(1,1,1)) = A_ch(logm) + c"
+    "artifact": "oph_charged_post_promotion_absolute_closure_route",
+    "artifact_ref": "code/particles/runs/leptons/charged_post_promotion_absolute_closure_route.json",
+    "candidate_route": "promotion_then_single_affine_mode_recovery",
+    "exact_descended_scalar": {
+      "artifact": "oph_charged_mu_physical_descent_reduction",
+      "artifact_ref": "code/particles/runs/leptons/charged_mu_physical_descent_reduction.json",
+      "id": "charged_physical_affine_scalar_mu",
+      "kind": "single_affine_scalar_on_theorem_grade_physical_Y_e"
+    },
+    "exact_smaller_forcing_object": {
+      "artifact": "oph_charged_physical_identity_mode_equalizer",
+      "artifact_ref": "code/particles/runs/leptons/charged_physical_identity_mode_equalizer.json",
+      "id": "charged_physical_identity_mode_equalizer",
+      "kind": "fiberwise_zero_cocycle_certificate_on_theorem_grade_physical_Y_e"
+    },
+    "id": "refinement_stable_uncentered_trace_lift",
+    "induced_data_once_filled": [
+      "charged_determinant_line_section",
+      "charged_absolute_anchor_A_ch",
+      "g_e",
+      "Delta_e_abs"
+    ],
+    "required_contract": "one theorem-grade uncentered lift C_tilde_e = C_hat_e + mu I on physical Y_e or an equivalent determinant-line presentation"
   },
   "status": "proved_as_minimal_extension",
   "theorem": {

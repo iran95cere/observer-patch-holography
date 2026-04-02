@@ -14,6 +14,7 @@ TRACE_LIFT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_
 DETERMINANT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_determinant_line_section_extension.py"
 ANCHOR_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_anchor_section.py"
 COCYCLE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_trace_lift_cocycle_reduction.py"
+EQUALIZER_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_physical_identity_mode_equalizer.py"
 DESCENT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_mu_physical_descent_reduction.py"
 NO_GO_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_centered_operator_mu_phys_no_go.py"
 ROUTE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_post_promotion_absolute_closure_route.py"
@@ -26,6 +27,7 @@ def test_charged_lane_is_not_end_to_end_closed_on_live_corpus() -> None:
     subprocess.run([sys.executable, str(DETERMINANT_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ANCHOR_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(COCYCLE_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(EQUALIZER_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(DESCENT_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(NO_GO_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ROUTE_SCRIPT)], check=True, cwd=ROOT)
@@ -48,6 +50,7 @@ def test_charged_lane_is_not_end_to_end_closed_on_live_corpus() -> None:
     assert payload["exact_irreducible_chain"][1]["id"] == "refinement_stable_uncentered_trace_lift"
     assert payload["exact_irreducible_chain"][1]["internal_carrier"] == "scalar_affine_cocycle_primitive"
     assert payload["exact_irreducible_chain"][1]["exact_descended_scalar"] == "charged_physical_affine_scalar_mu"
+    assert payload["exact_irreducible_chain"][1]["exact_smaller_forcing_object"] == "charged_physical_identity_mode_equalizer"
     assert payload["induced_after_irreducible_chain"]["charged_absolute_anchor"]["id"] == "charged_absolute_anchor_A_ch"
     assert payload["future_symbolic_forward_surface"]["if_A_ch_exists"]["g_e"] == "exp(A_ch)"
     assert "m_e" in payload["theorem_forbid_emit_now"]

@@ -63,6 +63,7 @@ def build_artifact(underdetermination: dict, route: dict) -> dict:
                     "internal_scalarization_artifact_ref"
                 ),
                 "exact_descended_scalar": post_promotion_slot.get("exact_descended_scalar"),
+                "exact_smaller_forcing_object": post_promotion_slot.get("exact_smaller_forcing_object"),
             },
             "induced_after_single_slot": induced,
         },
@@ -74,6 +75,9 @@ def build_artifact(underdetermination: dict, route: dict) -> dict:
             "current_surface_missing_object": underdetermination.get("next_exact_missing_object"),
             "post_promotion_single_slot": post_promotion_slot.get("id"),
             "post_promotion_exact_descended_scalar": post_promotion_slot.get("exact_descended_scalar", {}).get("id"),
+            "post_promotion_exact_smaller_forcing_object": post_promotion_slot.get(
+                "exact_smaller_forcing_object", {}
+            ).get("id"),
             "reduction_theorem_id": route.get("reduction_theorem", {}).get("id"),
         },
         "theorem_statement": (
@@ -90,7 +94,7 @@ def build_artifact(underdetermination: dict, route: dict) -> dict:
             "It exists to prevent mixing the current-surface no-go with the sharper post-promotion reduction route.",
             "The post-promotion slot is still a single slot, but it now has an exact scalar-cocycle carrier rather than a vague matrix-level ambiguity.",
             "A separate no-go is now explicit too: promotion of centered C_hat_e alone still cannot emit mu_phys(Y_e).",
-            "Under the refinement-stability clause already built into that slot, the remaining burden descends again to one physical affine scalar mu_phys(Y_e).",
+            "Under the refinement-stability clause already built into that slot, the remaining burden descends to one physical affine scalar mu_phys(Y_e), with the physical identity-mode equalizer as the exact smaller forcing object beneath it.",
             "Same-carrier eta/sigma residuals remain separate from this theorem-facing absolute-side factorization.",
         ],
     }

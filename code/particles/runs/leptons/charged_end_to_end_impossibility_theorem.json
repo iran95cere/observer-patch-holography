@@ -50,6 +50,7 @@
       "artifact": "oph_charged_uncentered_trace_lift_scaffold",
       "effect_on_fill": "induce_determinant_line_section_A_ch_and_absolute_charged_outputs",
       "exact_descended_scalar": "charged_physical_affine_scalar_mu",
+      "exact_smaller_forcing_object": "charged_physical_identity_mode_equalizer",
       "id": "refinement_stable_uncentered_trace_lift",
       "internal_carrier": "scalar_affine_cocycle_primitive",
       "required_contract": "one theorem-grade uncentered lift C_tilde_e = C_hat_e + mu I on physical Y_e or an equivalent determinant-line presentation"
@@ -64,7 +65,7 @@
       "m_tau": "exp(A_ch + tau_log_centered)"
     }
   },
-  "generated_utc": "2026-04-01T16:12:58Z",
+  "generated_utc": "2026-04-02T01:48:59Z",
   "induced_after_irreducible_chain": {
     "absolute_outputs": {
       "Delta_e_abs": "log(g_ch_shared) - A_ch",
@@ -100,7 +101,7 @@
       ],
       "sufficient_uniform_constant_bound": 119.5600535277701
     },
-    "non_sufficiency_for_absolute_scale": "Internalizing the central-split transfer extension would promote C_hat_e, but it would still leave charged_absolute_anchor_A_ch open.",
+    "non_sufficiency_for_absolute_scale": "Internalizing the central-split transfer extension would promote C_hat_e, but the remaining post-promotion burden would still be the refinement-stable uncentered trace lift; beneath its descended scalar mu_phys(Y_e), the exact forcing object is the physical identity-mode equalizer.",
     "status": "proved_as_minimal_extension"
   },
   "notes": [
@@ -108,7 +109,7 @@
     "The exact minimal operator-side extension is the central_split_quadratic_commutator_transfer theorem.",
     "Even after that promotion step, centered operator data alone still cannot emit mu_phys(Y_e); the post-promotion centered-operator-only route is now explicitly ruled out.",
     "The sharpened post-promotion single slot is the refinement-stable uncentered trace lift, not a separate determinant-line trivialization theorem.",
-    "Inside that slot the scalar cocycle primitive descends further to one physical affine scalar mu_phys(Y_e) once refinement stability on theorem-grade physical Y_e is imposed.",
+    "Inside that slot the scalar cocycle primitive descends further to one physical affine scalar mu_phys(Y_e), and the exact forcing object beneath that scalar is the physical identity-mode equalizer on common physical fibers.",
     "The determinant-line section and charged absolute anchor A_ch are induced once that trace lift exists on theorem-grade physical Y_e.",
     "Measured charged masses and compare-only D12 absolute targets remain forbidden from theorem artifacts."
   ],

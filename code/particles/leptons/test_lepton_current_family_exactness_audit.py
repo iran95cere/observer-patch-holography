@@ -23,6 +23,7 @@ TRACE_LIFT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_
 DETERMINANT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_determinant_line_section_extension.py"
 ANCHOR_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_anchor_section.py"
 COCYCLE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_trace_lift_cocycle_reduction.py"
+EQUALIZER_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_physical_identity_mode_equalizer.py"
 DESCENT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_mu_physical_descent_reduction.py"
 NO_GO_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_centered_operator_mu_phys_no_go.py"
 ROUTE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_post_promotion_absolute_closure_route.py"
@@ -46,6 +47,7 @@ def test_lepton_exactness_audit_identifies_common_shift_as_insufficient() -> Non
     subprocess.run([sys.executable, str(DETERMINANT_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ANCHOR_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(COCYCLE_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(EQUALIZER_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(DESCENT_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(NO_GO_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ROUTE_SCRIPT)], check=True, cwd=ROOT)

@@ -4,7 +4,7 @@
 This does not promote `C_hat_e^{cand}` on the live corpus. It records the
 smallest theorem extension identified by the worker bundles: a centered
 Schur-type P->Q->P transfer theorem with a refinement-uniform middle-factor
-bound.
+bound, together with the sharpened post-promotion residual slot.
 """
 
 from __future__ import annotations
@@ -19,6 +19,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 GENERATOR_JSON = ROOT / "particles" / "runs" / "flavor" / "generation_bundle_branch_generator.json"
 DEFAULT_OUT = ROOT / "particles" / "runs" / "flavor" / "charged_central_split_transfer_extension.json"
+POST_PROMOTION_ROUTE_REF = "code/particles/runs/leptons/charged_post_promotion_absolute_closure_route.json"
+PHYSICAL_DESCENT_REF = "code/particles/runs/leptons/charged_mu_physical_descent_reduction.json"
+PHYSICAL_EQUALIZER_REF = "code/particles/runs/leptons/charged_physical_identity_mode_equalizer.json"
 
 
 def _timestamp() -> str:
@@ -94,13 +97,37 @@ def build_artifact(generator: dict[str, Any]) -> dict[str, Any]:
             },
         },
         "remaining_object_after_extension": {
-            "id": "charged_absolute_anchor_A_ch",
-            "required_contract": "A_ch(logm + c*(1,1,1)) = A_ch(logm) + c",
-            "candidate_route": "charged_determinant_line_section",
+            "artifact": "oph_charged_post_promotion_absolute_closure_route",
+            "artifact_ref": POST_PROMOTION_ROUTE_REF,
+            "candidate_route": "promotion_then_single_affine_mode_recovery",
+            "id": "refinement_stable_uncentered_trace_lift",
+            "required_contract": (
+                "one theorem-grade uncentered lift C_tilde_e = C_hat_e + mu I on physical Y_e "
+                "or an equivalent determinant-line presentation"
+            ),
+            "exact_descended_scalar": {
+                "artifact": "oph_charged_mu_physical_descent_reduction",
+                "artifact_ref": PHYSICAL_DESCENT_REF,
+                "id": "charged_physical_affine_scalar_mu",
+                "kind": "single_affine_scalar_on_theorem_grade_physical_Y_e",
+            },
+            "exact_smaller_forcing_object": {
+                "artifact": "oph_charged_physical_identity_mode_equalizer",
+                "artifact_ref": PHYSICAL_EQUALIZER_REF,
+                "id": "charged_physical_identity_mode_equalizer",
+                "kind": "fiberwise_zero_cocycle_certificate_on_theorem_grade_physical_Y_e",
+            },
+            "induced_data_once_filled": [
+                "charged_determinant_line_section",
+                "charged_absolute_anchor_A_ch",
+                "g_e",
+                "Delta_e_abs",
+            ],
         },
         "notes": [
             "This is an extension route, not a theorem hidden in the current corpus.",
-            "Internalizing this route would promote C_hat_e^cand, but it would still not solve the affine common-shift breaker A_ch by itself.",
+            "Internalizing this route would promote C_hat_e^cand, but the remaining post-promotion burden is still one uncentered trace-lift slot rather than a bare free A_ch.",
+            "Inside that post-promotion slot, the exact forcing object beneath mu_phys(Y_e) is the physical identity-mode equalizer delta(r,r') = 0 on common physical fibers.",
         ],
     }
 

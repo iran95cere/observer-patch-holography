@@ -220,8 +220,8 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "leptons",
         "title": "Charged Leptons",
-        "summary": "The charged-lepton lane contains a closed exact same-family readout on the fixed ordered carrier, while the theorem-grade absolute lane narrows to one branch-generator clause and one post-promotion affine scalar.",
-        "takeaway": "One exact charged chain is already complete on its declared scope: shared excitation dictionary -> ordered charged carrier -> exact centered readback -> quadratic readout theorem -> exact same-family triple. The remaining theorem burden is the affine descent through `C_hat_e^{cand}` and then `mu_phys(Y_e)`.",
+        "summary": "The charged-lepton lane contains a closed exact same-family readout on the fixed ordered carrier, while the theorem-grade absolute lane narrows to one branch-generator clause and one post-promotion lift.",
+        "takeaway": "One exact charged chain is already complete on its declared scope: shared excitation dictionary -> ordered charged carrier -> exact centered readback -> quadratic readout theorem -> exact same-family triple. The remaining theorem burden is promotion through `C_hat_e^{cand}` and then the post-promotion lift whose descended scalar is `mu_phys(Y_e)`, with `charged_physical_identity_mode_equalizer` beneath that scalar.",
         "logic": (
             "The lane starts from the ordered charged package, proves that the realized support is a one-dimensional "
             "linear subray, exposes the canonical quadratic support-extension direction, maps that into the charged "
@@ -233,10 +233,10 @@ LANES: List[Dict[str, Any]] = [
             "`C_hat_e^{cand}`. Promoting it is blocked by the branch-generator splitting theorem and its "
             "commutator clause, and the local corpus proves neither exact vanishing nor uniform quadratic smallness of that descended commutator yet. The strongest new route is only an extension candidate: a centered Schur-type "
             "`P->Q->P` transfer theorem would promote the proxy bridge if a refinement-uniform middle-factor bound can be certified, with the current local proxy gap staying safe for about `M < 119.56`. On the absolute side the equalizer route is no-go under common-shift "
-            "symmetry, so the future slot is one affine-covariant absolute anchor `A_ch`. Conditional on theorem-grade centered promotion, the exact post-promotion burden descends further to the physical affine scalar `mu_phys(Y_e)`, from which the uncentered lift, determinant-line section, and affine anchor follow canonically."
+            "symmetry, so the future slot is the refinement-stable uncentered trace lift rather than a free affine anchor. Inside that lift, the exact smaller forcing object is `charged_physical_identity_mode_equalizer`, which forces the descended scalar `mu_phys(Y_e)` and then the determinant-line section and affine anchor."
         ),
-        "tasks_text": "Open task: search for the full charged closure chain first by proving `oph_generation_bundle_branch_generator_splitting`, reduced to `compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split`, and then deriving the descended physical affine scalar `mu_phys(Y_e)`. If that still fails, keep the layered frontier explicit rather than falling back to older fit language.",
-        "prediction_surface": "Charged theorem surface with exact centered readback, an exact same-family sidecar triple on the fixed ordered carrier, a common-shift no-go for the absolute scale, and a layered post-promotion route through `mu_phys(Y_e)` to the uncentered determinant-line lift and affine anchor.",
+        "tasks_text": "Open task: search for the full charged closure chain first by proving `oph_generation_bundle_branch_generator_splitting`, reduced to `compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split`, and then deriving the refinement-stable uncentered trace lift whose descended scalar is `mu_phys(Y_e)`, with `charged_physical_identity_mode_equalizer` as the exact smaller forcing object beneath that scalar. If that still fails, keep the layered frontier explicit rather than falling back to older fit language.",
+        "prediction_surface": "Charged theorem surface with exact centered readback, an exact same-family sidecar triple on the fixed ordered carrier, a common-shift no-go for the absolute scale, and a layered post-promotion route through the uncentered trace lift, `charged_physical_identity_mode_equalizer`, and `mu_phys(Y_e)` to the determinant-line section and affine anchor.",
         "particles": ["electron", "muon", "tau"],
         "tasks": [
             "papers.compact.e.29-derive-the-yukawa-excitation-dictionary",
@@ -1308,7 +1308,7 @@ def build_svg(results: Dict[str, Any], tasks: Dict[str, Dict[str, Any]], exact_b
         "Start with the OPH axioms plus the declared live scalar P and the extra input surface used by the neutrino estimate lane.",
         "Then read each lane from top to bottom: what the lane already does, what is still missing, what prediction surface it produces, and which particle rows are currently publishable.",
         f"The badge reports {closedish} of {total_rows} tracked rows above continuation / simulation status. In plain terms: those are the rows that are already beyond the merely exploratory stage.",
-        "The broader UV/BW premise boundary still sits above the particle lanes. Three cap-pair extraction witnesses are already explicit on disk; the remaining local gap is now sharper: on the local-Gibbs pullback branch the Markov/recovery side is already latent, so the live missing clause inside the fixed-local-collar Markov/faithfulness datum is the eventual lower spectral bound feeding the faithful modular-defect term, after which ordered null cut-pair rigidity remains.",
+        "The broader UV/BW premise boundary still sits above the particle lanes. Three cap-pair extraction witnesses are already explicit on disk; the remaining local gap is sharper too: on the local-Gibbs pullback branch the Markov/recovery side is already latent, so the live missing clause inside the fixed-local-collar Markov/faithfulness datum is `eventual_fixed_local_collar_common_floor_on_modular_transport_marginals`, the common eventual floor on the finitely many modular-transport marginals feeding the faithful modular-defect term, after which ordered null cut-pair rigidity remains.",
     ]
     scaffold_h = estimate_box_height(
         title="How to read the mass derivation chart",

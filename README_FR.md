@@ -68,7 +68,7 @@ L'OPH est un programme de reconstruction. Espace-temps, structure de jauge, part
 
 ### Résumé bref des écarts restants
 
-Les écarts restants sont étroits et explicites : les leptons chargés attendent `C_hat_e^{cand}` et `mu_phys(Y_e)`, les quarks attendent la loi scalaire `quark_d12_t1_value_law` sur le rayon de masse D12 sélectionné, avec `intrinsic_scale_law_D12` comme enveloppe dérivée, les neutrinos attendent `C_nu`, et les hadrons attendent le bundle backend de production et les systématiques complètes.
+Les écarts restants sont étroits et explicites : les leptons chargés attendent `C_hat_e^{cand}` et la levée post-promotion dont le scalaire descendu est `mu_phys(Y_e)`, avec `charged_physical_identity_mode_equalizer` comme plus petit objet forçant sous ce scalaire ; les quarks attendent la loi scalaire `quark_d12_t1_value_law` sur le rayon de masse D12 sélectionné, avec `intrinsic_scale_law_D12` comme enveloppe dérivée ; les neutrinos attendent `C_nu` ; et les hadrons attendent le bundle backend de production et les systématiques complètes.
 
 ## Articles
 

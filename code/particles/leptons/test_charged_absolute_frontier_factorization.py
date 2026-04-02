@@ -15,6 +15,7 @@ TRACE_LIFT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_
 DETERMINANT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_determinant_line_section_extension.py"
 ANCHOR_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_absolute_anchor_section.py"
 COCYCLE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_uncentered_trace_lift_cocycle_reduction.py"
+EQUALIZER_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_physical_identity_mode_equalizer.py"
 DESCENT_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_mu_physical_descent_reduction.py"
 NO_GO_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_centered_operator_mu_phys_no_go.py"
 ROUTE_SCRIPT = ROOT / "particles" / "leptons" / "derive_charged_post_promotion_absolute_closure_route.py"
@@ -28,6 +29,7 @@ def test_charged_absolute_frontier_factorization() -> None:
     subprocess.run([sys.executable, str(DETERMINANT_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ANCHOR_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(COCYCLE_SCRIPT)], check=True, cwd=ROOT)
+    subprocess.run([sys.executable, str(EQUALIZER_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(DESCENT_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(NO_GO_SCRIPT)], check=True, cwd=ROOT)
     subprocess.run([sys.executable, str(ROUTE_SCRIPT)], check=True, cwd=ROOT)
@@ -48,7 +50,13 @@ def test_charged_absolute_frontier_factorization() -> None:
     assert payload["post_promotion_layer"]["irreducible_single_slot"]["exact_descended_scalar"]["id"] == (
         "charged_physical_affine_scalar_mu"
     )
+    assert payload["post_promotion_layer"]["irreducible_single_slot"]["exact_smaller_forcing_object"]["id"] == (
+        "charged_physical_identity_mode_equalizer"
+    )
     assert payload["frontier_ledger"]["post_promotion_exact_descended_scalar"] == "charged_physical_affine_scalar_mu"
+    assert payload["frontier_ledger"]["post_promotion_exact_smaller_forcing_object"] == (
+        "charged_physical_identity_mode_equalizer"
+    )
     assert payload["post_promotion_layer"]["promotion_only_no_go"]["theorem_id"] == (
         "charged_centered_operator_cannot_emit_mu_phys"
     )

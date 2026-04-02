@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Shrink the charged post-promotion scalar slot to one physical affine scalar."""
+"""Shrink the charged post-promotion scalar slot to one physical affine scalar.
+
+This emitter also records the exact smaller forcing object beneath the
+descended scalar: the physical identity-mode equalizer on common physical
+fibers.
+"""
 
 from __future__ import annotations
 
@@ -11,6 +16,7 @@ from pathlib import Path
 from charged_absolute_route_common import (
     ANCHOR_SECTION_JSON,
     DETERMINANT_LINE_JSON,
+    PHYSICAL_EQUALIZER_JSON,
     TRACE_LIFT_COCYCLE_JSON,
     TRACE_LIFT_JSON,
     TRACE_LIFT_PHYSICAL_DESCENT_JSON,
@@ -27,8 +33,23 @@ def _timestamp() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def build_artifact(trace_lift: dict, cocycle: dict, determinant_line: dict, anchor: dict) -> dict:
+def build_artifact(
+    trace_lift: dict,
+    cocycle: dict,
+    determinant_line: dict,
+    anchor: dict,
+    physical_equalizer: dict,
+) -> dict:
     descent_contract = trace_lift_physical_descent_contract()
+    descent_contract["smaller_forcing_object"] = physical_equalizer.get(
+        "exact_smaller_forcing_object",
+        "charged_physical_identity_mode_equalizer",
+    )
+    descent_contract["smaller_forcing_rule"] = physical_equalizer.get(
+        "equalizer_contract",
+        {},
+    ).get("fiber_rule")
+
     return {
         "artifact": "oph_charged_mu_physical_descent_reduction",
         "generated_utc": _timestamp(),
@@ -38,6 +59,18 @@ def build_artifact(trace_lift: dict, cocycle: dict, determinant_line: dict, anch
         "larger_missing_object_artifact_ref": artifact_ref(TRACE_LIFT_JSON),
         "exact_smaller_missing_object": descent_contract["exact_smaller_missing_object"],
         "exact_smaller_missing_object_kind": "single_affine_scalar_on_theorem_grade_physical_Y_e",
+        "exact_smaller_forcing_object": {
+            "id": physical_equalizer.get(
+                "exact_smaller_forcing_object",
+                "charged_physical_identity_mode_equalizer",
+            ),
+            "artifact": physical_equalizer.get("artifact"),
+            "artifact_ref": artifact_ref(PHYSICAL_EQUALIZER_JSON),
+            "kind": physical_equalizer.get(
+                "exact_smaller_forcing_object_kind",
+                "fiberwise_zero_cocycle_certificate_on_theorem_grade_physical_Y_e",
+            ),
+        },
         "descent_contract": descent_contract,
         "input_scalarization_artifact_ref": artifact_ref(TRACE_LIFT_COCYCLE_JSON),
         "reduction_theorem": {
@@ -48,7 +81,8 @@ def build_artifact(trace_lift: dict, cocycle: dict, determinant_line: dict, anch
                 "Then the refinement identity-mode cocycle vanishes on every pair of refinement representatives "
                 "of the same physical Y_e, so mu descends to a unique physical scalar mu_phys(Y_e). Conversely, "
                 "any such mu_phys defines the uncentered lift, determinant-line section, and affine anchor by "
-                "C_tilde_e = C_hat_e + mu_phys I, s_det = 3 mu_phys, and A_ch = mu_phys."
+                "C_tilde_e = C_hat_e + mu_phys I, s_det = 3 mu_phys, and A_ch = mu_phys. This fiberwise "
+                "zero-cocycle certificate is the exact smaller forcing object beneath mu_phys(Y_e)."
             ),
         },
         "forced_vanishing": {
@@ -78,8 +112,8 @@ def build_artifact(trace_lift: dict, cocycle: dict, determinant_line: dict, anch
         },
         "why_this_is_smaller": [
             "The family-wise scalar primitive mu(r) is only needed before refinement stability is imposed.",
-            "Once the lift is required to live on theorem-grade physical Y_e, the refinement cocycle is forced to vanish.",
-            "The remaining exact burden is therefore one physical affine scalar, not a refinement-family primitive.",
+            "The exact forcing object beneath mu_phys(Y_e) is the physical identity-mode equalizer delta(r,r') = 0 on each physical fiber.",
+            "Once that equalizer holds, mu_phys(Y_e) is only the common value of mu(r) on the fiber, not an extra independent theorem slot.",
         ],
         "do_not_claim_now": [
             "theorem-grade mu_phys(Y_e) on the live corpus",
@@ -89,6 +123,7 @@ def build_artifact(trace_lift: dict, cocycle: dict, determinant_line: dict, anch
         "notes": [
             "This sharpens the post-promotion frontier only under the same refinement-stability contract already required by the lift scaffold.",
             "It does not promote current-corpus closure or bypass the upstream C_hat_e promotion theorem.",
+            "The exact smaller forcing object beneath the descended scalar is emitted separately as the physical identity-mode equalizer.",
         ],
     }
 
@@ -101,6 +136,7 @@ def main() -> int:
     parser.add_argument("--cocycle-reduction", default=str(TRACE_LIFT_COCYCLE_JSON))
     parser.add_argument("--determinant-line", default=str(DETERMINANT_LINE_JSON))
     parser.add_argument("--anchor-section", default=str(ANCHOR_SECTION_JSON))
+    parser.add_argument("--physical-equalizer", default=str(PHYSICAL_EQUALIZER_JSON))
     parser.add_argument("--output", default=str(DEFAULT_OUT))
     args = parser.parse_args()
 
@@ -109,6 +145,7 @@ def main() -> int:
         load_json(Path(args.cocycle_reduction)),
         load_json(Path(args.determinant_line)),
         load_json(Path(args.anchor_section)),
+        load_json(Path(args.physical_equalizer)),
     )
 
     out_path = Path(args.output)

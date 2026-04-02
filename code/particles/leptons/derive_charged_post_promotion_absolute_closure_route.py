@@ -13,6 +13,7 @@ from charged_absolute_route_common import (
     CENTERED_OPERATOR_MU_NO_GO_JSON,
     DETERMINANT_LINE_JSON,
     GENERATION_BUNDLE_JSON,
+    PHYSICAL_EQUALIZER_JSON,
     POST_PROMOTION_ROUTE_JSON,
     TRACE_LIFT_COCYCLE_JSON,
     TRACE_LIFT_PHYSICAL_DESCENT_JSON,
@@ -32,6 +33,7 @@ def build_artifact(
     underdetermination: dict,
     trace_lift: dict,
     physical_descent: dict,
+    physical_equalizer: dict,
     centered_operator_no_go: dict,
     determinant_line: dict,
     anchor: dict,
@@ -41,6 +43,18 @@ def build_artifact(
     compare = dict(underdetermination.get("compare_only_continuation_target", {}))
     hard_reject = dict(underdetermination.get("hard_reject", {}))
     trace_contract = dict(trace_lift.get("contract", {}))
+    forcing_object = {
+        "id": physical_equalizer.get(
+            "exact_smaller_forcing_object",
+            "charged_physical_identity_mode_equalizer",
+        ),
+        "artifact": physical_equalizer.get("artifact"),
+        "artifact_ref": artifact_ref(PHYSICAL_EQUALIZER_JSON),
+        "kind": physical_equalizer.get(
+            "exact_smaller_forcing_object_kind",
+            "fiberwise_zero_cocycle_certificate_on_theorem_grade_physical_Y_e",
+        ),
+    }
 
     return {
         "artifact": "oph_charged_post_promotion_absolute_closure_route",
@@ -51,8 +65,8 @@ def build_artifact(
         "summary": (
             "The sharpened charged absolute route is two-stage: first promote the latent "
             "centered charged operator to theorem-grade C_hat_e, then supply one "
-            "refinement-stable uncentered trace lift. The determinant-line section, A_ch, "
-            "and the absolute charged outputs are induced once that second step exists."
+            "refinement-stable uncentered trace lift. Inside that second stage, the exact "
+            "forcing core beneath mu_phys(Y_e) is the physical identity-mode equalizer."
         ),
         "operator_promotion_gate": {
             "candidate_object": charged_candidate.get("name", "C_hat_e^{cand}"),
@@ -92,7 +106,9 @@ def build_artifact(
                 "artifact": physical_descent.get("artifact"),
                 "artifact_ref": artifact_ref(TRACE_LIFT_PHYSICAL_DESCENT_JSON),
                 "kind": physical_descent.get("exact_smaller_missing_object_kind"),
+                "forcing_object": forcing_object,
             },
+            "exact_smaller_forcing_object": forcing_object,
         },
         "promotion_only_no_go": {
             "artifact": centered_operator_no_go.get("artifact"),
@@ -119,6 +135,7 @@ def build_artifact(
                 "required_contract": trace_contract.get("must_emit"),
                 "internal_carrier": "scalar_affine_cocycle_primitive",
                 "exact_descended_scalar": physical_descent.get("exact_smaller_missing_object"),
+                "exact_smaller_forcing_object": forcing_object["id"],
                 "effect_on_fill": "induce_determinant_line_section_A_ch_and_absolute_charged_outputs",
             },
         ],
@@ -148,8 +165,8 @@ def build_artifact(
             "Promotion of C_hat_e alone still cannot emit mu_phys(Y_e), because centered operator data is common-shift invariant.",
             "The determinant-line section is induced by the refinement-stable uncentered trace lift, so there is no extra determinant trivialization theorem slot beyond that lift.",
             "Inside that lift slot, the residual ambiguity is only a scalar affine cocycle primitive, not a further matrix-valued transport theorem.",
-            "Because the lift is already required to be refinement-stable on theorem-grade physical Y_e, that primitive descends further to one physical affine scalar mu_phys(Y_e).",
-            "This is strictly sharper than treating eta, sigma, or a bare free A_ch as the next honest theorem-facing frontier.",
+            "Because the lift is already required to be refinement-stable on theorem-grade physical Y_e, the exact forcing object beneath mu_phys(Y_e) is the fiberwise identity-mode equalizer delta(r,r') = 0 on common physical fibers.",
+            "Once that equalizer holds, mu_phys(Y_e), A_ch, and the determinant-line section are the canonical common-value readouts rather than extra independent theorem data.",
         ],
         "do_not_promote": [
             "eta_source_support_extension_log_per_side",
@@ -168,6 +185,7 @@ def build_artifact(
             "This route artifact does not claim current-corpus closure.",
             "It sharpens only the theorem-facing frontier above the promoted operator surface.",
             "The present corpus still lacks both the operator-promotion theorem and the post-promotion uncentered trace lift.",
+            "Beneath the descended physical scalar, the route now emits the smaller exact physical equalizer that canonically forces the affine mode.",
         ],
     }
 
@@ -178,6 +196,7 @@ def main() -> int:
     parser.add_argument("--underdetermination", default=str(UNDERDETERMINATION_JSON))
     parser.add_argument("--trace-lift", default=str(TRACE_LIFT_JSON))
     parser.add_argument("--physical-descent", default=str(TRACE_LIFT_PHYSICAL_DESCENT_JSON))
+    parser.add_argument("--physical-equalizer", default=str(PHYSICAL_EQUALIZER_JSON))
     parser.add_argument("--centered-operator-no-go", default=str(CENTERED_OPERATOR_MU_NO_GO_JSON))
     parser.add_argument("--determinant-line", default=str(DETERMINANT_LINE_JSON))
     parser.add_argument("--anchor-section", default=str(ANCHOR_SECTION_JSON))
@@ -189,6 +208,7 @@ def main() -> int:
         load_json(Path(args.underdetermination)),
         load_json(Path(args.trace_lift)),
         load_json(Path(args.physical_descent)),
+        load_json(Path(args.physical_equalizer)),
         load_json(Path(args.centered_operator_no_go)),
         load_json(Path(args.determinant_line)),
         load_json(Path(args.anchor_section)),

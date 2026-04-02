@@ -17,6 +17,7 @@ UNDERDETERMINATION_JSON = RUNS_DIR / "charged_absolute_scale_underdetermination_
 TRACE_LIFT_JSON = RUNS_DIR / "charged_uncentered_trace_lift_scaffold.json"
 TRACE_LIFT_COCYCLE_JSON = RUNS_DIR / "charged_uncentered_trace_lift_cocycle_reduction.json"
 TRACE_LIFT_PHYSICAL_DESCENT_JSON = RUNS_DIR / "charged_mu_physical_descent_reduction.json"
+PHYSICAL_EQUALIZER_JSON = RUNS_DIR / "charged_physical_identity_mode_equalizer.json"
 CENTERED_OPERATOR_MU_NO_GO_JSON = RUNS_DIR / "charged_centered_operator_mu_phys_no_go.json"
 DETERMINANT_LINE_JSON = RUNS_DIR / "charged_determinant_line_section_extension.json"
 ANCHOR_SECTION_JSON = RUNS_DIR / "charged_absolute_anchor_section.json"
