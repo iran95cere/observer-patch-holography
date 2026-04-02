@@ -24,7 +24,7 @@ But black holes are different. Their information lives on the surface:
 
 $$S_{BH} = \frac{k_B c^3}{4 G \hbar} A = \frac{A}{4 l_P^2}$$
 
-Black hole entropy is one bit per four Planck areas of the horizon.
+In entropy units, black hole entropy is \(A/(4l_P^2)\); in bits this becomes \(A/(4l_P^2 \ln 2)\).
 
 ### The Bekenstein Bound
 
@@ -34,13 +34,17 @@ Lower a box of entropy toward a black hole on a rope. As it approaches the horiz
 
 This would violate the second law of thermodynamics-unless the black hole gains enough entropy to compensate. But how much entropy can the box hold?
 
-If you try to pack too much entropy into a small region, the energy required creates a black hole. The maximum entropy you can fit into a region of radius R is:
+If you try to pack too much entropy into a small region, the energy required creates a black hole. The black-hole saturation scaling is:
 
-$$S_{max} \sim \frac{R^2}{l_P^2}$$
+$$S_{BH} \sim \frac{R^2}{l_P^2}$$
 
 -proportional to the area, not the volume.
 
-This is the **Bekenstein bound**. It's a universal limit on information storage, enforced by gravity itself.
+The original **Bekenstein bound** is
+
+$$S \leq \frac{2\pi R E}{\hbar c}$$
+
+and black-hole saturation is what turns that pressure into the familiar area law. Together they show that gravity pushes information storage toward boundary scaling.
 
 ### The Holographic Principle
 
@@ -264,7 +268,7 @@ Now reduce the entanglement. As you dial down the correlations between the two C
 
 Einstein and Rosen studied wormholes (ER bridges) in 1935. Einstein, Podolsky, and Rosen studied entanglement (EPR pairs) in 1935. For eighty years, no one connected them.
 
-In 2013, Maldacena and Susskind proposed: **ER = EPR**. Wormholes and entanglement are the same thing.
+In 2013, Maldacena and Susskind proposed: **ER = EPR**. In the right holographic settings, wormholes and entanglement can be read as two descriptions of the same underlying connectivity.
 
 Every EPR pair-every entangled pair of particles-is connected by a tiny, non-traversable wormhole. The wormhole is too small and too quantum to send messages through, but it's there in the geometry. Entanglement IS geometric connection.
 
@@ -403,7 +407,7 @@ The pattern:
 |---|---|---|
 | Information fills volume; more space means more storage | Bekenstein-Hawking entropy: black hole information scales with surface area, not volume; the holographic principle | Boundaries are consistency ledgers; the bulk is reconstructed from boundary data; 3D space emerges from 2D encoding |
 
-**The key reverse engineering insight**: We started with the intuition that information capacity should scale with volume-bigger containers hold more stuff. Black holes revealed by revealing that their entropy scales with area, not volume. 't Hooft and Susskind generalized this to the holographic principle: all physics in a volume can be encoded on its boundary. Our model explains why: boundaries serve as consistency ledgers where observers compare notes. The bulk is not fundamental storage-it's derived from boundary data. AdS/CFT provides a precise, calculable example of this principle in action.
+**The key reverse engineering insight**: We started with the intuition that information capacity should scale with volume-bigger containers hold more stuff. Black holes revealed that their entropy scales with area, not volume. 't Hooft and Susskind generalized this to the holographic principle: all physics in a volume can be encoded on its boundary. Our model explains why: boundaries serve as consistency ledgers where observers compare notes. The bulk is not fundamental storage-it's derived from boundary data. AdS/CFT provides a precise, calculable example of this principle in action.
 
 **Additional lessons**:
 
@@ -425,4 +429,4 @@ The pattern:
 
 We've seen that boundaries can encode bulks. But what actually weaves the bulk together? What makes one point "close" to another? The answer is entanglement-the quantum correlations we've encountered throughout this book.
 
-In the next chapter, we zoom in on the main glue of the bulk: entanglement. We'll see how the Ryu-Takayanagi formula extends to dynamics, how cutting entanglement can tear space apart, and how the ER=EPR derive shows that spacetime itself is woven from quantum correlations.
+In the next chapter, we zoom in on the main glue of the bulk: entanglement. We'll see how the Ryu-Takayanagi formula extends to dynamics, how cutting entanglement can tear space apart, and how ER=EPR points toward spacetime being woven from quantum correlations.

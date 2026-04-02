@@ -63,7 +63,7 @@ The representations are labeled by angular momentum l = 0, 1, 2, ...:
 - **l = 1 (Vector)**: Transforms like an arrow. Three components. Examples: the photon.
 - **l = 2 (Tensor)**: Transforms like a stress matrix. Five components. Example: the graviton.
 
-This explains a deep fact: **particles have discrete spin values**. It's geometry. To exist on a sphere, a field must transform as a spherical harmonic Y_{lm}. Spherical harmonics are labeled by integers. Therefore spin is quantized.
+This explains part of the angular-momentum story: fields on the sphere decompose into discrete angular modes because spherical harmonics are labeled by integers. Intrinsic spin is a separate representation-theoretic input, which for fermions enters through the spinor and double-cover structure discussed next.
 
 ## 12.5 The Spinor Mystery
 
@@ -223,7 +223,7 @@ The symmetry-consistency model includes both rigorous mathematical results and t
 
 **Testable predictions**:
 
-**1. Conservation laws hold**: If symmetries are consistency requirements, then conservation of energy, momentum, and charge must be exact. Any violation identifies a measurement contradiction with both the symmetry and the model. Precision: energy conservation tested to 1 part in 10^18.
+**1. Conservation laws hold**: If symmetries are consistency requirements, then the associated local conservation laws must hold. Charge conservation is exact within the Standard Model, while energy-momentum conservation in gravity is expressed locally through covariant conservation rather than as a universal global scalar in arbitrary spacetimes.
 
 **2. CPT invariance is unbreakable**: CPT symmetry (combined charge-parity-time reversal) must hold in any Lorentz-invariant local quantum field theory. No CPT violation has ever been observed. Precision: tested to 1 part in 10^18 in kaon systems.
 
@@ -244,7 +244,7 @@ Summary:
 |---|---|---|
 | Symmetries are aesthetic choices; the universe happens to be symmetric | Noether's theorem: every continuous symmetry corresponds to a conservation law; symmetries are not optional | Symmetries are consistency requirements; they provide the translation manual that makes different observers' measurements compatible |
 
-**The key reverse engineering insight**: We started with the intuition that symmetries are aesthetic preferences-the universe could have been asymmetric. Noether's theorem demonstrated by revealing that symmetries are inextricably linked to conservation laws. Our model explains why: symmetries are consistency requirements. They're the grammar that lets different observers translate between their viewpoints. Without rotational symmetry, observers facing different directions couldn't agree on physics. Without time translation symmetry, physics today couldn't be compared to physics yesterday. Conservation laws are the bookkeeping of agreement.
+**The key reverse engineering insight**: We started with the intuition that symmetries are aesthetic preferences-the universe could have been asymmetric. Noether's theorem showed that symmetries are inextricably linked to conservation laws. Our model explains why: symmetries are consistency requirements. They're the grammar that lets different observers translate between their viewpoints. Without rotational symmetry, observers facing different directions couldn't agree on physics. Without time-translation symmetry, physics today couldn't be compared to physics yesterday. Conservation laws are the bookkeeping of agreement.
 
 **Additional lessons**:
 

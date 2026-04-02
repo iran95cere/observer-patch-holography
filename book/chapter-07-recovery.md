@@ -96,7 +96,7 @@ Here's the simplest example. Instead of sending a single bit (0 or 1), send it t
 
 Now suppose noise flips one bit. You receive "010." Majority vote says the original was "0"-two zeros versus one one. The information survives.
 
-This seems obvious, but Shannon proved something surprising: every noisy channel has a **capacity**-a maximum rate at which you can send information reliably. If you send slower than capacity, you can achieve *perfect* reliability. Not just pretty-good reliability. Perfect.
+This seems obvious, but Shannon proved something surprising: every noisy channel has a **capacity**-a maximum rate at which you can send information reliably. If you send slower than capacity, there exist codes whose error rate can be made arbitrarily small.
 
 The trick is clever encoding. Spread information across many symbols in subtle patterns. The receiver can reconstruct the original even when individual symbols are corrupted, because the patterns survive even when specific symbols don't.
 
@@ -260,7 +260,7 @@ Similarly, S(BC) = 1 bit and S(B) = 1 bit.
 So:
 $$I(A:C|B) = S(AB) + S(BC) - S(B) - S(ABC) = 1 + 1 - 1 - 0 = 1$$
 
-The GHZ state has maximal conditional mutual information. B doesn't screen A from C at all. The correlation between A and C is genuinely tripartite-you need all three systems to see it.
+The GHZ state has nonzero, genuinely tripartite conditional mutual information. B doesn't screen A from C at all. The correlation between A and C is genuinely tripartite-you need all three systems to see it.
 
 This means you can't recover C from B alone. The GHZ state is non-Markov.
 
@@ -348,18 +348,18 @@ For decades, no one could derive this from first principles. The Page curve was 
 
 ### The Recovery Perspective
 
-The recovery rule explains the Page curve naturally.
+The recovery rule gives a useful recoverability-language reading of the Page curve.
 
 Label the systems:
 - A: information thrown into the black hole (Alice's diary)
 - B: early Hawking radiation
 - C: late Hawking radiation
 
-Initially, B is small. The bound I(A:C|B) less than or equal to kappa times |partial B| over l_P is loose. A and C can be highly correlated independently of B.
+Initially, B is small. The collected radiation is not yet large enough to decode the diary information carried jointly by the full evaporation state.
 
-As time passes, B grows. More radiation is emitted. The boundary |partial B| increases.
+As time passes, B grows. More radiation is emitted, and the correlations needed for decoding become increasingly accessible in the radiation subsystem.
 
-At Page time, B becomes large enough to screen A from C effectively. The conditional mutual information I(A:C|B) drops.
+Around Page time, the radiation becomes large enough that late quanta are tightly constrained by correlations with the early radiation. In that sense, recoverability from the radiation improves sharply.
 
 After Page time, C can be approximately recovered from B. The diary's information is in the radiation-encrypted, scrambled, but present.
 
@@ -447,11 +447,11 @@ None of these contradicting observations has ever been made.
 
 The recovery rule has a startling implication: nothing is ever truly lost.
 
-If the universe is unitary and holographic encoding is robust, every piece of information that ever existed is still encoded *somewhere*-in the correlations of outgoing radiation, in the quantum state of the cosmic horizon, in the patterns of the cosmic microwave background.
+If the universe is unitary and holographic encoding is robust, information is not simply destroyed; it is redistributed into increasingly nonlocal correlations of the full quantum state.
 
 The Library of Alexandria? The scrolls burned, but the information scrambled into smoke, heat, and light. That radiation spread across the cosmos at light speed. It's now diluted across an unimaginably vast region of space-but it's still there. In principle, with a computer the size of the observable universe, you could run the Petz map and watch the smoke reconstitute into Sophocles.
 
-We already use weak versions of this. Paleontology recovers information about creatures from millions of years ago-from fossils, the degraded remnants of organisms. Astronomy observes light from billions of years ago-information that traveled across the universe to reach our telescopes. The cosmic microwave background is a snapshot of the universe when it was 380,000 years old-information preserved in radiation.
+We already use weak versions of this. Paleontology recovers information about creatures from millions of years ago-from fossils, the degraded remnants of organisms. Astronomy observes light from billions of years ago-information that traveled across the universe to reach our telescopes. The cosmic microwave background is one vivid example of very old information preserved in radiation.
 
 The recovery rule says this is not accident or luck. It's fundamental. The past is encoded in the present, always.
 
@@ -485,7 +485,7 @@ What we found:
 
 4. **Local Recoverability**: The universe is a Markov network. Boundaries screen interiors. Nearby regions carry redundant information. Lost data can be reconstructed.
 
-5. **Shannon's Channel Capacity**: Every noisy channel has a capacity below which perfect reliability is achievable through redundant encoding.
+5. **Shannon's Channel Capacity**: Every noisy channel has a capacity below which arbitrarily reliable transmission is achievable through redundant encoding.
 
 6. **Strong Subadditivity**: Conditional mutual information is never negative-B can only help, never hurt, when recovering correlations.
 

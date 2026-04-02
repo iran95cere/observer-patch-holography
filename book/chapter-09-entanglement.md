@@ -124,15 +124,15 @@ Entanglement is real and irreducible. The correlations are stronger than any cla
 
 Bell showed that classical correlations are bounded. But why doesn't nature allow even stronger correlations?
 
-Imagine "super-quantum" correlations that saturate the algebraic maximum of S = 4. Such correlations would allow instant communication or trivialize computational complexity-they would break physics as we know it.
+Imagine "super-quantum" correlations that saturate the algebraic maximum of S = 4. Even if they still obey no-signaling, they would trivialize tasks like communication complexity and sit uneasily with the information-processing structure of ordinary quantum theory.
 
-The Tsirelson bound S = 2sqrt(2) is the maximum allowed by quantum mechanics. It's strong enough to violate classical limits but weak enough to preserve causality and computational complexity.
+The Tsirelson bound S = 2sqrt(2) is the maximum allowed by quantum mechanics. It's strong enough to violate classical limits while still fitting the specific consistency structure of ordinary quantum theory.
 
 This shows a deep connection: **quantum correlations are precisely as strong as consistency allows**. Classical is too weak-it fails certain consistency tests. Super-quantum is too strong-it violates causality. Quantum sits at the sweet spot.
 
 In OPH, this connects to overlap consistency. When patches on the S^2 screen overlap, observers must agree on shared observables. The correlations needed to maintain this agreement across all possible overlaps require exactly quantum mechanics-not classical, not super-quantum.
 
-Classical correlations are too weak, super-quantum ones break causality. Quantum mechanics sits at the exact consistency sweet spot.
+Classical correlations are too weak, while super-quantum ones overshoot the ordinary consistency structure. Quantum mechanics sits at the exact consistency sweet spot.
 
 ## 9.5 ER = EPR: Wormholes Are Entanglement
 
@@ -140,7 +140,7 @@ Einstein and Rosen wrote about wormholes in 1935. Einstein, Podolsky, and Rosen 
 
 In 2013, Juan Maldacena and Leonard Susskind made a bold proposal: **ER = EPR**.
 
-Einstein-Rosen bridges (wormholes) **are** Einstein-Podolsky-Rosen correlations (entanglement). They're the same phenomenon described in different languages.
+The proposal is that Einstein-Rosen bridges (wormholes) and Einstein-Podolsky-Rosen correlations (entanglement) are deeply linked-two languages for the same underlying connectivity in the right regimes.
 
 ### The Thermofield Double
 
@@ -148,7 +148,7 @@ The strongest evidence comes from the **thermofield double state**:
 
 $$|\text{TFD}\rangle = \sum_n e^{-\beta E_n/2} |n\rangle_L |n\rangle_R$$
 
-This state lives on two copies of a system. It's maximally entangled at temperature T = 1/beta.
+This state lives on two copies of a system. It is an entangled purification of a thermal state at temperature T = 1/beta.
 
 In AdS/CFT, the thermofield double is dual to an **eternal two-sided black hole**. The two boundaries correspond to two copies of the CFT. They're connected by a smooth wormhole through the interior.
 
@@ -244,9 +244,9 @@ This is error correction as a law of physics. Reality stabilizes itself through 
 
 The entanglement-geometry correspondence makes sharp, testable predictions:
 
-**1. Ryu-Takayanagi formula in AdS/CFT**: The RT formula predicts that entanglement entropy in the boundary CFT exactly equals the area of minimal surfaces in the bulk. This has been verified in thousands of explicit calculations across different conformal field theories and bulk geometries. The match is exact, not approximate.
+**1. Ryu-Takayanagi formula in AdS/CFT**: In the appropriate holographic regime, the RT/HRT framework links boundary entanglement entropy to extremal-surface geometry in the bulk. This has been checked in many explicit holographic calculations and is a central piece of the AdS/CFT dictionary.
 
-**2. Area law scaling**: Ground states of local Hamiltonians must have entanglement entropy scaling with boundary area, not volume. This is verified computationally for every physical system tested-from spin chains to tensor networks.
+**2. Area law scaling**: Many ground states of local Hamiltonians obey boundary-dominated entanglement scaling, though there are important logarithmic and other controlled exceptions. This boundary sensitivity is a major structural clue behind holography.
 
 **3. Subadditivity and strong subadditivity**: If entanglement = geometry, then entropy inequalities become geometric constraints. Strong subadditivity $S(AB) + S(BC) \geq S(B) + S(ABC)$ constrains which bulk geometries can exist. These inequalities are provably satisfied by any quantum state.
 
@@ -282,7 +282,7 @@ Chapter summary:
 
 4. **Ryu-Takayanagi**: Entanglement entropy equals minimal surface area divided by 4G. Geometry encodes entanglement.
 
-5. **ER = EPR**: Wormholes and entanglement are the same thing. Geometry is a language for quantum correlations.
+5. **ER = EPR**: Certain entangled states admit wormhole dual descriptions, and the proposal treats geometry as a language for quantum correlations.
 
 6. **Tensor networks**: MERA and HaPPY show how entanglement creates geometry through discrete circuits.
 
