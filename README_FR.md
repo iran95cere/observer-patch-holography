@@ -16,6 +16,28 @@ L'OPH est un programme de reconstruction. Espace-temps, structure de jauge, part
 - Un programme particules avec porteurs structurels exactement sans masse, fermeture électrofaible de rang théorème, étage quantitatif Higgs/top, sidecars exacts non hadroniques et voies de continuation explicites pour la saveur et les hadrons.
 - Une architecture microphysique d'écran concrète qui met mesure, enregistrements et observateurs à l'intérieur de la physique.
 
+## Surface locale d'unification
+
+L'OPH place une surface locale d'unification autour de l'entrée UV locale calibrée. La même échelle pilotée par `P` porte la voie bosonique D10/D11 et la voie entropique gravitationnelle, tandis que la branche lorentzienne fournit la vitesse causale invariante et que le paquet local de lecture fournit l'affichage SI.
+
+<p align="center">
+  <a href="assets/OPH_Unification_Diagram.svg" target="_blank" rel="noopener noreferrer">
+    <img src="assets/OPH_Unification_Diagram.svg" alt="Schéma d'unification OPH" width="92%">
+  </a>
+</p>
+
+<p align="center"><sub>La surface locale de calibration UV qui relie `P`, `c`, `G` et la voie `W/Z/H`. Cliquez pour ouvrir le SVG complet.</sub></p>
+
+| Grandeur | Chaîne OPH | Valeur sur la surface indiquée | Note de statut |
+| --- | --- | --- | --- |
+| `c` | `Branche lorentzienne -> LocalFamiliarUnitReadoutPackage` | `299792458 m/s` | sortie structurelle de vitesse causale avec lecture SI |
+| `G` | `P -> a_cell`, `ellbar_shared`, `G = a_cell / (4 ellbar_shared)` | `6.674299995910528e-11 m^3 kg^-1 s^-2` | valeur exacte émise par branche sur la surface locale d'exact-release |
+| `M_W` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_W` | `80.377 GeV` | codomaine exact sur `EWTargetFreeRepairChartIdentity_D10`; ligne publique target-free `80.377000015 GeV` |
+| `M_Z` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_Z` | `91.18797809193725 GeV` | codomaine exact sur `EWTargetFreeRepairChartIdentity_D10`; ligne publique target-free `91.187978078 GeV` |
+| `M_H` | `P -> alpha_U -> (t_U, t_tr) -> sigma_D11,HT -> M_H` | `125.1995304097179 GeV` | codomaine exact sur `D11LiveForwardExactHiggsPromotion`; ligne publique forward `125.218922060 GeV` |
+
+La frontière locale d'exact-release consiste en `LocalFamiliarUnitReadoutPackage`, `SharedEdgeEntropyBridge`, `StrictClassicalBranchReleaseClause`, `EWTargetFreeRepairChartIdentity_D10` et `D11LiveForwardExactHiggsPromotion`. Le registre détaillé des constantes et statuts se trouve dans [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
+
 **Pile générale des théorèmes et dérivations**
 
 <p align="center">
@@ -67,28 +89,6 @@ Les lignes publiques Higgs/top sont portées par la graine forward D11 scalaire 
   et `Δm21² / Δm32² = 0.03072111`.
 - La surface exacte non hadronique est regroupée dans
   [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md).
-
-## Surface locale d'unification
-
-L'OPH place une surface locale d'unification autour de l'entrée UV locale calibrée. La même échelle pilotée par `P` porte la voie bosonique D10/D11 et la voie entropique gravitationnelle, tandis que la branche lorentzienne fournit la vitesse causale invariante et que le paquet local de lecture fournit l'affichage SI.
-
-<p align="center">
-  <a href="assets/french/local-unification-surface.svg" target="_blank" rel="noopener noreferrer">
-    <img src="assets/french/local-unification-surface.svg" alt="Surface locale d'unification OPH" width="92%">
-  </a>
-</p>
-
-<p align="center"><sub>La surface UV locale qui relie `c`, `G` et la voie `W/Z/H`. Cliquez pour ouvrir le SVG complet.</sub></p>
-
-| Grandeur | Chaîne OPH | Valeur sur la surface indiquée | Note de statut |
-| --- | --- | --- | --- |
-| `c` | `Branche lorentzienne -> LocalFamiliarUnitReadoutPackage` | `299792458 m/s` | sortie structurelle de vitesse causale avec lecture SI |
-| `G` | `P -> a_cell`, `ellbar_shared`, `G = a_cell / (4 ellbar_shared)` | `6.674299995910528e-11 m^3 kg^-1 s^-2` | valeur exacte émise par branche sur la surface locale d'exact-release |
-| `M_W` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_W` | `80.377 GeV` | codomaine exact sur `EWTargetFreeRepairChartIdentity_D10`; ligne publique target-free `80.377000015 GeV` |
-| `M_Z` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_Z` | `91.18797809193725 GeV` | codomaine exact sur `EWTargetFreeRepairChartIdentity_D10`; ligne publique target-free `91.187978078 GeV` |
-| `M_H` | `P -> alpha_U -> (t_U, t_tr) -> sigma_D11,HT -> M_H` | `125.1995304097179 GeV` | codomaine exact sur `D11LiveForwardExactHiggsPromotion`; ligne publique forward `125.218922060 GeV` |
-
-La frontière locale d'exact-release consiste en `LocalFamiliarUnitReadoutPackage`, `SharedEdgeEntropyBridge`, `StrictClassicalBranchReleaseClause`, `EWTargetFreeRepairChartIdentity_D10` et `D11LiveForwardExactHiggsPromotion`. Le registre détaillé des constantes et statuts se trouve dans [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
 
 ## Articles
 

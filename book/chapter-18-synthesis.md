@@ -267,7 +267,7 @@ That same local calibration surface organizes the numerical unification story. T
 | `Z` | `P -> alpha_U -> (t_U, t_tr) -> v -> M_Z` | `91.18797809193725 GeV` | exact codomain on the D10 chart-identity surface |
 | `H` | `P -> alpha_U -> (t_U, t_tr) -> sigma_D11,HT -> M_H` | `125.1995304097179 GeV` | exact codomain on the D11 live-forward exactification surface |
 
-![Local unification surface](../assets/local-unification-surface.svg)
+![OPH unification diagram](../assets/OPH_Unification_Diagram.svg)
 
 The boundary of this local package consists of five explicit objects: `LocalFamiliarUnitReadoutPackage`, `SharedEdgeEntropyBridge`, `StrictClassicalBranchReleaseClause`, `EWTargetFreeRepairChartIdentity_D10`, and `D11LiveForwardExactHiggsPromotion`. The same calibrated local input therefore organizes the classical gravity coupling and the electroweak boson/Higgs mass scale within one diagrammatic surface, while `c` enters as the structural Lorentz output displayed in local SI units.
 
