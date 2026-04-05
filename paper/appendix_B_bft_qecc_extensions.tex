@@ -1,54 +1,3 @@
-%% appendix_B_bft_qecc_extensions.tex
-%%
-%% Integration instructions for the maintainer:
-%%
-%% 1. SHORT SUBSECTION — paste the \subsection block below
-%%    into \section{Discussion and Open Problems} in
-%%    reality_as_consensus_protocol.tex, as the last subsection
-%%    before \appendix.
-%%
-%% 2. APPENDIX B — after the existing Appendix A, add:
-%%
-%%    \section{Conditional Distributed-Systems and QECC
-%%             Extensions of the Consensus Formalism}
-%%    \label{app:bft-qecc}
-%%    \input{appendix_B_bft_qecc_extensions}
-%%
-%% ---------------------------------------------------------------------------
-
-% ============================================================
-% SHORT PROSE — for Discussion and Open Problems subsection
-% ============================================================
-
-\subsection{Conditional BFT and QECC Extensions}
-\label{subsec:conditional-bft-qecc}
-
-The consensus formalism of \textrm{OPH} has natural analogies to classical and
-quantum distributed Byzantine agreement.
-Observer patches correspond to protocol nodes, overlap repair corresponds to a
-quorum vote, and the repair fixed-point corresponds to a consensus state.
-Under explicit structural assumptions (quorum size $\geq 2f+1$, partial synchrony,
-one-vote-per-view, certificate semantics, and \textrm{DLS}-style view-change), a
-\textrm{QBFT}-style interpretation of \textrm{OPH} repair satisfies safety and liveness
-(Appendix~\ref{app:bft-qecc}, Theorem~\ref{thm:qbft-safety}).
-The repair map admits a quantum-channel formulation via the Petz recovery map
-(Definition~\ref{def:oph-repair-map}), but the \textrm{CPTP} property on all inputs
-requires either full-rank $\mathcal{N}(\sigma)$ or an explicit domain restriction;
-trace-preserving completion is not automatic when $\mathcal{N}(\sigma)$ has a
-non-trivial kernel (Proposition~\ref{prop:petz-cptp}).
-A quantum error-correcting interpretation is possible under additional topological
-structure, but the code-distance / min-cut equality requires explicit conditions
-on logical-operator homology and boundary geometry
-(Claim~\ref{claim:qecc-mincut}).
-All of these extensions are conditional or conjectural and are not part of
-the core theorem package of Paper~4.
-
-% ============================================================
-% APPENDIX B — full technical material
-% ============================================================
-
-\noindent\rule{\linewidth}{0.4pt}
-
 \paragraph{Honesty labels.}
 \begin{description}
   \item[\textbf{[Established]}] Follows from cited prior work or a complete
@@ -210,11 +159,14 @@ depends on the specific overlap channel and must be verified separately
 \end{proposition}
 
 \begin{proof}
-Complete positivity: composition of three \textrm{CP} operations,
-(i) sandwiching by $\mathcal{N}(\sigma)^{-1/2}(\cdot)\mathcal{N}(\sigma)^{-1/2}$
-on $\mathrm{supp}(\mathcal{N}(\sigma))$,
-(ii) $\mathcal{N}^\dagger$,
-(iii) sandwiching by $\sigma^{1/2}(\cdot)\sigma^{1/2}$.
+Complete positivity follows from composing three \textrm{CP} operations:
+\begin{enumerate}[(i)]
+  \item sandwiching by
+        $\mathcal{N}(\sigma)^{-1/2}(\cdot)\mathcal{N}(\sigma)^{-1/2}$
+        on $\mathrm{supp}(\mathcal{N}(\sigma))$;
+  \item $\mathcal{N}^\dagger$;
+  \item sandwiching by $\sigma^{1/2}(\cdot)\sigma^{1/2}$.
+\end{enumerate}
 Trace preservation in the full-rank case:
 Petz~\cite{Petz1986}; Fagnola--Umanit\`{a}~\cite{FagnolaUmanita2010}.
 \end{proof}
