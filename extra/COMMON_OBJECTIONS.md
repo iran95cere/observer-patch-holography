@@ -36,7 +36,7 @@ In OPH:
 - The physical objects are patch algebras and their overlap maps, not coordinate cells in a background bulk.
 - Lorentz kinematics are derived from **geometric modular flow** on caps, with `K_C = 2pi B_C` and `Conf^+(S^2) ~= PSL(2,C) ~= SO^+(3,1)`.
 - The entanglement first law is applied to these algebraic caps, and it is covariant under the induced Lorentz action.
-- The gravity derivation is explicitly upgraded from a scalar rest-frame statement to the **full tensor Einstein equation** by overlap consistency across all local timelike directions, `G_ab + Lambda g_ab = 8pi G <T_ab>`, so the framework does **not** stop at a Newtonian approximation. This is the published chain in *Observers Are All You Need*, Part I §4.2-4.3 and Part I §5.1-5.7, with the compact theorem statements also summarized in Part V §2.1-2.5.
+- The gravity derivation is explicitly upgraded from a scalar rest-frame statement to the **full tensor Einstein equation** by overlap consistency across all local timelike directions, `G_ab + Lambda g_ab = 8pi G <T_ab>`, so the framework does **not** stop at a Newtonian approximation. This is the published chain in *Observers Are All You Need*, Part I §4.2-4.3 and Part I §5.1-5.7, with the short-form theorem statements also summarized in Part V §2.1-2.5.
 
 ---
 

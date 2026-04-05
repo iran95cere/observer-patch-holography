@@ -55,7 +55,7 @@ The basic collar decomposition is:
 rho_ABD = sum_alpha p_alpha rho_(A b_L)^(alpha) tensor rho_(b_R D)^(alpha)
 ```
 
-where `alpha` labels classical center data living at the cut. This is the OPH Markov-collar structure. The same structure is stated in the compact manuscript and in the CS companion paper's algebraic appendix.
+where `alpha` labels classical center data living at the cut. This is the OPH Markov-collar structure. The same structure is stated in the SM/GR derivation paper and in the CS companion paper's algebraic appendix.
 
 For a cap `C`, the reduced state has the form:
 

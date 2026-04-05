@@ -12,7 +12,7 @@ Not in the narrow sense of “does it replace all of physics tomorrow,” but in
 
 That is where OPH gets unusually interesting.
 
-Because even before the deepest foundational questions are settled, OPH already suggests a different way of thinking about physical systems. Its central objects are not only particles, fields, or bulk wavefunctions, but local patches, overlap observables, recoverability across collars, stable records, synchronization maps, and irreducible obstructions. The consensus paper frames objectivity as convergence of overlapping local descriptions under repair dynamics, treats gauge symmetry as hidden implementation freedom, and identifies stable cycle obstructions as physically meaningful residual structure rather than mere error . The microphysics note pushes that into a concrete simulator-facing architecture built from finite gauge-register or quantum-link style components, patch algebras, overlap observables, record layers, observer criteria, and synchronization mechanisms . The compact OPH note then presents the broader ambition: under explicit premises, reconstruct compact gauge structure from edge sectors and push toward larger relativity and Standard Model claims on a realized branch  .
+Because even before the deepest foundational questions are settled, OPH already suggests a different way of thinking about physical systems. Its central objects are not only particles, fields, or bulk wavefunctions, but local patches, overlap observables, recoverability across collars, stable records, synchronization maps, and irreducible obstructions. The consensus paper frames objectivity as convergence of overlapping local descriptions under repair dynamics, treats gauge symmetry as hidden implementation freedom, and identifies stable cycle obstructions as physically meaningful residual structure rather than mere error . The microphysics note pushes that into a concrete simulator-facing architecture built from finite gauge-register or quantum-link style components, patch algebras, overlap observables, record layers, observer criteria, and synchronization mechanisms . The SM/GR derivation paper then presents the broader ambition: under explicit premises, reconstruct compact gauge structure from edge sectors and push toward larger relativity and Standard Model claims on a realized branch  .
 
 That combination matters.
 
@@ -232,7 +232,7 @@ That would be a new chapter in measurement engineering.
 
 ### Boundary-first readout
 
-If OPH is right, many important properties of a system may show up most cleanly not in its full bulk state, but in edge-sector distributions, overlap observables, collar projectors, and boundary entropy structure. The compact note’s gauge reconstruction claims, for instance, are explicitly driven by edge-sector reasoning under stated premises, with the group acting globally when transportability conditions hold .
+If OPH is right, many important properties of a system may show up most cleanly not in its full bulk state, but in edge-sector distributions, overlap observables, collar projectors, and boundary entropy structure. The SM/GR paper's gauge reconstruction claims, for instance, are explicitly driven by edge-sector reasoning under stated premises, with the group acting globally when transportability conditions hold .
 
 That points toward a future in which powerful diagnostics work by reading seams rather than interiors.
 

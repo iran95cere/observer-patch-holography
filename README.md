@@ -26,7 +26,7 @@ OPH places a local unification surface around the calibrated local UV input. The
   </a>
 </p>
 
-Constants, theorem chains, and open proof fronts for this surface are tracked in [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
+The current particle-status ledgers live in [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) and [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md). Broader claim status is carried by the current paper set.
 
 **Overall theorem and derivation stack**
 
@@ -83,7 +83,7 @@ Public Higgs/top rows are carried by the closed one-scalar forward seed. The exa
 ## Papers
 
 - **Paper 1. [Observers Are All You Need](paper/observers_are_all_you_need.pdf)**: synthesis paper for the whole OPH stack.
-- **Paper 2. [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**: SM/GR derivation paper for the recovered core.
+- **Paper 2. [Recovering Relativity and the Standard Model from Observer Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**: SM/GR derivation paper for the recovered core.
 - **Paper 3. [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)**: particle derivation, exact-hit surface, and continuation map.
 - **Paper 4. [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)**: fixed-point, repair, and consensus formulation.
 - **Paper 5. [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)**: finite screen architecture, records, and observer machinery.
@@ -106,4 +106,4 @@ Public Higgs/top rows are carried by the closed one-scalar forward seed. The exa
 - **[`book/`](book):** OPH Book source.
 - **[`code/`](code):** computational material, particle outputs, and experiments.
 - **[`assets/`](assets):** public diagrams and figures.
-- **[`extra/`](extra):** explainers, objections, and supporting notes.
+- **[`extra/`](extra):** maintained public notes such as objections, experimental write-ups, and selected supporting essays.

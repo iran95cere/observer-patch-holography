@@ -26,7 +26,7 @@ L'OPH place une surface locale d'unification autour de l'entrée UV locale calib
   </a>
 </p>
 
-Les constantes, chaînes de théorèmes et fronts de preuve encore ouverts pour cette surface sont suivis dans [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
+Les surfaces d'état actuelles pour les particules se trouvent dans [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) et [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md). Le statut plus large des affirmations est porté par l'ensemble courant des papiers.
 
 **Pile générale des théorèmes et dérivations**
 
@@ -83,7 +83,7 @@ Les lignes publiques Higgs/top sont portées par la graine forward scalaire uniq
 ## Articles
 
 - **Papier 1. [Observers Are All You Need](paper/observers_are_all_you_need.pdf)** : papier de synthèse de l'ensemble OPH.
-- **Papier 2. [Recovering Relativity and Standard Model Structure from Observer-Overlap Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)** : papier de dérivation relativité/structure du Modèle Standard.
+- **Papier 2. [Recovering Relativity and the Standard Model from Observer Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)** : papier de dérivation relativité/structure du Modèle Standard.
 - **Papier 3. [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)** : dérivation des particules, surface exacte, et carte des continuations.
 - **Papier 4. [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)** : formulation point fixe, réparation, et consensus.
 - **Papier 5. [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)** : architecture d'écran finie, enregistrements, et machinerie observateur.
@@ -106,4 +106,4 @@ Les lignes publiques Higgs/top sont portées par la graine forward scalaire uniq
 - **[`book/`](book)** : source du livre OPH.
 - **[`code/`](code)** : sorties calculatoires, surface particules et expériences.
 - **[`assets/`](assets)** : schémas et figures publics.
-- **[`extra/`](extra)** : notes d'appui, objections et compléments.
+- **[`extra/`](extra)** : notes publiques maintenues, objections, comptes rendus expérimentaux et quelques essais de support.
