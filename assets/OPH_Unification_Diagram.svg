@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 720 700" class="w-full max-w-3xl" >
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 700" class="w-full max-w-3xl">
         <defs>
           <marker id="uni-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
             <path d="M0,0 L8,3 L0,6" fill="hsl(45,90%,55%)" />
