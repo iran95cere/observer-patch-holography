@@ -107,3 +107,13 @@ Public Higgs/top rows are carried by the closed one-scalar forward seed. The exa
 - **[`code/`](code):** computational material, particle outputs, and experiments.
 - **[`assets/`](assets):** public diagrams and figures.
 - **[`extra/`](extra):** maintained public notes such as objections, experimental write-ups, and selected supporting essays.
+
+## OPH and the Sciences
+
+<p align="center">
+  <a href="assets/oph_science_overlap_map_poster.png" target="_blank" rel="noopener noreferrer">
+    <img src="assets/oph_science_overlap_map.svg" alt="A map of the sciences OPH overlaps with, from large domains to subdomains to concrete OPH application areas." width="100%">
+  </a>
+</p>
+
+<p align="center"><sub>A domain -> subdomain -> OPH-area map spanning mathematics, computer science, information and inference, complex systems, theoretical physics, quantum information, and measurement foundations. Click to open the full poster PNG.</sub></p>
