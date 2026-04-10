@@ -32,8 +32,8 @@
 \newcommand{\ophid}[1]{\path{#1}}
 
 \title{Recovering Relativity and the Standard Model\\
-from Observer Consistency}
-\author{B.\ M\"uller \and Peter Nguyen}
+from the OPH Package Rooted in Observer Consistency}
+\author{B.\ M\"uller \and Kai Xue \and Peter Nguyen}
 \date{\OPHPaperReleaseDate}
 
 \begin{document}
@@ -52,7 +52,7 @@ The standard model of particle physics and general relativity are successful eff
 \]
 why the observed three generations and three colors are realized, why hypercharges take the observed rational values, what fixes the electroweak and flavor scales, and what the framework can and cannot say about the cosmological constant and possible dark-sector continuations.
 
-This paper presents a single framework that addresses this list as a conditional reconstruction program. The framework is Observer-Patch Holography (OPH). Its starting point is an observer-centric organization of physical data: each observer has access only to a patch algebra, neighboring observers must agree on overlaps, and global physical law is recovered from the resulting consistency conditions. The same formal structure that produces schedule-independent overlap consistency then feeds a Lorentzian modular-phase classification, a Jacobson-type Einstein branch conditional on fixed-cap stationarity and the null modular bridge together with the bounded-interval projective branch, compact gauge reconstruction in a bosonic internal-gauge sector, charge quantization, and the low-energy architecture selected by the admissibility conditions used in the gauge branch. Any discrete-horizon or black-hole spectroscopy template remains a Phase-III continuation and is not part of the recovered relativity-plus-Standard-Model core.
+This paper presents a single framework that addresses this list as a conditional reconstruction program. The framework is Observer-Patch Holography (OPH). Its starting point is an observer-centric organization of physical data: each observer has access only to a patch algebra, neighboring observers must agree on overlaps, and the OPH reconstruction program is organized around the resulting consistency conditions. Within the full OPH axiom package and the additional branch premises stated below, the same formal structure that produces schedule-independent overlap consistency then feeds a Lorentzian modular-phase classification, a Jacobson-type Einstein branch conditional on fixed-cap stationarity and the null modular bridge together with the bounded-interval projective branch, compact gauge reconstruction in a bosonic internal-gauge sector, charge quantization, and the low-energy architecture selected by the admissibility conditions used in the gauge branch. Any discrete-horizon or black-hole spectroscopy template remains a Phase-III continuation and is not part of the recovered relativity-plus-Standard-Model core.
 
 The paper separates exact structural theorems, conditional scaling-limit branches, calibration-sector outputs, and phenomenological continuations.\footnote{Broader interpretive questions are deferred here so the claim-tier boundary remains explicit.} Several longer arguments are recorded below as proof sketches.
 
@@ -109,7 +109,7 @@ Node & Output & Immediate OPH ingredients & Standard mathematics used & Extra no
 \textbf{D2} & Collar Markov/entropy split and \(G\)-dictionary setup (Theorem~\ref{thm:markovcollar}, Propositions~\ref{prop:approxrecover}, \ref{prop:splice}, \ref{prop:gensplit}, Definition~\ref{def:newton}) & Axioms~\ref{ax:screen}--\ref{ax:entropy} & HJPW Markov structure theorem; Petz and Fawzi--Renner recovery theory & exact block-factorized identities require exact Markovity or an explicitly stated idealized limit; the \(A/(4G)\) step is the coarse-grained dictionary of Definition~\ref{def:newton} & Phase I structural lemma/proposition layer \\
 \textbf{D3} & Lorentz branch \(\Conf^+(S^2)\cong \mathrm{SO}^+(3,1)\) (Theorem~\ref{thm:bw}, Corollary~\ref{cor:lorentz}) & Axioms~\ref{ax:screen}--\ref{ax:entropy} & Bisognano--Wichmann modular geometry; conformal-group classification & T2 together with the theorem-local geometric cap-pair extraction and ordered cut-pair rigidity hypotheses of Theorem~\ref{thm:bw}; Theorem~\ref{thm:geosubnet} fixes the target subnet internally & Phase I conditional scaling-limit theorem \\
 \textbf{D4} & Null modular bridge to \(T_{kk}\) (Propositions~\ref{prop:nullec}, \ref{prop:n3}; Corollaries~\ref{cor:n1}, \ref{cor:n2}; Theorem~\ref{lem:density}, Lemma~\ref{lem:translation}; Theorem~\ref{thm:stress}) & D2+D3 and Axioms~\ref{ax:screen}--\ref{ax:entropy} & Borchers--Wiesbrock half-sided modular inclusion; distributional differentiation on half-lines & the theorem-local inherited-strip decomposition and exact-or-controlled Markov hypotheses of Proposition~\ref{prop:nullec} and Corollary~\ref{cor:n1}, plus T2; quasi-local propagation and endpoint control are supplied internally by Axiom~\ref{ax:maxent} on the local finite-constraint branch; the imported continuum input is the standard local modular-Hamiltonian formula for the same half-line family, and bounded-interval formulas still require the separate interval-preserving projective branch & Phase I conditional bridge theorem \\
-\textbf{D5} & Jacobson-type Einstein branch: rest-frame relation plus conditional tensor upgrade (Lemma~\ref{lem:smallball}, Theorem~\ref{thm:einstein}, Corollary~\ref{cor:einstein}) & D3+D4 and Axioms~\ref{ax:screen}--\ref{ax:entropy} & Jacobson small-ball first law; null-to-tensor reconstruction modulo a metric term & T3 fixed-cap stationarity; locally Lorentzian \(d=4\) scaling regime; small-ball constancy assumptions; D4 carried remainder negligible at order \(\ell^4\); all local directions/reference states for the tensor upgrade & Phase I conditional scaling-limit theorem/corollary \\
+\textbf{D5} & Jacobson-type Einstein branch: rest-frame relation plus conditional tensor upgrade (Lemma~\ref{lem:smallball}, Theorem~\ref{thm:einstein}, Corollary~\ref{cor:einstein}) & D3+D4 and Axioms~\ref{ax:screen}--\ref{ax:entropy} & Jacobson small-ball first law; null-to-tensor reconstruction modulo a metric term & T3 fixed-cap stationarity; locally Lorentzian \(d=4\) scaling regime; the separate interval-preserving projective branch used to transport the D4 half-line generator/charge identification to bounded intervals; small-ball constancy assumptions; D4 carried remainder negligible at order \(\ell^4\); all local directions/reference states for the tensor upgrade & Phase I conditional scaling-limit theorem/corollary \\
 \textbf{D6} & Capacity branch for \(\Lambda\), plus a legacy capacity-level neutrino side estimate (Proposition~\ref{prop:lambda}, Corollary~\ref{cor:lambda}) & D5 leaves a \(+\Lambda g_{ab}\) ambiguity & de Sitter entropy relation and dimensional analysis & external input \(N_{\mathrm{scr}}\) and the screen-capacity identification & Phase II input-dependent corollary / estimate \\
 \textbf{D7} & Compact gauge reconstruction (Theorem~\ref{thm:compactgauge}) & Axioms~\ref{ax:screen}--\ref{ax:entropy} & Doplicher--Roberts / Tannaka reconstruction & Assumption~\ref{ass:gaugeprem} on the ordinary or central-defect bosonic branch; the genuinely noncentral fixed-cutoff branch is handled separately by Theorems~\ref{thm:hgdatum}--\ref{thm:hgtransport} and is not itself the ordinary compact-group reconstruction theorem & Phase I conditional structural theorem \\
 \textbf{D8} & Product gauge structure up to finite quotient (Lemmas~\ref{lem:mincontent}--\ref{lem:commutant}, Theorem~\ref{thm:sm}) & D7 + Axiom~\ref{ax:mar} & compact Lie representation classification; Schur's lemma & the same ordinary or central-defect bosonic branch as D7, together with a connected positive-dimensional Lie admissible class, one connected abelian factor, and faithful action on the minimal coupled carrier & Phase I realized-branch theorem \\
@@ -596,19 +596,19 @@ K_\Sigma\subset U(\tilde{\mathcal H}_\Sigma);
 \]
 before the choice of reference chart, the same data form a compact unitary groupoid of overlap-preserving transitions;
 \item if triple-overlap defects are central, the projective composition law of item 2 lifts to an direct action of a compact central extension \(\widehat K_\Sigma\); a genuinely noncentral defect is the only obstruction to reducing the transition system to an ordinary compact group action;
-\item in the invariant-state realization of the quotient, physical observables are the chart-independent endomorphisms, equivalently the fixed-point algebra
+\item in the invariant-state realization of the quotient, the chart-independent endomorphisms of the lifted presentation form the boundary-invariant algebra
 \[
-\mathcal A(R)=\widetilde{\mathcal A}(R)^{\widehat K_{\partial R}},
+\mathcal A_{\mathrm{inv}}(R)=\widetilde{\mathcal A}(R)^{\widehat K_{\partial R}},
 \qquad
 \widehat K_{\partial R}:=\prod_{\Sigma\subset\partial R}\widehat K_\Sigma,
 \]
-\noindent with the convention \(\widehat K_\Sigma=K_\Sigma\) whenever no central extension is needed.
+\noindent with the convention \(\widehat K_\Sigma=K_\Sigma\) whenever no central extension is needed; the physical state space is the corresponding invariant subspace, and on collars the sector-preserving algebra induced on that subspace is the block-diagonal algebra used in Theorem~\ref{thm:markovcollar}.
 \end{enumerate}
-Items 1 and 4 are the fixed-cutoff realized presentation used later; they are not extra axioms beyond the finite regulator presentation plus overlap redundancy.
+Items 1 and the lifted fixed-point presentation of item 4 are the fixed-cutoff realized data used later; they are not extra axioms beyond the finite regulator presentation plus overlap redundancy.
 \end{proposition}
 
 \begin{proof}[Proof sketch]
-Item 1 is the Hilbertization of finite sets. For item 2, each overlap-consistent recharting acts on a finite-dimensional matrix algebra, and every \(^*\)-automorphism of such an algebra is inner. After transporting all local overlap presentations to a chosen reference chart, each recharting is therefore implemented by a unitary on the cut Hilbert space. The subgroup generated by those unitaries has compact closure inside a finite-dimensional unitary group, which yields \(K_\Sigma\); without fixing the reference chart one has the corresponding compact unitary groupoid. Item 3 is the usual projective-versus-central-extension lift for a central 2-cocycle. Item 4 is the quotient statement: physical observables are precisely the endomorphisms insensitive to recharting of the boundary data, hence the fixed points of the derived boundary action. If the defect is genuinely noncentral, the quotient is still well defined, but the correct bookkeeping object is the crossed-module or higher-gauge data rather than an ordinary compact group.
+Item 1 is the Hilbertization of finite sets. For item 2, each overlap-consistent recharting acts on a finite-dimensional matrix algebra, and every \(^*\)-automorphism of such an algebra is inner. After transporting all local overlap presentations to a chosen reference chart, each recharting is therefore implemented by a unitary on the cut Hilbert space. The subgroup generated by those unitaries has compact closure inside a finite-dimensional unitary group, which yields \(K_\Sigma\); without fixing the reference chart one has the corresponding compact unitary groupoid. Item 3 is the usual projective-versus-central-extension lift for a central 2-cocycle. Item 4 records the lifted fixed-point presentation: chart-independent endomorphisms of the unreduced boundary data are exactly the fixed points of the derived boundary action, while the later collar theorem uses the invariant-state realization and the sector-preserving algebra induced on the matched-cut subspace. If the defect is genuinely noncentral, the quotient is still well defined, but the correct bookkeeping object is the crossed-module or higher-gauge data rather than an ordinary compact group.
 \end{proof}
 
 \begin{theorem}[Derived edge-center collar decomposition and exact Markov normal form]\label{thm:markovcollar}
@@ -627,8 +627,14 @@ with \(W_\alpha\) irreducible \(\widehat K_\Sigma\)-modules. Because the right h
 Then
 \[
 \mathcal H_B\cong\bigoplus_\alpha \mathcal H_{b_L^\alpha}\otimes \mathcal H_{b_R^\alpha},
-\qquad
-Z(\mathcal A(B))=\bigoplus_\alpha \mathbb C\,\mathbf 1_\alpha.
+\]
+and the sector-preserving collar algebra
+\[
+\mathcal A_{\mathrm{EC}}(B):=\bigoplus_\alpha \mathcal B(\mathcal H_{b_L^\alpha})\otimes \mathcal B(\mathcal H_{b_R^\alpha})
+\]
+has center
+\[
+Z(\mathcal A_{\mathrm{EC}}(B))=\bigoplus_\alpha \mathbb C\,\mathbf 1_\alpha.
 \]
 If, in addition, the reference state on \(A\cup B\cup D\) is exact Markov,
 \[
@@ -671,7 +677,7 @@ By Schur's lemma,
 0, & \alpha\neq \beta,
 \end{cases}
 \]
-which yields the displayed block decomposition and shows that the center is generated by the block projectors. Within each block, observables from \(A\cup B\) act only on the left factor and observables from \(B\cup D\) act only on the right factor. If the state is exact Markov, the standard HJPW structure theorem gives the blockwise factorized normal form \cite{hjpw04}. The same formula is used in the idealized recoverability limit when exact identities are taken literally.
+which yields the displayed block decomposition. The sector-preserving collar algebra therefore has the displayed block-diagonal form, so its center is generated by the block projectors. Within each block, observables from \(A\cup B\) act only on the left factor and observables from \(B\cup D\) act only on the right factor. If the state is exact Markov, the standard HJPW structure theorem gives the blockwise factorized normal form \cite{hjpw04}. The same formula is used in the idealized recoverability limit when exact identities are taken literally.
 \end{proof}
 
 \begin{theorem}[Derived higher-gauge cut datum]\label{thm:hgdatum}
@@ -2147,7 +2153,7 @@ The c.12-local bridge ends with explicit theorem-level objects: the positive sel
 \end{remark}
 \subsection{Generalized entropy and the Einstein equation}
 
-From this point through Corollary~\ref{cor:einstein} we specialize to the physical $d=4$ scaling branch. The claim boundary is explicit. The only standard geometric input used below, beyond the OPH outputs D3 and D4, is the fixed-volume area-variation identity for a small geodesic ball. The small-ball modular kernel itself is \emph{not} imported from a separate EFT law: it is the local expression of the OPH geometric cap generator $B_C$ from Theorem~\ref{thm:bw}, evaluated using the null-stress bridge of Theorem~\ref{thm:stress}.
+From this point through Corollary~\ref{cor:einstein} we specialize to the physical $d=4$ scaling branch. The claim boundary is explicit. The only standard geometric input used below, beyond the OPH outputs D3 and D4, is the fixed-volume area-variation identity for a small geodesic ball. The small-ball modular kernel used below is \emph{not} imported from a separate EFT law: it is the local expression of the OPH geometric cap generator $B_C$ from Theorem~\ref{thm:bw}, evaluated using the half-line null-stress identification of Theorem~\ref{thm:stress} together with the separate interval-preserving projective branch that transports it to bounded null intervals.
 
 For a reference state $\omega$ and a small cap $C$,
 \[
@@ -2181,7 +2187,7 @@ This is the Jacobson-type fixed-cap stationarity premise used in this paper; it 
 derived from MaxEnt alone.
 
 \begin{lemma}[Internal d=4 small-ball bridge]\label{lem:smallball}
-Assume the hypotheses of Theorem~\ref{thm:stress}. Let $p$ be the cap center and let $u^a$ be the future-directed unit tangent of the local diamond rest frame at $p$. In local inertial coordinates $(t,x^i)$ adapted to $u^a$, let $D_\ell$ be the causal diamond whose $t=0$ slice is the Euclidean ball
+Assume the hypotheses of Theorem~\ref{thm:stress}, together with the separate interval-preserving projective branch invoked there for bounded intervals. Let $p$ be the cap center and let $u^a$ be the future-directed unit tangent of the local diamond rest frame at $p$. In local inertial coordinates $(t,x^i)$ adapted to $u^a$, let $D_\ell$ be the causal diamond whose $t=0$ slice is the Euclidean ball
 \[
 B_\ell=\{t=0,\ r<\ell\},
 \qquad
@@ -2222,7 +2228,7 @@ so on the $t=0$ slice one has
 \]
 with $n^a=u^a$ the slice normal at the center.
 
-The same kernel is the bounded-interval kernel selected by the D4 null bridge. Along each null generator of the diamond, Theorem~\ref{thm:stress} gives the affine-covariant interval weight that vanishes at the two diamond endpoints, and on the $t=0$ slice that weight is exactly $(\ell^2-r^2)/(2\ell)$. Therefore the null-stress bridge reconstructs the bulk modular charge of the geometric generator as
+The same kernel is the bounded-interval kernel supplied by that separate projective branch. Along each null generator of the diamond, Theorem~\ref{thm:stress} identifies the OPH half-line generator with the local null-stress charge, and the interval-preserving projective branch transports that identification to the affine-covariant interval weight that vanishes at the two diamond endpoints. On the $t=0$ slice that weight is exactly $(\ell^2-r^2)/(2\ell)$. Therefore the null-stress bridge reconstructs the bulk modular charge of the geometric generator as
 \[
 \delta\langle B_C\rangle
 =

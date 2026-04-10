@@ -6,6 +6,8 @@ The basic idea: Senchal's observer theory says the right rule must admit observe
 
 The local paper in this folder is [Observer-Consistent Semantic Quotients for the Ruliad](papers/observer_consistent_semantic_quotients_for_the_ruliad.pdf).
 
+The toy benchmark code for the paper is in [code/ruliad_toy_benchmark.py](code/ruliad_toy_benchmark.py), with the regression check in [code/test_ruliad_toy_benchmark.py](code/test_ruliad_toy_benchmark.py) and the computed output in [code/ruliad_toy_benchmark_results.json](code/ruliad_toy_benchmark_results.json).
+
 <p align="center">
   <img src="assets/ruliad_slice_adapted.svg" alt="Adapted branching ruliad slice with many raw histories on the left and a smaller observer-semantic quotient on the right." width="96%">
 </p>
@@ -14,7 +16,7 @@ The local paper in this folder is [Observer-Consistent Semantic Quotients for th
 
 The toy benchmark in the paper gives a concrete pruning result. After the confluence and holonomy filters, 92 of 154 raw rule families survive, so 59.7% survive and 40.3% are excluded. The observer quotient reduces the corpus to 8 semantic classes, with 2 classes on the defect-free target.
 
-This folder contains only the authored bridge paper and the figure assets it uses.
+This folder contains the authored bridge paper, the toy benchmark code, and the figure assets used by the paper.
 
 External references:
 

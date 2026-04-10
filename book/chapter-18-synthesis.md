@@ -193,7 +193,7 @@ Among admissible low-energy sector packages, the realized one is the lexicograph
 The five axioms are the foundation. Specific theorem branches use extra inputs, and the papers state those inputs explicitly.
 
 1. **Lorentz branch**: scaling-limit and geometric modular-flow assumptions that let cap modular flow become geometric on the extracted prime geometric subnet.
-2. **Einstein branch**: fixed-cap stationarity and the stress-tensor bridge used in the entanglement-equilibrium argument.
+2. **Einstein branch**: fixed-cap stationarity, the half-line stress-tensor bridge, and the separate bounded-interval projective branch used in the entanglement-equilibrium argument.
 3. **Gauge branch**: the transport and reconstruction premises needed for ordinary compact gauge reconstruction, together with MAR on the realized admissible branch.
 4. **Configuration inputs**: the pixel area \(P\) and screen capacity \(N_{\mathrm{scr}}\), which set quantitative scales but are not axioms.
 
@@ -204,7 +204,7 @@ Under that full ledger, Lorentz kinematics is recovered on the stated scaling br
 Under the full ledger above, the model yields:
 
 1. **Lorentz kinematics** on the extracted prime geometric subnet from geometric modular flow on caps
-2. **Einstein's equation** on the stated scaling branch via entanglement equilibrium, promoted to a tensor equation by patch consistency
+2. **Einstein's equation** on the stated scaling branch via entanglement equilibrium, with the bounded-interval projective branch included in the small-ball step and then promoted to a tensor equation by patch consistency
 3. **The Standard Model gauge group** $SU(3) \times SU(2) \times U(1)/\mathbb{Z}_6$, reconstructed from the transportable bosonic edge-sector package, with MAR selecting the realized branch
 4. **Three generations, three colors**: fixed by anomaly cancellation together with MAR
 5. **Massless gauge bosons and graviton**: forced by emergent gauge and diffeomorphism invariance, which forbid mass terms

@@ -561,7 +561,7 @@ When you have a boundary between patches-say, a collar region around the edge of
 
 These fusion rules define a mathematical structure called a tensor category. A key result, established by Tannaka-Krein reconstruction (and its physics version, the Doplicher-Roberts theorem), is that any such transportable tensor category with the right rigid, symmetric, bosonic fiber-functor properties is equivalent to the representation category of some compact group G. In other words, the transportable edge-sector package reconstructs a gauge group.
 
-For the Standard Model, this reconstructed group includes a U(1) factor, the gauge group of electromagnetism. The key point: this U(1) is the redundancy structure of how patches identify their overlaps. It is built into the structure of observer consistency.
+On the realized Standard Model branch, this reconstructed group includes a U(1) factor, the gauge group of electromagnetism. The key point is that this U(1) comes from the redundancy structure of how patches identify their overlaps once the transportable-sector reconstruction package is in place.
 
 A gauge boson is the quantum of a gauge field. When U(1)_em emerges from overlap redundancy, its gauge field must exist, and its quantum, the photon, must exist. The photon is the particle that mediates the correlations between charged objects in different patches. It is how the redundancy structure propagates through the algebra net.
 
@@ -683,11 +683,11 @@ The same local calibration surface ties this particle lane to the gravity lane. 
 
 ## 14.21 The Big Picture
 
-The Standard Model looks like the answer to a very specific question: What is the simplest quantum field theory that can emerge from consistent patch gluing and survive under refinement?
+The Standard Model looks like the answer to a very specific question: What is the simplest quantum field theory that can emerge from the OPH gluing-plus-transport package, together with MAR, and survive under refinement?
 
-The photon and graviton are particles the theory *forces* upon us. The photon exists because U(1) gauge redundancy emerges from how charged patches glue together. The graviton exists because diffeomorphism invariance emerges from the fact that bulk spacetime is a compression of screen data. In both cases the structure is decisive: adding a hard mass term would break a redundancy the model requires. This is comparable to string theory's famous claim of "predicting gravity," except here the result flows from observer consistency instead of string dynamics.
+The photon and graviton are particles the theory *forces* upon us on the stated branches. The photon exists because U(1) gauge redundancy emerges from how charged patches glue together once the gauge reconstruction package is in place. The graviton exists because diffeomorphism invariance emerges from the fact that bulk spacetime is a compression of screen data on the gravity branch. In both cases the structure is decisive: adding a hard mass term would break a redundancy the model requires. This is comparable to string theory's famous claim of "predicting gravity," except here the result flows from the OPH package rather than from string dynamics.
 
-The quarks and leptons aren't arbitrary. Their charges are fixed by the requirement that reality be self-consistent. Three generations and three colors are not inserted by hand; they are the smallest answer that survives the combined demands of chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
+The quarks and leptons aren't arbitrary. Their charges are fixed by the realized gauge-consistency package. On the realized MAR-admissible branch, three generations and three colors are not inserted by hand; they are the smallest answer that survives the combined demands of chirality, CP violation, anomaly cancellation, and ultraviolet consistency.
 
 That is a remarkably concrete result. The framework does not merely say that "symmetry matters." It points to a very specific gauge structure, charge pattern, generation count, and color count. It reaches the massless carriers, the $W$ and $Z$, a quantitative Higgs/top lane, a theorem-grade neutrino family, and several quark continuation outputs. The remaining work sits mostly in charged-lepton closure, the remaining quark closure steps, and strongly coupled bound states.
 

@@ -1,18 +1,18 @@
 # Observer Patch Holography (OPH)
 
-> Observer Patch Holography starts from one claim: no observer sees the whole world at once. Each observer accesses only a local patch, and neighboring patches must agree on their overlap. OPH asks how much physics follows from that demand alone.
+> Observer Patch Holography starts from one claim: no observer sees the whole world at once. Each observer accesses only a local patch, and neighboring patches must agree on their overlap. OPH asks how much physics can be reconstructed from that starting point once the full axiom and branch ledger is made explicit.
 
 **French version:** [README_FR.md](README_FR.md)
 
 **Quick links:** [website](https://floatingpragma.io/oph/) | [OPH Textbooks](https://learn.floatingpragma.io/) | [OPH Lab](https://oph-lab.floatingpragma.io)
 
-OPH is a reconstruction program for fundamental physics. Spacetime, gauge structure, particles, records, and observer synchronization are treated as consequences of overlap consistency on a finite holographic screen.
+OPH is a reconstruction program for fundamental physics. Spacetime, gauge structure, particles, records, and observer synchronization are treated as consequences of the OPH package rooted in overlap consistency on a finite holographic screen, together with the explicit branch premises stated in the papers.
 
 ## What OPH Delivers
 
 - A finite-resolution theorem package for observer patches, collars, overlap repair, higher gauge structure, records, and checkpoint/restoration.
-- A conditional route to Lorentzian geometry, modular time, Jacobson-type Einstein dynamics, and de Sitter static-patch cosmology on the extracted prime geometric subnet; the remaining UV/BW scaffold is geometric cap-pair realization on that subnet plus ordered cut-pair rigidity, with the eventual fixed-local-collar modular-transport common floor as the smallest lower blocker.
-- A conditional compact gauge route in the bosonic branch to the realized Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6`, together with the exact hypercharge lattice and the realized counting chain `N_g = 3`, `N_c = 3`.
+- A conditional route to Lorentzian geometry, modular time, Jacobson-type Einstein dynamics, and de Sitter static-patch cosmology on the extracted prime geometric subnet; the Einstein branch uses fixed-cap stationarity, the null-surface bridge, and the separate bounded-interval projective branch, while the remaining UV/BW scaffold is geometric cap-pair realization on that subnet plus ordered cut-pair rigidity, with the eventual fixed-local-collar modular-transport common floor as the smallest lower blocker.
+- A conditional compact gauge route in the bosonic branch to the realized Standard Model quotient `SU(3) x SU(2) x U(1) / Z_6`, under the transportable-sector reconstruction premises and MAR, together with the exact hypercharge lattice and the realized counting chain `N_g = 3`, `N_c = 3`.
 - A particle program with exact structural massless carriers, a forward-emitted Phase II electroweak calibration branch with a closed target-free public `W/Z` theorem surface plus a compare-only exact frozen pair, a quantitative Higgs/top stage, exact non-hadron mass sidecars, and explicit continuation lanes for flavor and hadrons.
 - A concrete screen-microphysics architecture that puts measurement, records, and observers inside the physics.
 
@@ -83,7 +83,7 @@ Public Higgs/top rows are carried by the closed one-scalar forward seed. The exa
 ## Papers
 
 - **Paper 1. [Observers Are All You Need](paper/observers_are_all_you_need.pdf)**: synthesis paper for the whole OPH stack.
-- **Paper 2. [Recovering Relativity and the Standard Model from Observer Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**: SM/GR derivation paper for the recovered core.
+- **Paper 2. [Recovering Relativity and the Standard Model from the OPH Package Rooted in Observer Consistency](paper/recovering_relativity_and_standard_model_structure_from_observer_overlap_consistency_compact.pdf)**: SM/GR derivation paper for the recovered core.
 - **Paper 3. [Deriving the Particle Zoo from Observer Consistency](paper/deriving_the_particle_zoo_from_observer_consistency.pdf)**: particle derivation, exact-hit surface, and continuation map.
 - **Paper 4. [Reality as a Consensus Protocol](paper/reality_as_consensus_protocol.pdf)**: fixed-point, repair, and consensus formulation.
 - **Paper 5. [Screen Microphysics and Observer Synchronization](paper/screen_microphysics_and_observer_synchronization.pdf)**: finite screen architecture, records, and observer machinery.
