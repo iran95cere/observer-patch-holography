@@ -33,6 +33,7 @@ They are calibrated OPH implementation inputs, not theorem targets.
 
 - `fully derived`: fixed by the present OPH structural theorem package once the realized branch is chosen, with no extra continuous implementation input beyond that branch.
 - `conditional`: derived once OPH is supplied with one or more declared implementation inputs, usually `P` and/or `N_scr`, and sometimes a specific calibration or continuation branch.
+- `unit convention`: a downstream familiar-unit conversion constant used to display OPH outputs in SI-facing units. Its numerical value is fixed by the declared readout convention rather than emitted today as a standalone OPH artifact.
 - `not yet derived`: the present corpus does not close the physical theorem lane. Compare-only adapters, same-family witnesses, and frozen simulation scaffolds do not count as closed derivations.
 
 ## Theorem-Chain Guide
@@ -48,29 +49,39 @@ This ledger is easiest to read as a small number of theorem chains. Each row say
 | Quarks / CKM | exact same-family witness -> continuation package -> physical-sheet lift -> mass and CKM outputs | close the physical-sheet branch and the remaining three-object extension | [#37](https://github.com/FloatingPragma/observer-patch-holography/issues/37) |
 | Neutrinos | weighted-cycle bridge rigidity + absolute attachment -> PMNS pattern + splittings + absolute masses | expose the remaining physical Majorana-phase surface | [#154](https://github.com/FloatingPragma/observer-patch-holography/issues/154) |
 | Hadrons | quark descendants + `Lambda_MSbar` + nonperturbative execution -> hadron masses | unquench the hadron branch and publish systematics | [#153](https://github.com/FloatingPragma/observer-patch-holography/issues/153), [#157](https://github.com/FloatingPragma/observer-patch-holography/issues/157) |
-| Familiar units / thermodynamic constants | Lorentz output + local unit bridge + global capacity bridge -> SI-facing `c`, `G`, `Lambda`, `H_dS`, temperature displays | close the local unit bridge and state the role of `hbar` and `k_B` cleanly | [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159), [#156](https://github.com/FloatingPragma/observer-patch-holography/issues/156) |
+| Familiar units / thermodynamic constants | Lorentz output + local unit bridge + global capacity bridge -> SI-facing `c`, `G`, `Lambda`, `H_dS`, temperature displays, with `hbar` / `k_B` kept in the readout-convention lane | close the local unit bridge and propagate the temperature readout honestly across the local and de Sitter surfaces | [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159), [#22](https://github.com/FloatingPragma/observer-patch-holography/issues/22) |
 
 ## Core Unit-Setting Constants
 
 | Constant / parameter | Identified - summary | OPH constants required | How OPH derives it | Status | Tracker |
 | --- | --- | --- | --- | --- | --- |
 | `c` | Universal causal speed. | structural Lorentz branch only | Once the Lorentzian branch is recovered, OPH gets one invariant causal speed for all patches. The translated SI number then matches exactly by unit convention rather than by a second physical fit. | fully derived | [#106](https://github.com/FloatingPragma/observer-patch-holography/issues/106), [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) |
-| `hbar` | Quantum of action. | no closed OPH normalization yet | OPH recovers quantum/Hilbert/Born structure, but the current corpus does not emit a standalone numerical `hbar` artifact. | not yet derived | [#156](https://github.com/FloatingPragma/observer-patch-holography/issues/156) |
-| `k_B` | Entropy-temperature conversion factor. | no closed OPH normalization yet | OPH recovers the horizon thermodynamic structure, but the current corpus does not emit a standalone numerical `k_B` artifact. | not yet derived | [#156](https://github.com/FloatingPragma/observer-patch-holography/issues/156) |
+| `hbar` | Quantum of action. | familiar-unit bridge only | Not a standalone OPH theorem output on the present public surface. In SI-facing readouts it is treated as a downstream exact unit convention that translates action/frequency normalizations into familiar energy-time units once the local bridge is fixed. | unit convention | [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) |
+| `k_B` | Entropy-temperature conversion factor. | familiar-unit bridge only | Not a standalone OPH theorem output on the present public surface. In SI-facing readouts it is treated as a downstream exact unit convention that translates entropy/energy normalizations into Kelvin temperature display once the local bridge is fixed. | unit convention | [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) |
+
+### Public Status Of `hbar` And `k_B`
+
+On the current OPH public constants surface, `hbar` and `k_B` are not carried as open theorem targets. They remain downstream familiar-unit readout conventions.
+
+That means:
+
+- OPH may recover the structural quantum and thermodynamic relations in which these symbols appear.
+- the numerical SI-facing values of `hbar` and `k_B` are not claimed as standalone OPH-emitted artifacts.
+- formulas such as `l_P = sqrt(hbar G / c^3)` and `T_dS = hbar H_dS / (2*pi k_B)` are familiar-unit readout formulas on the public surface, not extra OPH derivations.
 
 ## Gravity And Cosmology
 
 | Constant / parameter | Identified - summary | OPH constants required | How OPH derives it | Status | Tracker |
 | --- | --- | --- | --- | --- | --- |
 | `G` | Newton's constant. Sets the strength of gravity. | UV edge entropy plus geometric area matching | OPH matches edge entropy to geometric area and gets `G = a_cell / (4 * lbar(t))`, where `lbar(t)` is the single-cell edge entropy from the heat-kernel edge distribution. | conditional | [#158](https://github.com/FloatingPragma/observer-patch-holography/issues/158), [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) |
-| `l_P` | Planck length. | `G`, `c`, `hbar` | Downstream definition `l_P = sqrt(hbar G / c^3)`. | conditional | — |
-| `M_P` | Planck mass / Planck energy scale. | `G`, `c`, `hbar` | Downstream algebraic combination of `G`, `c`, and `hbar`. | conditional | — |
+| `l_P` | Planck length. | `G`, `c`, plus the conventional `hbar` readout factor | Downstream familiar-unit definition `l_P = sqrt(hbar G / c^3)`, with `hbar` taken in the unit-convention sense above rather than as a standalone OPH-emitted constant. | conditional | — |
+| `M_P` | Planck mass / Planck energy scale. | `G`, `c`, plus the conventional `hbar` readout factor | Downstream familiar-unit algebraic combination of `G`, `c`, and `hbar`, with `hbar` treated as a readout convention rather than as an independent OPH artifact. | conditional | — |
 | `Lambda` | Cosmological constant. Current benchmark `1.09e-52 m^-2`. | `G + N_scr` | OPH identifies `Lambda` as a global capacity parameter, not a local vacuum-energy output: `Lambda = 3*pi / (G N_scr)`. | conditional | — |
 | `H_dS` | Asymptotic de Sitter Hubble scale. Current benchmark `1.80706e-18 s^-1 = 55.76 km s^-1 Mpc^-1`. | `G + N_scr` | Downstream from `Lambda` via `H = c * sqrt(Lambda / 3)`. This is the OPH de Sitter `H`, not the time-dependent present-day `H_0`. | conditional | — |
 | `r_dS` | de Sitter horizon radius. Current benchmark `1.65900e26 m`. | `G + N_scr` | Downstream from `Lambda` via `r_dS = sqrt(3 / Lambda)`. | conditional | — |
 | `A_dS` | de Sitter horizon area. Current benchmark `3.45863e53 m^2`. | `G + N_scr` | Downstream from `r_dS` via `A_dS = 4*pi*r_dS^2`. | conditional | — |
 | `S_dS` | de Sitter horizon entropy. Current benchmark `3.30998e122` nats, or `4.77529e122` bits. | `N_scr` | In the static-patch reading this is the screen-capacity variable itself. Numerically it also matches `A_dS / (4 l_P^2)` once units are fixed. | conditional | — |
-| `T_dS` | de Sitter temperature. Current benchmark `2.19678e-30 K`. | `G + N_scr` | Downstream from `H_dS` via `T_dS = hbar H / (2*pi k_B)`. | conditional | — |
+| `T_dS` | de Sitter temperature. Current benchmark `2.19678e-30 K`. | `G + N_scr` | Downstream Kelvin readout from `H_dS`; on the public surface one may write `T_dS = hbar H / (2*pi k_B)`, with `hbar` and `k_B` functioning only as conventional familiar-unit readout factors rather than standalone OPH outputs. | conditional | — |
 | `rho_Lambda` | Dark-energy density. Current benchmark `5.84013e-27 kg m^-3`. | `G + N_scr` | Downstream algebraic quantity from `Lambda` and `G`. | conditional | — |
 | `a_0^(OPH)` | MOND-like IR acceleration benchmark. Current benchmark `1.02919e-10 m s^-2`. | `G + N_scr + modular-anomaly branch` | If the deep-IR response is controlled by the de Sitter scale and the fixed anomaly prefactor, OPH gives `a_0 = (15 / (8*pi^2)) c^2 sqrt(Lambda / 3)`. | conditional | — |
 
@@ -279,10 +290,10 @@ Checked against the open `FloatingPragma/observer-patch-holography` tracker on `
 | `W`, `Z` | The target-free electroweak chain already emits the public electroweak pair on the realized branch. | The remaining exact-live object is one target-free electroweak identity theorem on top of the already-closed forward `P -> t -> couplings` trunk and the explicit GeV bridge. | `a_cell` only for familiar units | [#31](https://github.com/FloatingPragma/observer-patch-holography/issues/31), [#32](https://github.com/FloatingPragma/observer-patch-holography/issues/32), [#33](https://github.com/FloatingPragma/observer-patch-holography/issues/33), [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) | public live rows `M_W = 80.377000015 GeV`, `M_Z = 91.187978078 GeV`; exact codomain `80.377 GeV`, `91.18797809193725 GeV` |
 | Higgs / top | The closed one-scalar Higgs/top chain already emits a live Higgs/top branch above the electroweak closure. | The remaining exact-live object is one live-forward Higgs/top promotion theorem, with the local energy bridge kept explicit. | `a_cell` only for familiar units | [#34](https://github.com/FloatingPragma/observer-patch-holography/issues/34), [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) | public live rows `M_H = 125.218922060 GeV`, `m_t = 172.388645595 GeV`; exact codomain `125.1995304097179 GeV`, `172.3523553288312 GeV` |
 | `G` | Gravity-side dictionary already states `G = a_cell / (4 * ellbar(t))`. | The remaining exact-live objects are the shared electroweak/gravity edge-entropy bridge, the local readout package, and the strict classical-regime clause; the sharp primitive missing proof is the branch-preserving transport step behind the shared entropy object. | `a_cell` only | [#158](https://github.com/FloatingPragma/observer-patch-holography/issues/158), [#22](https://github.com/FloatingPragma/observer-patch-holography/issues/22), [#106](https://github.com/FloatingPragma/observer-patch-holography/issues/106), [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) | exact emitted branch value on the local extension surface `6.674299995910528e-11 m^3 kg^-1 s^-2` |
-| Cell / Planck scales | Benchmark translation already gives `a_cell`, `ell_cell`, `tau_cell`, and `E_cell`. | State one honest theorem-facing local unit bridge, then settle whether `hbar` and `k_B` are derived or conventional. | `a_cell` only | [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159), [#156](https://github.com/FloatingPragma/observer-patch-holography/issues/156) | `a_cell = 4.26047e-70 m^2`, `ell_cell = 2.06409e-35 m`, `tau_cell = 6.88507e-44 s`, `E_cell = 9.55999e18 GeV` |
+| Cell / Planck scales | Benchmark translation already gives `a_cell`, `ell_cell`, `tau_cell`, and `E_cell`. | State one honest theorem-facing local unit bridge, with `hbar` and `k_B` kept explicitly in the downstream familiar-unit convention lane. | `a_cell` only | [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159) | `a_cell = 4.26047e-70 m^2`, `ell_cell = 2.06409e-35 m`, `tau_cell = 6.88507e-44 s`, `E_cell = 9.55999e18 GeV` |
 | Fine-structure / weak couplings | The target-free electroweak chain already emits dimensionless electroweak couplings on the realized branch. | Promote calibration to prediction and derive the matching structure from OPH rather than external RG packaging. | neither | [#31](https://github.com/FloatingPragma/observer-patch-holography/issues/31), [#32](https://github.com/FloatingPragma/observer-patch-holography/issues/32), [#33](https://github.com/FloatingPragma/observer-patch-holography/issues/33) | `alpha_U = 0.04112498`, `alpha_em(m_Z)^-1 = 128.30576920`, `sin^2 theta_W(m_Z) = 0.2307354235` |
 | `Lambda`, `H_dS`, de Sitter observables | Once `G` and `N_scr` are supplied, OPH already emits the de Sitter branch algebraically. | Unify the local gravity and global capacity stories into one theorem stack, then propagate the local unit bridge cleanly. | both `a_cell` and `N_scr`, except `S_dS` which is `N_scr` only | [#22](https://github.com/FloatingPragma/observer-patch-holography/issues/22), [#47](https://github.com/FloatingPragma/observer-patch-holography/issues/47), [#52](https://github.com/FloatingPragma/observer-patch-holography/issues/52) | `Lambda = 1.09e-52 m^-2`, `H_dS = 1.80706e-18 s^-1 = 55.76 km s^-1 Mpc^-1`, `r_dS = 1.65900e26 m` |
-| Temperature-side quantities | Thermodynamic structure is present, but `hbar` / `k_B` are not yet closed as standalone constants. | Decide whether `hbar` and `k_B` are genuine OPH outputs or only unit conventions, then expose the public temperature bridge honestly. | local temperature scales: `a_cell`; de Sitter temperature: both `a_cell` and `N_scr` | [#156](https://github.com/FloatingPragma/observer-patch-holography/issues/156), [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159), [#22](https://github.com/FloatingPragma/observer-patch-holography/issues/22) | benchmark-only today: `T_cell = 1.10939e32 K`, `T_dS = 2.19678e-30 K` |
+| Temperature-side quantities | Thermodynamic structure is present, and Kelvin displays currently use conventional `hbar` / `k_B` readout factors rather than standalone OPH constants. | Close the local familiar-unit bridge and propagate the public temperature readout honestly across the de Sitter branch. | local temperature scales: `a_cell`; de Sitter temperature: both `a_cell` and `N_scr` | [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159), [#22](https://github.com/FloatingPragma/observer-patch-holography/issues/22) | benchmark-only today: `T_cell = 1.10939e32 K`, `T_dS = 2.19678e-30 K` |
 
 ### Execution Order
 
@@ -290,7 +301,7 @@ If the goal is to maximize how many familiar constants OPH can quote numerically
 
 1. keep the Lorentz / BW branch honest enough that `c` and the local geometric language sit on a declared branch: [#106](https://github.com/FloatingPragma/observer-patch-holography/issues/106)
 2. finish the shared edge-entropy bridge needed for non-circular `G`: [#158](https://github.com/FloatingPragma/observer-patch-holography/issues/158), [#22](https://github.com/FloatingPragma/observer-patch-holography/issues/22)
-3. close the local familiar-unit bridge and settle the public role of `hbar` / `k_B`: [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159), [#156](https://github.com/FloatingPragma/observer-patch-holography/issues/156)
+3. close the local familiar-unit bridge while keeping `hbar` / `k_B` in the downstream readout-convention lane: [#159](https://github.com/FloatingPragma/observer-patch-holography/issues/159)
 4. prove the exact live electroweak chart identity so public `W/Z` rows land on the exact repaired chart: [#31](https://github.com/FloatingPragma/observer-patch-holography/issues/31), [#32](https://github.com/FloatingPragma/observer-patch-holography/issues/32), [#33](https://github.com/FloatingPragma/observer-patch-holography/issues/33)
 5. prove the exact live Higgs/top promotion on the forward branch: [#34](https://github.com/FloatingPragma/observer-patch-holography/issues/34)
 6. once the local `c/G/W/Z/H` package is honest, propagate the same bridge into `Lambda`, `H_dS`, and the other de Sitter descendants: [#47](https://github.com/FloatingPragma/observer-patch-holography/issues/47), [#52](https://github.com/FloatingPragma/observer-patch-holography/issues/52)
@@ -313,11 +324,12 @@ If the remaining theorem gaps close on the presently realized branch, the famili
 
 ## Comparison To Official Reference Values
 
-For the unit-setting constants, the comparison has to be separated into three categories:
+For the unit-setting constants, the comparison has to be separated into four categories:
 
 - exact-by-definition SI matches
 - conditional bridge matches
-- not-yet-comparable quantities
+- downstream unit conventions rather than standalone OPH outputs
+- not apples-to-apples quantities
 
 ### Exact-By-Definition SI Match
 
@@ -327,10 +339,10 @@ For the unit-setting constants, the comparison has to be separated into three ca
 
 - `G`: on the sharpened local extension surface the emitted branch value is `6.674299995910528e-11 m^3 kg^-1 s^-2`, which matches the CODATA / NIST value `6.67430(15)e-11 m^3 kg^-1 s^-2` at the quoted digits. This is numerically strong, but it is not yet a current-corpus theorem-grade independent prediction because the shared `ellbar` identification, the strict classical-regime clause, and the local familiar-unit bridge remain open.
 
-### Not Yet Comparable As Standalone OPH Outputs
+### Downstream Unit Conventions, Not Standalone OPH Outputs
 
-- `hbar`: official SI / NIST value exists, but OPH does not yet emit an independent standalone `hbar` artifact.
-- `k_B`: official SI / NIST value exists, but OPH does not yet emit an independent standalone `k_B` artifact.
+- `hbar`: the SI-facing value is exact by present unit definition, but on the current OPH public surface it is used only as a downstream familiar-unit conversion factor, not as a standalone emitted OPH constant.
+- `k_B`: likewise, the SI-facing value is exact by present unit definition, but on the current OPH public surface it is used only as a downstream entropy-to-Kelvin conversion factor, not as a standalone emitted OPH constant.
 
 ### Not Apples-To-Apples With A Present-Day Measurement
 
@@ -344,7 +356,7 @@ Using the current benchmark `Lambda = 1.09e-52 m^-2`, OPH already lets us comput
 - `r_dS = sqrt(3 / Lambda) = 1.65900e26 m`
 - `A_dS = 4*pi*r_dS^2 = 3.45863e53 m^2`
 - `S_dS = A_dS / (4 l_P^2) = 3.30998e122` nats `= 4.77529e122` bits
-- `T_dS = hbar H_dS / (2*pi k_B) = 2.19678e-30 K`
+- `T_dS = hbar H_dS / (2*pi k_B) = 2.19678e-30 K`, with `hbar` and `k_B` understood here as downstream familiar-unit readout conventions rather than standalone OPH outputs
 - `rho_Lambda = Lambda c^2 / (8*pi G) = 5.84013e-27 kg m^-3`
 - `a_0^(OPH) = (15 / (8*pi^2)) c^2 sqrt(Lambda / 3) = 1.02919e-10 m s^-2`
 
@@ -355,7 +367,8 @@ Today, the OPH constant story looks like this:
 - fully derived: the discrete Standard Model structure (`G_phys`, `N_g`, `N_c`, exact hypercharges) and the exact structural zeros (`m_gamma = 0`, `m_gluon = 0`, `m_graviton = 0`)
 - conditional on `P`: the target-free electroweak and one-scalar Higgs/top stack, the QCD `Lambda_MSbar` descendant, and the theorem-grade neutrino branch
 - conditional on `N_scr`: `Lambda` and its de Sitter descendants
-- not yet derived: `hbar`, `k_B`, the physical charged-lepton theorem lane, the physical quark/CKM theorem lane, physical Majorana phases, strong CP, and the hadron spectrum
+- public familiar-unit conventions rather than standalone OPH outputs: `hbar` and `k_B`
+- not yet derived: the physical charged-lepton theorem lane, the physical quark/CKM theorem lane, physical Majorana phases, strong CP, and the hadron spectrum
 
 ## Primary Source Surface
 
