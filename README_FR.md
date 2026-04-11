@@ -19,6 +19,7 @@ L'OPH est un programme de reconstruction. Espace-temps, structure de jauge, part
 ## Surface locale d'unification
 
 L'OPH place une surface locale d'unification autour de l'entrée UV locale calibrée. La même échelle pilotée par `P` porte la voie bosonique électrofaible et Higgs ainsi que la voie entropique gravitationnelle, tandis que la branche lorentzienne fournit la vitesse causale invariante et que le paquet local de lecture fournit l'affichage SI.
+Sur la surface publique actuelle des constantes, `hbar` et `k_B` restent dans cette couche aval de lecture en unités familières plutôt que d'apparaître comme des constantes OPH émises de manière autonome.
 
 <p align="center">
   <a href="assets/OPH_Unification_Diagram.svg" target="_blank" rel="noopener noreferrer">
@@ -31,8 +32,8 @@ Les constantes, chaînes de théorèmes et fronts de preuve ouverts pour cette s
 **Pile générale des théorèmes et dérivations**
 
 <p align="center">
-  <a href="assets/prediction-chain.svg" target="_blank" rel="noopener noreferrer">
-    <img src="assets/prediction-chain.svg" alt="Pile théorématique et de dérivation OPH" width="92%">
+  <a href="assets/prediction-chain.svg?v=20260412" target="_blank" rel="noopener noreferrer">
+    <img src="assets/prediction-chain.svg?v=20260412" alt="Pile théorématique et de dérivation OPH" width="92%">
   </a>
 </p>
 

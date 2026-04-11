@@ -19,6 +19,7 @@ OPH is a reconstruction program for fundamental physics. Spacetime, gauge struct
 ## Local Unification Surface
 
 OPH places a local unification surface around the calibrated local UV input. The same `P`-driven scale carries the electroweak boson and Higgs lane together with the gravity-side entropy lane, while the Lorentz branch supplies the invariant causal speed and the local readout package supplies the SI display.
+On the current public constants surface, `hbar` and `k_B` remain part of that downstream familiar-unit readout rather than standalone OPH-emitted constants.
 
 <p align="center">
   <a href="assets/OPH_Unification_Diagram.svg" target="_blank" rel="noopener noreferrer">
@@ -31,8 +32,8 @@ Constants, theorem chains, and open proof fronts for this surface are tracked in
 **Current theorem stack and open fronts**
 
 <p align="center">
-  <a href="assets/prediction-chain.svg?v=20260411" target="_blank" rel="noopener noreferrer">
-    <img src="assets/prediction-chain.svg?v=20260411" alt="Current OPH theorem stack and open proof fronts" width="92%">
+  <a href="assets/prediction-chain.svg?v=20260412" target="_blank" rel="noopener noreferrer">
+    <img src="assets/prediction-chain.svg?v=20260412" alt="Current OPH theorem stack and open proof fronts" width="92%">
   </a>
 </p>
 
