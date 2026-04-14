@@ -332,7 +332,7 @@ without promoting an MSSM particle spectrum into the recovered core.
 The main unresolved objects are:
 
 1. **Screen microphysics**: What exactly are the degrees of freedom on S²?
-2. **Particle closure**: the charged-lepton absolute anchor, theorem coverage beyond the selected quark frame, and hadron masses behind the backend gate.
+2. **Particle closure**: the charged-lepton source landing from the common calibration input to physical charged data, theorem coverage beyond the selected quark frame, and hadron masses behind the backend gate.
 3. **Dynamics and gravity**: Can local horizon thermodynamics be made fully internal?
 4. **Cosmology**: What fixes Λ and the initial low‑entropy condition?
 5. **Numerical predictions**: Implement SU(2)/SU(3) quantum link models and
@@ -407,7 +407,7 @@ For the book, the particle story looks like this:
 | Structural carriers | Photon, gluons, and graviton are exact zeros. | theorem-grade structural statement |
 | Electroweak theorem | W and Z are fixed by the electroweak closure, with an exact reference-hitting validation slice beneath it. | the theorem surface carries the pair; the validation slice is secondary |
 | Higgs/top branch | A one-scalar Higgs/top branch yields \(H = 125.21892206026347\) GeV and \(t = 172.388646\) GeV, with an exact inverse validation slice on the same Jacobian surface. | the forward branch is the claim surface; the inverse slice is a validation surface |
-| Charged-lepton witness | An exact same-family \((e,\mu,\tau)\) witness fixes the ordered charged triple and its affine coordinate on that witness. | one absolute charged anchor is missing |
+| Charged-lepton witness | An exact same-family \((e,\mu,\tau)\) witness fixes the ordered charged triple and its affine coordinate on that witness. | the theorem surface contains a conditional determinant-line lift and an algebraic mass readout; the open theorem is the landing from the common calibration input to physical charged data or the charged determinant line |
 | Quark theorem | An exact PDG 2025 running \((u,d,s,c,b,t)\) sextet and exact forward Yukawas on the quark frame selected by \(P\). | the theorem closes on that selected frame; it does not classify every quark frame |
 | Neutrino theorem | A theorem-grade weighted-cycle family with \((m_1,m_2,m_3)=(0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\) eV and the corresponding mixing data. | exact central-splitting adapters are diagnostic validation surfaces |
 | Hadron boundary | Bound-state masses lie outside the closed package. | backend plus nonperturbative strong dynamics are required |
@@ -638,11 +638,11 @@ Physicists kept finding that observation plays a special role. Information kept 
 
 The elegance here is structural, not aesthetic. The pieces fit because they are different views of the same underlying consistency problem.
 
-## 18.14 The Work Continues
+## 18.14 Open Quantitative Fronts
 
-We have reverse engineered a piece of reality's source code. Enough to see the structure, while the broader quantitative closure remains open.
+The reconstruction fixes a structural core and several exact quantitative branches. Other quantitative branches sit on explicit named theorem boundaries.
 
-Much remains:
+Open fronts include:
 - The microscopic theory
 - Full quantitative Standard Model closure
 - The cosmological constant

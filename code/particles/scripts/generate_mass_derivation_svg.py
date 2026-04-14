@@ -222,28 +222,23 @@ LANES: List[Dict[str, Any]] = [
     {
         "key": "leptons",
         "title": "Charged Leptons",
-        "summary": "The charged-lepton lane contains a closed exact same-family readout on the fixed ordered carrier, together with a two-layer theorem boundary: branch-generator promotion and the post-promotion uncentered trace lift.",
-        "takeaway": "One exact charged chain closes on its declared scope: shared excitation dictionary -> ordered charged carrier -> exact centered readback -> quadratic readout theorem -> exact same-family triple. The theorem-grade absolute lane consists of `C_hat_e^{cand}` promotion and the post-promotion lift whose descended scalar is `mu_phys(Y_e)`, with `charged_physical_identity_mode_equalizer` beneath that scalar.",
+        "summary": "The charged-lepton lane contains a closed exact same-family readout on the fixed ordered carrier, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout from theorem-grade `A_ch(P)`.",
+        "takeaway": "The theorem surface contains the exact same-family witness, the conditional determinant-line lift, and the downstream algebraic mass readout. The single open charged theorem is the source landing `B_D10(P) -> Y_e(P)` or equivalently `B_D10(P) -> s_det(P)`.",
         "logic": (
             "The lane starts from the ordered charged package, proves that the realized support is a one-dimensional "
             "linear subray, exposes the canonical quadratic support-extension direction, maps that into the charged "
             "excitation gaps, closes the two-scalar support-extension law shell, isolates the eta source-readback "
             "primitive as a weighted midpoint-defect invariant, and then uses the endpoint-ratio breaker for sigma. "
             "On the fixed ordered three-point family, the exact same-family quadratic theorem closes the readout to one exact charged triple on that scope. "
-            "The scalar order beneath the public charged theorem rows is eta first and sigma second on the same carrier. "
-            "At theorem level, the exact boundary starts with the latent candidate "
-            "`C_hat_e^{cand}`. Promoting it is blocked by the branch-generator splitting theorem and its "
-            "commutator clause, and the local corpus proves neither exact vanishing nor uniform quadratic smallness of that descended commutator. The extension package is a centered Schur-type "
-            "`P->Q->P` transfer theorem: if a refinement-uniform middle-factor bound is certified, it promotes the proxy bridge with the recorded margin `M < 119.56`. On the absolute side the equalizer route is a no-go under common-shift "
-            "symmetry, so the theorem boundary passes through the refinement-stable uncentered trace lift. Inside that lift, the exact smaller forcing object is `charged_physical_identity_mode_equalizer`, which forces the descended scalar `mu_phys(Y_e)` and then the determinant-line section and affine anchor."
+            "The theorem-facing charged absolute lane contains a conditional determinant-line lift on theorem-grade physical charged data: "
+            "`mu_phys(Y_e) = (1/3) * log(det(Y_e))`, together with the canonical uncentered lift and determinant-line section. "
+            "Once theorem-grade `A_ch(P)` is given, the charged absolute scale and the charged mass triple are algebraic readouts. "
+            "The unresolved step is the source landing from the D10 calibration descendants of `P` to theorem-grade physical charged data or the charged determinant line."
         ),
-        "tasks_text": "Frontier statement: `oph_generation_bundle_branch_generator_splitting`, reduced to `compression_descendant_commutator_vanishes_or_is_uniformly_quadratic_small_after_central_split`, together with the refinement-stable uncentered trace lift whose descended scalar is `mu_phys(Y_e)` and whose smaller forcing object is `charged_physical_identity_mode_equalizer`.",
-        "prediction_surface": "Charged theorem surface with exact centered readback, an exact same-family sidecar triple on the fixed ordered carrier, a common-shift no-go for the absolute scale, and a layered post-promotion route through the uncentered trace lift, `charged_physical_identity_mode_equalizer`, and `mu_phys(Y_e)` to the determinant-line section and affine anchor.",
+        "tasks_text": "Frontier statement: the same-family witness, the conditional determinant-line lift, and the algebraic mass readout are closed. The open source-facing theorem is `B_D10(P) -> Y_e(P)` or equivalently `B_D10(P) -> s_det(P)`.",
+        "prediction_surface": "Charged theorem surface with an exact same-family witness, a conditional determinant-line lift on theorem-grade physical charged data, and an algebraic charged-mass readout from theorem-grade `A_ch(P)`.",
         "particles": ["electron", "muon", "tau"],
-        "tasks": [
-            "papers.compact.e.29-derive-the-yukawa-excitation-dictionary",
-            "papers.compact.e.30-replace-koide-assisted-lepton-fitting-with-a-theorem",
-        ],
+        "tasks": ["papers.compact.e.30e-derive-d10-to-charged-determinant-line-landing"],
     },
     {
         "key": "quarks",

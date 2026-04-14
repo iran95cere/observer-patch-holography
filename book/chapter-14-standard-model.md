@@ -546,7 +546,7 @@ For the book, the picture is this:
 | Structural carriers | Photon, gluons, and graviton are exact zeros | theorem-grade structural statement |
 | Electroweak theorem | W and Z are fixed by the electroweak closure, with an exact reference-hitting validation slice beneath it | the theorem surface carries the pair; the validation slice is secondary |
 | Higgs/top branch | A one-scalar Higgs/top branch yields \(H = 125.21892206026347\) GeV and \(t = 172.388646\) GeV, with an exact inverse validation slice on the same Jacobian surface | the forward branch is the claim surface; the inverse slice is a validation surface |
-| Charged-lepton witness | An exact same-family \((e,\mu,\tau)\) witness fixes the ordered charged triple and its affine coordinate on that witness | one absolute charged anchor is missing |
+| Charged-lepton witness | An exact same-family \((e,\mu,\tau)\) witness fixes the ordered charged triple and its affine coordinate on that witness | the theorem surface contains a conditional determinant-line lift and an algebraic mass readout; the open theorem is the landing from the common calibration input to physical charged data or the charged determinant line |
 | Quark theorem | An exact PDG 2025 running \((u,d,s,c,b,t)\) sextet and exact forward Yukawas on the quark frame selected by \(P\) | the theorem closes on that selected frame; it does not classify every quark frame |
 | Neutrino theorem | A theorem-grade weighted-cycle family with \((m_1,m_2,m_3)=(0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\) eV and the corresponding mixing data | exact central-splitting adapters are diagnostic validation surfaces |
 | Hadron boundary | Bound-state masses lie outside the closed package | backend plus nonperturbative strong dynamics are required |
@@ -577,7 +577,7 @@ The graviton emerges from a parallel chain of reasoning, applied to spacetime ge
 
 In Chapter 15 the theorem surface recovers the cap-modular statement on the extracted prime geometric subnet. On that subnet, once the recovery and MaxEnt structure is in place, modular flow on caps becomes a geometric conformal transformation with a fixed normalization. In the generic continuum case this is an automorphism-level statement for the scaling-limit cap pair; the operator identity for a modular Hamiltonian is restricted to the special type-I realization.
 
-The conformal group of the two-sphere is isomorphic to the Lorentz group: Conf⁺(S²) ≅ PSL(2,ℂ) ≅ SO⁺(3,1). This is a mathematical identity. Once the geometric cap pair is in hand on the extracted subnet, Lorentz kinematics follows from that conformal classification.
+The conformal group of the two-sphere is isomorphic to the Lorentz group: Conf⁺(S²) ≅ PSL(2,ℂ) ≅ SO⁺(3,1). This is a mathematical identity. Given the geometric cap pair on the extracted subnet, Lorentz kinematics follows from that conformal classification.
 
 But geometry goes further. The entanglement structure of the screen encodes dynamics as well as kinematics. Through the entanglement equilibrium argument, developed in Chapter 15, the condition that generalized entropy is stationary under small admissible variations implies a Jacobson-type first-variation Einstein relation in the same scaling regime, and patch consistency upgrades it to the tensor equation. The metric tensor emerges as the compression of modular flow data, and its dynamics are fixed by the requirement that entanglement remains balanced.
 
@@ -682,7 +682,7 @@ The same local calibration surface ties this particle lane to the gravity lane. 
 
 **Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
-**The boundary.** Charged leptons require the final absolute anchor. The exact quark theorem is restricted to the quark frame selected by \(P\). Hadrons require a production backend and nonperturbative strong-dynamics work.
+**The boundary.** Charged leptons require the source landing from the common calibration input to physical charged data. The exact quark theorem is restricted to the quark frame selected by \(P\). Hadrons require a production backend and nonperturbative strong-dynamics work.
 
 ## 14.21 The Big Picture
 

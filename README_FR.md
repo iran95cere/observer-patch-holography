@@ -27,7 +27,7 @@ Sur la surface publique des constantes, `hbar` et `k_B` restent dans cette couch
   </a>
 </p>
 
-Les constantes, chaînes de théorèmes et fronts de preuve ouverts pour cette surface sont suivis dans [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
+Les surfaces de statut pour les particules dans ce dépôt sont [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) et [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md).
 
 **Pile générale des théorèmes et dérivations**
 
@@ -46,8 +46,8 @@ respect clair d'une borne supérieure par rapport aux valeurs de référence PDG
 les papiers. Les résultats structurels comme la branche lorentzienne `3+1D`, le quotient de jauge
 du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, le réseau exact des hypercharges et la chaîne de
 comptage `N_g = 3`, `N_c = 3` sont énoncés dans les papiers et ne sont pas répétés ici. La voie
-bosonique `W/Z/H` reste en cours sur la branche de calibration de phase II; elle est donc discutée
-dans les papiers mais omise de ce tableau rapide.
+bosonique `W/Z/H` appartient à la branche de calibration de phase II; elle est donc discutée dans
+les papiers mais omise de ce tableau rapide.
 
 | Quantité | Symbole | OPH | PDG/NIST | Δ |
 | --- | --- | --- | --- | --- |
@@ -76,6 +76,8 @@ Pour les quarks, le PDG utilise ses conventions standard : `u`, `d` et `s` à `2
 Les papiers contiennent aussi les dérivations structurelles du Modèle Standard listées plus haut
 ainsi qu'une famille neutrino de rang théorème, qui n'apparaissent pas dans ce tableau faute de
 ligne de comparaison PDG/NIST directe à un seul nombre.
+
+Le secteur des leptons chargés suit une frontière plus nette. Le dépôt contient un témoin exact sur une même famille, un relèvement conditionnel de la ligne déterminant sur les données chargées physiques, puis une lecture algébrique des masses à partir de l'échelle absolue chargée de rang théorème. Le théorème ouvert est l'atterrissage de l'entrée de calibration commune `P` sur les données chargées physiques ou sur la ligne déterminant chargée.
 
 **Pile de dérivation des particules**
 

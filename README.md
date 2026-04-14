@@ -26,9 +26,9 @@ This condensed table keeps only OPH rows with either an exact match, a quoted si
 a clean upper-bound success against the PDG/NIST reference values used in the papers. Structural
 results such as the `3+1D` Lorentz branch, the Standard Model gauge quotient
 `SU(3) x SU(2) x U(1) / Z_6`, the exact hypercharge lattice, and the counting chain `N_g = 3`,
-`N_c = 3` are stated in the papers and are not repeated here. The `W/Z/H` boson lane remains work
-in progress on the Phase II calibration branch, so it is discussed in the papers but omitted from
-this quick comparison.
+`N_c = 3` are stated in the papers and are not repeated here. The `W/Z/H` boson lane sits on the
+Phase II calibration branch, so it is discussed in the papers but omitted from this quick
+comparison.
 
 | Quantity | Symbol | OPH | PDG/NIST | Δ |
 | --- | --- | --- | --- | --- |
@@ -58,6 +58,8 @@ The papers also contain the structural Standard Model derivations listed above a
 neutrino family, which are not included in this table because they do not have a single direct
 PDG/NIST one-number comparison row.
 
+Charged leptons sit on a sharper theorem split. The repo carries an exact same-family witness, a conditional determinant-line lift on physical charged data, and an algebraic mass readout from theorem-grade absolute charged scale. The open theorem is the landing from the common calibration input `P` to physical charged data or the charged determinant line.
+
 ## Local Unification Surface
 
 OPH places a local unification surface around the calibrated local UV input. The same `P`-driven scale carries the electroweak boson and Higgs lane together with the gravity-side entropy lane, while the Lorentz branch supplies the invariant causal speed and the local readout package supplies the SI display.
@@ -69,7 +71,7 @@ On the public constants surface, `hbar` and `k_B` remain part of that downstream
   </a>
 </p>
 
-Constants, theorem chains, and open proof fronts for this surface are tracked in [extra/OPH_PHYSICS_CONSTANTS.md](extra/OPH_PHYSICS_CONSTANTS.md).
+Particle status surfaces for this repo live in [code/particles/RESULTS_STATUS.md](code/particles/RESULTS_STATUS.md) and [code/particles/EXACT_NONHADRON_MASSES.md](code/particles/EXACT_NONHADRON_MASSES.md).
 
 **Theorem stack and open fronts**
 

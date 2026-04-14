@@ -899,10 +899,10 @@
   <text x="950" y="3128" fill="#ff8f97" font-size="15" font-family="JetBrains Mono, monospace" font-weight="700" letter-spacing="2" opacity="1">COMPLETION</text>
   <rect x="938" y="3345" width="227.2" height="3" rx="1.5" fill="#ff8f97" opacity="0.82" />
   <text x="944" y="3181" fill="#f4f7fb" font-size="30" font-family="Space Grotesk, sans-serif" font-weight="700" letter-spacing="-0.35" opacity="1">Charged Mass Prediction Frontier</text>
-  <text x="944" y="3234" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">operator obstruction certificate -&gt;</text>
-  <text x="944" y="3266" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">post-promotion lift -&gt; A_ch(P)</text>
-  <text x="944" y="3298" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">charged masses from P remain open (#151, #150,</text>
-  <text x="944" y="3330" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">#152)</text>
+  <text x="944" y="3234" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">same-family witness -&gt; determinant-line lift -&gt;</text>
+  <text x="944" y="3266" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">algebraic readout</text>
+  <text x="944" y="3298" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">open theorem: B_D10(P) -&gt; Y_e(P) or s_det(P)</text>
+  <text x="944" y="3330" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">(#201)</text>
 </g>
 <g filter="url(#panelShadow)">
   <rect x="180" y="3394" width="710" height="225" rx="28" fill="rgb(10 14 22 / 0.93)" stroke="#ff8f97" stroke-width="1.6" opacity="1.0" />
@@ -936,7 +936,7 @@
   <rect x="1948" y="3009" width="300.8" height="3" rx="1.5" fill="#7ca6ff" opacity="0.82" />
   <text x="1954" y="2909" fill="#f4f7fb" font-size="30" font-family="Space Grotesk, sans-serif" font-weight="700" letter-spacing="-0.35" opacity="1">Local Unification Surface</text>
   <text x="1954" y="2962" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">shared P-driven boson/Higgs/gravity picture</text>
-  <text x="1954" y="2994" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">README local surface is explicit but still branch-conditional</text>
+  <text x="1954" y="2994" fill="#9ba7b8" font-size="22" font-family="JetBrains Mono, monospace" font-weight="500" opacity="1">README local surface is explicit and branch-conditional</text>
 </g>
 <g filter="url(#panelShadow)">
   <rect x="1930" y="3058" width="940" height="193" rx="28" fill="rgb(10 14 22 / 0.93)" stroke="#ff8f97" stroke-width="1.6" opacity="1.0" />
