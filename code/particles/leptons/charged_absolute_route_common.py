@@ -26,6 +26,7 @@ DETERMINANT_LINE_JSON = RUNS_DIR / "charged_determinant_line_section_extension.j
 ANCHOR_SECTION_JSON = RUNS_DIR / "charged_absolute_anchor_section.json"
 POST_PROMOTION_ROUTE_JSON = RUNS_DIR / "charged_post_promotion_absolute_closure_route.json"
 ABSOLUTE_FRONTIER_FACTORIZATION_JSON = RUNS_DIR / "charged_absolute_frontier_factorization.json"
+P_TO_AFFINE_REDUCTION_JSON = RUNS_DIR / "charged_p_to_affine_anchor_reduction.json"
 
 
 def load_json(path: Path) -> dict[str, Any]:

@@ -10,6 +10,12 @@
     "artifact_ref": "code/particles/runs/leptons/charged_p_to_affine_anchor_bridge_no_go.json",
     "verdict": "no_current_corpus_P_to_A_ch_bridge"
   },
+  "bridge_reduction_artifact": {
+    "artifact": "oph_charged_p_to_affine_anchor_reduction",
+    "artifact_ref": "code/particles/runs/leptons/charged_p_to_affine_anchor_reduction.json",
+    "exact_smallest_bridge_target": "d10_to_charged_determinant_line_bridge",
+    "reduction_theorem_id": "charged_P_to_A_ch_reduces_to_determinant_line_bridge"
+  },
   "current_forbidden_outputs": [
     "A_ch(P)",
     "g_e(P)",
@@ -30,12 +36,13 @@
       "id": "refinement_stable_uncentered_trace_lift"
     },
     {
-      "effect_on_fill": "theorem_grade_A_ch(P)",
+      "effect_on_fill": "theorem_grade_charged_determinant_line_section(P)_then_A_ch(P)",
+      "exact_smallest_bridge_target": "d10_to_charged_determinant_line_bridge",
       "id": "d10_to_charged_affine_anchor_bridge",
       "smallest_honest_contract": "one theorem-grade map from the D10 calibration descendants of P to the charged determinant line, or to a smaller intermediate object that canonically forces A_ch(P)"
     }
   ],
-  "generated_utc": "2026-04-04T04:02:26Z",
+  "generated_utc": "2026-04-14T03:41:05Z",
   "notes": [
     "This is a dependency theorem, not a numerical mismatch report.",
     "It isolates exactly what remains before any public charged table can emit masses from P.",

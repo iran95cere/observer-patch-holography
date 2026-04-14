@@ -86,6 +86,13 @@ The post-promotion lift slot has now been reduced further in carrier type:
   `C_hat_e` cannot emit `mu_phys(Y_e)` by itself, because centered operator
   data is still invariant under the common-shift action that `mu_phys` breaks.
 
+- `oph_charged_p_to_affine_anchor_reduction`
+  This fixes the smallest honest bridge target for the `P`-driven absolute
+  lane. A theorem-grade landing from the D10 descendants of `P` on theorem-
+  grade physical `Y_e(P)` or on the charged determinant line already forces
+  `A_ch(P) = (1/3) * log(det(Y_e(P)))`, so the bridge target is smaller than a
+  free-standing affine-scalar theorem.
+
 Layered frontier ledger now on disk:
 
 - `oph_charged_absolute_frontier_factorization`

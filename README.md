@@ -22,37 +22,38 @@ The quantitative side is deliberately small. OPH uses only two calibrated inputs
 
 ### Precise Derivations
 
-This table focuses on OPH outputs with a clean one-number comparison against the latest official
-PDG or NIST reference values. Structural results such as the `3+1D` Lorentz branch, the Standard
-Model gauge quotient `SU(3) x SU(2) x U(1) / Z_6`, the exact hypercharge lattice, and the counting
-chain `N_g = 3`, `N_c = 3` are stated in the papers and are not repeated here.
+This condensed table keeps only OPH rows with either an exact match, a quoted sigma agreement, or
+a clean upper-bound success against the PDG/NIST reference values used in the papers. Structural
+results such as the `3+1D` Lorentz branch, the Standard Model gauge quotient
+`SU(3) x SU(2) x U(1) / Z_6`, the exact hypercharge lattice, and the counting chain `N_g = 3`,
+`N_c = 3` are stated in the papers and are not repeated here. The `W/Z/H` boson lane remains work
+in progress on the Phase II calibration branch, so it is discussed in the papers but omitted from
+this quick comparison.
 
-| Constant or particle | Standard shorthand | OPH predicted value | Latest PDG / NIST value | Agreement | Measurement source |
-| --- | --- | --- | --- | --- | --- |
-| Newtonian constant of gravitation | `G` | `6.674299995910528 x 10^-11 m^3 kg^-1 s^-2` | `6.67430(15) x 10^-11 m^3 kg^-1 s^-2` | `0.00003σ` | [NIST 2022](https://physics.nist.gov/cuu/pdf/wall_2022.pdf) |
-| Speed of light in vacuum | `c` | `299792458 m s^-1` | `299792458 m s^-1 (exact)` | `100% match` | [NIST 2022](https://physics.nist.gov/cuu/pdf/wall_2022.pdf) |
-| Inverse fine-structure constant | `alpha^-1(0)` | `137.035999177` | `137.035999177(21)` | `100% match` | [NIST 2022](https://physics.nist.gov/cgi-bin/cuu/Value?eqalphinv=) |
-| Photon mass | `m_gamma` | `0 eV` | `< 1 x 10^-18 eV` | `Below PDG bound` | [PDG 2025 gauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Gluon mass | `m_gluon` | `0 GeV` | `0 GeV` | `100% match` | [PDG 2025 gauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Graviton mass | `m_graviton` | `0 eV` | `< 1.76 x 10^-23 eV` | `Below PDG bound` | [PDG 2025 gauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| W boson mass | `m_W` | `80.377000015 GeV` | `80.3692 ± 0.0133 GeV` | `0.59σ, not yet fully derived` | [PDG 2025 gauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Z boson mass | `m_Z` | `91.187978078 GeV` | `91.1880 ± 0.0020 GeV` | `0.01σ, not yet fully derived` | [PDG 2025 gauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Higgs boson mass | `m_H` | `125.218922060 GeV` | `125.20 ± 0.11 GeV` | `0.17σ, not yet fully derived` | [PDG 2025 gauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Top quark mass | `m_t` | `172.388645595 GeV` | `172.56 ± 0.31 GeV` | `0.55σ, not yet fully derived` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Bottom quark mass | `m_b(m_b)` | `4.183 GeV` | `4.183 ± 0.007 GeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Charm quark mass | `m_c(m_c)` | `1.273 GeV` | `1.2730 ± 0.0046 GeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Strange quark mass | `m_s(2 GeV)` | `93.5 MeV` | `93.5 ± 0.8 MeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Down quark mass | `m_d(2 GeV)` | `4.70 MeV` | `4.70 ± 0.07 MeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Up quark mass | `m_u(2 GeV)` | `2.16 MeV` | `2.16 ± 0.07 MeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
+| Quantity | Symbol | OPH | PDG/NIST | Δ |
+| --- | --- | --- | --- | --- |
+| Gravitational constant | G | 6.6742999959e-11 | 6.67430(15)e-11 | 0.00003σ |
+| Speed of light | c | 299792458 | 299792458 (exact) | match |
+| Fine-structure (inv) | α⁻¹(0) | 137.035999177 | 137.035999177(21) | match |
+| Photon mass | m_γ | 0 eV | <1e-18 eV | below bound |
+| Gluon mass | m_g | 0 GeV | 0 GeV | match |
+| Graviton mass | m_grav | 0 eV | <1.76e-23 eV | below bound |
 
-Agreement is reported as a sigma distance where PDG or NIST quotes a one-standard-deviation
-uncertainty. For exact definitions, exact digit matches, or published upper bounds, the table reports
-`100% match` or `Below PDG bound` instead.
+**Quark sector**
 
-`W/Z` sit on the Phase II calibration lane, and Higgs/top sit on the quantitative D11 branch. Those rows are therefore not yet fully end-to-end derived in the same sense as the structural zeros, the exact fine-structure row, or the selected-class exact quark rows.
+| Quark | Symbol | OPH | PDG | Δ |
+| --- | --- | --- | --- | --- |
+| Bottom | m_b(m_b) | 4.183 GeV | 4.183 ± 0.007 | match |
+| Charm | m_c(m_c) | 1.273 GeV | 1.2730 ± 0.0046 | match |
+| Strange | m_s(2 GeV) | 93.5 MeV | 93.5 ± 0.8 | match |
+| Down | m_d(2 GeV) | 4.70 MeV | 4.70 ± 0.07 | match |
+| Up | m_u(2 GeV) | 2.16 MeV | 2.16 ± 0.07 | match |
+
+`Δ` reports the sigma distance where PDG or NIST quotes a one-standard-deviation uncertainty.
+Otherwise it records `match` or `below bound`.
 
 For the quark rows, PDG uses its standard quark-mass conventions: `u`, `d`, and `s` at `2 GeV`,
-`c` and `b` in the `MS` scheme at their own mass scale, and the direct top-mass summary for `t`.
+and `c` and `b` in the `MS` scheme at their own mass scale.
 The papers also contain the structural Standard Model derivations listed above and a theorem-grade
 neutrino family, which are not included in this table because they do not have a single direct
 PDG/NIST one-number comparison row.

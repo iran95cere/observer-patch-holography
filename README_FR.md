@@ -41,38 +41,38 @@ Les constantes, chaînes de théorèmes et fronts de preuve ouverts pour cette s
 
 ## Dérivations précises
 
-Ce tableau se concentre sur les sorties OPH pour lesquelles il existe une comparaison numérique
-directe avec la dernière valeur officielle PDG ou NIST. Les résultats structurels comme la branche
-lorentzienne `3+1D`, le quotient de jauge du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, le
-réseau exact des hypercharges et la chaîne de comptage `N_g = 3`, `N_c = 3` sont énoncés dans les
-papiers et ne sont pas répétés ici.
+Ce tableau condensé ne garde que les lignes OPH avec égalité exacte, accord en sigma publié ou
+respect clair d'une borne supérieure par rapport aux valeurs de référence PDG/NIST utilisées dans
+les papiers. Les résultats structurels comme la branche lorentzienne `3+1D`, le quotient de jauge
+du Modèle Standard `SU(3) x SU(2) x U(1) / Z_6`, le réseau exact des hypercharges et la chaîne de
+comptage `N_g = 3`, `N_c = 3` sont énoncés dans les papiers et ne sont pas répétés ici. La voie
+bosonique `W/Z/H` reste en cours sur la branche de calibration de phase II; elle est donc discutée
+dans les papiers mais omise de ce tableau rapide.
 
-| Constante ou particule | Abréviation standard | Valeur prédite par OPH | Dernière valeur PDG / NIST | Accord | Source de mesure |
-| --- | --- | --- | --- | --- | --- |
-| Constante de gravitation newtonienne | `G` | `6.674299995910528 x 10^-11 m^3 kg^-1 s^-2` | `6.67430(15) x 10^-11 m^3 kg^-1 s^-2` | `0.00003σ` | [NIST 2022](https://physics.nist.gov/cuu/pdf/wall_2022.pdf) |
-| Vitesse de la lumière dans le vide | `c` | `299792458 m s^-1` | `299792458 m s^-1 (exact)` | `100% match` | [NIST 2022](https://physics.nist.gov/cuu/pdf/wall_2022.pdf) |
-| Inverse de la constante de structure fine | `alpha^-1(0)` | `137.035999177` | `137.035999177(21)` | `100% match` | [NIST 2022](https://physics.nist.gov/cgi-bin/cuu/Value?eqalphinv=) |
-| Masse du photon | `m_gamma` | `0 eV` | `< 1 x 10^-18 eV` | `Sous la borne PDG` | [PDG 2025 jauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Masse du gluon | `m_gluon` | `0 GeV` | `0 GeV` | `100% match` | [PDG 2025 jauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Masse du graviton | `m_graviton` | `0 eV` | `< 1.76 x 10^-23 eV` | `Sous la borne PDG` | [PDG 2025 jauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Masse du boson W | `m_W` | `80.377000015 GeV` | `80.3692 ± 0.0133 GeV` | `0.59σ, pas encore entièrement dérivé` | [PDG 2025 jauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Masse du boson Z | `m_Z` | `91.187978078 GeV` | `91.1880 ± 0.0020 GeV` | `0.01σ, pas encore entièrement dérivé` | [PDG 2025 jauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Masse du boson de Higgs | `m_H` | `125.218922060 GeV` | `125.20 ± 0.11 GeV` | `0.17σ, pas encore entièrement dérivé` | [PDG 2025 jauge/Higgs](https://pdg.lbl.gov/2025/tables/rpp2025-sum-gauge-higgs-bosons.pdf) |
-| Masse du quark top | `m_t` | `172.388645595 GeV` | `172.56 ± 0.31 GeV` | `0.55σ, pas encore entièrement dérivé` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Masse du quark bottom | `m_b(m_b)` | `4.183 GeV` | `4.183 ± 0.007 GeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Masse du quark charm | `m_c(m_c)` | `1.273 GeV` | `1.2730 ± 0.0046 GeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Masse du quark étrange | `m_s(2 GeV)` | `93.5 MeV` | `93.5 ± 0.8 MeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Masse du quark down | `m_d(2 GeV)` | `4.70 MeV` | `4.70 ± 0.07 MeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
-| Masse du quark up | `m_u(2 GeV)` | `2.16 MeV` | `2.16 ± 0.07 MeV` | `100% match` | [PDG 2025 quarks](https://pdg.lbl.gov/2025/tables/rpp2025-sum-quarks.pdf) |
+| Quantité | Symbole | OPH | PDG/NIST | Δ |
+| --- | --- | --- | --- | --- |
+| Constante gravitationnelle | G | 6.6742999959e-11 | 6.67430(15)e-11 | 0.00003σ |
+| Vitesse de la lumière | c | 299792458 | 299792458 (exact) | match |
+| Structure fine (inv.) | α⁻¹(0) | 137.035999177 | 137.035999177(21) | match |
+| Masse du photon | m_γ | 0 eV | <1e-18 eV | sous la borne |
+| Masse du gluon | m_g | 0 GeV | 0 GeV | match |
+| Masse du graviton | m_grav | 0 eV | <1.76e-23 eV | sous la borne |
 
-L'accord est donné en nombre de sigma lorsque le PDG ou le NIST publie une incertitude à un sigma.
-Pour les définitions exactes, les égalités exactes aux chiffres affichés ou les bornes supérieures
-publiées, le tableau affiche `100% match` ou `Sous la borne PDG`.
+**Secteur des quarks**
 
-Les lignes `W/Z` appartiennent à la voie de calibration de phase II, et les lignes Higgs/top à la branche quantitative D11. Elles ne sont donc pas encore entièrement dérivées de bout en bout au même sens que les zéros structurels, la ligne exacte de la structure fine ou les lignes quark exactes sur classe sélectionnée.
+| Quark | Symbole | OPH | PDG | Δ |
+| --- | --- | --- | --- | --- |
+| Bottom | m_b(m_b) | 4.183 GeV | 4.183 ± 0.007 | match |
+| Charm | m_c(m_c) | 1.273 GeV | 1.2730 ± 0.0046 | match |
+| Strange | m_s(2 GeV) | 93.5 MeV | 93.5 ± 0.8 | match |
+| Down | m_d(2 GeV) | 4.70 MeV | 4.70 ± 0.07 | match |
+| Up | m_u(2 GeV) | 2.16 MeV | 2.16 ± 0.07 | match |
 
-Pour les quarks, le PDG utilise ses conventions standard : `u`, `d` et `s` à `2 GeV`, `c` et `b`
-dans le schéma `MS` à leur propre échelle de masse, et le résumé de masse directe du top pour `t`.
+`Δ` donne l'écart en sigma lorsque le PDG ou le NIST publie une incertitude à un sigma. Sinon, il
+indique `match` ou `sous la borne`.
+
+Pour les quarks, le PDG utilise ses conventions standard : `u`, `d` et `s` à `2 GeV`, et `c` et
+`b` dans le schéma `MS` à leur propre échelle de masse.
 Les papiers contiennent aussi les dérivations structurelles du Modèle Standard listées plus haut
 ainsi qu'une famille neutrino de rang théorème, qui n'apparaissent pas dans ce tableau faute de
 ligne de comparaison PDG/NIST directe à un seul nombre.
