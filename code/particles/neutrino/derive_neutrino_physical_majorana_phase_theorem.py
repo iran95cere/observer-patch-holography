@@ -253,6 +253,26 @@ def _shared_basis_transport_checks(
     }
 
 
+def _shared_basis_branch_identity_checks(
+    weighted_cycle_matrix: np.ndarray,
+    canonical_pmns: np.ndarray,
+    charged_basis_matrix: np.ndarray,
+    shared_basis_matrix: np.ndarray,
+    u_nu_shared: np.ndarray,
+    pmns: np.ndarray,
+    u_e_left: np.ndarray,
+) -> dict[str, float]:
+    expected_shared_basis_matrix = u_e_left.conj() @ weighted_cycle_matrix @ u_e_left.conj().T
+    expected_u_nu_shared = u_e_left @ canonical_pmns
+    expected_pmns = np.conjugate(u_e_left).T @ expected_u_nu_shared
+    return {
+        "charged_basis_matrix_max_abs_delta": float(np.max(np.abs(charged_basis_matrix - weighted_cycle_matrix))),
+        "shared_basis_matrix_max_abs_delta": float(np.max(np.abs(shared_basis_matrix - expected_shared_basis_matrix))),
+        "u_nu_shared_max_abs_delta": float(np.max(np.abs(u_nu_shared - expected_u_nu_shared))),
+        "pmns_matrix_max_abs_delta": float(np.max(np.abs(pmns - expected_pmns))),
+    }
+
+
 def build_payload(
     weighted_cycle: dict[str, Any],
     shared_charged_left: dict[str, Any],
@@ -267,6 +287,8 @@ def build_payload(
         raise ValueError("shared charged-lepton left basis must be closed before Majorana phases can be emitted")
     if not basis_contract.get("orientation_preserved", False):
         raise ValueError("shared charged-lepton basis must preserve orientation")
+    if weighted_cycle.get("physical_window_status") != "pmns_and_hierarchy_repaired":
+        raise ValueError("weighted-cycle repair must close the physical PMNS window first")
     if weighted_cycle.get("pmns_row_order_for_pdg") != ["e", "mu", "tau"]:
         raise ValueError("weighted-cycle branch must already be in PDG row order")
 
@@ -311,6 +333,7 @@ def build_payload(
     }
     readout_checks = dict(majorana_readout["checks"])
     row_gauged_pmns = majorana_readout["row_gauged_pmns"]
+    shared_basis_identity_checks: dict[str, float] | None = None
 
     if shared_basis_representation is not None:
         if shared_basis_representation.get("artifact") != "oph_neutrino_weighted_cycle_shared_basis_representation":
@@ -320,9 +343,34 @@ def build_payload(
         if not bool(shared_basis_representation.get("physical_branch_closed", False)):
             raise ValueError("shared-basis weighted-cycle representation must explicitly close the physical branch")
         u_e_left = _complex_matrix(shared_charged_left["U_e_left"], "real", "imag")
-        pmns = _complex_matrix(shared_basis_representation, "pmns_matrix_real", "pmns_matrix_imag")
+        charged_basis_matrix = _complex_matrix(shared_basis_representation, "charged_basis_matrix_real", "charged_basis_matrix_imag")
+        representation_pmns = _complex_matrix(shared_basis_representation, "pmns_matrix_real", "pmns_matrix_imag")
         shared_basis_matrix = _complex_matrix(shared_basis_representation, "shared_basis_matrix_real", "shared_basis_matrix_imag")
         u_nu_shared = _complex_matrix(shared_basis_representation, "u_nu_shared_real", "u_nu_shared_imag")
+        shared_basis_identity_checks = _shared_basis_branch_identity_checks(
+            matrix,
+            canonical["pmns"],
+            charged_basis_matrix,
+            shared_basis_matrix,
+            u_nu_shared,
+            representation_pmns,
+            u_e_left,
+        )
+        if float(shared_basis_identity_checks["charged_basis_matrix_max_abs_delta"]) > 1.0e-8:
+            raise ValueError("shared-basis weighted-cycle representation must come from the same repaired weighted-cycle matrix")
+        if float(shared_basis_identity_checks["shared_basis_matrix_max_abs_delta"]) > 1.0e-8:
+            raise ValueError(
+                "shared-basis weighted-cycle representation must equal the explicit U_e_left congruence transport of the repaired weighted-cycle matrix"
+            )
+        if float(shared_basis_identity_checks["u_nu_shared_max_abs_delta"]) > 1.0e-8:
+            raise ValueError(
+                "shared-basis weighted-cycle representation must use the transported Takagi unitary of the same repaired weighted-cycle matrix"
+            )
+        if float(shared_basis_identity_checks["pmns_matrix_max_abs_delta"]) > 1.0e-8:
+            raise ValueError(
+                "shared-basis weighted-cycle representation must recover the same canonical PMNS branch as the repaired weighted-cycle matrix"
+            )
+        pmns = representation_pmns
         transport_checks = _shared_basis_transport_checks(shared_basis_matrix, u_nu_shared, pmns, u_e_left)
         if float(transport_checks["shared_basis_symmetry_max_abs"]) > 1.0e-8:
             raise ValueError("shared-basis weighted-cycle representation must remain complex symmetric")
@@ -340,7 +388,6 @@ def build_payload(
         observable_match = _observable_match(observables, weighted_cycle_observables)
         if max(observable_match.values()) > 1.0e-8:
             raise ValueError("shared-basis weighted-cycle representation must recover the weighted-cycle oscillation observables")
-        takagi_congruence_payload = dict(shared_basis_representation.get("weighted_cycle_takagi_congruence") or takagi_congruence_payload)
         public_promotion_status = "closed_on_weighted_cycle_shared_basis_representation"
         public_promotion_blocker = None
         shared_basis_use_status = "public_emission_closed_on_weighted_cycle_shared_basis_representation"
@@ -349,6 +396,7 @@ def build_payload(
             "status": shared_basis_representation.get("status"),
             "physical_branch_closed": bool(shared_basis_representation.get("physical_branch_closed", False)),
             "statement": shared_basis_representation.get("statement"),
+            "branch_identity_checks": shared_basis_identity_checks,
             "transport_checks": transport_checks,
         }
         if shared_basis_representation_path is not None:
@@ -377,7 +425,7 @@ def build_payload(
         "theorem_surface": theorem_surface,
         "statement": statement,
         "readout_convention": {
-            "stored_pmns_matrix": "pmns_matrix_* stores the canonical Takagi unitary recovered from the emitted symmetric matrix before any charged-lepton row rephasing for display.",
+            "stored_pmns_matrix": "pmns_matrix_* stores the canonical Takagi unitary on the repaired weighted-cycle branch before any charged-lepton row rephasing for Majorana readout. On the promoted path, the same matrix is revalidated against the explicit shared-basis transport data.",
             "takagi_condition": "U_PMNS^T M_nu U_PMNS = diag(m_i) with diag(m_i) in R_{>0}",
             "majorana_readout_row_gauge": "row_gauged_pmns_matrix_* = diag(exp(-i arg(U_e1)), 1, 1) * pmns_matrix_* so (row_gauged U)_{e1} in R_{>0}",
             "majorana_readout_formula": {
@@ -411,6 +459,7 @@ def build_payload(
         "pmns_observables": observables,
         "readout_checks": readout_checks,
         "weighted_cycle_observables_match": observable_match,
+        "shared_basis_identity_checks": shared_basis_identity_checks,
         "shared_basis_representation": shared_basis_representation_summary,
         "candidate_parameters": majorana_pair,
         "emitted_parameters": emitted_parameters,
@@ -418,7 +467,7 @@ def build_payload(
             "A strict readout from PMNS columns alone would remain computational-gauge dependent, because arbitrary intermediate column phases leave the oscillation observables unchanged while moving alpha21 and alpha31.",
             "The readout fixes that ambiguity by first taking the canonical Takagi congruence of the emitted symmetric weighted-cycle matrix and then applying the readout-only electron-row gauge `U_e1 in R_{>0}`.",
             (
-                "The resulting pair is promoted publicly because the repaired weighted-cycle branch is now represented explicitly on the closed shared basis and the physical PMNS path is recovered there exactly. This promotion does not identify that branch with the separate intrinsic/shared-basis PMNS diagnostic surface."
+                "The resulting pair is promoted publicly because the repaired weighted-cycle branch is now represented explicitly on the closed shared basis, rechecked directly against the same repaired weighted-cycle matrix, and the physical PMNS path is recovered there exactly. This promotion does not identify that branch with the separate intrinsic/shared-basis PMNS diagnostic surface."
                 if shared_basis_representation is not None
                 else "The resulting pair is stable under computational column rephasings of the intermediate unitary, but it is not promoted here as a public physical emission because the repaired weighted-cycle branch has not yet been represented explicitly on the closed shared basis."
             ),

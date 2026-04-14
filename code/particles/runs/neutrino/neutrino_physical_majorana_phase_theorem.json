@@ -37,11 +37,11 @@
     "electron_row_gauge_phase_deg": 79.72751605060557,
     "electron_row_gauge_phase_rad": 1.3915076595196934
   },
-  "generated_utc": "2026-04-14T11:23:02Z",
+  "generated_utc": "2026-04-14T11:38:10Z",
   "notes": [
     "A strict readout from PMNS columns alone would remain computational-gauge dependent, because arbitrary intermediate column phases leave the oscillation observables unchanged while moving alpha21 and alpha31.",
     "The readout fixes that ambiguity by first taking the canonical Takagi congruence of the emitted symmetric weighted-cycle matrix and then applying the readout-only electron-row gauge `U_e1 in R_{>0}`.",
-    "The resulting pair is promoted publicly because the repaired weighted-cycle branch is now represented explicitly on the closed shared basis and the physical PMNS path is recovered there exactly. This promotion does not identify that branch with the separate intrinsic/shared-basis PMNS diagnostic surface."
+    "The resulting pair is promoted publicly because the repaired weighted-cycle branch is now represented explicitly on the closed shared basis, rechecked directly against the same repaired weighted-cycle matrix, and the physical PMNS path is recovered there exactly. This promotion does not identify that branch with the separate intrinsic/shared-basis PMNS diagnostic surface."
   ],
   "pmns_matrix_imag": [
     [
@@ -102,7 +102,7 @@
       "alpha31": "2 (arg((row_gauged U)_{e3}) + delta_PMNS)"
     },
     "majorana_readout_row_gauge": "row_gauged_pmns_matrix_* = diag(exp(-i arg(U_e1)), 1, 1) * pmns_matrix_* so (row_gauged U)_{e1} in R_{>0}",
-    "stored_pmns_matrix": "pmns_matrix_* stores the canonical Takagi unitary recovered from the emitted symmetric matrix before any charged-lepton row rephasing for display.",
+    "stored_pmns_matrix": "pmns_matrix_* stores the canonical Takagi unitary on the repaired weighted-cycle branch before any charged-lepton row rephasing for Majorana readout. On the promoted path, the same matrix is revalidated against the explicit shared-basis transport data.",
     "takagi_condition": "U_PMNS^T M_nu U_PMNS = diag(m_i) with diag(m_i) in R_{>0}"
   },
   "row_gauged_pmns_matrix_imag": [
@@ -139,8 +139,20 @@
       0.10373135846276055
     ]
   ],
+  "shared_basis_identity_checks": {
+    "charged_basis_matrix_max_abs_delta": 0.0,
+    "pmns_matrix_max_abs_delta": 1.4392811567525336e-15,
+    "shared_basis_matrix_max_abs_delta": 2.4532694666933987e-18,
+    "u_nu_shared_max_abs_delta": 1.894101977298092e-15
+  },
   "shared_basis_representation": {
     "artifact": "oph_neutrino_weighted_cycle_shared_basis_representation",
+    "branch_identity_checks": {
+      "charged_basis_matrix_max_abs_delta": 0.0,
+      "pmns_matrix_max_abs_delta": 1.4392811567525336e-15,
+      "shared_basis_matrix_max_abs_delta": 2.4532694666933987e-18,
+      "u_nu_shared_max_abs_delta": 1.894101977298092e-15
+    },
     "physical_branch_closed": true,
     "source_path": "code/particles/runs/neutrino/neutrino_weighted_cycle_shared_basis_representation.json",
     "statement": "The repaired weighted-cycle Majorana matrix is transported exactly into the closed shared same-label basis, and the physical PMNS surface is recovered there as U_e_left^dagger * U_nu_shared. This closes the weighted-cycle theorem lane on the shared basis without identifying it with the separate intrinsic/shared-basis PMNS diagnostic surface.",
@@ -167,26 +179,26 @@
   "status": "theorem_grade_emitted",
   "takagi_congruence": {
     "congruence_half_angles_deg": [
-      -79.72751605060562,
-      23.46322505967657,
-      -82.64852414714792
+      -79.72751605060567,
+      23.463225059676475,
+      -82.64852414714794
     ],
     "congruence_half_angles_rad": [
-      -1.391507659519694,
-      0.40951053042779917,
-      -1.4424888682817696
+      -1.391507659519695,
+      0.4095105304277975,
+      -1.4424888682817698
     ],
-    "diagonalized_imag_max_abs": 8.673617379884035e-18,
-    "diagonalized_offdiag_max_abs": 4.437129678412874e-17,
+    "diagonalized_imag_max_abs": 6.071532165918825e-18,
+    "diagonalized_offdiag_max_abs": 1.780205822318556e-17,
     "diagonalized_real_masses": [
       0.01012630148527337,
       0.011302414501969324,
-      0.030791424088410596
+      0.030791424088410606
     ],
-    "phase_relation_offdiag_max_abs": 4.1111994833554825e-15,
+    "phase_relation_offdiag_max_abs": 1.5553031891404223e-15,
     "singular_values": [
-      0.010126301485273374,
-      0.011302414501969326,
+      0.010126301485273378,
+      0.01130241450196933,
       0.03079142408841062
     ]
   },
