@@ -51,8 +51,33 @@ def _load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _canonical_artifact_ref(path: Path | None) -> str | None:
+    if path is None:
+        return None
+    if not path.is_absolute():
+        return path.as_posix()
+    try:
+        rel = path.relative_to(ROOT)
+    except ValueError:
+        return path.as_posix()
+    return f"code/{rel.as_posix()}"
+
+
 def _complex_matrix(payload: dict[str, Any], real_key: str, imag_key: str) -> np.ndarray:
     return np.array(payload[real_key], dtype=float) + 1j * np.array(payload[imag_key], dtype=float)
+
+
+def _canonicalize_takagi_column_signs(unitary: np.ndarray) -> np.ndarray:
+    canonical = unitary.copy()
+    for column in range(canonical.shape[1]):
+        for row in range(canonical.shape[0]):
+            entry = canonical[row, column]
+            if abs(entry) <= 1.0e-12:
+                continue
+            if entry.real < -1.0e-12 or (abs(entry.real) <= 1.0e-12 and entry.imag < -1.0e-12):
+                canonical[:, column] *= -1.0
+            break
+    return canonical
 
 
 def _wrap_signed_phase(angle_rad: float) -> float:
@@ -146,6 +171,7 @@ def _canonical_takagi_unitary(matrix: np.ndarray) -> dict[str, Any]:
     congruence_half_angles = np.angle(np.diag(phase_relation))
     takagi_vectors = left_vectors @ np.diag(np.exp(-0.5j * congruence_half_angles))
     unitary = np.conjugate(takagi_vectors)
+    unitary = _canonicalize_takagi_column_signs(unitary)
     diagonalized = unitary.T @ matrix @ unitary
     diagonalized_offdiag = diagonalized - np.diag(np.diag(diagonalized))
     diagonal_masses = np.real(np.diag(diagonalized))
@@ -238,8 +264,8 @@ def build_payload(
         "basis_contract": basis_contract,
         "basis_labels": list(shared_charged_left.get("labels") or []),
         "source_artifacts": {
-            "weighted_cycle_branch": str(weighted_cycle_path),
-            "shared_charged_left_basis": str(shared_charged_left_path),
+            "weighted_cycle_branch": _canonical_artifact_ref(weighted_cycle_path),
+            "shared_charged_left_basis": _canonical_artifact_ref(shared_charged_left_path),
         },
         "depends_on": [
             "oph_neutrino_weighted_cycle_repair",

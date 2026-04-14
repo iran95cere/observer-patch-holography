@@ -100,7 +100,7 @@
       "unit": "eV^2"
     }
   ],
-  "generated_utc": "2026-04-14T10:02:56Z",
+  "generated_utc": "2026-04-14T10:36:26Z",
   "inputs": {
     "P": 1.63094,
     "hadron_profile": "suppressed",
@@ -114,7 +114,7 @@
       "observable": "alpha21^(Maj)",
       "observable_id": "alpha21_majorana",
       "prediction_display": "153.618518 deg",
-      "prediction_value": 153.6185177794357,
+      "prediction_value": 153.61851777943562,
       "status": "theorem_grade",
       "unit": "deg"
     },

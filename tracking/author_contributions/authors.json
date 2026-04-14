@@ -71,6 +71,16 @@
       "notes": "Git author identity used for Kai Xue's paper and book contributions."
     },
     {
+      "display_name": "Mario Poneder",
+      "aliases": [
+        {
+          "name": "Mario Poneder",
+          "email": "m.poneder@decentra.vision"
+        }
+      ],
+      "notes": "Git author identity used for Mario Poneder's particle-lane and theorem-closure contributions."
+    },
+    {
       "display_name": "Peter Nguyen",
       "aliases": [
         {

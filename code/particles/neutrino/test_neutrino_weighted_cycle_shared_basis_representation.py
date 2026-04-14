@@ -45,5 +45,10 @@ def test_weighted_cycle_shared_basis_representation_closes_exactly() -> None:
         assert abs(payload["weighted_cycle_observables_match"]["theta23_deg_abs_delta"]) < 1.0e-10
         assert abs(payload["weighted_cycle_observables_match"]["theta13_deg_abs_delta"]) < 1.0e-10
         assert abs(payload["weighted_cycle_observables_match"]["delta_deg_abs_delta"]) < 1.0e-10
+        assert payload["source_artifacts"]["weighted_cycle_branch"] == "code/particles/runs/neutrino/neutrino_weighted_cycle_repair.json"
+        assert payload["source_artifacts"]["shared_charged_left_basis"] == "code/particles/runs/neutrino/shared_charged_lepton_left_basis.json"
+        assert payload["pmns_matrix_real"][0][0] > 0.0
+        assert payload["pmns_matrix_real"][0][1] > 0.0
+        assert payload["pmns_matrix_real"][0][2] > 0.0
         assert abs(payload["emitted_parameters"]["alpha21_deg_0_to_360"] - 153.6185177794357) < 1.0e-9
         assert abs(payload["emitted_parameters"]["alpha31_deg_0_to_360"] - 257.0032408220805) < 1.0e-9

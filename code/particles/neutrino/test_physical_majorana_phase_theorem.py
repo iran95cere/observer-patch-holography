@@ -85,6 +85,13 @@ def test_weighted_cycle_majorana_phase_theorem_promotes_when_shared_basis_repres
     assert payload["public_promotion_status"] == "closed_on_weighted_cycle_shared_basis_representation"
     assert payload["public_promotion_blocker"] is None
     assert payload["shared_basis_representation"] is not None
+    assert payload["shared_basis_representation"]["source_path"] == "code/particles/runs/neutrino/neutrino_weighted_cycle_shared_basis_representation.json"
+    assert payload["source_artifacts"]["weighted_cycle_branch"] == "code/particles/runs/neutrino/neutrino_weighted_cycle_repair.json"
+    assert payload["source_artifacts"]["shared_charged_left_basis"] == "code/particles/runs/neutrino/shared_charged_lepton_left_basis.json"
+    assert payload["source_artifacts"]["shared_basis_representation"] == "code/particles/runs/neutrino/neutrino_weighted_cycle_shared_basis_representation.json"
+    assert payload["pmns_matrix_real"][0][0] > 0.0
+    assert payload["pmns_matrix_real"][0][1] > 0.0
+    assert payload["pmns_matrix_real"][0][2] > 0.0
     assert payload["emitted_parameters"] is not None
     assert abs(payload["emitted_parameters"]["alpha21_deg_0_to_360"] - 153.6185177794357) < 1.0e-9
     assert abs(payload["emitted_parameters"]["alpha31_deg_0_to_360"] - 257.0032408220805) < 1.0e-9

@@ -61,8 +61,33 @@ def _load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _canonical_artifact_ref(path: Path | None) -> str | None:
+    if path is None:
+        return None
+    if not path.is_absolute():
+        return path.as_posix()
+    try:
+        rel = path.relative_to(ROOT)
+    except ValueError:
+        return path.as_posix()
+    return f"code/{rel.as_posix()}"
+
+
 def _complex_matrix(payload: dict[str, Any], real_key: str, imag_key: str) -> np.ndarray:
     return np.array(payload[real_key], dtype=float) + 1j * np.array(payload[imag_key], dtype=float)
+
+
+def _canonicalize_takagi_column_signs(unitary: np.ndarray) -> np.ndarray:
+    canonical = unitary.copy()
+    for column in range(canonical.shape[1]):
+        for row in range(canonical.shape[0]):
+            entry = canonical[row, column]
+            if abs(entry) <= 1.0e-12:
+                continue
+            if entry.real < -1.0e-12 or (abs(entry.real) <= 1.0e-12 and entry.imag < -1.0e-12):
+                canonical[:, column] *= -1.0
+            break
+    return canonical
 
 
 def _wrap_signed_phase(angle_rad: float) -> float:
@@ -156,6 +181,7 @@ def _canonical_pmns_from_weighted_cycle_matrix(matrix: np.ndarray) -> dict[str, 
     congruence_half_angles = np.angle(np.diag(phase_relation))
     takagi_vectors = left_vectors @ np.diag(np.exp(-0.5j * congruence_half_angles))
     pmns = np.conjugate(takagi_vectors)
+    pmns = _canonicalize_takagi_column_signs(pmns)
     diagonalized = pmns.T @ matrix @ pmns
 
     diagonalized_offdiag = diagonalized - np.diag(np.diag(diagonalized))
@@ -274,7 +300,9 @@ def build_payload(
             "transport_checks": transport_checks,
         }
         if shared_basis_representation_path is not None:
-            shared_basis_representation_summary["source_path"] = str(shared_basis_representation_path)
+            shared_basis_representation_summary["source_path"] = _canonical_artifact_ref(
+                shared_basis_representation_path
+            )
         status = "theorem_grade_emitted"
         proof_chain_role = "active_theorem_lane"
         public_surface_candidate_allowed = True
@@ -305,9 +333,9 @@ def build_payload(
         "public_promotion_blocker": public_promotion_blocker,
         "shared_basis_use_status": shared_basis_use_status,
         "source_artifacts": {
-            "weighted_cycle_branch": str(weighted_cycle_path),
-            "shared_charged_left_basis": str(shared_charged_left_path),
-            "shared_basis_representation": str(shared_basis_representation_path) if shared_basis_representation_path is not None else None,
+            "weighted_cycle_branch": _canonical_artifact_ref(weighted_cycle_path),
+            "shared_charged_left_basis": _canonical_artifact_ref(shared_charged_left_path),
+            "shared_basis_representation": _canonical_artifact_ref(shared_basis_representation_path),
         },
         "depends_on": [
             dependency

@@ -76,6 +76,9 @@ Pour les quarks, le PDG utilise ses conventions standard : `u`, `d` et `s` à `2
 Les papiers contiennent aussi les dérivations structurelles du Modèle Standard listées plus haut
 ainsi qu'une famille neutrino de rang théorème, qui n'apparaissent pas dans ce tableau faute de
 ligne de comparaison PDG/NIST directe à un seul nombre.
+La surface neutrino publique courante inclut aussi une paire physique de phases de Majorana de
+rang théorème sur la branche de transport weighted-cycle en base partagée ; voir
+`code/particles/RESULTS_STATUS.md`.
 
 Le secteur des leptons chargés suit une frontière plus nette. Le dépôt contient un témoin exact sur une même famille, un relèvement conditionnel de la ligne déterminant sur les données chargées physiques, puis une lecture algébrique des masses à partir de l'échelle absolue chargée de rang théorème. Le théorème ouvert est l'atterrissage de l'entrée de calibration commune `P` sur les données chargées physiques ou sur la ligne déterminant chargée.
 
