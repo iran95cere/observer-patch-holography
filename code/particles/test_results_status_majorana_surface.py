@@ -103,6 +103,10 @@ def test_majorana_phase_surface_rows_require_complete_emitted_parameters(tmp_pat
                 "artifact": "oph_neutrino_physical_majorana_phase_theorem",
                 "status": "theorem_grade_emitted",
                 "public_surface_candidate_allowed": True,
+                "candidate_parameters": {
+                    "alpha21_deg_0_to_360": 153.6185177794357,
+                    "alpha31_deg_0_to_360": 257.00324082207993,
+                },
                 "emitted_parameters": {
                     "alpha21_deg_0_to_360": 153.6185177794357,
                 },

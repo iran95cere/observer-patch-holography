@@ -953,7 +953,7 @@ def build_neutrino_oscillation_comparison_rows(surface_state: Dict[str, Any]) ->
 
 
 def _majorana_emitted_degrees(theorem: Dict[str, Any]) -> tuple[float, float] | None:
-    emitted = dict(theorem.get("emitted_parameters") or theorem.get("candidate_parameters") or {})
+    emitted = dict(theorem.get("emitted_parameters") or {})
     try:
         alpha21 = float(emitted["alpha21_deg_0_to_360"])
         alpha31 = float(emitted["alpha31_deg_0_to_360"])
