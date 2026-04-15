@@ -94,6 +94,42 @@ def test_majorana_phase_surface_rows_require_theorem_grade_status(tmp_path: path
     assert "synthetic inconsistent status gate" in by_id["alpha21_majorana"]["note"]
 
 
+def test_majorana_phase_surface_rows_require_complete_emitted_parameters(tmp_path: pathlib.Path) -> None:
+    module = _load_module()
+    theorem_path = tmp_path / "majorana_theorem.json"
+    theorem_path.write_text(
+        json.dumps(
+            {
+                "artifact": "oph_neutrino_physical_majorana_phase_theorem",
+                "status": "theorem_grade_emitted",
+                "public_surface_candidate_allowed": True,
+                "candidate_parameters": {
+                    "alpha21_deg_0_to_360": 153.6185177794357,
+                    "alpha31_deg_0_to_360": 257.00324082207993,
+                },
+                "emitted_parameters": {
+                    "alpha21_deg_0_to_360": 153.6185177794357,
+                },
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    original = module.NEUTRINO_PHYSICAL_MAJORANA_PHASE_THEOREM
+    module.NEUTRINO_PHYSICAL_MAJORANA_PHASE_THEOREM = theorem_path
+    try:
+        rows = module.build_majorana_phase_surface_rows(module.build_surface_state(with_hadrons=False))
+    finally:
+        module.NEUTRINO_PHYSICAL_MAJORANA_PHASE_THEOREM = original
+
+    by_id = {row["observable_id"]: row for row in rows}
+    assert by_id["alpha21_majorana"]["status"] == "still_absent"
+    assert by_id["alpha21_majorana"]["prediction_display"] == "n/a"
+    assert by_id["alpha31_majorana"]["prediction_display"] == "n/a"
+    assert "incomplete on disk" in by_id["alpha21_majorana"]["note"]
+
+
 def test_render_markdown_includes_majorana_phase_section() -> None:
     module = _load_module()
     surface_state = module.build_surface_state(with_hadrons=False)
@@ -131,3 +167,4 @@ def test_render_markdown_includes_majorana_phase_section() -> None:
     )
     assert "## Majorana Phase Surface" in markdown
     assert "| alpha21^(Maj) | theorem_grade | 153.618518 deg |" in markdown
+    assert "| alpha31^(Maj) | theorem_grade | 257.003241 deg |" in markdown

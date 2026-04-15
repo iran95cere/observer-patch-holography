@@ -952,6 +952,16 @@ def build_neutrino_oscillation_comparison_rows(surface_state: Dict[str, Any]) ->
     return rows
 
 
+def _majorana_emitted_degrees(theorem: Dict[str, Any]) -> tuple[float, float] | None:
+    emitted = dict(theorem.get("emitted_parameters") or {})
+    try:
+        alpha21 = float(emitted["alpha21_deg_0_to_360"])
+        alpha31 = float(emitted["alpha31_deg_0_to_360"])
+    except (KeyError, TypeError, ValueError):
+        return None
+    return alpha21, alpha31
+
+
 def build_majorana_phase_surface_rows(surface_state: Dict[str, Any]) -> List[Dict[str, Any]]:
     active = dict(surface_state["active_local_public_candidates"])
     if not active.get("neutrino_repaired_branch"):
@@ -967,34 +977,42 @@ def build_majorana_phase_surface_rows(surface_state: Dict[str, Any]) -> List[Dic
         and theorem.get("status") == "theorem_grade_emitted"
         and theorem.get("public_surface_candidate_allowed", False)
     ):
-        emitted = dict(theorem.get("emitted_parameters") or theorem.get("candidate_parameters") or {})
-        alpha21_note = (
-            "Theorem-grade physical Majorana phase on the repaired shared-basis weighted-cycle surface. "
-            "The readout uses the canonical Takagi congruence of the emitted symmetric cycle matrix together with the electron-row gauge `U_e1 in R_{>0}`, so it is insensitive to computational column rephasings of the intermediate unitary."
-        )
-        alpha31_note = (
-            "Same theorem surface as `alpha21^(Maj)`: emitted by the canonical Takagi congruence readout on the repaired shared-basis weighted-cycle matrix."
-        )
-        return [
-            {
-                "observable_id": "alpha21_majorana",
-                "observable": "alpha21^(Maj)",
-                "status": "theorem_grade",
-                "prediction_value": float(emitted["alpha21_deg_0_to_360"]),
-                "prediction_display": format_observable_value(float(emitted["alpha21_deg_0_to_360"]), "deg"),
-                "unit": "deg",
-                "note": alpha21_note,
-            },
-            {
-                "observable_id": "alpha31_majorana",
-                "observable": "alpha31^(Maj)",
-                "status": "theorem_grade",
-                "prediction_value": float(emitted["alpha31_deg_0_to_360"]),
-                "prediction_display": format_observable_value(float(emitted["alpha31_deg_0_to_360"]), "deg"),
-                "unit": "deg",
-                "note": alpha31_note,
-            },
-        ]
+        emitted = _majorana_emitted_degrees(theorem)
+        if emitted is None:
+            theorem = dict(theorem)
+            theorem["public_promotion_blocker"] = (
+                "The promoted Majorana theorem artifact is incomplete on disk: expected numeric emitted parameters "
+                "`alpha21_deg_0_to_360` and `alpha31_deg_0_to_360`."
+            )
+        else:
+            alpha21_deg, alpha31_deg = emitted
+            alpha21_note = (
+                "Theorem-grade physical Majorana phase on the repaired shared-basis weighted-cycle surface. "
+                "The readout uses the canonical Takagi congruence of the emitted symmetric cycle matrix together with the readout-only electron-row gauge `U_e1 in R_{>0}`, so it is insensitive to computational column rephasings of the intermediate unitary."
+            )
+            alpha31_note = (
+                "Same theorem surface as `alpha21^(Maj)`: emitted by the same canonical Takagi readout after the readout-only electron-row gauge on the repaired shared-basis weighted-cycle matrix."
+            )
+            return [
+                {
+                    "observable_id": "alpha21_majorana",
+                    "observable": "alpha21^(Maj)",
+                    "status": "theorem_grade",
+                    "prediction_value": alpha21_deg,
+                    "prediction_display": format_observable_value(alpha21_deg, "deg"),
+                    "unit": "deg",
+                    "note": alpha21_note,
+                },
+                {
+                    "observable_id": "alpha31_majorana",
+                    "observable": "alpha31^(Maj)",
+                    "status": "theorem_grade",
+                    "prediction_value": alpha31_deg,
+                    "prediction_display": format_observable_value(alpha31_deg, "deg"),
+                    "unit": "deg",
+                    "note": alpha31_note,
+                },
+            ]
 
     if theorem is None:
         alpha21_note = (
