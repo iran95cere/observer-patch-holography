@@ -117,7 +117,7 @@ Returning to the broader observer-first OPH framework, the rest of this chapter 
 
 - **Relativity**: There's no absolute time or space because there's no absolute perspective. Each observer has their own time (modular flow). On the extracted prime geometric subnet, overlap consistency plus geometric cap modular flow yields Lorentz kinematics.
 
-- **Bell nonlocality**: Quantum correlations exceed classical bounds because reality isn't a pre-existing thing that observers passively discover. The correlations aren't "transmitted" through space; they're established through the consistency requirements of overlapping patches.
+- **Bell nonlocality**: Quantum correlations exceed classical bounds because reality isn't a pre-existing thing that observers passively discover. On the fixed-cutoff microphysics surface, the Bell package is explicit: the compare slice carries the joint Born law, the local marginals do not depend on the remote setting, and the CHSH value stays below the Tsirelson bound on the stated two-wing source branch. Exact \(2\sqrt{2}\) saturation is fixed only on an explicit two-qubit Bell-pair branch. The correlations aren't "transmitted" through space; they're established through the consistency requirements of overlapping patches.
 
 - **The hard problem of consciousness**: Subjective experience isn't mysteriously added to an objective world. Subjectivity is primary. The "hard problem" dissolves; it only seems hard if you assume objective reality comes first and then try to fit experience into it.
 

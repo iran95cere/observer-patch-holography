@@ -212,3 +212,158 @@ Then for all \(X\) commuting with the record algebra \(\mathcal R\),
 \]
 So collapse on the observer-facing fixed-cutoff surface is simply classical conditioning on the
 commuting record algebra.
+
+\subsection{Two-Wing Bell / CHSH Package}
+
+\textbf{Definition.} On one declared fixed-cutoff physical observable algebra
+\(\mathcal A_{\mathrm{phys}}(L\cup R)\), a \emph{two-wing Bell presentation} consists of:
+\begin{enumerate}[leftmargin=2em]
+\item commuting left/right wing subalgebras
+\[
+\mathcal A_L,\mathcal A_R\subset \mathcal A_{\mathrm{phys}}(L\cup R),
+\qquad
+[X_L,X_R]=0
+\quad
+\forall\,X_L\in\mathcal A_L,\ X_R\in\mathcal A_R;
+\]
+\item central classical setting values \(x,y\in\{0,1\}\) on the declared record slots;
+\item binary projective readouts
+\[
+\{P_{a|x}^{(L)}\}_{a=\pm1}\subset\mathcal A_L,
+\qquad
+\{P_{b|y}^{(R)}\}_{b=\pm1}\subset\mathcal A_R,
+\]
+with orthogonality and completeness on each wing; and
+\item a physical source state \(\rho_{LR}\) on \(\mathcal A_{\mathrm{phys}}(L\cup R)\).
+\end{enumerate}
+The source-state premise is explicit. This appendix does not derive Bell-pair preparation from
+bare repair dynamics.
+
+\paragraph{\textbf{Theorem 3.7 (Fixed-cutoff Bell law and no-signaling).}}
+For a two-wing Bell presentation, define
+\[
+\Pi_{ab|xy}:=P_{a|x}^{(L)}P_{b|y}^{(R)}.
+\]
+Then
+\[
+p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,\Pi_{ab|xy}\bigr)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,P_{a|x}^{(L)}P_{b|y}^{(R)}\bigr)
+\]
+is a probability law on \(\{ \pm1\}\times\{\pm1\}\), and
+\[
+\sum_{b=\pm1} p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,P_{a|x}^{(L)}\bigr),
+\qquad
+\sum_{a=\pm1} p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,P_{b|y}^{(R)}\bigr).
+\]
+Hence the local marginal on one wing is independent of the remote setting.
+
+\paragraph{\textbf{Proof sketch.}}
+Because the left/right projectors commute, \(\{\Pi_{ab|xy}\}_{a,b}\) is a commuting projective
+family on the fixed setting slice. The Born trace therefore gives the joint law. Positivity is
+immediate, normalization follows from the completeness relations, and summing over one wing
+removes the remote projector.
+
+\paragraph{\textbf{Theorem 3.8 (CHSH/Tsirelson on the fixed-cutoff Bell surface).}}
+Define
+\[
+A_x:=P_{+|x}^{(L)}-P_{-|x}^{(L)},
+\qquad
+B_y:=P_{+|y}^{(R)}-P_{-|y}^{(R)}.
+\]
+Then
+\[
+A_x^2=\mathbf 1,
+\qquad
+B_y^2=\mathbf 1,
+\qquad
+[A_x,B_y]=0,
+\]
+and the Bell correlators satisfy
+\[
+E(x,y)
+:=
+\sum_{a,b=\pm1}ab\,p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,A_xB_y\bigr).
+\]
+For the CHSH operator
+\[
+\mathcal B:=A_0(B_0+B_1)+A_1(B_0-B_1)
+\]
+one has
+\[
+\mathcal B^2
+=
+4\,\mathbf 1-[A_0,A_1][B_0,B_1],
+\qquad
+\|\mathcal B\|\le 2\sqrt2.
+\]
+Therefore
+\[
+\bigl|E(0,0)+E(0,1)+E(1,0)-E(1,1)\bigr|
+\le
+2\sqrt2.
+\]
+
+\paragraph{\textbf{Proof sketch.}}
+Expand \(A_xB_y\) in the projective basis to get the correlator formula. Expand \(\mathcal B^2\)
+and use \(A_x^2=B_y^2=\mathbf 1\) together with \([A_x,B_y]=0\). Since
+\(\|[A_0,A_1]\|\le 2\) and \(\|[B_0,B_1]\|\le 2\), the operator norm of \(\mathcal B^2\) is at
+most \(8\).
+
+\paragraph{\textbf{Corollary 3.9 (Two-qubit saturation branch).}}
+Assume additionally that there exist commuting unital \(*\)-subalgebras
+\[
+\mathcal Q_L\subset \mathcal A_L,
+\qquad
+\mathcal Q_R\subset \mathcal A_R,
+\]
+with
+\[
+\mathcal Q_L\cong M_2(\mathbb C),
+\qquad
+\mathcal Q_R\cong M_2(\mathbb C),
+\qquad
+C^*(\mathcal Q_L,\mathcal Q_R)\cong M_2(\mathbb C)\otimes M_2(\mathbb C).
+\]
+Assume that, under this identification, the restriction of \(\rho_{LR}\) to
+\(C^*(\mathcal Q_L,\mathcal Q_R)\) is
+\[
+|\Phi^+\rangle\!\langle\Phi^+|,
+\qquad
+|\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2},
+\]
+and that the fixed-cutoff observables restrict there to
+\[
+A_0=\sigma_z\otimes \mathbf 1,
+\qquad
+A_1=\sigma_x\otimes \mathbf 1,
+\]
+\[
+B_0=\mathbf 1\otimes \frac{\sigma_z+\sigma_x}{\sqrt2},
+\qquad
+B_1=\mathbf 1\otimes \frac{\sigma_z-\sigma_x}{\sqrt2}.
+\]
+Then
+\[
+E(0,0)=E(0,1)=E(1,0)=\frac{1}{\sqrt2},
+\qquad
+E(1,1)=-\frac{1}{\sqrt2},
+\]
+and hence
+\[
+E(0,0)+E(0,1)+E(1,0)-E(1,1)=2\sqrt2.
+\]
+
+\paragraph{\textbf{Proof sketch.}}
+This is the standard two-qubit computation on the explicitly assumed
+\(M_2(\mathbb C)\otimes M_2(\mathbb C)\) subalgebra. It is an exact branch-conditional statement
+on that added two-qubit premise; it does not derive tensor-factor structure or Bell-pair
+preparation from the bare OPH repair dynamics.

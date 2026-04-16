@@ -1712,14 +1712,14 @@ continuum, the geometric modular branch, or gravity from the finite regulator.
 \end{enumerate}
 
 The imported OPH structure stays imported, the finite reference architecture stays finite, the
-regulator-side patch-net embedding theorem, the finite-group edge-law theorem, and the two
+regulator-side patch-net embedding theorem, the finite-group edge-law theorem, and the three
 observer-side theorem packages are closed at fixed cutoff, and the open bridge is stated
 explicitly. Open items are the later packet-level quotient closure where desired, the
 compact heat-kernel lift, the larger global consensus program, and the continuum/gravity lift.
 
 \section{Fixed-Cutoff Theorem Packages}
 
-This paper proves four fixed-cutoff theorem packages: regulated patch-net embedding, edge heat-kernel / Casimir, measurement/Born-rule, and observer checkpoint/restoration.
+This paper proves five fixed-cutoff theorem packages: regulated patch-net embedding, edge heat-kernel / Casimir, measurement/Born-rule, Bell/CHSH, and observer checkpoint/restoration.
 
 \subsection{Regulated patch-net embedding theorem}\label{sec:microphysics-feeds-a01}
 
@@ -2084,6 +2084,215 @@ This closes the fixed-cutoff measurement/Born-rule package on the microphysics s
 record algebra, Born trace, L\"uders conditioning, and the limited repeated-read corollary are
 all fixed on the declared operational surface.
 
+\subsection{Bell / CHSH theorem stack}
+
+\paragraph{Inputs used here.}
+From the fixed-cutoff theorem surfaces already established we use only the declared physical
+observable algebra on one observer-facing two-wing region, the central setting registers on the
+same compare slice, and the Born/L\"uders package on the resulting commuting event algebra. The
+consensus paper supplies the quotient-level physical observable algebra and observable-level
+confluence on that same fixed-cutoff branch. The only downstream blocker named here is the later
+refinement/continuum lift where the physical observable algebra itself changes under refinement.
+
+\paragraph{Bell data on the fixed-cutoff surface.}
+Fix two disjoint observer-facing wing regions \(L\) and \(R\) on one declared fixed-cutoff
+physical algebra \(\mathcal A_{\mathrm{phys}}(L\cup R)\), and let
+\[
+\mathcal A_L,\mathcal A_R\subset \mathcal A_{\mathrm{phys}}(L\cup R)
+\]
+be commuting subalgebras,
+\[
+[X_L,X_R]=0
+\qquad
+\forall\, X_L\in\mathcal A_L,\ X_R\in\mathcal A_R.
+\]
+Let \(x,y\in\{0,1\}\) be classical setting values written on central setting registers, and for
+each setting choose binary projective readouts
+\[
+\{P_{a|x}^{(L)}\}_{a=\pm1}\subset\mathcal A_L,
+\qquad
+\{P_{b|y}^{(R)}\}_{b=\pm1}\subset\mathcal A_R,
+\]
+with
+\[
+P_{a|x}^{(L)}P_{a'|x}^{(L)}=\delta_{aa'}P_{a|x}^{(L)},
+\qquad
+\sum_{a=\pm1}P_{a|x}^{(L)}=\mathbf 1,
+\]
+\[
+P_{b|y}^{(R)}P_{b'|y}^{(R)}=\delta_{bb'}P_{b|y}^{(R)},
+\qquad
+\sum_{b=\pm1}P_{b|y}^{(R)}=\mathbf 1.
+\]
+Assume the source preparation is a physical state \(\rho_{LR}\) on
+\(\mathcal A_{\mathrm{phys}}(L\cup R)\). The source-state premise is explicit here: this theorem
+does not derive Bell-pair preparation from the bare repair dynamics.
+
+\paragraph{Bell-law theorem.}
+For every fixed setting pair \((x,y)\), the joint event projectors
+\[
+\Pi_{ab|xy}:=P_{a|x}^{(L)}P_{b|y}^{(R)}
+\]
+belong to one commuting event algebra, and the outcome law on the compare slice is
+\begin{equation}
+p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,\Pi_{ab|xy}\bigr)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,P_{a|x}^{(L)}P_{b|y}^{(R)}\bigr).
+\end{equation}
+This law is positive, normalized, and no-signaling:
+\begin{equation}
+\sum_{b=\pm1} p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,P_{a|x}^{(L)}\bigr),
+\qquad
+\sum_{a=\pm1} p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,P_{b|y}^{(R)}\bigr),
+\end{equation}
+so the left marginal is independent of \(y\) and the right marginal is independent of \(x\).
+
+\paragraph{Proof.}
+Because the left and right projectors commute, \(\Pi_{ab|xy}\) is a commuting projective family on
+the fixed setting slice. The Born theorem already proved above on the same commuting event algebra
+therefore gives the joint law. Positivity is immediate, and normalization follows from
+\[
+\sum_{a,b}\Pi_{ab|xy}
+=
+\left(\sum_a P_{a|x}^{(L)}\right)\left(\sum_b P_{b|y}^{(R)}\right)
+=
+\mathbf 1.
+\]
+Summing over one wing uses the same completeness relation and removes the remote projector, which
+proves the no-signaling identities.
+
+\paragraph{CHSH/Tsirelson theorem.}
+Define the binary observables
+\[
+A_x:=P_{+|x}^{(L)}-P_{-|x}^{(L)},
+\qquad
+B_y:=P_{+|y}^{(R)}-P_{-|y}^{(R)}.
+\]
+Then
+\[
+A_x^2=\mathbf 1,
+\qquad
+B_y^2=\mathbf 1,
+\qquad
+[A_x,B_y]=0,
+\]
+and the Bell correlators are
+\begin{equation}
+E(x,y)
+:=
+\sum_{a,b=\pm1}ab\,p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,A_xB_y\bigr).
+\end{equation}
+For the CHSH operator
+\begin{equation}
+\mathcal B
+:=
+A_0(B_0+B_1)+A_1(B_0-B_1),
+\end{equation}
+one has
+\begin{equation}
+\mathcal B^2
+=
+4\,\mathbf 1-[A_0,A_1][B_0,B_1].
+\end{equation}
+Hence
+\begin{equation}
+\|\mathcal B\|
+\le
+2\sqrt 2,
+\qquad
+\bigl|E(0,0)+E(0,1)+E(1,0)-E(1,1)\bigr|
+\le
+2\sqrt 2.
+\end{equation}
+
+\paragraph{Proof.}
+The correlator formula is the usual projector expansion,
+\[
+A_xB_y
+=
+\sum_{a,b=\pm1}ab\,P_{a|x}^{(L)}P_{b|y}^{(R)}.
+\]
+Expanding \(\mathcal B^2\) and using \(A_x^2=B_y^2=\mathbf 1\) together with
+\([A_x,B_y]=0\) gives the identity above. Because \(\|A_x\|,\|B_y\|\le 1\),
+\[
+\|[A_0,A_1]\|\le 2,
+\qquad
+\|[B_0,B_1]\|\le 2,
+\]
+so \(\|\mathcal B^2\|\le 8\) and therefore \(\|\mathcal B\|\le 2\sqrt2\). Taking the expectation
+value in \(\rho_{LR}\) gives the CHSH bound.
+
+\paragraph{Two-qubit saturation corollary.}
+Assume additionally that there exist commuting unital \(*\)-subalgebras
+\[
+\mathcal Q_L\subset \mathcal A_L,
+\qquad
+\mathcal Q_R\subset \mathcal A_R,
+\]
+with
+\[
+\mathcal Q_L\cong M_2(\mathbb C),
+\qquad
+\mathcal Q_R\cong M_2(\mathbb C),
+\qquad
+C^*(\mathcal Q_L,\mathcal Q_R)\cong M_2(\mathbb C)\otimes M_2(\mathbb C).
+\]
+Assume that, under this identification, the restriction of \(\rho_{LR}\) to
+\(C^*(\mathcal Q_L,\mathcal Q_R)\) is
+\[
+|\Phi^+\rangle\!\langle\Phi^+|,
+\qquad
+|\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2},
+\]
+and that the fixed-cutoff observables restrict there to
+\[
+A_0=\sigma_z\otimes \mathbf 1,
+\qquad
+A_1=\sigma_x\otimes \mathbf 1,
+\]
+\[
+B_0=\mathbf 1\otimes \frac{\sigma_z+\sigma_x}{\sqrt2},
+\qquad
+B_1=\mathbf 1\otimes \frac{\sigma_z-\sigma_x}{\sqrt2}.
+\]
+Then
+\[
+E(0,0)=E(0,1)=E(1,0)=\frac{1}{\sqrt2},
+\qquad
+E(1,1)=-\frac{1}{\sqrt2},
+\]
+and hence
+\[
+E(0,0)+E(0,1)+E(1,0)-E(1,1)=2\sqrt2.
+\]
+
+\paragraph{Proof.}
+This is the standard two-qubit computation on the explicitly assumed
+\(M_2(\mathbb C)\otimes M_2(\mathbb C)\) subalgebra. It is an exact branch-conditional statement
+on that added two-qubit premise; it does not derive tensor-factor structure or Bell-pair
+preparation from the bare OPH repair dynamics.
+
+\paragraph{Merge boundary.}
+What is closed here is exactly the fixed-cutoff Bell package on the declared two-wing surface:
+source-premised joint law, no-signaling on commuting separated observables, the CHSH correlator
+formula, and the Tsirelson bound. Exact \(2\sqrt2\) saturation is fixed only on the explicit
+two-qubit branch above. What is not claimed here is a derivation of Bell-pair source preparation
+or tensor-factor structure from the bare repair dynamics, or a refinement-stable continuum Bell
+package beyond the fixed-cutoff physical observable algebra.
+
+\paragraph{Conclusion for this package.}
+This closes the fixed-cutoff Bell/CHSH package for the source-premised two-wing law,
+separated-observable no-signaling, and the Tsirelson bound. Exact \(2\sqrt2\) saturation is
+fixed only under the explicit two-qubit branch premise above.
+
 \subsection{Observer continuation / backup theorem stack}
 
 \paragraph{Checkpoint data.}
@@ -2171,6 +2380,8 @@ observable family and then for the later global consensus analysis on that expor
 here, while its compact heat-kernel lift remains a downstream refinement question.
 \item The fixed-cutoff measurement/Born-rule package is closed here by the central record
 algebra, Born trace, and conditioning theorem stack.
+\item The fixed-cutoff Bell/CHSH package is closed here on the declared two-wing surface by the
+source-premised joint law, no-signaling theorem, and CHSH/Tsirelson theorem stack.
 \item The fixed-cutoff observer checkpoint/restoration package is closed here by the
 checkpoint, restoration, error, and identity theorem stack.
 \item What remains after these fixed-cutoff results is packet-level quotient closure where
@@ -2180,11 +2391,12 @@ and the continuum/gravity lift.
 
 \section{Conclusion}
 
-The regulated screen architecture carries four fixed-cutoff theorem packages:
+The regulated screen architecture carries five fixed-cutoff theorem packages:
 \begin{enumerate}[leftmargin=2em]
 \item the regulated patch-net embedding theorem, with the later packet-closure/global-consensus boundary made explicit,
 \item the edge-sector thermal/Casimir theorem, with its remaining compact heat-kernel lift made explicit,
-\item the central-record/Born-rule measurement package, and
+\item the central-record/Born-rule measurement package,
+\item the fixed-cutoff Bell/CHSH package on the declared two-wing surface, and
 \item the checkpoint/restoration/backup observer package.
 \end{enumerate}
 

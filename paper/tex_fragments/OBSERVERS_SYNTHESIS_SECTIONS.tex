@@ -179,11 +179,12 @@ reference architecture: a finite gauge-register or quantum-link style screen mod
 registers, patches, overlaps, edge observables, records, repair instruments, and observer-facing
 interfaces are all made concrete at fixed cutoff.
 
-This lane has four theorem-bearing components. First, the reference architecture itself is
+This lane has five theorem-bearing components. First, the reference architecture itself is
 explicit. Second, the regulated patch-net embedding theorem is closed on its fixed-cutoff
 object/local-interface surface, and the edge-sector thermal/Casimir branch carries an explicit
 fixed-cutoff law with one remaining compact lift above that theorem surface.
-Third, the fixed-cutoff measurement/Born-rule package is closed. Fourth, the
+Third, the fixed-cutoff measurement/Born-rule package is closed. Fourth, the fixed-cutoff
+Bell/CHSH package is closed on the declared two-wing surface. Fifth, the
 checkpoint/restoration observer package is closed. The external burdens on this lane are the final
 packet-level quotient closure where one wants an autonomous exported dynamics, the compact
 heat-kernel lift, global consensus analysis, refinement-stable universality, and the
@@ -228,6 +229,47 @@ directly. The approximate
 stability estimate is the same two-term bound used on the consensus surface: projector errors
 contribute \(\delta_{\mathrm{rec}}\) and accessible-state errors contribute \(\varepsilon\).
 
+\paragraph{Theorem (Fixed-cutoff Bell / CHSH package).}
+On the declared fixed-cutoff physical observable algebra, fix commuting left/right wing
+subalgebras, central binary setting registers, binary projective readouts on each wing, and a
+physical source state on the joint wing algebra. Then the compare slice carries the joint law
+\[
+p(a,b\mid x,y)
+=
+\operatorname{Tr}\!\bigl(\rho_{LR}\,P_{a|x}^{(L)}P_{b|y}^{(R)}\bigr),
+\]
+the local marginals are independent of the remote setting, the Bell correlators satisfy
+\[
+E(x,y)=\operatorname{Tr}\!\bigl(\rho_{LR}\,A_xB_y\bigr),
+\]
+and the CHSH combination obeys
+\[
+\bigl|E(0,0)+E(0,1)+E(1,0)-E(1,1)\bigr|
+\le
+2\sqrt2.
+\]
+If the source family contains an explicit two-qubit branch with the stated Pauli readouts, the
+same fixed-cutoff surface saturates \(2\sqrt2\) exactly on that branch. The source-state premise
+is explicit: the theorem derives the Bell law and the Tsirelson bound from the stated
+fixed-cutoff operator surface, while Bell-pair preparation and two-qubit factor structure remain
+stated branch premises.
+
+\paragraph{Proof sketch.}
+The left/right readout projectors commute across wings, so the joint events lie in one commuting
+event algebra and Born's rule gives the joint law directly. Summing over one wing removes the
+remote projector and yields no-signaling. Writing
+\[
+A_x=P_{+|x}^{(L)}-P_{-|x}^{(L)},
+\qquad
+B_y=P_{+|y}^{(R)}-P_{-|y}^{(R)}
+\]
+gives \(A_x^2=B_y^2=\mathbf 1\) and \([A_x,B_y]=0\), so the standard CHSH operator identity
+\[
+\mathcal B^2=4\,\mathbf 1-[A_0,A_1][B_0,B_1]
+\]
+implies \(\|\mathcal B\|\le 2\sqrt2\). The explicit two-qubit branch gives equality for the
+standard Pauli choices.
+
 \paragraph{Theorem (Checkpoint/restoration and observer backup).}
 For an observer patch \(P_O\), let the checkpoint data consist of the observer-facing record
 algebra, the accessible local state, the future update schedule, and the externally visible
@@ -249,7 +291,7 @@ observer-accessible event algebras. Stronger substrate-selection or strange-loop
 remain outside the recovered theorem package.
 
 \paragraph{Extended derivation.}
-The fixed-cutoff edge-law, measurement, Born-rule, and checkpoint/restoration packages are developed in
+The fixed-cutoff edge-law, measurement, Born-rule, Bell/CHSH, and checkpoint/restoration packages are developed in
 \emph{Screen Microphysics, Patches, and Observer Synchronization in OPH}~\cite{ophmicrophysics}.
 
 \section{Conditional Worldsheet/String Branch}
@@ -312,7 +354,7 @@ fixed-cutoff gap, and the quotient-level repair normal form is explicit on the f
 surface. The consensus lane is classified there as a finite-state exact theorem package rather
 than as a universality claim.
 \item The screen-microphysics lane has an explicit regulated reference architecture together
-with closed measurement/Born-rule and checkpoint/restoration packages. Its open fronts
+with closed measurement/Born-rule, Bell/CHSH, and checkpoint/restoration packages. Its open fronts
 are packet-level quotient closure where a declared observable family is meant to carry an
 autonomous exported dynamics, the compact heat-kernel lift, refinement-stable universality,
 global consensus closure, and the continuum/gravity lift.

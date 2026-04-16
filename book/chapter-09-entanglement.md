@@ -118,6 +118,13 @@ This is the signature of entanglement: **the whole can be pure while the parts a
 
 The **2015 loophole-free Bell tests** closed the main locality and detection loopholes simultaneously while strongly constraining remaining loophole worries. The result: suitable entangled experiments violate Bell inequalities, ruling out simple local hidden-variable accounts.
 
+On the fixed-cutoff microphysics surface, OPH carries the matching theorem package. If a
+two-wing experiment is encoded by commuting left and right observables, binary settings, and a
+declared source state on the joint wing algebra, then the compare slice carries the joint Born
+law, the local marginals do not depend on the remote setting, and the CHSH value stays below
+\(2\sqrt{2}\). Exact saturation at \(2\sqrt{2}\) is fixed only under an explicit two-qubit
+branch premise with the stated Pauli readouts.
+
 Entanglement is real and irreducible. The correlations are stronger than any classical mechanism can produce, yet still cannot transmit information faster than light.
 
 ### Why Quantum? The Tsirelson Bound
