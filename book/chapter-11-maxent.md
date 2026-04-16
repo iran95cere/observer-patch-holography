@@ -2,7 +2,7 @@
 
 ## 11.1 The Intuitive Picture: Time Is Fundamental
 
-Before we examine what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the Newtonian picture of time.
 
 **The intuitive picture**: Time is a fundamental external parameter. It flows from past to future, independent of anything in the universe. Events happen in time, just as objects exist in space. The clock ticks whether or not anything is happening. Time is the stage; physics is the play.
 
@@ -10,7 +10,7 @@ This is Newton's absolute time: "Absolute, true, and mathematical time, of itsel
 
 The arrow of time, the fact that we remember yesterday but not tomorrow, that eggs break but don't unbreak, seems fundamental to this picture. Time has a direction, built into its very nature.
 
-And yet, nature gave us hints that shattered this picture.
+General relativity and quantum theory broke that picture.
 
 ## 11.2 The Surprising Hint: Time Is Not Fundamental
 
@@ -58,7 +58,7 @@ What is a modular Hamiltonian? In ordinary quantum mechanics, the Hamiltonian H 
 
 On the thermal-time proposal, time is the modular flow of the statistical state rather than a fundamental coordinate on a manifold.
 
-Here is the reframing: **Time flows because we are in a state of incomplete knowledge.** The thermal-time program ties experienced time to state restriction and coarse-graining, rather than treating time as a primitive external parameter.
+**Time flows because we are in a state of incomplete knowledge.** The thermal-time program ties experienced time to state restriction and coarse-graining, rather than treating time as a primitive external parameter.
 
 ### Tomita-Takesaki Theory
 
@@ -70,7 +70,7 @@ $$\sigma_t(A) = \Delta^{it} A \Delta^{-it}$$
 
 Even without specifying a Hamiltonian, even without putting time in by hand, the algebra-state pair *generates its own time evolution*.
 
-For a non-specialist, the surprise is easy to miss. An automorphism is just a structure-preserving way of pushing every allowed question forward. Tomita-Takesaki says that once you know which questions an observer can ask and which state those questions live in, the pair already contains a preferred internal flow. The clock is not added from outside. It is extracted from the observer's restricted situation.
+For a non-specialist, the surprise is easy to miss. An automorphism is just a structure-preserving way of pushing every allowed question forward. Tomita-Takesaki says that once you know which questions an observer can ask and which state those questions live in, the pair contains a preferred internal flow. The clock is not added from outside. It is extracted from the observer's restricted situation.
 
 The technical phrases "cyclic" and "separating" sound forbidding, but their role is straightforward. They say the chosen state probes the algebra richly enough and distinguishes operators cleanly enough for modular theory to get a grip. Once those conditions hold, the observer's limited state is not passive. It carries an intrinsic ordering of accessible questions.
 

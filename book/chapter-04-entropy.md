@@ -6,7 +6,7 @@ Here's what seems obvious: if you know the rules perfectly, you should be able t
 
 **The intuitive picture**: The laws of physics are deterministic and time-reversible. Newton's equations work just as well backward as forward. If you film billiard balls colliding and play the film in reverse, you see a perfectly valid physical process. Past and future should be symmetric.
 
-And yet the world is blatantly asymmetric.
+Ordinary life says otherwise.
 
 Glasses break but don't unbreak. Eggs scramble but don't unscramble. Coffee and milk mix but don't unmix. Ice cubes melt in warm rooms; warm rooms don't freeze into ice cubes. We remember yesterday but not tomorrow.
 
@@ -112,7 +112,7 @@ Consider: for observers to exist at all, they must be able to form consistent re
 
 The MaxEnt principle tells us to assign the maximum-entropy state *given our constraints*. But what are the constraints? If one of them is "observers exist to apply MaxEnt," then equilibrium states are ruled out by construction. The very act of asking "what state should I assign?" presupposes a questioner embedded in an entropy gradient.
 
-This doesn't derive the specific low entropy of the Big Bang from pure logic. But it does suggest that the Past principle is not an arbitrary input; it is structurally important in this picture. A universe with durable observers checking for consistency appears to require a significant departure from equilibrium. The low-entropy past can then be read as a structural precondition for the consistency-building present, not yet as a fully derived theorem of the framework.
+This does not derive the specific low entropy of the Big Bang from pure logic. It does show why the Past principle is structurally important in this picture. A universe with durable observers checking for consistency requires a significant departure from equilibrium. The low-entropy past is therefore a structural precondition for the consistency-building present. The framework does not derive that initial condition.
 
 ## 4.4 Information is Physical
 
@@ -339,9 +339,9 @@ Let's trace the logic explicitly.
 3. Entanglement patterns on the screen determine both entropy and geometry
 4. The consistency process that makes observations agree costs energy and generates entropy
 5. Durable observers and records require entropy gradients, so a robust arrow of time becomes structurally important
-6. The Past principle may be structurally favored by consistency constraints, even though the specific low-entropy beginning is not yet derived from OPH alone
+6. The Past principle may be structurally favored by consistency constraints, though OPH does not derive the specific low-entropy beginning
 
-This suggests that the universe required a special low-entropy state for any of this to work. But this need not be left as an unexplained miracle. Consistency constraints require observers, observers require records, records require entropy gradients, and entropy gradients point back toward a low-entropy past. The Past principle is therefore structurally motivated here, even though the exact initial condition is not yet derived from the framework alone.
+This suggests that the universe required a special low-entropy state for any of this to work. Consistency constraints require observers, observers require records, records require entropy gradients, and entropy gradients point back toward a low-entropy past. The Past principle is structurally motivated here. The exact initial condition is not derived from the framework alone.
 
 ## 4.11 Summary: The Entropy Budget
 

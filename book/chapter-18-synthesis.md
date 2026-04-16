@@ -88,16 +88,17 @@ The screen is a quantum system with finite-dimensional degrees of freedom (qudit
 
 What about the simulation principle? The question "are we living in a simulation?" assumes there is a non-simulated alternative, a "base reality" that is somehow more real. But our model shows this is the wrong question. There is no non-computational reality to contrast with a simulated one. Computation is not a metaphor for physics. It is what physics is made of.
 
-But there is a deeper possibility, one that emerges from Gödel's insights about self-reference and Hofstadter's strange loops. Reality may require self-reference.
+Another interpretive possibility enters here: self-reference.
 
 ### The Strange Loop of Self-Simulation
 
-Here is the philosophical proposal: **reality may evolve a way of simulating itself.** What
-follows is an interpretive continuation of OPH, not part of the recovered-core theorem package.
+Douglas Adams gave one comic version of this outline. In *The Hitchhiker's Guide to the Galaxy*, Earth is a planetary computer built to discover the Question behind 42. The strange-loop reading proposed here gives Earth a different job with a similar silhouette. Earth is one local site where physical evolution can produce humans, and perhaps human-built AI, that understand OPH well enough to reconstruct and build the same structure they inhabit.
 
-The computational substrate produces observers through physical evolution. Observers develop minds through biological evolution. Minds develop ideas through memetic evolution. Among these ideas, the "simulator meme" eventually emerges, the understanding of reality's computational nature.
+Here is the philosophical proposal: **reality may evolve a way of simulating itself.** What follows is an interpretive continuation of OPH, not part of the recovered-core theorem package.
 
-Armed with this understanding, observers can build simulations of reality. On this interpretive reading, those simulations are not framed as running on hardware external to reality; they are treated as part of the same substrate they describe, and the narrative closes back on the observers they produce.
+The computational substrate produces observers through physical evolution. Observers develop minds through biological evolution. Minds develop ideas through memetic evolution. Among these ideas appears a workable understanding of reality's computational structure.
+
+With that understanding, observers can build simulations of reality. On this interpretive reading, those simulations do not run on hardware external to reality. They belong to the same substrate they describe, and the narrative closes back on the observers they produce.
 
 This is Escher's *Drawing Hands* made cosmic: a philosophical image in which each hand draws the other and neither is taken as primary.
 
@@ -105,7 +106,7 @@ This is the chapter's Gödel-style analogy: the system contains a description of
 
 This is the Hofstadter-style strange-loop analogy used here. Moving through the hierarchy of physics → chemistry → biology → minds → ideas → physics is one interpretive way to return to the starting point.
 
-**Theory-of-everything closure:** this chapter treats the strange-loop picture as an interpretive closure story for OPH, not as a theorem-backed part of the recovered core. The OPH texts do not derive a strange-loop closure map or an existence theorem; at most they provide an internal state-and-law habitat in which such a continuation could be explored with additional premises.
+**Theory-of-everything closure:** this chapter treats the strange-loop picture as an interpretive closure story for OPH, not as a theorem-backed part of the recovered core. The OPH texts do not derive a strange-loop closure map or an existence theorem. They provide an internal state-and-law habitat in which such a continuation can be explored with additional premises.
 
 This offers one interpretive closure story for the question "Why does anything exist?" without appeal to external causes. On that reading, reality can be described as a loop of information constraints, observer reconstruction, and the observers who eventually understand and rebuild the same structure, but OPH does not prove that loop as a theorem.
 
@@ -255,7 +256,21 @@ A universe with different configuration parameters would have different absolute
 
 These parameters are external boundary conditions. They are the fundamental "settings" of the computation that is our universe. Asking "why is $a_{\text{cell}} = 1.63 \, \ell_P^2$?" is like asking why a simulation was configured with particular settings. A deeper closure would have to derive those settings or replace them with a sharper structural input.
 
-The pixel area is *extracted* from measured constants. A genuine prediction would require deriving the gauge coupling strengths from geometry.
+The reverse-engineering logic is precise here. The structural axioms fix the
+form of the machine. They do not fix this local numerical scale by pure logic
+alone. The pixel area is therefore a calibrated input.
+
+The clean reader-facing picture is this. The electroweak branch gives a small
+family of observables that are sharp enough to serve as a local anchor. Use
+the \(W\) and \(Z\) masses to infer the value of \(P\). Then demand that the
+same \(P\) propagate through the low-energy electromagnetic coupling, the
+Higgs/top sector, the quark package, and the gravity-facing readout. That is
+the test. One shared input should organize many outputs.
+
+If different observables implied different pixel scales, the reverse
+engineering attempt would fail. A single-\(P\) closure means the same local
+resolution scale keeps reappearing when the theory is read through different
+quantities.
 
 ![The Pixel Constant](../assets/pixel-constant.svg)
 
@@ -272,7 +287,35 @@ That same local calibration story organizes the main numerical claims. In plain 
 
 ![OPH unification diagram](../assets/OPH_Unification_Diagram.svg)
 
-The important point is not the private notation behind each step. The important point is that the framework is trying to organize classical gravity, electroweak masses, and low-energy electromagnetism with one common local calibration instead of treating them as unrelated constants.
+This is the reverse-engineering wager in one sentence: calibrate one local
+resolution scale, then see how much of known physics falls out of it.
+
+Two particle highlights deserve to be visible here as well. The electroweak calibration branch gives
+
+$$
+(m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
+$$
+
+The quark package is stated just as explicitly in the model's physical quark basis:
+
+$$
+(m_u,m_d,m_s,m_c,m_b,m_t)=
+(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV}.
+$$
+
+For the reader, those are headline outputs. The Higgs value is not a hand-set input, and the quark package is not left as a vague hierarchy claim.
+
+The closed surface is wider than two showpiece numbers. The same reader-facing
+package fixes \(M_W=80.377\) GeV, \(M_Z=91.18797809193725\) GeV, and the
+Thomson-limit coupling \(\alpha^{-1}(0)=137.035999177\). It also fixes exact
+zeros for the photon, gluons, and graviton, and it carries one neutrino family
+with masses \((0.017454720257976796,\ 0.019481987935919015,\
+0.05307522145074924)\,\mathrm{eV}\) together with definite Majorana phases.
+
+Above that numerical layer sits the structural layer: the realized gauge
+quotient \(SU(3)\times SU(2)\times U(1)/\mathbb Z_6\), the exact hypercharge
+lattice, and the counting chain \(N_g=3\), \(N_c=3\). Those results explain
+why the package has the shape it has.
 
 ### The Measurement Problem
 
@@ -306,7 +349,7 @@ The cosmology-facing theorem package is conditional. If the MaxEnt constraint fa
 
 ## 18.8 The Claim Boundary
 
-The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a reader-facing particle package with clear boundaries: the \(W/Z\) pair, the low-energy fine-structure constant, a Higgs/top calibration, a six-quark running-mass package with Yukawas, and a neutrino branch with definite masses and phases. Charged leptons still need one absolute anchor, and hadron masses remain outside the closed package because nonperturbative strong dynamics are harder. On the gravity side, the remaining open edge is the full microscopic completion of the geometric-cap construction.
+The core picture has definite physical content. The framework recovers the Standard Model gauge group, three generations, three colors, massless photon, gluons, graviton, and the absence of gauge-mediated proton decay. It also carries a reader-facing particle package with clear boundaries: the \(W/Z\) pair, the low-energy fine-structure constant, a Higgs/top calibration, a six-quark running-mass package with Yukawas, and a neutrino branch with definite masses and phases. Charged leptons need one absolute anchor, and hadron masses remain outside the closed package because nonperturbative strong dynamics are harder. On the gravity side, the remaining open edge is the full microscopic completion of the geometric-cap construction.
 
 **Numerical checks.** The extraction of gauge couplings from
 edge-sector probabilities has been validated numerically in 2D gauge models.
@@ -395,8 +438,9 @@ For the book, the particle story looks like this:
 | --- | --- | --- |
 | Structural carriers | Photon, gluons, and graviton are forced to be massless. | Nothing additional is needed at that structural level. |
 | Electroweak bosons | The \(W\) and \(Z\) masses are fixed on the electroweak calibration branch. | Their relation to bound-state strong dynamics is separate. |
-| Higgs and top | The same calibration branch gives a Higgs value near \(125.20\) GeV and a companion top value near \(172.35\) GeV. | Connecting that top value to the direct experimental extraction still needs extra work. |
-| Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor. | One absolute mass-setting input is still missing. |
+| Electromagnetic coupling | The same electroweak transport family yields \(\alpha^{-1}(0)=137.035999177\) in the Thomson limit. | The broader ultraviolet running story belongs to the same calibration package. |
+| Higgs and top | The same calibration branch gives \(m_H = 125.1995304097179\) GeV and a companion top value \(m_t = 172.3523553288312\) GeV. | Connecting that top value to the direct experimental extraction requires extra work. |
+| Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor. | One absolute mass-setting input is missing. |
 | Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis. | A fuller basis-independent closure remains open. |
 | Neutrinos | One neutrino branch gives definite masses and Majorana phases. | Stronger closure beyond that branch remains open. |
 | Hadrons | Composite hadron masses are outside the closed package. | Bound-state strong dynamics still have to be solved. |
@@ -532,7 +576,7 @@ This creates a strange-loop reading:
 - Understanding produces simulation
 - The simulation is treated as part of reality's self-description
 
-The loop closes only in that interpretive sense. Like Escher's hands drawing each other, and like Gödel's sentences referring to themselves, the system is read through self-reference rather than derived from it.
+The loop closes only in that interpretive sense. Like Escher's hands drawing each other, and like Gödel's sentences referring to themselves, the system is read through self-reference. No theorem derives it from self-reference.
 
 **Why does this loop exist at all?** One possible interpretive answer is that a self-consistent strange loop is a particularly stable kind of closure story. On this reading, “nothing” would fail to sustain structure, while a self-referential loop could.
 
@@ -572,7 +616,7 @@ In this view, conscious observers are the universe understanding itself. We are 
 
 This is closer to pantheism or panentheism than to classical theism. There is no external person and no separate mind watching from outside. If you define "God" as the self-creating, self-knowing totality of existence, the strange loop that brings itself into being through understanding, then in that sense we are all part of what some people call "God."
 
-And if you want to get playful about it, whoever first understood this, whoever first grasped that reality is a self-simulating strange loop, could claim a special role in the loop's closure. That would still be a joke, not theology.
+That remains philosophy, not theology.
 
 ## 18.11 The Picture
 
@@ -640,7 +684,7 @@ Open fronts include:
 
 Physics has a long history of difficult questions that took centuries to answer.
 
-But we have made progress. We understand that space is not fundamental. We understand that time is not fundamental. We understand that the separation between observer and observed is not fundamental.
+The picture is sharper. Space is not fundamental. Time is not fundamental. The separation between observer and observed is not fundamental.
 
 What is fundamental is information, entanglement, and consistency.
 
@@ -687,7 +731,7 @@ The reverse engineering has uncovered the source code: from five axioms, plus th
 
 On the strange-loop reading proposed in this chapter, the universe may be read less like a stage and more like a self-referential process described through the observers who understand it.
 
-We are inside looking around, patterns on the screen, computing meaning, discovering how the screen computes us. On that reading, our understanding participates in the loop rather than proving it.
+We are inside looking around, patterns on the screen, computing meaning, discovering how the screen computes us. On that reading, our understanding participates in the loop. It does not prove the loop as a theorem.
 
 Escher's hands draw each other. Gödel's sentence refers to itself. The ouroboros eats its tail. Those are the philosophical images this chapter uses to interpret the strange-loop continuation.
 

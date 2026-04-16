@@ -1,12 +1,14 @@
 # Prologue: Physicists Are Hackers
 
+*For Douglas Adams, and for my wife Noon.*
+
 > Core idea, in plain English: there is no single objective camera angle on reality.
 > There are only local, subjective perspectives, and physics is the rulebook that keeps them consistent where they overlap.
 > If you are not a physicist, you are in the right place; this book is written as a reverse-engineering story, not a math-first textbook.
 
-This book is written for readers, not as the canonical claim ledger. The compact paper is the place to look for the tightest statement of what the framework establishes, and the companion papers carry the technical details for particles, consensus dynamics, and screen microphysics. The job of the book is different. It is to show how the clues fit together, why the mathematics points in one direction, and how the separate results add up to one picture.
+This book is for readers. The compact paper states the tight technical boundary. The companion papers carry the heavier machinery for particles, consensus dynamics, and screen microphysics. The job here is different. The book shows how the clues fit together, why the mathematics points in one direction, and how the separate results add up to one picture.
 
-Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book is the long-form OPH answer to both. It presents OPH as a concrete route toward a simulation-theory reading: reality is modeled as an observer-consistent information process with a specific architecture of holographic screens, observer patches, and overlap-consistency rules. It also presents OPH as a theory-of-everything program: quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules, while the strange-loop idea remains an interpretive extension outside the recovered core.
+Whether your interest begins with **simulation theory** or with the hope of a **theory of everything**, this book gives the long-form OPH answer. OPH is presented here as a concrete observer-consistent information architecture. Quantum mechanics, relativity, gauge structure, and particle physics appear as effective descriptions of deeper overlap-consistency rules. The strange-loop material is kept where it belongs: as interpretation outside the recovered core.
 
 ## The Cosmic Program
 
@@ -126,7 +128,7 @@ work out the consequences, the results are extraordinary:
 
 - **Gravity** emerges from how observers share entanglement across their screens
 - **The particle zoo** emerges from the symmetry structure forced by the framework
-- **A dark-sector continuation** is explored through modular anomalies, but MOND/RAR-scale phenomenology remains future work rather than a recovered-core result
+- **A dark-sector continuation** is explored through modular anomalies, but MOND/RAR-scale phenomenology sits outside the recovered core
 - **Why anything exists at all** enters the story through a self-referential closure picture
 
 Once you make this shift, strange features of reality start making sense.
@@ -166,6 +168,23 @@ access to information, and they must agree where their observations overlap.
 
 The framework needs only two numerical inputs from experiment: the size of a single "pixel" on the holographic screen, in Planck units, and the total screen capacity inferred from the cosmological constant. From there, the aim is to recover gravity, gauge structure, and the particle story from observer consistency instead of putting them in by hand. On the reader-facing claim boundary of the book, the framework reaches a conditional gravity branch, the Standard Model gauge structure, three generations, three colors, massless photon/gluons/graviton, the \(W\) and \(Z\), a calibrated Higgs/top sector, a running quark package, and a neutrino branch with definite masses. Charged leptons and hadrons remain the main open edges.
 
+This is where the reverse-engineering method matters. A good reverse engineer
+separates architecture from calibration. First you infer the structure the
+system must have. Then you identify the small number of external knobs that
+the structure itself does not fix. In OPH, the main local knob is the pixel
+scale \(P=a_{\mathrm{cell}}/\ell_P^2\). The axioms determine a great deal
+about the shape of the theory, but they do not determine that number by pure
+logic alone. The book's quantitative question is therefore sharp: if you pin
+down \(P\) on one clean electroweak anchor, does that same \(P\) also drive
+the rest of the particle package?
+
+The practical calibration move is simple to state. Use the clean electroweak
+surface, align \(P\) with the \(W/Z\) masses, and then ask whether the same
+value propagates through the fine-structure constant, the Higgs/top sector,
+the quark package, and the gravity-facing readout. If that works, the theory
+is doing real reverse engineering. If each sector needs its own private dial,
+it is only curve fitting with philosophical decoration.
+
 From this starting point, we derive constraints. We show how the mathematical
 structures of quantum mechanics and relativity emerge from consistency
 requirements. We trace the logic from axioms to consequences.
@@ -184,8 +203,10 @@ The structure follows the logic of reverse engineering:
 2. **Reverse engineer principles.** We show how the anomaly makes sense once
    you adopt the observer-consistency model.
 
-3. **Test against behavior.** We catalogue predictions, both verified and
-   testable. We note what identifies a measurement contradiction with the model.
+3. **Calibrate sparingly, then test hard.** We fix the tiny external input
+   surface, then ask how much of the remaining behavior follows from that one
+   choice. We catalogue predictions, both verified and testable. We note what
+   identifies a measurement contradiction with the model.
 
 This model rests on established mathematics and physics, organized around five core axioms. The results are striking: gravity, the symmetry structure behind the Standard Model, and several further programs all emerge from the framework. Our goal is to show you how deep the rabbit hole goes.
 
@@ -196,7 +217,7 @@ Chapters 13-17 cover the main physics branches.
 Chapters 18-19 are synthesis and interpretation.
 The epilogue is speculative continuation material.
 
-## Let's Go
+## Begin
 
 Reality is the strangest program ever written. It's been running since the
 Big Bang, processing inputs and producing outputs according to rules physics
@@ -211,7 +232,7 @@ what's really going on.
 What's really going on is weirder, more elegant, and more unified than
 the surface shows. It starts with observers. It starts with perspectives that must agree.
 
-Let's find out.
+Start there.
 
 ---
 

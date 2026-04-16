@@ -43,7 +43,7 @@ Think of the screen as a high-resolution, quantum information canvas. Most
 patterns are noisy and ephemeral. Some are stable: they survive overlap
 consistency, persist under modular time, and can be tracked across patches.
 Those stable patterns are what we call **particles**.
-That is the conceptual picture. The particle sector can be stated more concretely as well. The framework fixes the gauge structure, the massless carriers, and the \(W/Z\) pair. It also carries a calibrated Higgs/top result, a quark-mass package in the physical quark basis used by the model, and a neutrino branch with definite masses. Charged leptons still need one final overall anchor, and hadron masses sit outside the closed package because strong-coupling bound-state physics is harder.
+That is the conceptual picture. The particle sector can be stated more concretely as well. The framework fixes the gauge structure, the massless carriers, and the \(W/Z\) pair. It also carries a calibrated Higgs/top result, a quark-mass package in the physical quark basis used by the model, and a neutrino branch with definite masses. Charged leptons need one final overall anchor, and hadron masses sit outside the closed package because strong-coupling bound-state physics is harder.
 
 The key reframing is:
 
@@ -57,7 +57,80 @@ ripple is a pattern that moves and interacts. The ripple is not a separate
 thing; it is a stable excitation. Particles play the same role in the
 emergent EFT.
 
-## 16.4 What Is a Particle?
+## 16.4 From Stable Patterns to Concrete Particle Predictions
+
+Stable-pattern language can sound philosophical unless the reader is shown
+how those patterns become a concrete particle package.
+
+The first bridge is symmetry. Once Lorentz kinematics is recovered, a durable
+excitation is sorted by the familiar labels of relativistic physics: mass,
+spin, and helicity. Once the gauge branch is recovered, the charge bookkeeping
+also stops looking arbitrary. The realized branch fixes the Standard Model
+quotient \(SU(3)\times SU(2)\times U(1)/\mathbb Z_6\), the exact hypercharge
+lattice, and the counting chain \(N_g=3\), \(N_c=3\). Those are structural
+answers about what kinds of matter can exist.
+
+That structural layer has direct particle consequences. The photon,
+the eight gluons, and the graviton are massless because they lie along
+redundancy directions. A hard mass for any of them would break the gluing
+rules that let different observer patches describe the same physics. The same
+structural package also forbids gauge-mediated proton decay, because the
+realized gauge group is a product group and does not contain the extra
+leptoquark gauge bosons that simple-group unification would require.
+
+The quantitative particle rows come from the shared local calibration story.
+One electroweak transport family yields the weak-boson pair
+
+$$
+M_W = 80.377\,\mathrm{GeV}, \qquad
+M_Z = 91.18797809193725\,\mathrm{GeV},
+$$
+
+and the same family, followed along the unbroken electromagnetic channel to
+the long-distance Thomson limit, yields
+
+$$
+\alpha^{-1}(0)=137.035999177.
+$$
+
+This is how OPH arrives at a concrete coupling prediction. The low-energy
+electromagnetic strength and the weak-boson masses come from one branch of
+the construction.
+
+The same electroweak core continues into the Higgs and companion top values:
+
+$$
+(m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
+$$
+
+The quark sector closes on one selected physical quark basis:
+
+$$
+(m_u,m_d,m_s,m_c,m_b,m_t)=
+(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV}.
+$$
+
+These are running quark masses, not hadron masses. They belong to the
+short-distance particle description before QCD binds quarks into composite
+states.
+
+The neutrino branch is concrete as well:
+
+$$
+(m_{\nu_e},m_{\nu_\mu},m_{\nu_\tau})=
+(0.017454720257976796,\ 0.019481987935919015,\ 0.05307522145074924)\,\mathrm{eV},
+$$
+
+together with definite Majorana phases on that branch.
+
+Taken together, the particle picture is larger than a few isolated numbers.
+OPH fixes the structural gauge package, the exact massless carriers, the
+\(W/Z\) pair, the Thomson-limit electromagnetic coupling, the Higgs/top pair,
+the running quark sextet with Yukawas, and one neutrino family. Charged
+leptons need one absolute anchor. Hadrons require a separate nonperturbative
+bound-state step.
+
+## 16.5 What Is a Particle?
 
 In ordinary physics, a particle is defined by symmetry. Wigner showed that
 "particle types" are **irreducible representations of the Poincare group**,
@@ -89,7 +162,7 @@ classical physics: they are two faces of the same symmetry.
 This is why particles are universal: they are bookkeeping devices for symmetry
 classes, not fundamental objects.
 
-## 16.5 What Is Energy?
+## 16.6 What Is Energy?
 
 Energy is more than a number. It is the generator of time evolution.
 
@@ -111,7 +184,7 @@ So energy has a clean meaning:
 Conservation of energy then follows from symmetry: if the emergent action is
 invariant under time shifts, Noether's theorem gives a conserved energy.
 
-## 16.6 Motion and Forces: Why Things Move the Way They Do
+## 16.7 Motion and Forces: Why Things Move the Way They Do
 
 Classical motion can be described in two equivalent ways:
 
@@ -131,7 +204,7 @@ The broad shape of the low-energy laws is set by the same consistency
 structure that gives us gauge symmetry in Chapter 14. The exact
 coupling-by-coupling story is part of the continuing program.
 
-## 16.7 Why the Principle of Least Action Appears
+## 16.8 Why the Principle of Least Action Appears
 
 The principle of least action can sound mystical, but it is a direct
 consequence of quantum interference.
@@ -161,7 +234,7 @@ follows in the usual semiclassical limit.
 Historically it is called "least" action, but what really survives is
 **stationary** action: small variations do not change the path to first order.
 
-## 16.8 The Classical Limit: Why the World Looks Deterministic
+## 16.9 The Classical Limit: Why the World Looks Deterministic
 
 Classical physics is an **emergent approximation** that appears when:
 
@@ -198,11 +271,12 @@ The quantum world is larger but less shareable. Superpositions exist, but they c
 
 **Classical physics is the public face of quantum reality.** It is the stable consistency regime that many observers can share.
 
-## 16.9 Reverse Engineering Summary
+## 16.10 Reverse Engineering Summary
 
 | Intuitive Picture | Surprising Hint | First-Principles Reframing |
 |---|---|---|
 | Matter is fundamental stuff moving through space | Quantum interference and creation/annihilation show particles are not permanent objects | Matter is a stable excitation pattern in the screen net |
+| The particle catalog is an arbitrary list | Gauge structure and one calibration branch fix concrete particle rows | Matter comes with a constrained package of charges, carriers, couplings, and masses |
 | Energy is just a fuel | Energy is a generator tied to symmetry | Energy is the charge of emergent time translations (stress tensor) |
 | Motion follows force laws | Trajectories emerge from interference | Least action is the classical limit of quantum consistency |
 | Classical physics is the fundamental layer | Quantum mechanics underlies classical physics | Classical physics emerges because only consistent patterns survive the overlap filter |

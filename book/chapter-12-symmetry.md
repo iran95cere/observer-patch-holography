@@ -2,13 +2,13 @@
 
 ## 12.1 The Intuitive Picture: Symmetries Are Aesthetic Choices
 
-Before we examine what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the aesthetic picture of symmetry.
 
 **The intuitive picture**: Symmetries are aesthetic preferences. The universe could have been asymmetric-lopsided, irregular, chaotic-but it happens to be symmetric in certain ways. Physicists chose to study symmetric systems because they're easier to analyze and more beautiful. Symmetry is a convenience, not a necessity.
 
 This view treats symmetry as a happy accident or an unexplained gift. The laws of physics happen to look the same in all directions (rotational symmetry). They happen to be the same today as yesterday (time translation symmetry). But there's no deeper reason for this. The universe could have been otherwise.
 
-And yet, nature gave us a hint that shattered this picture.
+Noether broke that picture.
 
 ## 12.2 The Surprising Hint: Symmetries Imply Conservation Laws
 
@@ -46,7 +46,7 @@ Consider two astronomers observing the same galaxy. One measures energy in her r
 
 But they're not inconsistent. They're related by a Lorentz transformation. In OPH, this symmetry emerges from how modular time-flow works on the screen, as we saw in the previous chapters. The symmetry tells them exactly how to translate between their observations. Lorentz invariance is the rule that makes their different measurements compatible.
 
-Here is the reframing: **Symmetry isn't aesthetic-it's the grammar of consistency.** Without symmetry, different observers couldn't compare notes. Their measurements would be incommensurable.
+**Symmetry is the grammar of consistency.** Without symmetry, different observers could not compare notes. Their measurements would be incommensurable.
 
 ### The Overlap Algebra
 

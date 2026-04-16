@@ -2,7 +2,7 @@
 
 ## 6.1 The Intuitive Picture: Local Causes Explain Correlations
 
-Before we examine what physics actually discovered, let's articulate what seemed obvious for millennia.
+Start with the classical picture.
 
 **The intuitive picture**: When two distant events are correlated, there must be a common cause in their shared past. Correlations come from shared history, hidden connections, or pre-existing properties. If I flip two coins and they always match, either the coins were manufactured together with matching weights, or someone is signaling between them. There's no spooky magic at a distance.
 
@@ -14,7 +14,7 @@ The technical term for this intuition is **local realism**:
 
 Local realism is so natural that questioning it seems absurd. Of course the moon exists when nobody's looking. Of course a particle has a definite spin before you measure it. Of course distant correlations require either a shared cause or a connecting signal.
 
-And yet, nature gave us a hint that shattered this picture.
+Bell's theorem broke that picture.
 
 ## 6.2 The Surprising Hint: Bell's Theorem and Nonlocal Correlations
 
@@ -142,7 +142,7 @@ Think of it like attention. If you're having a deeply intimate conversation with
 
 ### The Consistency Filter
 
-Here is the reframing: **Bell-violating correlations are treated here as a structural feature that may help an observer-consistency framework remain viable.**
+**Bell-violating correlations are treated here as a structural feature that may help an observer-consistency framework remain viable.**
 
 Imagine the space of all possible local states-all assignments of density matrices to patches. This space is enormous. Most assignments are inconsistent; different patches disagree on overlaps.
 
@@ -326,7 +326,7 @@ From Wigner's view: the isolated lab can still be described by a superposed quan
 
 Both descriptions are internally consistent. The problem arises at the overlap-when Wigner opens the door and compares notes with his friend.
 
-This is the nested-observer version of the whole book. One observer's finished fact can still be another observer's unresolved branch, provided they have not yet compared records. The tension appears only when communication begins and the two descriptions have to settle into one common account.
+This is the nested-observer version of the whole book. One observer's finished fact can be another observer's unresolved branch, provided they have not compared records. The tension appears only when communication begins and the two descriptions have to settle into one common account.
 
 That is why Wigner's friend matters beyond foundations theater. It is the simplest clean model of nested access. One observer inhabits a definite record, another still treats that record as part of a larger quantum state, and both descriptions remain admissible until communication forces a common restriction. The whole OPH project keeps asking how such restrictions line up without contradiction.
 

@@ -2,7 +2,7 @@
 
 ## 13.1 The Intuitive Picture: The Universe Is Static or Decelerating
 
-Before we examine what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the old cosmological picture.
 
 **The intuitive picture**: The universe is either static (things stay roughly as they are) or decelerating (gravity pulls everything together, slowing expansion). This is the natural expectation from Newton through Einstein.
 
@@ -10,7 +10,7 @@ Einstein himself added a "cosmological constant" to his equations in 1917 to cre
 
 Even after accepting expansion, the expectation was deceleration. Gravity attracts. The mutual pull of all the matter in the universe should slow the expansion, like a ball thrown upward gradually slowing. Eventually, the expansion might stop or even reverse.
 
-And yet, nature gave us a hint that shattered this picture.
+Supernova data broke that picture.
 
 ## 13.2 The Surprising Hint: The Universe Is Accelerating
 
@@ -50,7 +50,7 @@ Inside the horizon, you can use static coordinates. This region-the **static pat
 
 ### De Sitter Fits Our Framework
 
-Here is the reframing: **The de Sitter horizon is the natural holographic screen.**
+**The de Sitter horizon is the natural holographic screen.**
 
 | Framework Element | De Sitter Property |
 |-------------------|-------------------|
@@ -265,7 +265,7 @@ Plugging in numbers:
 
 $$a_0^{(\text{OPH})} \approx 1.03 \times 10^{-10} \text{ m/s}^2$$
 
-This lands near the empirical MOND acceleration scale $a_0 \sim 1.2 \times 10^{-10}$ $\text{m/s}^2$ that fits galaxy rotation curves, which is why the branch is interesting. But this proximity is not yet a derived galaxy-dynamics result.
+This lands near the empirical MOND acceleration scale $a_0 \sim 1.2 \times 10^{-10}$ $\text{m/s}^2$ that fits galaxy rotation curves, which is why the branch is interesting. This proximity is not a derived galaxy-dynamics result.
 
 ### What This Continuation Benchmarks
 
@@ -301,11 +301,11 @@ What remains missing:
 - Cosmological abundance and structure-formation analysis
 - Environment-dependence and stability checks
 
-So the current claim is narrower: the same finite screen capacity that gives us the cosmological constant also supplies an IR benchmark scale for a possible dark-sector continuation. The continuation itself is still open.
+So the claim is narrower: the same finite screen capacity that gives us the cosmological constant also supplies an IR benchmark scale for a possible dark-sector continuation. The continuation itself is open.
 
-### What A Future Closure Would Need To Face
+### What A Full Closure Would Need To Face
 
-Any later closure would need to explain whether an acceleration scale near $a_0^{(\text{OPH})} \approx 1.03 \times 10^{-10}$ $\text{m/s}^2$ can coexist with galaxy, lensing, cluster, Bullet-Cluster, and cosmological data. At present the branch remains open.
+A full closure would need to explain whether an acceleration scale near $a_0^{(\text{OPH})} \approx 1.03 \times 10^{-10}$ $\text{m/s}^2$ can coexist with galaxy, lensing, cluster, Bullet-Cluster, and cosmological data. The branch is open.
 
 ---
 

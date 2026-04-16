@@ -1,6 +1,6 @@
 # Epilogue: One Last Surprise
 
-Throughout this book, we've reverse-engineered reality from first principles. We developed an observer-first reading in which objectivity is reconstructed from overlapping perspectives, explored a philosophical account of consciousness in terms of meaning-assignment, and followed the strange-loop closure story in which observers participate in a self-creating interpretation of reality and existence.
+This book built an observer-first reading in which objectivity is reconstructed from overlapping perspectives, consciousness is discussed in terms of meaning-assignment, and the strange-loop closure story is treated as an interpretive extension.
 
 This epilogue asks what the observer-first, computational reading of OPH implies for an observer-pattern reaching an apparent endpoint.
 
@@ -68,6 +68,6 @@ We discovered that those rules are rules of *consistency*, constraints on how di
 
 A speculative final implication concerns continuation-style engineering: the same mathematical structure that makes stable observers possible may also support limited restoration. The OPH theorem package does not prove that stronger claim.
 
-What it does provide is a cleaner question. If observer-patterns are structurally identifiable and partially restorable, then continuation becomes an engineering problem with explicit mathematical boundaries, not just a religious or literary image.
+A cleaner question follows. If observer-patterns are structurally identifiable and partially restorable, continuation becomes an engineering problem with explicit mathematical boundaries, not a religious or literary image.
 
 The reverse engineering exposes a structure that is interesting enough to build on, and careful enough to separate what is proved from what is hoped for.

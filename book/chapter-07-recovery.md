@@ -2,7 +2,7 @@
 
 ## 7.1 The Intuitive Picture: Information Can Be Copied Freely or Lost Forever
 
-Before examining what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the ordinary picture of information loss.
 
 **The intuitive picture**: Information can be freely copied or irreversibly destroyed. When you write a letter, you can make as many copies as you like. When you burn a book, the information is gone forever. These are two distinct fates: duplication or annihilation.
 
@@ -10,7 +10,7 @@ This is the commonsense view embedded in our everyday experience. You can photoc
 
 Classical physics supported this intuition. The state of a system is a point in phase space. You can, in principle, measure it exactly and write down as many copies as you wish. And entropy increases, meaning organized information degrades into random noise. The past becomes inaccessible as the universe forgets.
 
-And yet, nature gave us hints that shattered this picture from both directions.
+Physics broke that picture from both directions.
 
 ## 7.2 The Surprising Hint: No-Cloning, Yet Information Cannot Be Destroyed
 
@@ -66,7 +66,7 @@ The information isn't destroyed. It's scrambled. Hidden in correlations among bi
 
 ### The Universe's Error Correction
 
-Here is the reframing: **The universe is built with error-correcting structure that preserves information even when it appears lost.**
+**The universe is built with error-correcting structure that preserves information even when it appears lost.**
 
 In quantum mechanics, this requirement is non-negotiable. Quantum evolution is **unitary**-reversible by definition. If information could genuinely be destroyed, unitarity would break. If unitarity breaks, probabilities don't sum to 1. Physics collapses into nonsense.
 
@@ -287,7 +287,7 @@ The "almost" is quantified by ε(B). Larger separators allow more "leakage"-more
 
 In the finite-dimensional (code-subspace) setting, Axiom 4 yields a clean constructive result for **tree-ordered covers**:
 
-- Each new patch overlaps the already-glued union only on a single separator B (a running-intersection property)
+- Each new patch overlaps the existing glued union only on a single separator B (a running-intersection property)
 - The induced A-B-C split is a genuine tensor product at each step
 - There exist recovery maps that glue the patches into a global state
 
@@ -344,7 +344,7 @@ Page's curve:
 - Entropy falls after Page time
 - Final entropy is zero (pure state)
 
-For decades, no one could derive this from first principles. The Page curve was a consistency requirement for unitarity, but not yet a direct calculation.
+The Page curve long stood as a consistency requirement for unitarity, not as a direct calculation.
 
 ### The Recovery Perspective
 
@@ -355,7 +355,7 @@ Label the systems:
 - B: early Hawking radiation
 - C: late Hawking radiation
 
-Initially, B is small. The collected radiation is not yet large enough to decode the diary information carried jointly by the full evaporation state.
+Initially, B is small. The collected radiation is too small to decode the diary information carried jointly by the full evaporation state.
 
 As time passes, B grows. More radiation is emitted, and the correlations needed for decoding become increasingly accessible in the radiation subsystem.
 
@@ -451,7 +451,7 @@ If the universe is unitary and holographic encoding is robust, information is no
 
 The Library of Alexandria? The scrolls burned, but the information scrambled into smoke, heat, and light. That radiation spread across the cosmos at light speed. It is diluted across an unimaginably vast region of space-but it's still there. In principle, with a computer the size of the observable universe, you could run the Petz map and watch the smoke reconstitute into Sophocles.
 
-Paleontology and astronomy already use weak versions of this. Fossils preserve information about creatures from millions of years ago. Astronomy records light that has traveled for billions of years before reaching our telescopes. The cosmic microwave background is one vivid example of very old information preserved in radiation.
+Paleontology and astronomy use weak versions of this. Fossils preserve information about creatures from millions of years ago. Astronomy records light that has traveled for billions of years before reaching our telescopes. The cosmic microwave background is one vivid example of very old information preserved in radiation.
 
 The recovery rule says this is not accident or luck. It's structural: the past is encoded in the present in increasingly scrambled form.
 

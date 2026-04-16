@@ -2,7 +2,7 @@
 
 ## 8.1 The Intuitive Picture: Reality Lives in Volume
 
-Before we examine what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the ordinary intuition about storage.
 
 **The intuitive picture**: Information fills space. The more volume you have, the more stuff you can pack into it. Double the size of a box, and you can store twice as much information. Triple it, triple the storage. This is so obvious it hardly seems worth stating.
 
@@ -10,7 +10,7 @@ If you want to describe a region of the universe completely, you need to specify
 
 This intuition is embedded in how we think about containers, databases, and physical space itself. The library holds books in its volume, not on its walls. The hard drive stores data throughout its platters, not on the outer casing. The universe is a three-dimensional stage, and everything happens on that stage.
 
-And yet, nature gave us a hint that demolished this picture.
+Black holes broke that picture.
 
 ## 8.2 The Surprising Hint: Information Lives on Boundaries
 
@@ -82,7 +82,7 @@ This maps onto our observer story. Each observer patch contains a partial pictur
 
 ### The Consistency Ledger
 
-Here is the reframing: **Boundaries are consistency ledgers where observers compare notes.**
+**Boundaries are consistency ledgers where observers compare notes.**
 
 In OPH, reality emerges from the agreement of observer patches. But where do observers compare notes? They need a shared ledger-a common reference where their descriptions must match.
 
@@ -199,8 +199,15 @@ It helps to picture one concrete use. If the boundary theorist asks, "What happe
 | Hawking temperature | CFT temperature |
 
 The relationship Delta(Delta-d) = m squared R squared connects mass to dimension.
+Its physical meaning is simple. A heavy bulk field maps to a boundary operator
+with large scaling dimension, so the boundary disturbance it creates dies away
+more quickly under coarse-graining.
 
-The table is not just a glossary. Each row says what kind of bulk quantity the boundary theory is keeping track of. A bulk scalar is read as a boundary operator. A bulk gauge field is read as a conserved current. A bulk black hole is read as a hot many-body state. The third spatial direction in the bulk becomes a bookkeeping device for scale on the boundary.
+The table does real work. Each row says what kind of bulk quantity the
+boundary theory is keeping track of. A bulk scalar is read as a boundary
+operator. A bulk gauge field is read as a conserved current. A bulk black hole
+is read as a hot many-body state. The third spatial direction in the bulk
+becomes a bookkeeping device for scale on the boundary.
 
 ## 8.9 The Ryu-Takayanagi Formula
 
@@ -313,7 +320,7 @@ Under Jacobson's assumptions, requiring thermodynamic consistency for local
 horizons recovers the relationship between matter and geometry. That
 relationship is Einstein's equation.
 
-**On Jacobson's thermodynamic reading, gravity behaves like an equation-of-state output rather than a fundamental force.**
+**On Jacobson's thermodynamic reading, gravity behaves like an equation-of-state output. The geometry reads as a thermodynamic response.**
 
 Just as PV = nRT follows from statistical mechanics without knowing molecular details, Einstein's equation can be recovered from horizon thermodynamics without knowing the Planck-scale structure of spacetime.
 
@@ -390,7 +397,7 @@ The distinction has practical consequences:
 | Cosmological constant | Negative (AdS) | Positive (de Sitter) |
 | What's fundamental | Both bulk and boundary | Only the screen |
 
-Think of AdS/CFT as a **proof of concept**: it shows that boundaries can encode bulks with gravity. We take that lesson and apply it differently, as emergence from observer consistency rather than as a duality.
+Think of AdS/CFT as a **proof of concept**: it shows that boundaries can encode bulks with gravity. We take that lesson and apply it differently, as emergence from observer consistency. AdS/CFT remains a duality. OPH uses it as a lesson about encoding.
 
 The finite horizon in de Sitter provides a natural cutoff, a finite Hilbert space (~exp(10^122) dimensions), and observer-dependence built in from the start. These aren't bugs to be fixed-they're features that make the observer-centric approach natural.
 
@@ -415,7 +422,7 @@ This is a fundamental fork in the road:
 
 **The key insight**: de Sitter horizons are not a problem to be solved. They're the feature that makes observer-patch holography natural. Each observer has their own horizon, their own patch of screen, and consistency conditions on the overlaps.
 
-The cosmological constant appears as a **global capacity parameter**, the total number of degrees of freedom on the screen, rather than as something predicted from local physics. From the observed Lambda, we infer a screen-entropy scale of about $10^{122}$ in natural units, or $10^{122}/\ln 2$ bits. This is the "size" of reality, just as the pixel area is its "resolution."
+The cosmological constant appears as a **global capacity parameter**, the total number of degrees of freedom on the screen. It does not come from a local-physics derivation in this framework. From the observed Lambda, we infer a screen-entropy scale of about $10^{122}$ in natural units, or $10^{122}/\ln 2$ bits. This is the "size" of reality, just as the pixel area is its "resolution."
 
 This sidesteps that specific "boundary theory at infinity" version of the unsolved problem. We're not trying to build a global boundary theory at infinity. We're building local patch descriptions that must agree on overlaps. The bulk emerges from that agreement, with Lambda as the one global parameter that all overlapping descriptions share.
 

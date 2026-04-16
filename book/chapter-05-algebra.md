@@ -351,7 +351,7 @@ Let's trace the logic explicitly.
 6. Causality requires commutation for spacelike-separated regions
 7. **Non-commutativity is central to the kind of consistency problem quantum physics presents**-a fully commutative picture would miss the nontrivial constraint structure highlighted in this chapter
 
-The algebraic structure is not optional. It is what the hints from quantum mechanics force us to accept. OPH then explores a stronger interpretation: that non-commutativity is deeply tied to the difficulty of global consistency, rather than being an arbitrary extra feature. The "strangeness" of quantum mechanics is thereby read as part of the price of a structured reality, not yet as a standalone theorem from consistency alone.
+The algebraic structure is not optional. It is what the hints from quantum mechanics force us to accept. OPH then explores a stronger interpretation: non-commutativity is deeply tied to the difficulty of global consistency, not an arbitrary extra feature. The "strangeness" of quantum mechanics is thereby read as part of the price of a structured reality, not as a standalone theorem from consistency alone.
 
 The next chapter develops the overlap consistency condition in detail: exactly how must measurements on shared regions agree?
 

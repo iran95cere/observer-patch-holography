@@ -2,7 +2,7 @@
 
 ## 9.1 The Intuitive Picture: Space Is a Stage
 
-Before we examine what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the old geometric intuition.
 
 **The intuitive picture**: Space is a container. It's the stage on which physics happens. Objects exist at locations in space. The distance between two objects is a property of that stage-a fixed backdrop that exists independently of what occupies it.
 
@@ -10,7 +10,7 @@ This is Newton's absolute space. It's the intuition behind graph paper, GPS coor
 
 The vacuum-empty space-is simply... empty. Nothing there. A container with nothing inside.
 
-And yet, nature gave us hints that shattered this picture.
+Quantum field theory broke that picture.
 
 ## 9.2 The Surprising Hint: The Vacuum Is Not Empty
 
@@ -52,7 +52,7 @@ Recall our core thesis: reality is the process of making observations between ob
 
 If there were no correlations across your cut, the vacuum wouldn't glue itself together. You couldn't walk from A to B without noticing a seam-a glitch where observations would fail to match.
 
-Here is the reframing: **Space is not a stage that matter lives on. Space is the pattern of correlations that enables observer agreement.**
+**Space is not a stage that matter lives on. Space is the pattern of correlations that enables observer agreement.**
 
 Two regions are "close" when they share many quantum correlations-when observations in one region constrain observations in the other. Two regions are "far" when they share few correlations-when they are nearly independent.
 

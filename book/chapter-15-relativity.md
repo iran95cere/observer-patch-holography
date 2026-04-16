@@ -16,7 +16,7 @@ Space was similarly absolute. A container that exists whether or not anything is
 
 This worldview worked spectacularly well for two centuries. It predicted planetary orbits, tides, the motion of comets. It launched the Industrial Revolution and put humans on the Moon.
 
-And yet, it's wrong.
+Physics says otherwise.
 
 ## 15.2 The Surprising Hint: Light Refuses to Behave
 
@@ -289,7 +289,7 @@ $$K_C = 2\pi B_C + \text{const}$$
 
 which says that the modular Hamiltonian is, up to normalization and an irrelevant constant, the geometric boost generator for that cap.
 
-The microscopic construction is still technical and incomplete. For the reader, the important point is simpler: once cap modular flow becomes geometric, the clock defined by the state becomes the same object as the clock defined by spacetime symmetry. That is the bridge from modular theory to relativity.
+The microscopic construction is technical and incomplete. Once cap modular flow becomes geometric, the clock defined by the state becomes the same object as the clock defined by spacetime symmetry. That is the bridge from modular theory to relativity.
 
 ### Conformal Symmetry Is Lorentz Symmetry
 
@@ -514,7 +514,7 @@ This section is more speculative than the gravity and Lorentz results above. It'
 
 Galaxies rotate too fast. The stars at the outer edges orbit the galactic center at speeds that should fling them into intergalactic space, given the visible matter. Something provides extra gravitational pull.
 
-The standard response: dark matter particles. Some new, weakly interacting particle that clumps around galaxies and provides the missing mass. Decades of searches have not yet produced a confirmed new particle.
+The standard response: dark matter particles. Some new, weakly interacting particle that clumps around galaxies and provides the missing mass. Decades of searches have produced no confirmed new particle.
 
 An alternative: modify gravity (MOND). At low accelerations, perhaps gravity behaves differently. This explains galaxy rotation curves remarkably well, but struggles with galaxy clusters and the Bullet Cluster.
 
@@ -543,7 +543,7 @@ The framework connects this anomaly to the cosmological constant. The only avail
 
 $$a_0 = \frac{15}{8\pi^2} c^2 \sqrt{\frac{\Lambda}{3}} \approx 1.0 \times 10^{-10} \text{ m/s}^2$$
 
-This lands near the empirical MOND acceleration scale. That numerical proximity motivates the continuation, but it does not yet derive a galaxy law.
+This lands near the empirical MOND acceleration scale. That numerical proximity motivates the continuation, but it does not derive a galaxy law.
 
 ## 15.14 Reverse Engineering Summary
 

@@ -2,7 +2,7 @@
 
 ## 10.1 The Intuitive Picture: Information Is Fragile or Permanent
 
-Before we examine what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the common-sense picture of data.
 
 **The intuitive picture**: Information is either fragile or permanent. Write a message in sand and the tide erases it. Carve it in stone and it lasts for millennia. Information exists in specific physical arrangements; disturb those arrangements and the information is gone.
 
@@ -10,7 +10,7 @@ This is the commonsense view of data. A hard drive crash destroys your files. A 
 
 Classical physics supports this intuition. Information lives in definite states. Errors flip states to wrong values. Protection requires either isolation (keep the noise away) or redundancy (make backup copies).
 
-And yet, nature gave us hints that this picture is both too pessimistic and too optimistic. Information can be protected even when you cannot copy it. And information that seems permanently lost can be recovered from subtle correlations. The universe has built-in error correction.
+Quantum information theory broke that picture from both sides. Information can be protected even when you cannot copy it. Apparent loss can hide recoverable structure.
 
 ## 10.2 The Surprising Hint: Quantum Error Correction Is Possible
 
@@ -54,7 +54,7 @@ Each observer has a local patch of data. Each patch is noisy-sensors fail, memor
 
 This is exactly what error-correcting codes provide.
 
-Here is the reframing: **Reality isn't just consistent-it's error-corrected. The consistency we observe requires robust encoding of shared information.**
+**Reality is error-corrected.** The consistency we observe requires robust encoding of shared information.
 
 ### Holographic Error Correction
 
@@ -260,7 +260,7 @@ Protecting information does not require isolation or copying. Quantum mechanics 
 
 5. **Holographic Codes**: The bulk is a logical space protected by boundary redundancy. Depth equals protection.
 
-6. **Black Hole Information**: Islands and the Page curve support the broader holographic idea that black holes can preserve information through error-correcting structure; OPH currently keeps the full evaporation proof outside its proved core.
+6. **Black Hole Information**: Islands and the Page curve support the broader holographic idea that black holes can preserve information through error-correcting structure; the full OPH evaporation proof lies outside the proved core.
 
 7. **Quantum Darwinism**: Classical facts are quantum information that got redundantly encoded into the environment.
 

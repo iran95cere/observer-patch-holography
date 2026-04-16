@@ -2,7 +2,7 @@
 
 ## 17.1 The Intuitive Picture: Laws Are Eternal Mathematical Truths
 
-Before we examine what physics discovered, let's articulate what seemed obvious for millennia.
+Start with the Platonic picture of law.
 
 **The intuitive picture**: The laws of physics are eternal, unchanging mathematical truths. They existed before the Big Bang. They will exist after the heat death. Newton's laws, Maxwell's equations, Einstein's field equations-these are discovered, not invented. They describe timeless constraints on reality.
 
@@ -10,7 +10,7 @@ This is the Platonic view of physics. The universe obeys laws because those laws
 
 In this picture, asking "why these laws?" is meaningless. Laws are brute facts. They could have been different, but they happen to be what they are.
 
-And yet, nature gave us a hint that suggested a very different possibility.
+Fine-tuning makes that picture hard to keep.
 
 ## 17.2 The Surprising Hint: Fine-Tuning and the Multiverse
 
@@ -66,7 +66,7 @@ If you could, our universe wouldn't be at a fitness peak.
 
 ### The Reframing
 
-Here is the reframing: **Laws are not eternal truths. Laws are survivors of a selection process. They persist because they work-because they produce more of themselves.**
+**Laws are survivors of a selection process.** They persist because they work, because they produce more of themselves.
 
 This applies at multiple levels:
 - **Cosmic selection**: Smolin's CNS

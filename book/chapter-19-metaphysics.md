@@ -78,7 +78,7 @@ Some philosophers have called this "selector theory": non-existence isn't the na
 
 Others have spoken of "strange loops," reality creating itself through self-reference, like a hand drawing the hand that draws it. Our framework gives this intuition formal backing: the axioms support a self-consistent structure in which both the states and the laws that govern them emerge together, like a universe that writes its own operating system.
 
-But there is a deeper version of this idea. Reality may permit a strange-loop interpretation.
+There is a deeper version of the same idea. Reality may permit a strange-loop interpretation.
 
 This is also the point where OPH intersects most directly with what popular culture calls **simulation theory**. The framework does not picture the universe as a videogame running on somebody else's laptop. It instead treats physical reality itself as a self-consistent information process, and that is why OPH is publicly framed both as a concrete implementation of simulation theory and as a concrete theory of everything.
 

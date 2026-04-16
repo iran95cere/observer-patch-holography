@@ -406,7 +406,7 @@ The holographic principle makes sharp, testable predictions:
 
 **3. Information is finite**: The observable universe carries an entropy scale of order $\sim 10^{122}$ in natural units, or $\sim 10^{122}/\ln 2$ bits. This is enormous but finite. Any evidence of truly infinite information content would contradict holography.
 
-These ideas have strong support in the settings where we can currently probe them:
+These ideas have strong support in the settings where we can probe them directly:
 - Black hole thermodynamics confirms area-entropy
 - AdS/CFT calculations match both sides of the duality
 - No violation of the relevant entropy bounds has ever been observed

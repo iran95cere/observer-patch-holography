@@ -2,7 +2,7 @@
 
 ## 2.1 Hints Before the Hints
 
-Before physicists discovered that reality behaves strangely, philosophers had already raised questions that resonate with later problems in fundamental physics.
+Before physicists discovered that reality behaves strangely, philosophers had raised questions that resonate with later problems in fundamental physics.
 
 This is not a coincidence. The ancients didn't have particle accelerators or interferometers. But they had something almost as good: pure logical reasoning applied to careful observation. They asked what *must* be true if experience is to make any sense at all.
 
@@ -397,7 +397,7 @@ Let's step back and see the pattern.
 | Pragmatists | Truth is correspondence | Truth is what survives | Laws as survivors |
 | Gödel/Hofstadter | Descriptions separate from described | Self-reference creates strange loops | Self-simulating reality |
 
-Each philosopher identified a crack in the intuitive picture. Each crack pointed toward a feature of physics we now understand.
+Each philosopher identified a crack in the intuitive picture. Each crack pointed toward a feature of physics that later became clear.
 
 The convergence is striking. The intuitive picture of an objective 3D reality independent of observers really is problematic. The philosophers found the problems through pure reason. The physicists confirmed them through experiment.
 
@@ -405,6 +405,6 @@ The convergence is striking. The intuitive picture of an objective 3D reality in
 
 The philosophers gave us hints. The next step is the machinery.
 
-The key claim moving forward is that black-hole entropy and holographic arguments push strongly toward a boundary-first description rather than naive volume counting. The holographic principle suggests that 3D physics may admit an encoding on 2D surfaces.
+Black-hole entropy and holographic arguments push strongly toward a boundary-first description instead of naive volume counting. The holographic principle suggests that 3D physics may admit an encoding on 2D surfaces.
 
 The next chapter turns that suspicion into a physical object: the **holographic screen**. Instead of speaking loosely about hidden structure, it asks where the data lives and why boundary area, rather than volume, controls it.

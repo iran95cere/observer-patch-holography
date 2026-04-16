@@ -179,6 +179,16 @@ The fine structure constant alpha, which measures the strength of electromagneti
 \(\alpha^{-1}(0)=137.035999177\) in the Thomson limit. At higher energies, it increases. At the Z
 boson mass, it is about \(1/128\).
 
+In OPH, that low-energy number sits inside the same particle story as the weak bosons. Once the
+electroweak transport family is fixed by the shared local calibration, electromagnetism is read as
+the unbroken channel left after the weak and hypercharge sectors mix. Taking the long-distance
+Thomson limit of that channel gives
+
+$$\alpha^{-1}(0)=137.035999177.$$
+
+The fine-structure constant is therefore not an isolated entry from a constants table. It is the
+low-energy endpoint of the same branch that produces the \(W\) and \(Z\) rows.
+
 The strong force coupling runs the opposite way. At low energies, it's strong (hence the name). At high energies, it weakens. This is "asymptotic freedom," discovered by Gross, Wilczek, and Politzer in 1973.
 
 Running couplings mean the "constants" of physics aren't constant. They depend on the scale at which you probe.
@@ -545,15 +555,103 @@ For the book, the picture is this:
 
 | Sector | What the framework fixes | What remains open |
 |---|---|---|
+| Gauge structure | The realized branch fixes \(SU(3)\times SU(2)\times U(1)/\mathbb Z_6\), the exact hypercharge lattice, and the counting chain \(N_g=3\), \(N_c=3\) | Bound-state spectroscopy is a separate layer |
 | Structural carriers | Photon, gluons, and graviton are forced to be massless | Nothing additional is needed at that structural level |
-| Electroweak bosons | The \(W\) and \(Z\) masses are fixed on the electroweak calibration branch | Their relation to strongly coupled bound states is a separate problem |
-| Higgs and top | The same calibration branch gives a Higgs value near \(125.20\) GeV and a companion top value near \(172.35\) GeV | Connecting that top value to the direct experimental extraction still needs extra work |
-| Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor | One absolute mass-setting input is still missing |
-| Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis | A fuller basis-independent closure remains open |
+| Electroweak bosons | The electroweak calibration branch fixes \(M_W = 80.377\) GeV and \(M_Z = 91.18797809193725\) GeV | Their relation to strongly coupled bound states is a separate problem |
+| Electromagnetic coupling | The same transport family gives the Thomson-limit value \(\alpha^{-1}(0)=137.035999177\) | The full ultraviolet running story belongs to the broader calibration package |
+| Higgs and top | The same calibration branch gives \(m_H = 125.1995304097179\) GeV and a companion top value \(m_t = 172.3523553288312\) GeV | Connecting that top value to the direct experimental extraction requires extra work |
+| Charged leptons | The family structure is fixed and the remaining freedom is isolated to one overall anchor | One absolute mass-setting input is missing |
+| Quarks | The six running quark masses and corresponding Yukawa data are fixed in the model's physical quark basis: \((0.00216, 0.00470, 0.0935, 1.273, 4.183, 172.3523553288311)\) GeV | A fuller basis-independent closure remains open |
 | Neutrinos | One neutrino branch gives definite masses and Majorana phases | Stronger closure beyond that branch remains open |
 | Hadrons | Composite hadron masses are outside the closed package | Bound-state strong dynamics still have to be solved |
 
 That is enough to tell a clear story without pretending every particle sits at exactly the same stage of completion.
+
+Several numerical outputs deserve to be stated plainly. On the electroweak calibration branch, the Higgs comes out at
+
+$$m_H = 125.1995304097179\,\mathrm{GeV}$$
+
+with a companion top value
+
+$$m_t = 172.3523553288312\,\mathrm{GeV}.$$
+
+The quark package is also stated explicitly in the book-level particle story. In the model's physical quark basis, the running masses are
+
+$$
+(m_u,m_d,m_s,m_c,m_b,m_t) =
+(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV}.
+$$
+
+These are not hadron masses. They are the running quark masses emitted by the framework in that basis.
+
+### How the Concrete Particle Rows Arise
+
+Stable patterns on the screen matter because they land on the particle rows a
+physicist actually cares about.
+
+The first step is structural. Chapter 15 supplies Lorentz kinematics, so stable excitations sort
+themselves by the usual representation labels: mass, spin, and helicity. This chapter supplies the
+realized gauge quotient, the hypercharge lattice, and the counting chain \(N_g=3\), \(N_c=3\).
+That decides which charged excitations can exist and how they transform.
+
+The second step is redundancy. The photon, gluons, and graviton sit on symmetry-protected zero
+lines because electromagnetism, color, and gravity are redundancy structures in how patches glue
+and how bulk geometry is encoded. Give those carriers a hard mass and the overlap story stops
+closing consistently.
+
+The third step is the shared local calibration. Structural arguments tell you
+what kind of particle family can exist. They do not, by themselves, tell you
+the numerical value of the pixel scale \(P\). The local quantitative branch
+therefore has to be calibrated.
+
+In reader-facing terms, the cleanest way to think about that calibration is this. The
+electroweak sector gives a small trusted family of observables with little
+hadronic ambiguity. Use the \(W\) and \(Z\) masses to pin down \(P\), then
+ask whether the same \(P\) forces the rest of the local particle story. If
+the answer is yes, the framework is reverse engineering one machine with one
+shared knob across sectors.
+
+With that calibration in place, one electroweak transport family yields the weak
+boson pair
+
+$$M_W = 80.377\,\mathrm{GeV}, \qquad M_Z = 91.18797809193725\,\mathrm{GeV},$$
+
+and the same family, projected onto the unbroken electromagnetic channel and read at the
+long-distance Thomson limit, yields
+
+$$\alpha^{-1}(0)=137.035999177.$$
+
+That is why the fine-structure constant belongs in this chapter. It is part of the same transport
+story as the weak sector.
+
+The fourth step continues along the same electroweak core. The Higgs and companion top values sit
+on the next calibration surface:
+
+$$
+(m_H,m_t)=(125.1995304097179,\ 172.3523553288312)\,\mathrm{GeV}.
+$$
+
+The fifth step is flavor closure. Once the shared excitation dictionary is fixed, one selected
+physical quark basis carries an exact running-mass sextet together with explicit Yukawas:
+
+$$
+(m_u,m_d,m_s,m_c,m_b,m_t)=
+(0.00216,\ 0.00470,\ 0.0935,\ 1.273,\ 4.183,\ 172.3523553288311)\,\mathrm{GeV}.
+$$
+
+These are running quark masses, not hadron masses. They belong to the particle sector before
+strong-coupling bound-state physics turns quarks into protons, neutrons, and mesons.
+
+A separate neutrino branch gives one absolute family as well:
+
+$$
+(m_{\nu_e},m_{\nu_\mu},m_{\nu_\tau})=
+(0.017454720257976796,\ 0.019481987935919015,\ 0.05307522145074924)\,\mathrm{eV}.
+$$
+
+Charged leptons need one absolute anchor. Hadrons require nonperturbative strong dynamics. The
+closed particle surface is therefore larger than two showpiece numbers, but it is not the whole
+PDG booklet.
 
 ## 14.15 Why the Photon Is Inevitable
 
@@ -569,7 +667,7 @@ The plain-language content is elegant. If you know how charges combine, separate
 
 Tannaka-Krein reconstruction is intimidating terminology for an intuitive move. Watch the full pattern of transport, fusion, and conjugation carefully enough, and the hidden symmetry group ceases to be a guess. It becomes the only group compatible with that pattern.
 
-On the realized Standard Model branch, this reconstructed group includes a U(1) factor, the gauge group of electromagnetism. The key point is that this U(1) comes from the redundancy structure of how patches identify their overlaps once the transportable-sector reconstruction package is in place.
+On the realized Standard Model branch, this reconstructed group includes a U(1) factor, the gauge group of electromagnetism. This U(1) comes from the redundancy structure of how patches identify their overlaps once the transportable-sector reconstruction package is in place.
 
 A gauge boson is the quantum of a gauge field. When U(1)_em emerges from overlap redundancy, its gauge field must exist, and its quantum, the photon, must exist. The photon is the particle that mediates the correlations between charged objects in different patches. It is how the redundancy structure propagates through the algebra net.
 
@@ -603,7 +701,7 @@ Our model makes the same claim, but the logical structure is different. In strin
 
 In OPH, you start with observers on a holographic screen, impose consistency conditions on how their descriptions must agree, and discover that the consistent low-energy effective description must include both gauge fields and dynamical geometry. The photon emerges because electromagnetic gauge symmetry is the redundancy structure of charged-patch overlaps. The graviton emerges because diffeomorphism invariance is the redundancy structure of the bulk compression.
 
-Both particles are forced by consistency. And crucially, both must be exactly massless because their associated symmetries are structural features of how observers compare notes.
+Both particles are forced by consistency. Both are exactly massless because their associated symmetries are structural features of how observers compare notes.
 
 ## 14.18 Why Composite Masses Are Different
 
@@ -637,7 +735,7 @@ Similar tests work for nonabelian groups like $S_3$ (the smallest nonabelian gro
 
 This formula is not only an empirical observation. It can be derived theoretically. The group Laplacian is the *unique* gauge-invariant local quadratic operator on the edge degrees of freedom. Any other choice would either break gauge symmetry or require nonlocal terms. Combined with the MaxEnt principle, which selects the Gibbs state, this uniqueness forces the heat-kernel form. The factor $d_R$ instead of $d_R^2$ appears because entanglement entropy traces over one side of the cut. The derivation requires one additional assumption, that the entropy-maximizing generator is quasi-local, but otherwise follows from the axioms.
 
-That is why this section belongs in a book rather than an appendix. The vacuum is not being mined for cute number patterns. The claim is that edge entanglement is constrained enough that only one simple local weighting rule survives, and once that happens the representation theory of the gauge group leaves visible fingerprints in the probabilities.
+This section belongs in the book. The vacuum is not being mined for cute number patterns. The claim is that edge entanglement is constrained enough that only one simple local weighting rule survives, and once that happens the representation theory of the gauge group leaves visible fingerprints in the probabilities.
 
 The foreign terminology hides a simple picture. Edge entanglement does not weight charge sectors arbitrarily. It assigns each sector a local geometric cost on the group manifold. Read those costs carefully enough and the effective gauge couplings can be inferred from the vacuum itself.
 
@@ -688,7 +786,7 @@ Let's step back and see what the framework actually accounts for.
 
 **The zeros.** The photon and graviton masses are exactly zero. This is a symmetry-protected prediction. The photon's masslessness follows from U(1) gauge invariance being a genuine overlap redundancy; any mass would break the consistency of how charged patches glue together. Similarly, the graviton's masslessness follows from diffeomorphism invariance being the redundancy structure of bulk spacetime. Experimental and observational upper bounds are consistent with these predictions to extraordinary precision: the photon mass is constrained below ~10⁻¹⁸ eV, often summarized as ~27 orders of magnitude, and the graviton mass is constrained below ~10⁻²³ eV by gravitational-wave dispersion, often summarized as ~22 orders of magnitude.
 
-**The particle story.** Beyond the massless carriers, the framework reaches a readable particle package. It fixes the \(W\) and \(Z\), matches the Thomson-limit fine-structure constant \(\alpha^{-1}(0)=137.035999177\), gives a Higgs value near \(125.20\) GeV together with a companion top value near \(172.35\) GeV, fixes a six-quark running-mass package with corresponding Yukawas in the model's physical quark basis, and specifies a neutrino family with masses \((0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\,\mathrm{eV}\) together with definite Majorana phases. Charged leptons still need one absolute mass-setting input. Hadrons remain outside the closed package because strong-coupling bound states are harder.
+**The particle story.** Beyond the massless carriers, the framework reaches a readable particle package. It fixes the \(W\) and \(Z\) at \(80.377\) GeV and \(91.18797809193725\) GeV, matches the Thomson-limit fine-structure constant \(\alpha^{-1}(0)=137.035999177\), gives the Higgs value \(125.1995304097179\) GeV together with the companion top value \(172.3523553288312\) GeV, fixes the six-quark running-mass package \((0.00216, 0.00470, 0.0935, 1.273, 4.183, 172.3523553288311)\) GeV with corresponding Yukawas in the model's physical quark basis, and specifies a neutrino family with masses \((0.017454720257976796, 0.019481987935919015, 0.05307522145074924)\,\mathrm{eV}\) together with definite Majorana phases. Charged leptons need one absolute mass-setting input. Hadrons remain outside the closed package because strong-coupling bound states are harder.
 
 The reason these numbers belong in one chapter is that the framework is trying to organize them with one local calibration story. The same input that sets the electroweak scale also feeds the low-energy electromagnetic coupling and the effective gravitational coupling. The reader does not need every intermediate symbol to see the point. The point is that OPH is attempting to tie electroweak masses, the Higgs/top calibration, electromagnetism at low energy, and Newton's constant to one common structure instead of treating them as unrelated constants.
 
@@ -696,7 +794,7 @@ The reason these numbers belong in one chapter is that the framework is trying t
 
 **Gauge-mediated proton decay.** Gauge-mediated proton decay is forbidden. The gauge group is a product, not embedded in a larger simple group, so no leptoquark generators exist. Current experimental limits ($\tau_p > 10^{34}$ years) are consistent with this prediction.
 
-**The boundary.** Charged leptons still need an absolute mass-setting input. The quark result is tied to one physical quark basis. Hadrons require nonperturbative strong-dynamics work.
+**The boundary.** Charged leptons need an absolute mass-setting input. The quark result is tied to one physical quark basis. Hadrons require nonperturbative strong-dynamics work.
 
 ## 14.21 The Big Picture
 
