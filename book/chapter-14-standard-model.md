@@ -446,7 +446,7 @@ With N_c = 3 and standard normalization:
 
 $$\boxed{Y_Q = \frac{1}{6}, \quad Y_L = -\frac{1}{2}, \quad Y_u = \frac{2}{3}, \quad Y_d = -\frac{1}{3}, \quad Y_e = -1, \quad Y_H = \frac{1}{2}}$$
 
-These are exact rationals, the Standard Model hypercharges, with the ratios fixed by anomaly freedom + Yukawa invariance and the absolute values fixed by standard normalization. There are no continuous parameters to adjust.
+These are exact rationals, the Standard Model hypercharges, with the ratios fixed by anomaly freedom + Yukawa invariance and the absolute values fixed by standard normalization. There are no continuous parameters to adjust. On the realized branch, this sixth-integer lattice is exactly the one compatible with the physical quotient \((SU(3) \times SU(2) \times U(1))/Z_6\), not just a Lie-algebra normalization convention.
 
 That is what makes the derivation satisfying. The equations are not decorative bookkeeping. They explain why the charges come out in the strange pattern we observe. Quarks carry third-integer charges because the weak interaction, the Higgs couplings, and anomaly cancellation all have to coexist in one self-consistent chiral theory.
 
