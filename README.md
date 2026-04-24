@@ -21,4 +21,4 @@ The exact numerical value of `P` comes from the calibration surface. Its proximi
 
 ---
 
-> **Personal note (fork):** I'm working through the overlap-consistency derivation in Paper 2 alongside Penrose's *Road to Reality* ch. 31–33. My reading notes and worked examples are in [`notes/`](notes/) as I add them.
+> **Personal note (fork):** I'm working through Papers 2 and 3 in parallel. The `N_g = 3` generation count derivation in Paper 3 is the section I find most surprising — flagging it here as a reading anchor for myself.
