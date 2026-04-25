@@ -31,6 +31,12 @@ The builder expects these tools to be available in `PATH`:
 - `tectonic`
 - `rsvg-convert`
 
+On macOS these can all be installed via Homebrew:
+
+```bash
+brew install pandoc tectonic librsvg
+```
+
 ## Layout And Styling
 
 The book PDF builder is implemented in:
