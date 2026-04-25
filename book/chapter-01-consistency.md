@@ -27,11 +27,10 @@ There is a counter-tradition. Berkeley insisted that perception is primary. Kant
 > - Ernst Mach, *The Science of Mechanics* (1883): relational physics and critique of absolute space.
 > - Thomas Nagel, *The View from Nowhere* (1986): tension between objective and subjective standpoints.
 > - William James, *Pragmatism* (1907): truth as what works across perspectives — worth reading alongside Nagel as a counterpoint.
+> - <!-- personal note: also check out Evan Thompson's *Mind in Life* (2007) for a more biological angle on perspective-taking -->
 
 We take a narrower, operational step: **start from perspectives and demand consistency on overlaps.**
 
 ### Why the Intuitive Picture Fails
 
-But why abandon the intuitive picture at all? Because the universe gave us hints, strange, persistent, reproducible hints, that it cannot be correct.
-
-Here's a thought experiment that illustrates the problem: imagine a cosmic 
+But why abandon the intuitive picture at all? Because the universe gave us hints, strange, pers
